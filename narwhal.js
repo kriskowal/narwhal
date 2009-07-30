@@ -1,35 +1,50 @@
 (function (system) {
 
-// logger shim
-var shim = function () {
-    //if (system.debug && system.print) {
-        system.print(Array.prototype.join.apply(arguments, [" "]));
-    //}
-};
-var log = {fatal:shim, error:shim, warn:shim, info:shim, debug:shim};
-system.log = log;
-
 // global reference
 global = system.global;
+global.global = global;
 global.system = system;
 global.print = system.print;
 
-// equivalent to "var sandbox = require('sandbox');"
-var sandboxPath = system.prefix + "/lib/sandbox.js";
-var sandboxFactory = system.evaluate(
-    system.fs.read(sandboxPath),
-    "sandbox.js",
-    1
-);
-var sandbox = {};
-var sandboxModule = {id: 'sandbox', path: sandboxPath};
-sandboxFactory(
-    null, // require
-    sandbox, // exports
-    sandboxModule, // module
-    system, // system
-    system.print // print
-);
+// logger shim
+var logFake = function () {
+    if (system.debug) {
+        system.print(Array.prototype.join.apply(arguments, [" "]));
+    }
+};
+var log = {fatal:logFake, error:logFake, warn:logFake, info:logFake, debug:logFake};
+system.log = log;
+
+// this only works for modules with no dependencies and a known absolute path
+var requireFake = function(id, path, modules) {
+    modules = modules || {};
+    var exports = {};
+    var module = {id: id, path: path};
+
+    var factory = system.evaluate(system.fs.read(path), path, 1);
+    factory(
+        function(id) { return modules[id]; }, // require
+        exports, // exports
+        module, // module
+        system, // system
+        system.print // print
+    );
+
+    return exports;
+}
+
+// bootstrap sandbox module
+var sandbox = requireFake("sandbox", system.prefix + "/lib/sandbox.js");
+
+// bootstrap file module
+var fs = {};
+requireFake("sandbox", system.prefix + "/lib/file-bootstrap.js", { "file" : fs });
+for (var name in system.fs) {
+    if (Object.prototype.hasOwnProperty.call(system.fs, name)) {
+        fs[name] = system.fs[name];
+    }
+}
+system.fs = fs;
 
 // construct the initial paths
 var paths = [];
@@ -122,8 +137,8 @@ if (system.args.length && !options.interactive && !options.main) {
 }
 
 // user package prefixes
-if (system.env.SEA)
-    system.packagePrefixes.unshift(system.env.SEA);
+if (system.env.PACKAGE_HOME)
+    system.packagePrefixes.unshift(system.env.PACKAGE_HOME);
 system.packagePrefixes.unshift.apply(system.packagePrefixes, options.packagePrefixes);
 
 // load packages

@@ -1,7 +1,10 @@
+
+// use the "file" module as the exports object.
+var exports = require("file");
+
 // File: Rhino
 
 var IO = require("./io").IO;
-var file = require('./file');
 var os = require('./os');
 
 var javaRuntime = function () {
@@ -22,7 +25,7 @@ exports.FileIO = function (path, mode, permissions) {
         write: write,
         append: append,
         update: update
-    } = file.mode(mode);
+    } = exports.mode(mode);
 
     if (update) {
         throw new Error("Updating IO not yet implemented.");
@@ -36,10 +39,6 @@ exports.FileIO = function (path, mode, permissions) {
 };
 
 /* paths */
-
-exports.SEPARATOR = '/';
-exports.ALT_SEPARATOR = undefined;
-exports.ROOT = '/';
 
 exports.cwd = function () {
     return String(Packages.java.lang.System.getProperty("user.dir"));
@@ -91,13 +90,18 @@ exports.isFile = function (path) {
     return false;
 };
 
+// XXX not standard
+exports.isAbsolute = function (path) {
+    return new java.io.File(path).isAbsolute();
+};
+
 /* java doesn't provide isLink, but File.getCanonical leaks
    information about whether a file is a link, so we use the canonical
    file name of a path and the canonical file name of the
    containing directory to infer whether the file is a link.
 */
 exports.isLink = function (path) {
-    path = file.path(path);
+    path = exports.path(path);
     var canonical = path.canonical().toString();
     var container = path.resolve('.').canonical();
     if (path.isDirectory()) {
@@ -145,11 +149,17 @@ exports.link = function (source, target) {
 };
 
 exports.symlink = function (source, target) {
-    os.command(['ln', '-s', target, source]);
+    // XXX this behavior of resolving the source
+    // path from the target path when the source 
+    // path is relative ought to be discussed
+    // on ServerJS
+    if (exports.isRelative(source))
+        source = exports.relative(target, source);
+    os.command(['ln', '-s', source, target]);
 };
 
 exports.rename = function (source, target) {
-    source = file.path(source);
+    source = exports.path(source);
     target = source.resolve(target);
     source = JavaPath(source);
     target = JavaPath(target);
@@ -158,8 +168,8 @@ exports.rename = function (source, target) {
 };
 
 exports.move = function (source, target) {
-    source = file.path(source);
-    target = file.path(target);
+    source = exports.path(source);
+    target = exports.path(target);
     source = JavaPath(source);
     target = JavaPath(target);
     if (!source.renameTo(target))
