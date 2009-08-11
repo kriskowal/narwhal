@@ -40,7 +40,7 @@ IO.prototype.read = function(length) {
                 bytes.write(buffer, 0, length);
                 index = 0;
             }
-        }	
+        }   
         total += read;
         
         
@@ -187,6 +187,7 @@ exports.TextInputStream = function (raw, lineBuffering, buffering, charset, opti
         stream.close();
     };
 
+    return Object.create(self);
 };
 
 exports.TextOutputStream = function (raw, lineBuffering, buffering, charset, options) {
@@ -238,6 +239,7 @@ exports.TextOutputStream = function (raw, lineBuffering, buffering, charset, opt
         return self;
     };
 
+    return Object.create(self);
 };
 
 exports.TextIOWrapper = function (raw, mode, lineBuffering, buffering, charset, options) {
@@ -255,8 +257,10 @@ exports.TextIOWrapper = function (raw, mode, lineBuffering, buffering, charset, 
 var ByteIO = exports.ByteIO = function (initial) {
 };
 
-var StringIO = exports.StringIO = function (initial) {
+var StringIO = exports.StringIO = function (initial, delimiter) {
     var buffer = new java.lang.StringBuffer();
+    if (!delimiter)
+        delimiter = "\n";
     if (initial)
         buffer.append(initial);
 
@@ -292,7 +296,7 @@ var StringIO = exports.StringIO = function (initial) {
     function next() {
         if (buffer.length() == 0)
             throw StopIteration;
-        var pos = buffer.indexOf("\n");
+        var pos = buffer.indexOf(delimiter);
         if (pos == -1)
             pos = buffer.length();
         var result = read(pos);
@@ -328,14 +332,23 @@ var StringIO = exports.StringIO = function (initial) {
             }
         },
         readLine: function () {
-            var pos = buffer.indexOf("\n");
+            var pos = buffer.indexOf(delimiter);
             if (pos == -1)
                 pos = buffer.length();
             return read(pos + 1);
         },
+        readLines: function () {
+            var lines = [];
+            do {
+                var line = self.readLine();
+                if (line.length)
+                    lines.push(line);
+            } while (line.length);
+            return lines;
+        },
         next: next,
         print: function (line) {
-            return write(line + "\n").flush();
+            return write(line + delimiter).flush();
         },
         toString: function() {
             return String(buffer);
@@ -353,6 +366,6 @@ var StringIO = exports.StringIO = function (initial) {
             return string.substr.apply(string, arguments);
         }
     };
-    return self;
+    return Object.create(self);
 };
 
