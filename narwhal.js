@@ -34,14 +34,18 @@ var requireFake = function(id, path, modules) {
 };
 
 // bootstrap sandbox module
-var sandbox = requireFake("sandbox", system.prefix + "/lib/sandbox.js");
+var sandbox = requireFake(
+    "sandbox",
+    system.prefix + "/lib/sandbox.js",
+    {"system": system}
+);
 
 // bootstrap file module
 var fs = {};
 requireFake(
     "sandbox",
     system.prefix + "/lib/file-bootstrap.js",
-    {"file" : fs}
+    {"file" : fs, "system": system}
 );
 // override generic bootstrapping methods with those provided
 //  by the engine bootstrap system.fs object
@@ -118,7 +122,7 @@ global.require.debug = options.verbose;
 // already loaded
 if (!wasVerbose && system.verbose) {
     Object.keys(modules).forEach(function (name) {
-        print('@ ' + name);
+        print('| ' + name);
     });
 }
 
@@ -158,7 +162,7 @@ if (!options.noPackages) {
 } else {
     packages = {
         catalog: {},
-        packageOrder: []
+        order: []
     }
 }
 
@@ -168,9 +172,6 @@ if (!options.noPackages) {
 //  -e, -c , --command command
 //  -:, --path delimiter
 
-if (options.jsonOutput)
-    options.print = true;
-
 options.todo.forEach(function (item) {
     var action = item[0];
     var value = item[1];
@@ -179,28 +180,9 @@ options.todo.forEach(function (item) {
     } else if (action == "require") {
         require(value);
     } else if (action == "eval") {
-        var lines = [""];
-        if (options.input) {
-            lines = system.stdin;
-        }
-        if (options.inputAll) {
-            lines = [system.stdin.read()];
-        }
-        lines.forEach(function (line) {
-            if (options.input || options.inputAll) {
-                if (options.jsonInput)
-                    line = JSON.decode(line);
-                // XXX consider better ways of injecting _
-                global._ = line;
-            }
-            var result = system.evalGlobal(value);
-            if (options.jsonOutput)
-                result = JSON.encode(result);
-            if (options.print)
-                system.print(result);
-        });
+        system.evalGlobal(value);
     } else if (action == "path") {
-        var paths = packages.packageOrder.map(function (pkg) {
+        var paths = packages.order.map(function (pkg) {
             return pkg.directory.join('bin');
         }).filter(function (path) {
             return path.isDirectory();
