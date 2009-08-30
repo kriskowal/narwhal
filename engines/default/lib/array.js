@@ -6,15 +6,19 @@
 // ES5 15.4.3.2 
 if (!Array.isArray) {
     Array.isArray = function(obj) {
-        return obj && typeof obj === "object" && obj.constructor === Array;
+        return Object.prototype.toString.call(obj) == "[object Array]";
     };
 }
 
 // ES5 15.4.4.18
 if (!Array.prototype.forEach) {
-    Array.prototype.forEach =  function(block) {
-        for (var i = 0; i < this.length; i++)
-            block(this[i]);
+    Array.prototype.forEach =  function(block, thisObject) {
+        var len = this.length >>> 0;
+        for (var i = 0; i < len; i++) {
+            if (i in this) {
+                block.call(thisObject, this[i], i, this);
+            }
+        }
     };
 }
 
