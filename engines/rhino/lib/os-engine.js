@@ -1,6 +1,17 @@
 
 var io = require('io');
 
+var cLib;
+var getCLib = function () {
+    if (!cLib) {
+        var jna = Packages.com.sun.jna;
+        cLib = jna.NativeLibrary.getInstance(
+            jna.Platform.isWindows() ? "msvcrt" : "c"
+        );
+    }
+    return cLib;
+}
+
 exports.exit = function (status) {
     Packages.java.lang.System.exit(status << 0);
 };
@@ -13,6 +24,22 @@ exports.fork = function () {
 };
 
 exports.exec = function () {
+};
+
+var cSystem;
+var getCSystem = function () {
+    if (!cSystem)
+        cSystem = getCLib().getFunction("system");
+    return cSystem;
+};
+
+exports.system = function (command) {
+    if (Array.isArray(command)) {
+        command = command.map(function (arg) {
+            return require("os").enquote(arg);
+        }).join(" ");
+    }
+    return getCSystem().invokeInt([command]);
 };
 
 exports.dup = function () {
@@ -104,6 +131,9 @@ exports.popen = function (command, options) {
             errThread.join();
 
             var status = process.waitFor();
+            stdin.close();
+            stdout.close();
+            stderr.close();
 
             return {
                 status: status,
