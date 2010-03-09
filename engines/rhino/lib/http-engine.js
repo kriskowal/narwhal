@@ -1,4 +1,6 @@
 
+// -- kriskowal Kris Kowal Copyright (C) 2009-2010 MIT License
+
 var IO = require('./io').IO;
 
 exports.IO = function (url) {

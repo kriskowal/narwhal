@@ -132,6 +132,24 @@ exports.testWriteReadNewlineEnforced = function() {
     }
 };
 */
+
+exports.testOverwriteFile = function() {
+    var path = "testOverwriteFile.txt";
+    var a = "hello world";
+    var b = "hello";
+    try {
+        fs.write(path, a);
+        assert.is(a, fs.read(path));
+        assert.is(a.length, fs.size(path));
+        fs.write(path, b);
+        assert.is(b, fs.read(path));
+        assert.is(b.length, fs.size(path));
+    } finally {
+        if (fs.isFile(path))
+            fs.remove(path);
+    }
+}
+
 exports.testWriteReadBinaryWrongMode = function () {
     var path = "testWriteReadBinaryModeWrongMode.txt";
     var content = "\0\0\0".toByteString("ascii");
@@ -268,6 +286,19 @@ exports.testsMtime = function () {
     }
 };
 
+exports.testEmptyStringIsDirectory = function() {
+    assert.isTrue(fs.isDirectory(""), "'' should be a directory");
+}
+exports.testDotIsDirectory = function() {
+    assert.isTrue(fs.isDirectory("."), "'.' should be a directory");
+}
+exports.testCwdIsDirectory = function() {
+    assert.isTrue(fs.isDirectory(fs.cwd()), fs.cwd() + " should be a directory");
+}
+exports.testIsNotDirectory = function() {
+    assert.isFalse(fs.isDirectory("hopefully-not-a-directory"), "'hopefully-not-a-directory' shouldn't be a directory");
+}
+
 exports.testCwd = function() {
     assert.eq(system.env["PWD"], fs.cwd(), "Ensure the PWD environment variable is set!");
 }
@@ -279,6 +310,6 @@ exports.testNormal = require('./file/normal');
 exports.testDirname = require('./file/dirname');
 exports.testIsAbsolute = require('./file/is-absolute');
 
-if (require.main === module.id)
+if (require.main == module.id)
     require("os").exit(require("test/runner").run(exports));
 

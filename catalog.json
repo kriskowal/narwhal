@@ -26,9 +26,9 @@
                 "Mark Porter",
                 "Isaac Z. Schlueter (http://blog.izs.me/)",
                 "Kris Zyp (http://www.sitepen.com/blog/author/kzyp/)",
-                "Nathan Stott (http://nathan.whiteboard-it.com) <nathan.stott@whiteboard-it.com>"
+                "Nathan Stott (http://nathan.whiteboard-it.com) <nathan.stott@whiteboard-it.com>",
+                "Toby Ho (http://tobyho.com) <airportyh@gmail.com>"
             ],
-            "main": "examples/narwhal",
             "lib": [
                 "lib"
             ],
@@ -135,6 +135,13 @@
             "type": "zip",
             "location": "http://github.com/smith/narwhal-jaxer/zipball/master"
         },
+        "narwhal-moar-monkeys": {
+            "name": "narwhal-moar-monkeys",
+            "preload": "global-moar-monkeys",
+            "githubName": "narwhal-moar-monkeys",
+            "type": "zip",
+            "location": "http://github.com/kriskowal/narwhal-moar-monkeys/zipball/master"
+        },
         "jack": {
             "name": "jack",
             "dependencies": [
@@ -152,6 +159,7 @@
                 "rack",
                 "wsgi"
             ],
+            "version": "0.1.2",
             "githubName": "jack",
             "type": "zip",
             "location": "http://github.com/tlrobinson/jack/zipball/master"
@@ -210,7 +218,8 @@
                 "parser"
             ],
             "contributors": [
-                "Kris Kowal <kris@cixar.com>"
+                "Kris Kowal <kris@cixar.com>",
+                "Andy Chu <andy@chubot.org>"
             ],
             "license": "MPL 1.1/GPL 2.0/LGPL 2.1",
             "githubName": "narcissus",
@@ -239,6 +248,7 @@
         },
         "browserjs": {
             "name": "browserjs",
+            "version": "0.1",
             "dependencies": [
                 "narwhal"
             ],
@@ -252,7 +262,7 @@
             ],
             "githubName": "browserjs",
             "type": "zip",
-            "location": "http://github.com/tlrobinson/browserjs/zipball/master"
+            "location": "http://github.com/kriszyp/browserjs/zipball/master"
         },
         "inspec": {
             "name": "inspec",
@@ -560,33 +570,6 @@
             "type": "zip",
             "location": "http://github.com/past/speller/zipball/master"
         },
-        "objj": {
-            "name": "objj",
-            "dependencies": [
-                "narwhal",
-                "jack",
-                "browserjs"
-            ],
-            "lib": "lib-js",
-            "preload": [
-                "objj/loader"
-            ],
-            "description": "Objective-J and Cappuccino tools",
-            "keywords": [
-                "Objective-J",
-                "Cappuccino"
-            ],
-            "author": "280 North (http://280north.com/)",
-            "contributors": [
-                "Francisco Tolmasky (http://tolmasky.com/)",
-                "Ross Boucher (http://rossboucher.com/)",
-                "Tom Robinson (http://tlrobinson.net/)",
-                "Numerous others (http://contributors.cappuccino.org/)"
-            ],
-            "githubName": "cappuccino",
-            "type": "zip",
-            "location": "http://github.com/280north/cappuccino/zipball/package"
-        },
         "jake": {
             "name": "jake",
             "author": "Francisco Tolmasky (http://tolmasky.com/)",
@@ -597,6 +580,7 @@
                 "rake",
                 "make"
             ],
+            "version": "0.1.1",
             "githubName": "jake",
             "type": "zip",
             "location": "http://github.com/280north/jake/zipball/master"
@@ -702,7 +686,7 @@
                 "template",
                 "json"
             ],
-            "author": "andychup (http://code.google.com/u/andychup/)",
+            "author": "Andy Chu (andy@chubot.org)",
             "contributors": [
                 "Irakli Gozalishvili (http://rfobic.wordpress.com/)"
             ],
@@ -770,6 +754,360 @@
             "githubName": "narwhal-mongodb",
             "type": "zip",
             "location": "http://github.com/mrclash/narwhal-mongodb/zipball/master"
+        },
+        "underscore": {
+            "name": "underscore",
+            "description": "Functional programming aid for JavaScript. Works well with jQuery.",
+            "url": "http://documentcloud.github.com/underscore/",
+            "keywords": [
+                "util",
+                "functional",
+                "server",
+                "client",
+                "browser"
+            ],
+            "author": "Jeremy Ashkenas <jeremy@documentcloud.org>",
+            "maintainer": "Kris Kowal <kris.kowal@cixar.com>",
+            "contributors": [],
+            "dependencies": [],
+            "lib": ".",
+            "githubName": "underscore",
+            "type": "zip",
+            "location": "http://github.com/kriskowal/underscore/zipball/master"
+        },
+        "silk": {
+            "name": "silk",
+            "description": "A comprehensive set of 16x16px icons.",
+            "license": "CC-BY-2.5 (http://creativecommons.org/licenses/by/2.5/)",
+            "url": "http://www.famfamfam.com/lab/icons/silk/",
+            "keywords": [
+                "media",
+                "icons",
+                "silk",
+                "famfamfam"
+            ],
+            "author": "Mark James <mjames@gmail.com>",
+            "githubName": "silk",
+            "type": "zip",
+            "location": "http://github.com/kriskowal/silk/zipball/master"
+        },
+        "objective-j": {
+            "name": "objective-j",
+            "dependencies": [
+                "narwhal",
+                "browserjs",
+                "jake"
+            ],
+            "preload": [
+                "objective-j/loader"
+            ],
+            "description": "Objective-J and Cappuccino module",
+            "keywords": [
+                "objective-j",
+                "objj",
+                "objective j",
+                "cappuccino"
+            ],
+            "author": "280 North, Inc. (http://280north.com/)",
+            "version": "0.7.9",
+            "contributors": [
+                "Francisco Tolmasky (http://tolmasky.com/)",
+                "Ross Boucher (http://rossboucher.com/)",
+                "Tom Robinson (http://tlrobinson.net/)",
+                "Numerous others (http://contributors.cappuccino.org/)"
+            ],
+            "githubName": "objective-j-package",
+            "type": "zip",
+            "location": "http://github.com/280north/objective-j-package/zipball/master"
+        },
+        "cappuccino": {
+            "name": "cappuccino",
+            "dependencies": [
+                "narwhal",
+                "browserjs",
+                "jake",
+                "objective-j"
+            ],
+            "description": "Cappuccino module",
+            "keywords": [
+                "objective-j",
+                "objj",
+                "objective j",
+                "capp",
+                "cappuccino"
+            ],
+            "author": "280 North, Inc. (http://280north.com/)",
+            "version": "0.7.9",
+            "objj-frameworks": [
+                "Frameworks"
+            ],
+            "objj-debug-frameworks": [
+                "Frameworks/Debug"
+            ],
+            "contributors": [
+                "Francisco Tolmasky (http://tolmasky.com/)",
+                "Ross Boucher (http://rossboucher.com/)",
+                "Tom Robinson (http://tlrobinson.net/)",
+                "Numerous others (http://contributors.cappuccino.org/)"
+            ],
+            "githubName": "cappuccino-package",
+            "type": "zip",
+            "location": "http://github.com/280north/cappuccino-package/zipball/master"
+        },
+        "ojunit": {
+            "name": "ojunit",
+            "dependencies": [
+                "narwhal",
+                "objective-j",
+                "cappuccino"
+            ],
+            "author": "Tom Robinson (http://280north.com/)",
+            "contributors": [
+                "Ross Boucher",
+                "Martin Hacker"
+            ],
+            "description": "A simple Objective-J unit test framework.",
+            "keywords": [
+                "objective-j",
+                "unit test",
+                "testing",
+                "test"
+            ],
+            "objj-frameworks": [
+                "Framework"
+            ],
+            "githubName": "ojunit",
+            "type": "zip",
+            "location": "http://github.com/280north/ojunit/zipball/master"
+		},
+        "mongodb": {
+            "name": "mongodb",
+            "description": "API to access MongoDB, a schema-free database of JSON documents",
+            "keywords": [
+                "mongo",
+                "database",
+                "document",
+                "mongodb",
+                "db"
+            ],
+            "author": "Sergi Mansilla (http://www.sergimansilla.com) <sergi.mansilla@gmail.com>",
+            "jars": [
+                "jars/mongo-0.11.jar"
+            ],
+            "email": "sergi.mansilla@gmail.com",
+            "dependencies": [],
+            "lib": "lib",
+            "githubName": "narwhal-mongodb",
+            "type": "zip",
+            "location": "http://github.com/mrclash/narwhal-mongodb/zipball/master"
+        },
+        "underscore": {
+            "name": "underscore",
+            "description": "Underscore is a utility-belt library for Javascript that provides a lot of the functional programming support.",
+            "url": "http://documentcloud.github.com/underscore/",
+            "keywords": [
+                "util",
+                "functional",
+                "server",
+                "client",
+                "browser"
+            ],
+            "author": "Jeremy Ashkenas <jashkenas@gmail.com>",
+            "maintainer": "Kris Kowal (http://askawizard.blogspot.com/) <kris.kowal@cixar.com>",
+            "contributors": [],
+            "dependencies": [],
+            "githubName": "underscore",
+            "type": "zip",
+            "location": "http://github.com/kriskowal/underscore/zipball/master"
+        },
+        "qxoo": {
+            "name": "qxoo",
+            "author": "Fabian Jakobs",
+            "dependencies": [],
+            "contributors": [],
+            "githubName": "qxoo",
+            "type": "zip",
+            "location": "http://github.com/fjakobs/qxoo/zipball/master"
+        },
+        "barista": {
+            "name": "barista",
+            "dependencies": [
+                "narwhal",
+                "objective-j",
+                "cappuccino"
+            ],
+            "author": "Derek Hammer",
+            "description": "An automated user interface testing framework.",
+            "keywords": [
+                "objective-j",
+                "unit test",
+                "testing",
+                "test",
+                "user interface"
+            ],
+            "objj-frameworks": [
+                "Framework"
+            ],
+            "githubName": "barista",
+            "type": "zip",
+            "location": "http://github.com/hammerdr/barista/zipball/master"
+        },
+        "ojmoq": {
+            "name": "ojmoq",
+            "dependencies": [
+                "narwhal",
+                "objective-j"
+            ],
+            "author": "Derek Hammer",
+            "description": "A mocking library for Objective-J that is inspired by the Moq project.",
+            "keywords": [
+                "objective-j",
+                "unit test",
+                "testing",
+                "test",
+                "mocking"
+            ],
+            "objj-frameworks": [
+                "Framework"
+            ],
+            "githubName": "ojmoq",
+            "type": "zip",
+            "location": "http://github.com/hammerdr/ojmoq/zipball/master"
+        },
+        "sizzle": {
+            "name": "sizzle",
+            "description": "A sizzlin' hot selector engine",
+            "keywords": [
+                "sizzle",
+                "selector",
+                "dom"
+            ],
+            "author": "John Resig (http://ejohn.org)",
+            "maintainer": [
+                "George Moschovitis (http://gmosx.com)"
+            ],
+            "dependencies": [],
+            "lib": [
+                "lib"
+            ],
+            "lean": [
+                "lib"
+            ],
+            "githubName": "sizzle",
+            "type": "zip",
+            "location": "http://github.com/gmosx/sizzle/zipball/master"
+        },
+        "observable": {
+            "name": "observable",
+            "description": "JavaScript framework for Observable mixins with plugin support",
+            "keywords": [
+                "observable",
+                "mixin",
+                "event",
+                "plugin"
+            ],
+            "author": "Nathan Stott",
+            "email": "nathan.stott@whiteboard-it.com",
+            "dependencies": [],
+            "lib": "lib",
+            "githubName": "observable-js",
+            "type": "zip",
+            "location": "http://github.com/nrstott/observable-js/zipball/master"
+        },
+		"commonjs-utils": {
+            "name": "commonjs-utils",
+            "description": "CommonJS utility modules",
+            "keywords": [
+            ],
+            "author": "Kris Zyp",
+            "email": "kriszyp@gmail.com",
+            "dependencies": [],
+            "lib": "lib",
+            "githubName": "commonjs-utils",
+            "type": "zip",
+            "location": "http://github.com/kriszyp/commonjs-utils/zipball/master"
+		},
+		"pintura": {
+			"name": "pintura",
+			"author": "Kris Zyp",
+            "email": "kriszyp@gmail.com",
+			"dependencies": ["narwhal", "jack", "commonjs-utils", "narcissus", "wiky"],
+			"contributors": [],
+			"keywords": [
+				"rest",
+				"database",
+				"web",
+				"json",
+				"persevere"
+			],
+			"githubName": "pintura",
+            "lib": "lib",
+			"type": "zip",
+			"location": "http://github.com/kriszyp/pintura/zipball/master",
+			"license":"AFL/BSD"
+		},
+        "cappruby": {
+            "name": "cappruby",
+            "dependencies": [
+                "objective-j",
+                "cappuccino"
+            ],
+            "preload": [
+                "cappruby/loader"
+            ],
+            "objj-frameworks": [
+                "Frameworks"
+            ],
+            "description": "Experimental Ruby implementation on top of the Objective-J runtime / JavaScript",
+            "keywords": [
+                "cappruby",
+                "ruby",
+                "objective-j",
+                "objj",
+                "objective j",
+                "cappuccino"
+            ],
+            "author": "Tom Robinson (http://tlrobinson.net/)",
+            "version": "0.0.1",
+            "githubName": "cappruby",
+            "type": "zip",
+            "location": "http://github.com/tlrobinson/cappruby/zipball/master"
+        },
+        "coffee-script": {
+            "name": "coffee-script",
+            "lib": "lib-js",
+            "preload": [
+                "coffee-script/loader"
+            ],
+            "description": "Unfancy JavaScript",
+            "keywords": [
+                "javascript",
+                "language"
+            ],
+            "author": "Jeremy Ashkenas",
+            "version": "0.1.2",
+            "githubName": "coffee-script",
+            "type": "zip",
+            "location": "http://github.com/tlrobinson/coffee-script/zipball/master"
+        },
+        "parenscript": {
+            "name": "parenscript",
+            "preload": [
+                "parenscript/loader"
+            ],
+            "description": "Parenscript is a small Lispy language that compiles to JavaScript. This is the Narwhal module that integrates ParenScript with Narwhal.",
+            "keywords": [
+                "javascript",
+                "language",
+                "lisp",
+                "macros",
+                "macro"
+            ],
+            "author": "Nick Fitzgerald (http://fitzgeraldnick.com) <fitzgen@gmail.com>",
+            "license": "MIT",
+            "githubName": "parenscript-narwhal",
+            "type": "zip",
+            "location": "http://github.com/fitzgen/parenscript-narwhal/zipball/master"
         }
     }
 }

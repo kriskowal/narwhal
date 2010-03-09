@@ -1,3 +1,6 @@
+
+// -- kriszyp Kris Zyp
+
 var queue = require("event-queue");
 var workerEngine = require("worker-engine");
 
@@ -13,17 +16,19 @@ var Worker = exports.Worker = function(scriptName){
 
 function createPort(queue, target, port, global){
     target.onmessage = true; // give it something to feature detect off of
-    port = port || {
+    port = port || {};
             // allows for sending a message with a direct object reference.
             // this is not part of CommonJS, and must be used with great care.
-            __enqueue__: function(eventName, args){
-                queue.enqueue(function(){
-                    if(typeof target[eventName] == "function"){
-                        target[eventName].apply(target, args);
-                    }
-                });
+    port.__enqueue__= function(eventName, args){
+        queue.enqueue(function(){
+            if(typeof global[eventName] == "function"){
+                global[eventName].apply(target, args);
             }
-        };
+        });
+    };
+    port.hasPendingEvents = function(){
+        return queue.hasPendingEvents();
+    };
     port.postMessage = function(message){
         queue.enqueue(function(){
             var event = {
@@ -39,63 +44,52 @@ function createPort(queue, target, port, global){
             }
         });
     };
-    port.isIdle= function(){
-        return queue.isEmpty();
-    };
     return port;
 }
-function createWorker(scriptName, setup, workerName){
-    var workerQueue, 
-        workerGlobal = workerEngine.createEnvironment();
+var createEnvironment = exports.createEnvironment = function(){
+    var workerGlobal = workerEngine.createEnvironment();
     
     // add the module lookup paths from our environment
     var paths = workerGlobal.require.paths;
     paths.splice(0, paths.length);
     paths.push.apply(paths, require.paths);
     
+    // there must be one and only one shared worker map amongst all workers
+    workerGlobal.system.__sharedWorkers__ = system.__sharedWorkers__;
+
+	return workerGlobal;	
+};
+function createWorker(scriptName, setup, workerName){
+    var workerQueue, 
+        workerGlobal = createEnvironment();
+    
+    var sandbox = workerGlobal.require("sandbox").Sandbox({
+            system: workerGlobal.system,
+            loader: workerGlobal.require.loader,
+            modules: {
+                "event-queue": workerGlobal.require("event-queue"),
+                packages: workerGlobal.require("packages")
+            },
+            debug: workerGlobal.require.loader.debug
+        });
     // get the event queue
-    workerQueue = workerGlobal.require("event-queue");
+    workerQueue = sandbox("event-queue"); 
+    
+    sandbox("worker").name = workerName;
     
     // calback for dedicated and shared workers to do their thing
     var worker = setup(workerQueue, workerGlobal);
     
-    // there must be one and only one shared worker map amongst all workers
-    workerGlobal.require("system").__sharedWorkers__ = system.__sharedWorkers__;
-
     workerEngine.spawn(function(){
-        workerGlobal.require(scriptName);
+        sandbox.main(scriptName);
         // enter the event loop
-        while(true){
-            try{
-                workerQueue.nextEvent()();
-                if(workerQueue.isEmpty()){
-                    // fire onidle events when empty, this allows to do effective worker pooling
-                    queue.enqueue(function(){
-                       if(worker && worker.onidle){
-                           worker.onidle();
-                       }
-                    });
-                }
-            }catch(e){
-                workerQueue.enqueue(function(){
-                    if(typeof workerGlobal.onerror === "function"){
-                        // trigger the onerror event in the worker if an error occurs
-                        try{
-                            workerGlobal.onerror(e);
-                        }
-                        catch(e){
-                            // don't want an error here to go into an infinite loop!
-                            workerEngine.defaultErrorReporter(e);
-                        }
-                    }
-                    else{
-                        workerEngine.defaultErrorReporter(e);
-                    }
-                });
-            
-            
-            }
-        }
+        workerQueue.enterEventLoop(function(){
+	    queue.enqueue(function(){
+	       if(worker && worker.onidle){
+		       worker.onidle();
+	       }
+	    });
+	});
     }, workerName || scriptName);
 };
 

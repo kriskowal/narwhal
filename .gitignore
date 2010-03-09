@@ -5,3 +5,7 @@ narwhal.conf
 zips
 .DS_Store
 ._*
+/build
+/.tmp
+gh-pages
+Makefile

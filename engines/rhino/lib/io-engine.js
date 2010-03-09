@@ -1,3 +1,7 @@
+
+// -- tlrobinson Tom Robinson
+// -- kriskowal Kris Kowal Copyright (C) 2009-2010 MIT License
+
 // IO: Rhino
 
 var IO = exports.IO = function(inputStream, outputStream) {
