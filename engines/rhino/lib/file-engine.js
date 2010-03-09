@@ -1,4 +1,7 @@
 
+// -- tlrobinson Tom Robinson
+// -- kriskowal Kris Kowal Copyright (C) 2009-2010 MIT License
+
 // use the "file" module as the exports object.
 var exports = require('./file');
 
@@ -73,7 +76,8 @@ exports.stat = function (path) {
 };
 
 exports.exists = function (path) {
-    return JavaPath(path).exists();
+    try { return JavaPath(path).exists(); } catch(e) {}
+    return false;
 };
 
 exports.linkExists = function (path) {
@@ -97,6 +101,10 @@ exports.isAbsolute = function (path) {
 
 /* see: http://www.idiom.com/~zilla/Xfiles/javasymlinks.html */
 exports.isLink = function (path) {
+    if(java.io.File.separator == "\\"){
+        // these file separators result in different canonical vs absolute for non-links, and windows doesn't have symlinks anyway
+        return false;
+    }
     path = exports.path(path);
     var canonical = path.canonical().toString();
     var absolute = path.absolute().toString();
@@ -112,7 +120,9 @@ exports.isWritable = function (path) {
 };
 
 exports.chmod = function (path, mode) {
-    os.command(['chmod', mode.toString(8), path]);
+    if (!/\bwindows\b/i.test(system.os))
+        os.command(['chmod', mode.toString(8), path]);
+    // XXX Windows code-path
 };
 
 exports.chown = function (path, owner, group) {

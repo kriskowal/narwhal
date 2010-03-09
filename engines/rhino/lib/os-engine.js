@@ -1,5 +1,7 @@
 
-var io = require('io');
+// -- kriskowal Kris Kowal Copyright (C) 2009-2010 MIT License
+
+var IO = require('io');
 
 var cLib;
 var getCLib = function () {
@@ -14,6 +16,10 @@ var getCLib = function () {
 };
 
 exports.exit = function (status) {
+    // send an unload event if that module has been required
+    if (require.loader.isLoaded("unload")) {
+        require("unload").send();
+    }
     Packages.java.lang.System.exit(status << 0);
 };
 
@@ -42,7 +48,7 @@ exports.system = function (command) {
             return require("os").enquote(arg);
         }).join(" ");
     }
-    return getCSystem().invokeInt([command]);
+    return getCSystem().invokeInt([command]) >> 8;
 };
 
 exports.dup = function () {
@@ -67,16 +73,18 @@ var javaPopen = function (command) {
 
 exports.popen = function (command, options) {
     // todo options: "b", {charset, shell}
-    if (!options)
-        options = {};
+    options = options || {};
     if (typeof command == "string")
         command = ["sh", "-c", command];
 
     var process = javaPopen(command);
 
-    var stdin = new io.TextOutputStream(new io.IO(null, process.getOutputStream()));
-    var stdout = new io.TextInputStream(new io.IO(process.getInputStream()));
-    var stderr = new io.TextInputStream(new io.IO(process.getErrorStream()));
+    var stdin = new IO.TextOutputStream(new IO.IO(null, process.getOutputStream()),
+        options.buffering, options.lineBuffering, options.charset);
+    var stdout = new IO.TextInputStream(new IO.IO(process.getInputStream()), options.buffering,
+        options.lineBuffering, options.charset);
+    var stderr = new IO.TextInputStream(new IO.IO(process.getErrorStream()),
+        options.buffering, options.lineBuffering, options.charset);
 
     return {
         wait: function () {
@@ -88,18 +96,18 @@ exports.popen = function (command, options) {
         communicate: function (input, output, errput) {
 
             if (typeof stdin == "string")
-                stdin = new io.StringIO(input);
+                stdin = new IO.StringIO(input);
             else if (!stdin)
-                stdin = new io.StringIO();
+                stdin = new IO.StringIO();
 
             if (typeof input == "string")
-                input = new io.StringIO(input);
+                input = new IO.StringIO(input);
             else if (!input)
-                input = new io.StringIO();
+                input = new IO.StringIO();
             if (!output)
-                output = new io.StringIO();
+                output = new IO.StringIO();
             if (!errput)
-                errput = new io.StringIO();
+                errput = new IO.StringIO();
 
             var inThread = new JavaAdapter(Packages.java.lang.Thread, {
                 "run": function () {

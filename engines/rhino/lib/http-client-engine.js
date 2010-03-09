@@ -1,3 +1,6 @@
+
+// -- isaacs Isaac Schlueter
+
 var IO = require("io").IO,
     HashP = require("hashp").HashP;
 

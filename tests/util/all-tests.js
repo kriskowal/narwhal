@@ -7,6 +7,7 @@ exports.testObject = require("./object");
 exports.testArray = require("./array");
 exports.testCollection = require("./collection");
 exports.testString = require("./string");
+exports.testRange = require("./range");
 exports.testCase = require("./case");
 exports.testUnique = require("./unique");
 
@@ -73,6 +74,6 @@ exports.testCompare = function () {
 };
 */
 
-if (require.main === module.id)
+if (require.main == module.id)
     require("os").exit(require("test/runner").run(exports));
 
