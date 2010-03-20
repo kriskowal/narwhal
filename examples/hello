@@ -1,2 +1,3 @@
-#!/usr/bin/env narwhal
-print("Hello, World!");
+#!/usr/bin/env js
+var SYSTEM = require("system");
+SYSTEM.print("Hello, World!");

@@ -6,7 +6,7 @@ Narwhal is a standard library and tools for multiple JavaScript engines; each en
 
 * `rhino`: is the default and most complete engine, based on Mozilla Rhino for Java, used for out-of-the-box functionality.
 * `k7`: is a `v8` based engine, in development by Sébastien Pierre.
-* `helma`: is based on Rhino with extensions, being developed by Hannes Wallnöefer.
+* `ringojs`: is based on Rhino with extensions, being developed by Hannes Wallnöefer.
 * `xulrunner`: is in development for Firefox extensions and XULRunner applications on the Spidermonkey engine by Irakli Gozalishvili, Christoph Dorn, and Zach Carter.
 * `jaxer`: is an engine based on Mozilla SpiderMonkey, for deploying web pages with both server and client side scripts, being developed by Nathan L Smith.
 * `v8cgi`: is based on the work of Ondrej Zara, and has not been updated in a long while.
