@@ -282,6 +282,10 @@
             "user": "veged",
             "ref": "narwhal"
         },
+        "bem-tools" : {
+            "type": "github",
+            "user": "veged",
+        },
         "closure-compiler": {
             "type": "github",
             "user": "280north",
@@ -334,6 +338,10 @@
             "type": "github",
             "user": "tlrobinson",
             "name": "commonjs-sqlite-jdbc"
+        },
+        "zipjs": {
+            "type": "github",
+            "user": "tlrobinson"
         }
     }
 }
