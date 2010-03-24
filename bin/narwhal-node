@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# -- kriskowal Kris Kowal Copyright (C) 2009-2010 MIT License
+
+# get the absolute path of the executable
+SELF_PATH=$(cd -P -- "$(dirname -- "$0")" && pwd -P) && SELF_PATH=$SELF_PATH/$(basename -- "$0")
+
+# resolve symlinks
+while [ -h "$SELF_PATH" ]; do
+	DIR=$(dirname -- "$SELF_PATH")
+	SYM=$(readlink -- "$SELF_PATH")
+	SELF_PATH=$(cd -- "$DIR" && cd -- $(dirname -- "$SYM") && pwd)/$(basename -- "$SYM")
+done
+
+NODE_HOME=$(dirname -- $(dirname -- $SELF_PATH))
+export NARWHAL_ENGINE_HOME="$NODE_HOME/narwhal"
+
+if [ ! "$NARWHAL_HOME" ]; then
+	NARWHAL_HOME=$(dirname -- $(dirname -- $NODE_HOME))
+fi
+
+export NARWHAL_HOME
+
+NARWHAL_ENGINE_BIN="$NODE_HOME/build/default/node_narwhal"
+
+# uses rlwrap (readline wrapper) if present
+NARWHAL="$(which rlwrap) $NARWHAL_GDB $NARWHAL_ENGINE_BIN"
+
+$NARWHAL "$@"
+
