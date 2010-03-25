@@ -27,6 +27,7 @@
 #include <node_version.h>
 #include <node_iconv.h>
 #include <narwhal_buffer.h>
+#include <narwhal_os.h>
 #include <node_narwhal_bootstrap.h>
 
 #include <v8-debug.h>
@@ -1192,6 +1193,10 @@ static void Load(int argc, char *argv[]) {
   Handle<Object> module_node_encodings = Object::New();
   Transcoder::Initialize(module_node_encodings);
   modules->Set(String::NewSymbol("node/encodings"), module_node_encodings);
+
+  Handle<Object> module_os = Object::New();
+  Os::Initialize(module_os);
+  modules->Set(String::NewSymbol("os-engine"), module_os);
 
   modules->Set(String::NewSymbol("node/dns-embedding"), dns);
   modules->Set(String::NewSymbol("node/fs-embeddding"), fs);

@@ -449,6 +449,7 @@ def build(bld):
     src/node_timer.cc
     src/node_idle_watcher.cc
     src/narwhal_buffer.cc
+    src/narwhal_os.cc
     src/node_iconv.cc
   """
   node_narwhal.includes = """
