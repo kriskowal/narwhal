@@ -14,7 +14,7 @@ done
 NARWHAL_HOME=$(dirname -- "$(dirname -- "$SELF_PATH")")
 
 # use Rhino as the default if none is specified in narwhal.conf
-NARWHAL_DEFAULT_ENGINE="rhino"
+NARWHAL_DEFAULT_ENGINE="node"
 
 # load narwhal.conf if it exists
 if [ -f "$NARWHAL_HOME/narwhal.conf" ]; then
