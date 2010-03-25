@@ -39,6 +39,7 @@ assert.AssertionError = function (options) {
     // V8 specific
     if (Error.captureStackTrace) {
         Error.captureStackTrace(this, (this.fail || assert.fail));
+        /*
         // Node specific, removes the node machinery stack frames
         // XXX __filename will probably not always be the best way to detect Node
         if (typeof __filename !== undefined) {
@@ -50,6 +51,7 @@ assert.AssertionError = function (options) {
                 }
             }
         }
+        */
     }
 
 };

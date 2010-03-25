@@ -1,4 +1,23 @@
 
+Narwhal + Node
+==============
+
+To use Narwhal on Node, you'll need to build Node, but you won't have to
+download it separately; it's co-versioned with the `narwhal-node` branch.
+
+    $ git clone git://github.com/kriskowal/narwhal.git
+    $ cd narwhal
+    $ git checkout origin/node-master
+    $ cd packages/narwhal-node
+    $ ./configure
+    $ make
+    $ cd ../..
+    $ source bin/activate
+
+Installation is not necessary.  I am working toward getting an automated
+package for Ubuntu.
+
+
 Narwhal
 =======
 
@@ -11,13 +30,6 @@ This is what `examples/hello` looks like:
     #!/usr/bin/env js
     var SYSTEM = require("system");
     SYSTEM.print("Hello, World!");
-
-To get the `js` command, download Narwhal or clone it on Github.
-
-* download and extract the
-  [zip](http://github.com/280north/narwhal/zipball/0.2) or
-  [tar](http://github.com/280north/narwhal/tarball/0.2) archive, or
-* `git clone git://github.com/280north/narwhal.git`
 
 Make the `js` command available on your `PATH`
 
@@ -35,9 +47,6 @@ create, freeze, and reheat multiple seas with different versions of the same
 packages.
 
     $ narwhal/bin/sea
-
-There is no configure, build, or install step.  Use `js` now.
-
 
 <strong>Github:</strong> If you are viewing this from the project front-page,
 under the root directory listing, you will need to click through to the
