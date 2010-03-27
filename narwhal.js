@@ -1,49 +1,14 @@
 // Richard Penwell (penwellr) MIT Licence - March 1, 2010
 (function narwhal(modules) {
 
-var deprecated;
-if (modules.fs) {
-    // XXX: migration step for deprecated engines
-    // the old arguments[0] was the system module and
-    //  {fs: {}, ...} == system
-    // the new arguments[0] is the primed modules memo
-    //  {system: system, file: file}
-    var system = modules;
-    var file = system.fs;
-    var modules = {system: system, file: file};
-    deprecated = true;
-} else {
-    var system = modules.system;
-    var file = modules.file;
-}
-
-// XXX: migration step for deprecated engines
-// the old system.evaluate accepts a tuple and
-// the new system.evaluate accepts an object
-var canary = {};
-system.evaluate("exports.deprecated=true", "", 1)({exports:{}}, canary);
-if (canary.deprecated) {
-    var Factory = system.evaluate;
-    system.evaluate = function (text, name, lineNo) {
-        var factory = Factory(text, name, lineNo);
-        return function (inject) {
-            return factory(
-                inject.require,
-                inject.exports,
-                inject.module,
-                inject.system,
-                inject.print
-            );
-        }
-    };
-}
+var ENGINE = modules.engine;
+var SYSTEM = modules.system;
+var FILE = modules.file;
 
 // global reference
 // XXX: beyond-compliance with CommonJS
-global = system.global;
+global = ENGINE.global;
 global.global = global;
-global.system = system;
-global.print = system.print;
 
 // this only works for modules with no dependencies and a known absolute path
 var requireFake = function (id, path, force) {
@@ -59,13 +24,11 @@ var requireFake = function (id, path, force) {
     var exports = modules[id] = modules[id] || {};
     var module = {id: id, path: path};
 
-    var factory = system.evaluate(file.read(path), path, 1);
+    var factory = ENGINE.Module(FILE.read(path), path, 1);
     factory({
         require: requireFake,
         exports: exports,
-        module: module,
-        system: system,
-        print: system.print
+        module: module
     });
 
     return exports;
@@ -73,38 +36,31 @@ var requireFake = function (id, path, force) {
 
 var fakeJoin = function () {
 	var delim = "/";
-	if (/\bwin(dows|nt)\b/i.test(system.os))
+	if (/\bwin(dows|nt)\b/i.test(ENGINE.os))
 		delim = "\\";
 	return Array.prototype.join.call(arguments, delim);
 }
 
 // bootstrap sandbox and loader modules
-var loader = requireFake("loader", fakeJoin(
-    system.prefix, "packages", "narwhal-lib", "lib", "narwhal", "loader.js"
-));
-var multiLoader = requireFake("loader/multi", fakeJoin(
-    system.prefix, "packages", "narwhal-lib", "lib", "narwhal", "loader", "multi.js"
-));
-var sandbox = requireFake("sandbox", fakeJoin(
-    system.prefix, "packages", "narwhal-lib", "lib", "narwhal", "sandbox.js"
-));
+var lib = fakeJoin(ENGINE.prefix, "packages", "narwhal-lib", "lib", "narwhal");
+var loader = requireFake("loader", fakeJoin(lib, "loader.js"));
+var multiLoader = requireFake("loader/multi", fakeJoin(lib, "loader", "multi.js"));
+var sandbox = requireFake("sandbox", fakeJoin(lib, "sandbox.js"));
 // bootstrap file module
-requireFake("file", fakeJoin(
-    system.prefix, "lib", "file-bootstrap.js"
-), "force");
+var lib = fakeJoin(ENGINE.prefix, "lib");
+requireFake("file", fakeJoin(lib, "file-bootstrap.js"), "force");
 
 // construct the initial paths
 var paths = [];
-// XXX system.packagePrefixes deprecated in favor of system.prefixes
-system.prefixes = system.prefixes || system.packagePrefixes || [system.prefix];
-system.prefixes.push(fakeJoin(system.prefix, "packages", "narwhal-lib"));
-var prefixes = system.prefixes.slice();
-if (system.enginePrefix)
-    prefixes.unshift(system.enginePrefix);
+ENGINE.prefixes = ENGINE.prefixes || [ENGINE.prefix];
+ENGINE.prefixes.push(fakeJoin(ENGINE.prefix, "packages", "narwhal-lib"));
+var prefixes = ENGINE.prefixes.slice();
+if (ENGINE.enginePrefix)
+    prefixes.unshift(ENGINE.enginePrefix);
 for (var i = 0, ii = prefixes.length; i < ii; i++) {
     var prefix = prefixes[i];
-    for (var j = 0, jj = system.engines.length; j < jj; j++) {
-        var engine = system.engines[j];
+    for (var j = 0, jj = ENGINE.engines.length; j < jj; j++) {
+        var engine = ENGINE.engines[j];
         paths.push(fakeJoin(prefixes[i], "engines", engine, "lib"));
     }
     paths.push(fakeJoin(prefixes[i], "lib"));
@@ -113,16 +69,16 @@ for (var i = 0, ii = prefixes.length; i < ii; i++) {
 // create the primary Loader and Sandbox:
 var loader = multiLoader.MultiLoader({
     paths: paths,
-    debug: system.verbose
+    debug: ENGINE.verbose
 });
-if (system.loaders) {
-    loader.loaders.unshift.apply(loader.loaders, system.loaders);
-    delete system.loaders;
+if (ENGINE.loaders) {
+    loader.loaders.unshift.apply(loader.loaders, ENGINE.loaders);
+    delete ENGINE.loaders;
 }
 var require = global.require = sandbox.Sandbox({
     loader: loader,
     modules: modules,
-    debug: system.verbose
+    debug: ENGINE.verbose
 });
 
 // patch the primordials (or: save the whales)
@@ -130,7 +86,7 @@ var require = global.require = sandbox.Sandbox({
 try {
     require("global");
 } catch (e) {
-    system.print("Couldn't load global/primordial patches ("+e+")");
+    SYSTEM.print("Couldn't load global/primordial patches ("+e+")");
 }
 
 // load the complete system module
@@ -141,80 +97,70 @@ require.force("system");
 // augment the path search array with those provided in
 //  environment variables
 paths.push.apply(paths, [
-    system.env.JS_PATH || "",
-    system.env.NARWHAL_PATH || ""
+    SYSTEM.env.JS_PATH || "",
+    SYSTEM.env.NARWHAL_PATH || ""
 ].join(":").split(":").filter(function (path) {
     return !!path;
 }));
 
 var OS = require("os");
-if (system.env.NARWHALOPT)
-    system.args.splice.apply(
-        system.args,
-        [1,0].concat(OS.parse(system.env.NARWHALOPT))
+if (SYSTEM.env.NARWHALOPT)
+    SYSTEM.args.splice.apply(
+        SYSTEM.args,
+        [1,0].concat(OS.parse(SYSTEM.env.NARWHALOPT))
     );
 
 // parse command line options
 var parser = require("narwhal").parser;
-var options = parser.parse(system.args);
+var options = parser.parse(SYSTEM.args);
 if (options.debug !== undefined)
-    system.debug = options.debug;
-var wasVerbose = system.verbose;
+    ENGINE.debug = options.debug;
+var wasVerbose = ENGINE.verbose;
 if (options.verbose !== undefined) {
-    system.verbose = options.verbose;
-    require.verbose = system.verbose;
+    ENGINE.verbose = options.verbose;
+    require.verbose = ENGINE.verbose;
 }
 
 // if the engine provides an optimization level, like Rhino, call it through.
-if (system.setOptimizationLevel && !system.env.NARWHAL_DEBUGGER) {
-    if (system.env.NARWHAL_OPTIMIZATION !== undefined)
-        system.setOptimizationLevel(system.env.NARWHAL_OPTIMIZATION);
+if (ENGINE.setOptimizationLevel && !SYSTEM.env.NARWHAL_DEBUGGER) {
+    if (SYSTEM.env.NARWHAL_OPTIMIZATION !== undefined)
+        ENGINE.setOptimizationLevel(SYSTEM.env.NARWHAL_OPTIMIZATION);
     else
-        system.setOptimizationLevel(options.optimize);
-}
-
-if (deprecated) {
-    if (options.verbose) {
-        system.print(
-            "WARNING: this version of the " + system.engine + " engine \n" +
-            "         is deprecated because it injects the system module \n" +
-            "         instead of a modules memo in the narwhal bootstrap system."
-        );
-    }
+        ENGINE.setOptimizationLevel(options.optimize);
 }
 
 // enable loader tracing
 global.require.debug = options.verbose;
 // in verbose mode, list all the modules that are 
 // already loaded
-if (!wasVerbose && system.verbose) {
+if (!wasVerbose && ENGINE.verbose) {
     Object.keys(modules).forEach(function (name) {
-        system.print("| " + name);
+        SYSTEM.print("| " + name);
     });
 }
 
 // find the program module and its prefix
 var program;
-if (system.args.length && !options.interactive && !options.main) {
+if (SYSTEM.args.length && !options.interactive && !options.main) {
 	if (!program) {
-        program = file.path(system.args[0]).canonical();
+        program = FILE.path(SYSTEM.args[0]).canonical();
 	}
 	// add package prefixes for all of the packages
 	// containing the program, from specific to general
-	var parts = file.split(program || file.path("").canonical());
+	var parts = FILE.split(program || FILE.path("").canonical());
 	for (var i = 0; i < parts.length; i++) {
-	    var path = file.join.apply(null, parts.slice(0, i));
-	    var packageJson = file.join(path, "package.json");
-	    if (file.isFile(packageJson))
-	        system.prefixes.unshift(path);
+	    var path = FILE.join.apply(null, parts.slice(0, i));
+	    var packageJson = FILE.join(path, "package.json");
+	    if (FILE.isFile(packageJson))
+	        ENGINE.prefixes.unshift(path);
 	}
 }
 
 // user package prefix
-if (system.env.SEA)
-    system.prefixes.unshift(system.env.SEA);
+if (SYSTEM.env.SEA)
+    ENGINE.prefixes.unshift(SYSTEM.env.SEA);
 
-system.packages = options.packages;
+ENGINE.packages = options.packages;
 
 // load packages
 var packages;
@@ -242,20 +188,20 @@ options.todo.forEach(function (item) {
     } else if (action == "require") {
         require(value);
     } else if (action == "eval") {
-        system.evalGlobal(value);
+        ENGINE.compile(value, "<arg>");
     } else if (action == "path") {
         var paths = packages.order.map(function (pkg) {
             return pkg.directory.join("bin");
         }).filter(function (path) {
             return path.isDirectory();
         });
-        var oldPaths = system.env.PATH.split(value);
+        var oldPaths = SYSTEM.env.PATH.split(value);
         while (oldPaths.length) {
             var path = oldPaths.shift();
             if (paths.indexOf(path) < 0)
                 paths.push(path);
         }
-        system.print(paths.join(value));
+        SYSTEM.print(paths.join(value));
     }
 });
 
