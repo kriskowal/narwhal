@@ -4,12 +4,12 @@
 
 var SYSTEM = require('system');
 var FS = require('file');
-var UTIL = require('util');
 var ASSERT = require("assert");
-var TERM = require("term");
+var UTIL = require('narwhal/util');
+var TERM = require("narwhal/term");
+var ARGS = require('narwhal/args');
 var jsDump = require("test/jsdump").jsDump;
 
-var ARGS = require('args');
 var parser = exports.parser = new ARGS.Parser();
 parser.option('--no-color', 'color').def(true).set(false);
 parser.option('--loop', 'loop').def(false).set(true);
