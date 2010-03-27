@@ -139,6 +139,11 @@ if (!wasVerbose && ENGINE.verbose) {
     });
 }
 
+// strict mode causes deprecation errors (as registered with the
+// narwhal/deprecation module) to throw errors so they can be
+// traced.
+ENGINE.strict = options.strict;
+
 // find the program module and its prefix
 var program;
 if (SYSTEM.args.length && !options.interactive && !options.main) {
