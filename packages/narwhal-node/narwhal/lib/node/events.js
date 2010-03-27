@@ -87,25 +87,25 @@ function addTimerListener (callback) {
   }
 }
 
-global.setTimeout = function (callback, after) {
+exports.setTimeout = function (callback, after) {
   var timer = new process.Timer();
   addTimerListener.apply(timer, arguments);
   timer.start(after, 0);
   return timer;
 };
 
-global.setInterval = function (callback, repeat) {
+exports.setInterval = function (callback, repeat) {
   var timer = new process.Timer();
   addTimerListener.apply(timer, arguments);
   timer.start(repeat, repeat);
   return timer;
 };
 
-global.clearTimeout = function (timer) {
+exports.clearTimeout = function (timer) {
   if (timer instanceof process.Timer) {
     timer.stop();
   }
 };
 
-global.clearInterval = global.clearTimeout;
+exports.clearInterval = exports.clearTimeout;
 

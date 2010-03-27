@@ -1184,7 +1184,10 @@ static void Load(int argc, char *argv[]) {
   modules->Set(String::NewSymbol("system"), module_system);
   module_system->Set(String::NewSymbol("args"), arguments);
   module_system->Set(String::NewSymbol("env"), env);
-  NODE_SET_METHOD(module_system, "compile", Compile);
+
+  Handle<Object> module_engine = Object::New();
+  modules->Set(String::NewSymbol("engine"), module_engine);
+  NODE_SET_METHOD(module_engine, "compile", Compile);
 
   Handle<Object> module_node_buffer = Object::New();
   Buffer::Initialize(module_node_buffer);
@@ -1196,7 +1199,7 @@ static void Load(int argc, char *argv[]) {
 
   Handle<Object> module_os = Object::New();
   Os::Initialize(module_os);
-  modules->Set(String::NewSymbol("os-engine"), module_os);
+  modules->Set(String::NewSymbol("os-embedding"), module_os);
 
   modules->Set(String::NewSymbol("node/dns-embedding"), dns);
   modules->Set(String::NewSymbol("node/fs-embeddding"), fs);
@@ -1209,7 +1212,7 @@ static void Load(int argc, char *argv[]) {
 #endif
 
   Local<Value> f_value = ExecuteString(String::New(native_bootstrap),
-                                       String::New("narwhal/bootstrap.js"));
+                                       String::New("$NODE/narwhal/bootstrap.js"));
 #ifndef NDEBUG
   if (try_catch.HasCaught())  {
     ReportException(try_catch);

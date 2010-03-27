@@ -172,6 +172,42 @@ static Handle<Value> Pipe(const Arguments& args) {
   return scope.Close(descriptors);
 };
 
+static Handle<Value> Close(const Arguments& args) {
+  HandleScope scope;
+  if (!args[0]->IsInt32())
+      return ThrowException(String::New("close(0) must be a file descriptor number"));
+  close(args[0]->Int32Value());
+  return Undefined();
+}
+
+static Handle<Value> Getpid(const Arguments& args) {
+  HandleScope scope;
+  return Number::New(getpid());
+}
+
+static Handle<Value> Setsid(const Arguments& args) {
+  HandleScope scope;
+  return Number::New(setsid());
+}
+
+static Handle<Value> Sleep(const Arguments& args) {
+  HandleScope scope;
+  if (!args[0]->IsInt32())
+      return ThrowException(String::New("sleep(0) must be an integer"));
+  if (args[0]->Int32Value() < 0)
+      return ThrowException(String::New("sleep(0) must be positive"));
+  return Number::New(sleep(args[0]->Int32Value()));
+}
+
+static Handle<Value> Waitpid(const Arguments& args) {
+  HandleScope scope;
+  int status;
+  int result = waitpid(args[0]->Int32Value(), &status, args[1]->Int32Value());
+  if (result)
+    return ThrowException(String::New("waitpid() returned nonzero"));
+  return Number::New(status);
+}
+
 void Os::Initialize(Handle<Object> target) {
   NODE_SET_METHOD(target, "system", System);
   NODE_SET_METHOD(target, "exit", Exit);
@@ -180,5 +216,10 @@ void Os::Initialize(Handle<Object> target) {
   NODE_SET_METHOD(target, "dup", Dup);
   NODE_SET_METHOD(target, "dup2", Dup2);
   NODE_SET_METHOD(target, "pipe", Pipe);
+  NODE_SET_METHOD(target, "close", Close);
+  NODE_SET_METHOD(target, "getpid", Getpid);
+  NODE_SET_METHOD(target, "setsid", Setsid);
+  NODE_SET_METHOD(target, "sleep", Sleep);
+  NODE_SET_METHOD(target, "waitpid", Waitpid);
 }
 

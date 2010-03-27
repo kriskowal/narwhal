@@ -69,6 +69,7 @@ IO.prototype.isatty = function () {
 
 exports.ByteStream = function (fd) {
     return {
+        "fd": fd,
         "read": function (max) {
             if (arguments.length == 0) {
                 throw new Error("Read all not supported directly by ByteStream");
@@ -86,6 +87,8 @@ exports.ByteStream = function (fd) {
         },
         "write": function (binary, start, stop) {
             binary = binary._bytes || binary;
+            if (!(binary instanceof Buffer))
+                throw new Error("ByteStream::write(0) must be a Buffer");
             if (start === undefined)
                 start = 0;
             if (stop === undefined)

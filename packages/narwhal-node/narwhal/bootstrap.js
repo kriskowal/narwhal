@@ -10,7 +10,7 @@
 
     function main () {
         try {
-            var text = FS.read(SYSTEM.prefix + "/narwhal.js");
+            var text = FS.read(ENGINE.prefix + "/narwhal.js");
             var factory = PROCESS.compile(text, "narwhal.js", 1);
             factory(modules);
         } catch (exception) {
@@ -28,22 +28,34 @@
 
         // exports.env = // node_narwhal.cc
 
+        exports.print = function () {
+            if (exports.stdout) {
+                return exports.stdout.print.apply(exports.stdout, arguments);
+            } else {
+                modules['node/process'].write(
+                    Array.prototype.join.call(arguments, " ") + "\n"
+                );
+            }
+            return exports;
+        };
+
+    }).call(this, modules.system);
+
+    // module "engine"
+    (function (exports, SYSTEM) {
+
         exports.global = this;
         exports.engine = "node";
         exports.engines = ["node", "v8", "default"];
-        exports.debug = +exports.env["NARWHAL_DEBUG"];
-        exports.verbose = +exports.env["NARWHAL_VERBOSE"];
+        exports.debug = +SYSTEM.env["NARWHAL_DEBUG"];
+        exports.verbose = +SYSTEM.env["NARWHAL_VERBOSE"];
 
-        exports.os = "macosx"; // XXX TODO
-        exports.enginePrefix = exports.env["NARWHAL_ENGINE_HOME"];
-        exports.prefix = exports.env["NARWHAL_HOME"];
+        exports.os = undefined; // XXX TODO
+        exports.enginePrefix = SYSTEM.env["NARWHAL_ENGINE_HOME"];
+        exports.prefix = SYSTEM.env["NARWHAL_HOME"];
         exports.prefixes = [exports.prefix];
 
-        exports.evalGlobal = function (text) {
-            return exports.compile(text, '<string>', 1);
-        };
-
-        exports.evaluate = function (text, fileName, lineNo) {
+        exports.Module = function (text, fileName, lineNo) {
             var factory = function (inject) {
                 var names = [];
                 for (var name in inject)
@@ -58,7 +70,7 @@
                     );
                 } catch (exception) {
                     throw new Error(
-                        exception + " while compliling " +
+                        exception + " while compiling " +
                         fileName + ":" + lineNo
                     );
                 }
@@ -69,18 +81,7 @@
             return factory;
         };
 
-        exports.print = function () {
-            if (exports.stdout) {
-                return exports.stdout.print.apply(exports.stdout, arguments);
-            } else {
-                modules['node/process'].write(
-                    Array.prototype.join.call(arguments, " ") + "\n"
-                );
-            }
-            return exports;
-        };
-
-    }).call(this, modules.system);
+    })(modules.engine, modules.system);
 
     // module "file"
     (function (exports) {
@@ -123,6 +124,7 @@
     var PROCESS = modules['node/process'];
     var FS = modules['file'];
     var SYSTEM = modules['system'];
+    var ENGINE = modules['engine'];
 
     main();
 

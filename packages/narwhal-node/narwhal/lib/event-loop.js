@@ -1,12 +1,12 @@
 
-var nodeProcess = require("node/process");
+var EVENTS = require("node/events");
 
 exports.enqueue = function (task) {
-    nodeProcess.setTimeout(task, 0);
+    EVENTS.setTimeout(task, 0);
 };
 
-exports.setTimeout = nodeProcess.setTimeout;
-exports.clearTimeout = nodeProcess.clearTimeout;
-exports.setInterval = nodeProcess.setInterval;
-exports.clearInterval = nodeProcess.clearInterval;
+exports.setTimeout = EVENTS.setTimeout;
+exports.clearTimeout = EVENTS.clearTimeout;
+exports.setInterval = EVENTS.setInterval;
+exports.clearInterval = EVENTS.clearInterval;
 

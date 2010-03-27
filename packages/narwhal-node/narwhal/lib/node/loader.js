@@ -1,6 +1,6 @@
 
 var FS = require("file");
-var SYSTEM = require("system");
+var ENGINE = require("system");
 var PROCESS = require.force("node/process");
 var EVENTS = require("node/events");
 var PATH = require("node/path");
@@ -22,7 +22,7 @@ exports.require = function (baseId) {
         throw new Error("Node-loader failed to find '" + baseId + "' module.");
     var text = path.read({"charset": "UTF-8"});
     var _exports = {};
-    SYSTEM.evaluate(text, path, 1)({
+    ENGINE.Module(text, path, 1)({
         "process": PROCESS,
         "global": exports.global,
         "exports": _exports,

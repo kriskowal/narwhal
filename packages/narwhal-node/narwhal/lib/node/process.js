@@ -1,9 +1,9 @@
 
-var SYSTEM = require("system");
+var ENGINE = require("engine");
 
 var process = exports;
 
-var global = SYSTEM.global;
+var global = ENGINE.global;
 global.GLOBAL = global;
 
 process.createChildProcess = function (file, args, env) {
