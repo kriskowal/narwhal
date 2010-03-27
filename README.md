@@ -17,6 +17,12 @@ download it separately; it's co-versioned with the `narwhal-node` branch.
 Installation is not necessary.  I am working toward getting an automated
 package for Ubuntu.
 
+Differences from Node
+---------------------
+
+* There is no `process` global variable.  You can get the `process` object from
+  the `node/process` module.
+* Node modules are under the `node/` name space.
 
 Narwhal
 =======
