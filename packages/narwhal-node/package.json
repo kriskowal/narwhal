@@ -11,5 +11,9 @@
     "lib": "narwhal/lib",
     "directories": {
         "lib": "narwhal/lib"
-    }
+    },
+    "dependencies": [
+        "narwhal",
+        "narwhal-lib"
+    ]
 }
