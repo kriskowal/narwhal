@@ -68,7 +68,7 @@ IO.prototype.isatty = function () {
 };
 
 exports.ByteStream = function (fd) {
-    return {
+    var self = {
         "fd": fd,
         "read": function (max) {
             if (arguments.length == 0) {
@@ -96,14 +96,18 @@ exports.ByteStream = function (fd) {
             while (start < stop) {
                 start += NODE_FS.writeFrom(fd, binary, start, stop, 0);
             }
+            return self;
         },
         "flush": function () {
             //NODE_FS.flush(fd);
+            return self;
         },
         "close": function () {
             NODE_FS.close(fd);
+            return self;
         }
     };
+    return self;
 };
 
 exports.TextInputStream = function (raw, lineBuffering, buffering, charset, options) {
@@ -117,7 +121,8 @@ exports.TextOutputStream = function (raw, lineBuffering, buffering, charset, opt
     self.raw = raw;
 
     self.write = function (string) {
-        raw.write(string.toByteString(charset));
+        var bytes = string.toByteString(charset);
+        raw.write(bytes);
         return self;
     };
 

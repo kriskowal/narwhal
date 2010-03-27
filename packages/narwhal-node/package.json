@@ -13,7 +13,6 @@
         "lib": "narwhal/lib"
     },
     "dependencies": [
-        "narwhal",
-        "narwhal-lib"
+        "narwhal"
     ]
 }

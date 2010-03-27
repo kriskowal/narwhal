@@ -1,6 +1,6 @@
 
 var FS = require("file");
-var ENGINE = require("system");
+var ENGINE = require("engine");
 var PROCESS = require.force("node/process");
 var EVENTS = require("node/events");
 var PATH = require("node/path");

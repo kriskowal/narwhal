@@ -155,11 +155,6 @@ exports.read = function read(prefixes, catalog, usingCatalog, options) {
                 continue;
             visitedPackages[canonicalPackageDirectory] = true;
 
-            // check for duplicate package names
-            if (Object.prototype.hasOwnProperty.call(catalog, name)) {
-                continue;
-            }
-
             if (!packageDirectory.join('package.json').isFile()) {
                 //SYSTEM.log.warn('No package.json in ' + packageDirectory);
                 continue;
@@ -215,6 +210,12 @@ exports.read = function read(prefixes, catalog, usingCatalog, options) {
                     // set name based on package*.json "name" property
                     name = packageDatum.name || name;
                 }
+
+                // check for duplicate package names
+                if (Object.prototype.hasOwnProperty.call(catalog, name)) {
+                    continue;
+                }
+
                 catalog[name] = packageDatum;
                 packageDatum.directory = packageDirectory.join('');
 
@@ -316,7 +317,7 @@ var scan = function scan(catalog, name) {
             });
         }
     } catch (exception) {
-        if (require.debug) {
+        if (require.debug || true) {
             if (typeof exception == "string")
                 SYSTEM.log.error(
                     "Threw away package " + name +
@@ -379,7 +380,7 @@ exports.sortedPackages = function (graph) {
                         continue;
                     }
                     if (!Object.prototype.hasOwnProperty.call(graph, dependency)) {
-                        if (require.debug) {
+                        if (require.debug || ENGINE.verbose) {
                             print(
                                 "Throwing away package '" + name +
                                 "' because it depends on the package '" + dependency +
