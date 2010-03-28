@@ -34,7 +34,7 @@ JavaScript based on the methods specified here.''
 var IO = require("io").IO;
 var OS = require('os');
 var SYSTEM = require("system");
-var UTIL = require("util");
+var UTIL = require("narwhal/util");
 
 var javaPath = function (path) { // XXX was JavaPath in file-engine
     return new java.io.File(String(path) || ".");

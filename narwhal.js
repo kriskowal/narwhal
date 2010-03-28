@@ -1,4 +1,6 @@
-// Richard Penwell (penwellr) MIT Licence - March 1, 2010
+// -- tlrobinson Tom Robinson Copyright TODO
+// -- kriskowal Kris Kowal Copyright (c) 2010 MIT License
+// -- penwellr Richard Penwell, MIT Licence - March 1, 2010
 (function narwhal(modules) {
 
 var deprecated;
@@ -10,11 +12,20 @@ if (modules.fs) {
     //  {system: system, file: file}
     var system = modules;
     var file = system.fs;
-    var modules = {system: system, file: file};
+    var modules = {"system": system, "file": file};
     deprecated = true;
-} else {
+} else if (modules.file) {
     var system = modules.system;
     var file = modules.file;
+} else if (modules['narwhal/fs']) {
+    var system = modules.system;
+    var file = modules['narwhal/fs'];
+}
+
+// XXX migration from file to narwhal/fs
+if (modules.file) {
+    modules["narwhal/fs"] = modules["file"];
+    delete modules.file;
 }
 
 // XXX: migration for the split between engine and system
@@ -103,8 +114,8 @@ var sandbox = requireFake("sandbox", fakeJoin(
     system.prefix, "packages", "narwhal-lib", "lib", "narwhal", "sandbox.js"
 ));
 // bootstrap file module
-requireFake("file", fakeJoin(
-    system.prefix, "lib", "file-bootstrap.js"
+requireFake("narwhal/fs", fakeJoin(
+    system.prefix, "packages", "narwhal-lib", "lib", "narwhal", "fs-boot.js"
 ), "force");
 
 // construct the initial paths
@@ -148,8 +159,8 @@ try {
 }
 
 // load the complete system module
-require.force("file");
-require.force("file-engine");
+require.force("narwhal/fs");
+require.force("fs-base");
 require.force("system");
 
 // augment the path search array with those provided in
