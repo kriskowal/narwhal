@@ -31,7 +31,6 @@ JavaScript based on the methods specified here.''
 
 */
 
-var BOOTSTRAP = require("fs-bootstrap");
 var IO = require("io").IO;
 var OS = require('os');
 var SYSTEM = require("system");
@@ -238,7 +237,7 @@ exports.openRaw = function (path, mode, permissions) {
         create: create, // TODO
         exclusive: exclusive, // TODO
         truncate: truncate // TODO
-    } = BOOTSTRAP.mode(mode);
+    } = exports.options(mode);
 
     if (update) {
         throw new Error("Updating IO not yet implemented.");
@@ -1103,4 +1102,76 @@ succeed.
 
 */
 
+// TODO replace with fs-boot options scanner, when available
+exports.options = function (mode, result) {
+    if (!result)
+        result = {
+            read: false,
+            write: false,
+            append: false,
+            update: false,
+            create: true,
+            exclusive: false,
+            truncate: true,
+            binary: false,
+            noctty: false,
+            nofollow: false,
+            buffering: false,
+            lineBuffering: false,
+            permissions: exports.Permissions['default'],
+            binary: true,
+            charset: undefined
+        };
+    else if (typeof result != "object")
+        throw new Error(
+            "Mode to update is not a proper mode object: " + result
+        );
+
+    if (mode === undefined || mode === null) {
+    } else if (mode instanceof String || typeof mode == "string") {
+        mode.split("").forEach(function (option) {
+            if (option == 'r') {
+                result.read = true;
+            } else if (option == 'w') {
+                result.write = true;
+            } else if (option == 'a') {
+                result.append = true;
+            } else if (option == '+') {
+                result.update = false;
+            } else if (option == 'b') {
+                result.binary = true;
+            } else if (option == 't') {
+                result.binary = false;
+            } else if (option == 'c') {
+                result.create = true;
+            } else if (option == 'x') {
+                result.exclusive = true;
+            } else {
+                throw new Error("unrecognized mode option in mode: " + option);
+            }
+        });
+    } else if (mode instanceof Array) {
+        mode.forEach(function (option) {
+            if (Object.prototype.hasOwnProperty.call(result, option)) {
+                result[option] = true;
+            } else {
+                throw new Error("unrecognized mode option in mode: " + option);
+            }
+        });
+    } else if (mode instanceof Object) {
+        for (var option in mode) {
+            if (Object.prototype.hasOwnProperty.call(mode, option)) {
+                if (Object.prototype.hasOwnProperty.call(result, option)) {
+                    result[option] = !!mode[option];
+                } else {
+                    throw new Error("unrecognized mode option in mode: " + option);
+                }
+            }
+        }
+    } else {
+        throw new Error("unrecognized mode: " + mode);
+    }
+
+    return result;
+};
 
