@@ -3,7 +3,8 @@
 // -- tlrobinson Tom Robinson
 
 exports.randomUUID = function(){
-    require("narwhal").deprecated("randomUUID is deprecated in favor of uuid");
+    require("narwhal/deprecated").deprecated(
+    "randomUUID is deprecated in favor of uuid");
     return String(java.util.UUID.randomUUID());
 };
 

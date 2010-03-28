@@ -1,88 +1,49 @@
 
 // -- kriskowal Kris Kowal Copyright (C) 2009-2010 MIT License
 // -- tlrobinson Tom Robinson
-// -- tolmasky Francisco Tolmasky
-// -- dangoor Kevin Dangoor
 
-// NOTE: portions of the "file" module are implemented in "file-bootstrap" and "file-engine",
-// which are loaded at the bottom of this file to allow for overriding default implementations
+/**
+ * @module
+ * @extends ./fs-boot
+ * @extends fs-base
+ */
 
-var io = require('io');
+/*whatsupdoc*/
+/*markup markdown*/
 
-require("file-bootstrap");
+var BOOT = require("./fs-boot");
+var BASE = require("fs-base");
+var IO = require("./io-boot");
 
-/* streams */
+for (var name in BOOT) {
+    exports[name] = BOOT[name];
+}
 
-exports.open = function (path, mode, options) {
+for (var name in BASE) {
+    exports[name] = BASE[name];
+}
 
-    // it's possible to confuse options and mode,
-    // particularly with exports.read(path, options).
-    // if a mode string is passed into options, 
-    // tollerate it.
-    if (typeof options == 'string') {
-        options = {
-            mode: exports.mode(options)
-        }
-    }
+/** */
+exports.symbolicLink = function (source, target) {
+    if (bootstrap.isRelative(source))
+        source = exports.relative(target, source);
+    base.symbolicLink(source, target);
+};
 
-    // we'll channel all of the arguments through
-    // the options object, so create an empty one if none
-    // was given.
-    if (!options) 
-        options = {};
-
-    // if options were specified as the first (and
-    // presumably only) argument, use those options,
-    // overriding any in the options object if both
-    // were provided.
-    if (typeof path == 'object') {
-        for (var key in path) {
-            if (Object.prototype.hasOwnProperty.call(path, key)) {
-                options[key] = path[key];
-            }
-        }
-    }
-    // if the path is a string, however, write it
-    // onto the options object alone.
-    if (typeof path == 'string')
-        options.path = path;
-
-    // accumulate the mode from options.mode and 
-    // the mode arg through successive generations;
-    // coerce the options.mode to an object, suitable
-    // for updates
-    options.mode = exports.mode(options.mode);
-    // update options.mode with the mode argument
-    if (mode)
-        options.mode = exports.mode(mode, options.mode);
-
-
-    // channel all the options back into local variables
-    path = options.path;
-    mode = options.mode;
-    var permissions = options.permissions,
-        charset = options.charset,
-        buffering = options.buffering,
-        recordSeparator = options.recordSeparator,
-        fieldSeparator = options.fieldSeparator;
-
-    // and decompose the mode object
-    var read = mode.read,
-        write = mode.write,
-        append = mode.append,
-        update = mode.update,
-        binary = mode.binary;
-
-    // read by default
-    if (!(read || write || append))
-        read = mode.read = true;
-
-    // create a byte stream
-    var raw = exports.FileIO(path, mode, permissions);
+/** */
+exports.open = function (path /*...modes, permissions, and options */) {
+    var options = Array.prototype.slice.call(arguments, 1)
+    .reduce(function (options, overlay) {
+        return exports.openOptions(overlay, options);
+    }, exports.defaultOpenOptions());
+    // path read write append update binary or text
+    // create truncate exclusive noctty directory nofollow
+    // sync buffering line- buffering permissions charset
+    var raw = BASE.openRaw(path, options, options.permissions);
 
     // if we're in binary mode, just return the raw
     // stream
-    if (binary)
+    if (options.binary)
         return raw;
 
     // otherwise, go through the courses to return the
@@ -90,7 +51,15 @@ exports.open = function (path, mode, options) {
     // line buffered, and charset decoded/encoded
     // abstraction
 
-    var lineBuffering = buffering == 1 || buffering === undefined && raw.isatty && raw.isatty();
+    var buffering = options.buffering,
+        lineBuffering = options.lineBuffering;
+
+    // TODO
+    var lineBuffering = (
+        buffering == 1 ||
+        buffering === undefined &&
+        raw.isatty && raw.isatty()
+    );
     // leaving buffering undefined is a signal to the engine implementation
     //  that it ought to pick a good size on its own.
     if (buffering < 0) {
@@ -100,31 +69,34 @@ exports.open = function (path, mode, options) {
         throw new Error("can't have unbuffered text IO");
     }
 
-    return new io.TextIOWrapper(raw, mode, lineBuffering, buffering, charset, options);
-
+    return IO.TextIOForMode(raw, options, options.charset);
 };
 
-/*
-    idempotent normalization of acceptable formats for
-    file modes.
-*/
-exports.mode = function (mode, result) {
-    if (!result)
-        result = {
-            read: false,
-            write: false,
-            append: false,
-            update: false,
-            binary: false,
-            canonical: false,
-            exclusive: false
-        };
-    else if (typeof result != 'object')
-        throw new Error("Mode to update is not a proper mode object: " + result);
+exports.defaultOpenOptions = function () {
+    return {
+        read: false,
+        write: false,
+        append: false,
+        update: false,
+        create: true,
+        exclusive: false,
+        truncate: true,
+        xNarwhalSync: false,
+        xNarwhalDirectory: false,
+        xNarwhalNoControlTty: false,
+        xNarwhalNoFollow: false,
+        binary: false,
+        buffering: false,
+        lineBuffering: false,
+        permissions: exports.Permissions['default'],
+        charset: undefined
+    };
+};
 
-    if (mode === undefined || mode === null) {
-    } else if (mode instanceof String || typeof mode == "string") {
-        mode.split("").forEach(function (option) {
+exports.openOptions = function (options, result) {
+    if (options === undefined || options === null) {
+    } else if (typeof options === "string") {
+        options.split("").forEach(function (option) {
             if (option == 'r') {
                 result.read = true;
             } else if (option == 'w') {
@@ -138,72 +110,77 @@ exports.mode = function (mode, result) {
             } else if (option == 't') {
                 result.binary = false;
             } else if (option == 'c') {
-                result.canonical = true;
+                result.create = true;
             } else if (option == 'x') {
                 result.exclusive = true;
             } else {
-                throw new Error("unrecognized mode option in mode: " + option);
+                throw new Error("unrecognized open option: " + option);
             }
         });
-    } else if (mode instanceof Array) {
-        mode.forEach(function (option) {
+    } else if (Array.isArray(options)) {
+        options.forEach(function (option) {
             if (Object.prototype.hasOwnProperty.call(result, option)) {
                 result[option] = true;
             } else {
-                throw new Error("unrecognized mode option in mode: " + option);
+                throw new Error("unrecognized open option: " + option);
             }
         });
-    } else if (mode instanceof Object) {
-        for (var option in mode) {
-            if (Object.prototype.hasOwnProperty.call(mode, option)) {
+    } else if (options instanceof Object) {
+        for (var option in options) {
+            if (Object.prototype.hasOwnProperty.call(options, option)) {
                 if (Object.prototype.hasOwnProperty.call(result, option)) {
-                    result[option] = !!mode[option];
+                    result[option] = options[option];
                 } else {
-                    throw new Error("unrecognized mode option in mode: " + option);
+                    throw new Error("unrecognized open option: " + option);
                 }
             }
         }
     } else {
-        throw new Error("unrecognized mode: " + mode);
+        throw new Error("unrecognized open options: " + options);
     }
-
     return result;
 };
 
-/* read, write, &c */
-
-exports.read = function (path, options) {
+/**
+ */
+exports.read = function (path /*...*/) {
     path = String(path);
-    var file = exports.open(path, 'r', options);
+    var args = Array.prototype.slice.call(arguments, 1);
+    var stream = exports.open.apply(exports, [path, "r"].concat(args));
     try {
-        return file.read();
+        return stream.read();
     } finally {
-        file.close();
+        stream.close();
     }
 };
 
-exports.write = function (path, data, options) {
+/**
+ */
+exports.write = function (path, data /*...*/) {
     path = String(path);
-    var file = exports.open(path, 'w', options);
+    var args = Array.prototype.slice.call(arguments, 2);
+    var stream = exports.open.apply(exports, [path, "w"].concat(args));
     try {
-        file.write(data);
-        file.flush();
+        stream.write(data);
+        stream.flush();
     } finally {
-        file.close();
+        stream.close();
     }
 };
 
+/**
+ * @param source path
+ * @param target path
+ */
 exports.copy = function (source, target) {
     source = exports.path(source);
     target = exports.path(target);
     source.open("rb").copy(target.open("wb")).close();
 };
 
-var list = exports.list;
-exports.list = function (path) {
-    return list(String(path || '') || ".");
-};
-
+/**
+ * @param path
+ */
 exports.listTree = function (path) {
     path = String(path || '');
     if (!path)
@@ -222,6 +199,8 @@ exports.listTree = function (path) {
     return paths;
 };
 
+/**
+ */
 exports.listDirectoryTree = function (path) {
     path = String(path || '');
     if (!path)
@@ -238,20 +217,15 @@ exports.listDirectoryTree = function (path) {
     return paths;
 };
 
-exports.FNM_LEADING_DIR = 1 << 1;
-exports.FNM_PATHNAME    = 1 << 2;
-exports.FNM_PERIOD      = 1 << 3;
-exports.FNM_NOESCAPE    = 1 << 4;
-exports.FNM_CASEFOLD    = 1 << 5;
-exports.FNM_DOTMATCH    = 1 << 6;
-
-var fnmatchFlags = ["FNM_LEADING_DIR","FNM_PATHNAME","FNM_PERIOD","FNM_NOESCAPE","FNM_CASEFOLD","FNM_DOTMATCH"];
-
-exports.fnmatch = function (pattern, string, flags) {
-    var re = exports.patternToRegExp(pattern, flags);
-    //print("PATTERN={"+pattern+"} REGEXP={"+re+"}");
-    return re.test(string);
-}
+// XXX TODO document these options
+var fnmatchFlags = [
+    "FNM_LEADING_DIR",
+    "FNM_PATHNAME",
+    "FNM_PERIOD",
+    "FNM_NOESCAPE",
+    "FNM_CASEFOLD",
+    "FNM_DOTMATCH"
+];
 
 exports.patternToRegExp = function (pattern, flags) {
     var options = {};
@@ -264,7 +238,8 @@ exports.patternToRegExp = function (pattern, flags) {
     }
     
     // FNM_PATHNAME: don't match separators
-    var matchAny = options.FNM_PATHNAME ? "[^"+RegExp.escape(exports.SEPARATOR)+"]" : ".";
+    var matchAny = options.FNM_PATHNAME ?
+        "[^"+RegExp.escape(exports.SEPARATOR)+"]" : ".";
     
     // FNM_NOESCAPE match "\" separately
     var tokenizeRegex = options.FNM_NOESCAPE ?
@@ -334,7 +309,7 @@ exports.copyTree = function(source, target, path) {
     if (exports.exists(targetPath))
         throw new Error("file exists: " + targetPath);
     if (exports.isDirectory(sourcePath)) {
-        exports.mkdir(targetPath);
+        exports.makeDirectory(targetPath);
         exports.list(sourcePath).forEach(function (name) {
             exports.copyTree(source, target, exports.join(path, name));
         });
@@ -389,7 +364,10 @@ exports.glob = function (pattern, flags) {
 
     });
     
-    if (paths[0] === "") paths.shift();
+    // XXX contentious
+    // I want the "" to appear because it is the recursive basis - kriskowal
+    if (paths[0] === "")
+        paths.shift();
     
     return paths;
 };
@@ -437,7 +415,8 @@ var globPattern = function (paths, pattern, flags) {
     return Array.prototype.concat.apply([], paths.map(function (path) {
         if (!exports.isDirectory(path))
             return [];
-        return [/*".", ".."*/].concat(exports.list(path)).filter(function (name) {
+        return [/*".", ".."*/].concat(exports.list(path))
+        .filter(function (name) {
             return re.test(name);
         }).map(function (name) {
             if (path)
@@ -455,29 +434,29 @@ exports.globPaths = function (pattern, flags) {
     });
 };
 
-exports.rmtree = function(path) {
+exports.removeTree = function(path) {
     if (exports.isLink(path)) {
         exports.remove(path);
     } else
     if (exports.isDirectory(path)) {
         exports.list(path).forEach(function (name) {
-            exports.rmtree(exports.join(path, name));
+            exports.removeTree(exports.join(path, name));
         });
-        exports.rmdir(path);
+        exports.removeDirectory(path);
     } else {
         exports.remove(path);
     }
 };
 
-if (!exports.mkdirs) {
-    exports.mkdirs = function (path) {
+if (!exports.makeTree) {
+    exports.makeTree = function (path) {
         var parts = exports.split(path);
         var at = [];
         parts.forEach(function (part) {
             at.push(part);
             var path = exports.join.apply(null, at);
             try {
-                exports.mkdir(path);
+                exports.makeDirectory(path);
             } catch (exception) {
             }
         });
@@ -489,7 +468,7 @@ if (!exports.mkdirs) {
 exports.relative = function (source, target) {
     if (!target) {
         target = source;
-        source = exports.cwd() + '/';
+        source = exports.workingDirectory() + '/';
     }
     source = exports.absolute(source);
     target = exports.absolute(target);
@@ -511,11 +490,11 @@ exports.relative = function (source, target) {
 };
 
 exports.absolute = function (path) {
-    return exports.resolve(exports.join(exports.cwd(), ''), path);
+    return exports.normal(exports.join(exports.workingDirectory(), ''), path);
 };
 
-exports.cwdPath = function () {
-    return new exports.Path(exports.cwd());
+exports.workingDirectoryPath = function () {
+    return new exports.Path(exports.workingDirectory());
 };
 
 /* path wrapper, for chaining */
@@ -586,9 +565,9 @@ Path.prototype.globPaths = function (pattern, flags) {
 
 var pathed = [
     'absolute',
-    'basename',
+    'base',
     'canonical',
-    'dirname',
+    'directory',
     'normal',
     'relative'
 ];
@@ -634,34 +613,34 @@ for (var i = 0; i < pathIterated.length; i++) {
 }
 
 var nonPathed = [
-    'chmod',
-    'chown',
+    'changeGroup',
+    'changeOwner',
     'copy',
+    'copyTree',
     'exists',
     'extension',
+    'hardLink',
     'isDirectory',
     'isFile',
     'isLink',
     'isReadable',
     'isWritable',
-    'link',
-    'linkExists',
     'list',
     'listTree',
-    'mkdir', 
-    'mkdirs',
+    'makeDirectory', 
+    'makeTree',
     'move',
     'mtime',
     'open',
     'read',
     'remove',
+    'removeDirectory',
+    'removeTree',
     'rename',
-    'rmdir',
-    'rmtree',
     'size',
     'split',
     'stat',
-    'symlink',
+    'symbolicLink',
     'touch',
     'write'
 ];
@@ -681,10 +660,5 @@ for (var i = 0; i < nonPathed.length; i++) {
             return result;
         };
     })(name);
-}
-
-var ENGINE = require("file-engine");
-for (var name in ENGINE) {
-    exports[name] = ENGINE[name];
 }
 

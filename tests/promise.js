@@ -1,6 +1,6 @@
 
 var assert = require("assert");
-var UTIL = require("util");
+var UTIL = require("narwhal/util");
 var queue = require("event-loop-engine");
 var promiseModule = require("promise");
 

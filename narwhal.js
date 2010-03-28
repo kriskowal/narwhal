@@ -1,9 +1,11 @@
-// Richard Penwell (penwellr) MIT Licence - March 1, 2010
+// -- tlrobinson Tom Robinson Copyright TODO
+// -- kriskowal Kris Kowal Copyright (c) 2010 MIT License
+// -- penwellr Richard Penwell, MIT Licence - March 1, 2010
 (function narwhal(modules) {
 
-var ENGINE = modules.engine;
-var SYSTEM = modules.system;
-var FILE = modules.file;
+var ENGINE = modules['engine'];
+var SYSTEM = modules['system'];
+var FS = modules['narwhal/fs'];
 
 // global reference
 // XXX: beyond-compliance with CommonJS
@@ -24,7 +26,7 @@ var requireFake = function (id, path, force) {
     var exports = modules[id] = modules[id] || {};
     var module = {id: id, path: path};
 
-    var factory = ENGINE.Module(FILE.read(path), path, 1);
+    var factory = ENGINE.Module(FS.read(path), path, 1);
     factory({
         require: requireFake,
         exports: exports,
@@ -46,9 +48,7 @@ var lib = fakeJoin(ENGINE.prefix, "packages", "narwhal-lib", "lib", "narwhal");
 var loader = requireFake("loader", fakeJoin(lib, "loader.js"));
 var multiLoader = requireFake("loader/multi", fakeJoin(lib, "loader", "multi.js"));
 var sandbox = requireFake("sandbox", fakeJoin(lib, "sandbox.js"));
-// bootstrap file module
-var lib = fakeJoin(ENGINE.prefix, "lib");
-requireFake("file", fakeJoin(lib, "file-bootstrap.js"), "force");
+requireFake("narwhal/fs", fakeJoin(lib, "fs-boot.js"), "force");
 
 // construct the initial paths
 var paths = [];
@@ -90,8 +90,8 @@ try {
 }
 
 // load the complete system module
-require.force("file");
-require.force("file-engine");
+require.force("narwhal/fs");
+require.force("fs-base");
 require.force("system");
 
 // augment the path search array with those provided in
@@ -148,15 +148,15 @@ ENGINE.strict = options.strict;
 var program;
 if (SYSTEM.args.length && !options.interactive && !options.main) {
 	if (!program) {
-        program = FILE.path(SYSTEM.args[0]).canonical();
+        program = FS.path(SYSTEM.args[0]).canonical();
 	}
 	// add package prefixes for all of the packages
 	// containing the program, from specific to general
-	var parts = FILE.split(program || FILE.path("").canonical());
+	var parts = FS.split(program || FS.path("").canonical());
 	for (var i = 0; i < parts.length; i++) {
-	    var path = FILE.join.apply(null, parts.slice(0, i));
-	    var packageJson = FILE.join(path, "package.json");
-	    if (FILE.isFile(packageJson))
+	    var path = FS.join.apply(null, parts.slice(0, i));
+	    var packageJson = FS.join(path, "package.json");
+	    if (FS.isFile(packageJson))
 	        ENGINE.prefixes.unshift(path);
 	}
 }

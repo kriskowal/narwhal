@@ -1,7 +1,7 @@
 
-var util = require("util");
+var util = require("narwhal/util");
 var assert = require("test/assert");
-var args = require("args");
+var args = require("narwhal/args");
 var sandboxing = require("sandbox");
 var loader = require("loader");
 var os = require("os");

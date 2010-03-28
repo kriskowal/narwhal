@@ -68,7 +68,7 @@
         }
     };
 
-    var evaluate = function (text, fileName, lineNo) {
+    var Module = function (text, fileName, lineNo) {
         return function (inject) {
             var names = [];
             for (var name in inject)
@@ -107,6 +107,17 @@
         Packages.java.lang.System.out.println(String(string));
     };
 
+    /*
+    Error = (function (BaseError) {
+        return function Error () {
+            var error = Object.create(BaseError.prototype);
+            BaseError.apply(error, arguments);
+            error.rhinoException = Packages.org.mozilla.javascript.JavaScriptException(this, null, 0);
+            return error;
+        };
+    })(Error);
+    */
+
     var narwhal = importScript(prefix + "/narwhal.js");
 
     var debug = +String(Packages.java.lang.System.getenv("NARWHAL_DEBUG"));
@@ -115,21 +126,23 @@
 
     try {
         narwhal({
-            system: {
+            "engine": {
                 global: global,
                 evalGlobal: evalGlobal,
                 importScripts: importScripts,
                 engine: 'rhino',
                 engines: ['rhino', 'default'],
                 os: os,
-                print: print,
                 prefix: prefix,
-                evaluate: evaluate,
+                Module: Module,
                 debug: debug,
                 verbose: verbose,
                 setOptimizationLevel: setOptimizationLevel
             },
-            file: {
+            "system": {
+                print: print
+            },
+            "narwhal/fs": {
                 read: read,
                 isFile: isFile
             }
