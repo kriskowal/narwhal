@@ -1,6 +1,6 @@
 
 var assert = require("test/assert");
-var util = require('util');
+var util = require('narwhal/util');
 var format = require("printf");
 var sandboxing = require("sandbox");
 

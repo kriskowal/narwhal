@@ -1,7 +1,7 @@
 
 var ASSERT = require("assert");
 var FILE = require("file");
-var UTIL = require("util");
+var UTIL = require("narwhal/util");
 var SANDBOX = require("sandbox").Sandbox;
 
 
