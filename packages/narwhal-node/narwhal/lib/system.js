@@ -3,19 +3,20 @@
 // -- kriskowal Kris Kowal
 
 var IO = require("./io");
-var FS = require("./file");
+var FS = require("./narwhal/fs");
 
 exports.print = function () {
     exports.stdout.write(Array.prototype.join.call(arguments, ' ') + "\n").flush();
 };
 
-var rawStdin =  IO.ByteStream(0);
-var rawStdout = IO.ByteStream(1);
-var rawStderr = IO.ByteStream(2);
+var locale = exports.env.LOCALE || "UTF-8";
 
-exports.stdin  = new IO.TextInputStream(new IO.IO(rawStdin, null));
-exports.stdout = new IO.TextOutputStream(new IO.IO(null, rawStdout));
-exports.stderr = new IO.TextOutputStream(new IO.IO(null, rawStderr));
+var rawStdin =  IO.openFd(0);
+var rawStdout = IO.openFd(1);
+var rawStderr = IO.openFd(2);
+exports.stdin  = IO.TextReader(rawStdin, locale);
+exports.stdout = IO.TextWriter(rawStdout, locale);
+exports.stderr = IO.TextWriter(rawStderr, locale);
 
 exports.originalArgs = exports.args.slice();
 

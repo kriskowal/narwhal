@@ -11,7 +11,7 @@
     function main () {
         try {
             var text = FS.read(ENGINE.prefix + "/narwhal.js");
-            var factory = PROCESS.compile(text, "narwhal.js", 1);
+            var factory = PROCESS.compile(text, "$NARWHAL/narwhal.js", 1);
             factory(modules);
         } catch (exception) {
             if (exception instanceof Error) {
@@ -83,7 +83,7 @@
 
     })(modules.engine, modules.system);
 
-    // module "file"
+    // module "narwhal/fs"
     (function (exports) {
         var K = modules['node/process'];
         var NODE_FS = modules['node/process'].fs;
@@ -119,10 +119,10 @@
             }
         };
 
-    })(modules.file = {});
+    })(modules['narwhal/fs'] = {});
 
     var PROCESS = modules['node/process'];
-    var FS = modules['file'];
+    var FS = modules['narwhal/fs'];
     var SYSTEM = modules['system'];
     var ENGINE = modules['engine'];
 

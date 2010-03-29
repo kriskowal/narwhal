@@ -1,5 +1,5 @@
 
-var Buffer = require("node/buffer").Buffer;
+var Buffer = require("narwhal/buffer").Buffer;
 
 exports.B_LENGTH = function (bytes) {
     return bytes.length;

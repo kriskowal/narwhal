@@ -1191,11 +1191,12 @@ static void Load(int argc, char *argv[]) {
 
   Handle<Object> module_node_buffer = Object::New();
   Buffer::Initialize(module_node_buffer);
-  modules->Set(String::NewSymbol("node/buffer-embedding"), module_node_buffer);
+  modules->Set(String::NewSymbol("narwhal/buffer-engine"), module_node_buffer);
 
   Handle<Object> module_node_encodings = Object::New();
   Transcoder::Initialize(module_node_encodings);
   modules->Set(String::NewSymbol("node/encodings"), module_node_encodings);
+  modules->Set(String::NewSymbol("narwhal/encodings-engine"), module_node_encodings);
 
   Handle<Object> module_os = Object::New();
   Os::Initialize(module_os);

@@ -602,6 +602,9 @@ Handle<Value> File::ReadInto(const Arguments& args) {
   if (start < 0)
     return ThrowException(String::New("readInto() arguments[2] 'start must "
       "be a positive Number if it is defined."));
+  if (start > buffer->length())
+    return ThrowException(String::New("readInto() arguments[2] 'start' must "
+      "be no greather than the length of the buffer."));
 
   // stop
   if (args[3]->IsUndefined())
@@ -611,7 +614,10 @@ Handle<Value> File::ReadInto(const Arguments& args) {
   else
     return ThrowException(String::New("readInto() arguments[3] 'stop' must "
       "be a Number if it is defined"));
-  if (stop > buffer->length_)
+  if (stop < start)
+    return ThrowException(String::New("readInto() arguments[3] 'stop' must "
+      "be greater than 'start'"));
+  if (stop > buffer->length())
     return ThrowException(String::New("readInto() arguments[3] 'stop' must "
       "be less than or equal to the buffer's length"));
 
@@ -631,12 +637,12 @@ Handle<Value> File::ReadInto(const Arguments& args) {
 
   // callback
   if (args[5]->IsFunction()) {
-    ASYNC_CALL(read, args[5], fd, NULL, length, offset)
+    ASYNC_CALL(read, args[5], fd, buf + start, length, offset)
   } else {
     if (offset < 0) {
-      ret = read(fd, buf, length);
+      ret = read(fd, buf + start, length);
     } else {
-      ret = pread(fd, buf, length, offset);
+      ret = pread(fd, buf + start, length, offset);
     }
     if (ret < 0)
       return ThrowException(errno_exception(errno));
@@ -680,6 +686,9 @@ Handle<Value> File::WriteFrom(const Arguments& args) {
   if (start < 0)
     return ThrowException(String::New("writeFrom() arguments[2] 'start must "
       "be a positive Number if it is defined."));
+  if (start > buffer->length())
+    return ThrowException(String::New("writeFrom() arguments[2] 'start must "
+      "be no greater than the buffer length."));
 
   // stop
   if (args[3]->IsUndefined())
@@ -689,7 +698,10 @@ Handle<Value> File::WriteFrom(const Arguments& args) {
   else
     return ThrowException(String::New("writeFrom() arguments[3] 'stop' must "
       "be a Number if it is defined"));
-  if (stop > buffer->length_)
+  if (stop < start)
+    return ThrowException(String::New("writeFrom() arguments[3] 'stop' must "
+      "be greater than 'start'"));
+  if (stop > buffer->length())
     return ThrowException(String::New("writeFrom() arguments[3] 'stop' must "
       "be less than or equal to the buffer's length"));
 

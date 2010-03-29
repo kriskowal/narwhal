@@ -502,6 +502,8 @@ Handle<Value> Buffer::Copy(const Arguments &args) {
   char *source, *target;
   uint32_t source_start, source_stop, target_start, target_stop;
 
+  // TODO consider returning a copy if no target specified
+
   if (!Buffer::HasInstance(args.This()))
     return ThrowException(String::New("copy() 'this' must be a Buffer "
       "Object"));

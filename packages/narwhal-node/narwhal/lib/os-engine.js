@@ -23,11 +23,11 @@ exports.popen = function (command, options) {
     if (self.pid) {
         // parent
         exports.close(stdinPipe.reader);
-        self.stdin = new IO.TextOutputStream(new IO.IO(null, IO.ByteStream(stdinPipe.writer)));
+        self.stdin = IO.TextWriter(IO.openFd(stdinPipe.writer), "UTF-8");
         exports.close(stdoutPipe.writer);
-        self.stdout = new IO.TextInputStream(new IO.IO(IO.ByteStream(stdoutPipe.reader)));
+        self.stdout = IO.TextReader(IO.openFd(stdoutPipe.reader), "UTF-8");
         exports.close(stderrPipe.writer);
-        self.stderr = new IO.TextInputStream(new IO.IO(IO.ByteStream(stderrPipe.reader)));
+        self.stderr = IO.TextReader(IO.openFd(stderrPipe.reader), "UTF-8");
     } else {
         // child
         exports.dup2(stdinPipe.reader, 0);
