@@ -4,6 +4,7 @@
 require("global-es5");
 
 // https://wiki.mozilla.org/ServerJS/Binary/B
+// TODO deprecate
 if (!String.prototype.toByteString)
     Object.defineProperty(String.prototype, "toByteString", {
         "value": function(charset) {
@@ -15,6 +16,7 @@ if (!String.prototype.toByteString)
     });
 
 // https://wiki.mozilla.org/ServerJS/Binary/B
+// TODO deprecate
 if (!String.prototype.toByteArray)
     Object.defineProperty(String.prototype, 'toByteArray', {
         "value": function(charset) {
@@ -26,6 +28,7 @@ if (!String.prototype.toByteArray)
     });
 
 // https://wiki.mozilla.org/ServerJS/Binary/B
+// TODO deprecate
 if (!String.prototype.charCodes)
     Object.defineProperty(String.prototype, 'charCodes', {
         "value": function () {
@@ -37,6 +40,7 @@ if (!String.prototype.charCodes)
     });
 
 // https://wiki.mozilla.org/ServerJS/Binary/B
+// TODO deprecate
 if (!String.fromCharCodes)
     Object.defineProperty(String, 'fromCharCodes', {
         "value": function (codes) {
@@ -46,6 +50,7 @@ if (!String.fromCharCodes)
     });
 
 // https://wiki.mozilla.org/ServerJS/Binary/B
+// TODO deprecate
 if (!Array.prototype.toByteString)
     Object.defineProperty(Array.prototype, 'toByteString', {
         "value": function(charset) {
@@ -54,6 +59,7 @@ if (!Array.prototype.toByteString)
         "enumerable": false
     });
 
+// TODO deprecate
 if (!Array.prototype.toByteArray)
     Object.defineProperty(Array.prototype, 'toByteArray', {
         "value": function(charset) {
@@ -61,4 +67,7 @@ if (!Array.prototype.toByteArray)
         },
         "enumerable": false
     });
+
+if (typeof StopIteration === "undefined")
+    StopIteration = Object.create(Error.prototype);
 
