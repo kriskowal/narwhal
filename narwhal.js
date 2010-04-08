@@ -11,6 +11,7 @@ var FS = modules['narwhal/fs'];
 // XXX: beyond-compliance with CommonJS
 global = ENGINE.global;
 global.global = global;
+global.print = SYSTEM.print;
 
 // this only works for modules with no dependencies and a known absolute path
 var requireFake = function (id, path, force) {
@@ -45,12 +46,16 @@ var fakeJoin = function () {
 
 // bootstrap sandbox and loader modules
 var lib = fakeJoin(ENGINE.prefix, "packages", "narwhal-lib", "lib", "narwhal");
-var loader = requireFake("loader", fakeJoin(lib, "loader.js"));
-var multiLoader = requireFake("loader/multi", fakeJoin(lib, "loader", "multi.js"));
-var sandbox = requireFake("sandbox", fakeJoin(lib, "sandbox.js"));
+requireFake("loader", fakeJoin(lib, "loader.js"));
+var MULTI = requireFake("loader/multi", fakeJoin(lib, "loader", "multi.js"));
+var SANDBOX = requireFake("sandbox", fakeJoin(lib, "sandbox.js"));
 requireFake("narwhal/fs", fakeJoin(lib, "fs-boot.js"), "force");
 
-// construct the initial paths
+// construct the initial paths.  These may include paths that do not
+// exist, but the "narwhal/packages" module rewrites paths later to
+// include only existing directories.  We cannot check for
+// non-existant directories until after the bootstrapping, since we
+// need the fully functional "narwhal/fs" module to do so.
 var paths = [];
 ENGINE.prefixes = ENGINE.prefixes || [ENGINE.prefix];
 ENGINE.prefixes.push(fakeJoin(ENGINE.prefix, "packages", "narwhal-lib"));
@@ -67,7 +72,7 @@ for (var i = 0, ii = prefixes.length; i < ii; i++) {
 }
 
 // create the primary Loader and Sandbox:
-var loader = multiLoader.MultiLoader({
+var loader = MULTI.MultiLoader({
     paths: paths,
     debug: ENGINE.verbose
 });
@@ -75,7 +80,7 @@ if (ENGINE.loaders) {
     loader.loaders.unshift.apply(loader.loaders, ENGINE.loaders);
     delete ENGINE.loaders;
 }
-var require = global.require = sandbox.Sandbox({
+var require = global.require = SANDBOX.Sandbox({
     loader: loader,
     modules: modules,
     debug: ENGINE.verbose
@@ -153,7 +158,7 @@ if (SYSTEM.args.length && !options.interactive && !options.main) {
 	// add package prefixes for all of the packages
 	// containing the program, from specific to general
 	var parts = FS.split(program || FS.path("").canonical());
-	for (var i = 0; i < parts.length; i++) {
+	for (var i = 0, ii = parts.length; i < ii; i++) {
 	    var path = FS.join.apply(null, parts.slice(0, i));
 	    var packageJson = FS.join(path, "package.json");
 	    if (FS.isFile(packageJson))
@@ -169,14 +174,14 @@ ENGINE.packages = options.packages;
 
 // load packages
 var packages;
-if (!options.noPackages) {
-    packages = require("narwhal/packages");
-    packages.main();
-} else {
+if (options.noPackages) {
     packages = {
         catalog: {},
         order: []
     }
+} else {
+    packages = require("narwhal/packages");
+    packages.main();
 }
 
 // run command options
@@ -189,12 +194,16 @@ options.todo.forEach(function (item) {
     var action = item[0];
     var value = item[1];
     if (action == "include") {
+    // -I, --include lib
         require.paths.unshift(value);
     } else if (action == "require") {
+    // -r, --require module
         require(value);
     } else if (action == "eval") {
+    // -e, -c, --command command
         ENGINE.compile(value, "<arg>");
     } else if (action == "path") {
+    // -:, --path delimiter
         var paths = packages.order.map(function (pkg) {
             return pkg.directory.join("bin");
         }).filter(function (path) {
@@ -216,11 +225,7 @@ if (options.interactive) {
 } else if (options.main) {
     require.main(options.main);
 } else if (program) {
-    if (program.isDirectory()) {
-        require.main(packages.root.directory.resolve(packages.root.main || "main").toString());
-    } else {
-        require.main(program.toString());
-    }
+    require.main(program.toString());
 }
 
 // send an event-loop-hook event if that module has been required
