@@ -1,5 +1,5 @@
 
-var ENGINE = require("event-loop-setup").getEventLoop();
+var ENGINE = require("./event-loop-setup").getEventLoop();
 
 exports.enqueue = ENGINE.enqueue || function (task) {
     exports.setTimeout(function () {

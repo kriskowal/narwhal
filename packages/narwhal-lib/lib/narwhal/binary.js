@@ -5,7 +5,7 @@
 // -- tschaub
 // -- nrstott Nathan Stott
 
-var engine = require("binary-engine"),
+var engine = require("./binary-engine"),
     B_ALLOC = engine.B_ALLOC,
     B_LENGTH = engine.B_LENGTH,
     B_GET = engine.B_GET,
@@ -758,3 +758,4 @@ ByteArray.prototype.displace = function(begin, end) {
 ByteArray.prototype.toSource = function() {
     return "ByteArray(["+this.toArray().join(",")+"])";
 };
+

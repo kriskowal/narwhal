@@ -108,7 +108,7 @@ paths.push.apply(paths, [
     return !!path;
 }));
 
-var OS = require("os");
+var OS = require("narwhal/os");
 if (SYSTEM.env.NARWHALOPT)
     SYSTEM.args.splice.apply(
         SYSTEM.args,
@@ -229,8 +229,8 @@ if (options.interactive) {
 }
 
 // send an event-loop-hook event if that module has been required
-if (require.loader.isLoaded("event-loop-hook")) {
-    require("event-loop-hook").emit();
+if (require.loader.isLoaded("narwhal/event-loop-hook")) {
+    require("narwhal/event-loop-hook").emit();
 }
 
 })

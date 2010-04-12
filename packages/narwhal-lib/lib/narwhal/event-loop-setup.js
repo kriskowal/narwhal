@@ -34,7 +34,7 @@ exports.setEventLoop = function (_eventLoop) {
  */
 exports.getEventLoop = function () {
     if (!eventLoop)
-        eventLoop = require("event-loop-engine");
+        eventLoop = require("./event-loop-engine");
     return eventLoop;
 };
 
