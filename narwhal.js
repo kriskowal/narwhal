@@ -3,8 +3,8 @@
 // -- penwellr Richard Penwell, MIT Licence - March 1, 2010
 (function narwhal(modules) {
 
-var ENGINE = modules['engine'];
 var SYSTEM = modules['system'];
+var ENGINE = modules['narwhal/engine'];
 var FS = modules['narwhal/fs'];
 
 // global reference
@@ -89,7 +89,7 @@ var require = global.require = SANDBOX.Sandbox({
 // patch the primordials (or: save the whales)
 // to bring them up to at least the neighborhood of ES5 compliance.
 try {
-    require("global");
+    require("narwhal/global");
 } catch (e) {
     SYSTEM.print("Couldn't load global/primordial patches ("+e+")");
 }
@@ -145,9 +145,9 @@ if (!wasVerbose && ENGINE.verbose) {
 }
 
 // strict mode causes deprecation errors (as registered with the
-// narwhal/deprecation module) to throw errors so they can be
-// traced.
-ENGINE.strict = options.strict;
+// narwhal/deprecation module), and package loading errors,  to throw
+// errors so they can be traced.
+ENGINE.strict = ENGINE.strict || options.strict;
 
 // find the program module and its prefix
 var program;

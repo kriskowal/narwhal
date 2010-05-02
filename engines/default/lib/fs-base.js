@@ -6,6 +6,7 @@ require("nawhal/deprecated").deprecated(
 */
 
 var LEGACY = require("file-engine");
+var UTIL = require("narwhal/util");
 
 exports.Permissions = function (permissions, constructor) {
     this.update(exports.Permissions['default']);
