@@ -1,4 +1,7 @@
 
+var SYSTEM = require("system");
+
 exports.readline = function() {
-    return system.stdin.readLine();
-}
+    return SYSTEM.stdin.readLine();
+};
+
