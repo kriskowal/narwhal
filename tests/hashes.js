@@ -1,14 +1,14 @@
 
 var assert = require('assert');
-var struct = require('struct');
+var struct = require('narwhal/struct');
 var util = require('narwhal/util');
 
 var raw = "Hello, World!";
-var md4 = require('md4');
-var md5 = require('md5');
-var sha = require('sha');
-var sha256 = require('sha256');
-var crc32 = require('crc32');
+var md4 = require('narwhal/md4');
+var md5 = require('narwhal/md5');
+var sha = require('narwhal/sha');
+var sha256 = require('narwhal/sha256');
+var crc32 = require('narwhal/crc32');
 
 exports.testMd4 = function () {
     assert.equal(md4.hash("test hash").toString(16), "549089516E75BD13C41FF098FBB58D5E");
