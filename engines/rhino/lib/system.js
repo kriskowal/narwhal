@@ -1,7 +1,7 @@
 
 // -- tlrobinson Tom Robinson
 
-var io = require("./io");
+var io = require("narwhal/io");
 
 exports.print = function () {
     exports.stdout.write(Array.prototype.join.call(arguments, ' ') + "\n").flush();
@@ -41,10 +41,4 @@ if (securityManager) {
     if (/^com.google.apphosting\./.test(securityManagerName))
         exports.appEngineHosting = true;
 }
-
-exports.fs = require('./file');
-
-// default logger
-var Logger = require("./logger").Logger;
-exports.log = new Logger(exports.stderr);
 
