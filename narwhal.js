@@ -147,7 +147,7 @@ if (!wasVerbose && ENGINE.verbose) {
 // strict mode causes deprecation errors (as registered with the
 // narwhal/deprecation module), and package loading errors,  to throw
 // errors so they can be traced.
-ENGINE.strict = ENGINE.strict || options.strict;
+ENGINE.strict = ENGINE.strict || options.strict || 0;
 
 // find the program module and its prefix
 var program;
@@ -167,8 +167,8 @@ if (SYSTEM.args.length && !options.interactive && !options.main) {
 }
 
 // user package prefix
-if (SYSTEM.env.SEA)
-    ENGINE.prefixes.unshift(SYSTEM.env.SEA);
+if (SYSTEM.env.NARWHAL_PACKAGE_HOME)
+    ENGINE.prefixes.unshift(SYSTEM.env.NARWHAL_PACKAGE_HOME);
 
 ENGINE.packages = options.packages;
 
