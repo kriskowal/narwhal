@@ -40,8 +40,8 @@ var terms = [
  * functions coordinate flushing of `stdout` and `stderr`
  * to ensure that formatting is applied correctly.
  *
- * @param {{stdout, stderr, env}} the "system" module or a
- * reasonable facimile.
+ * @param {{stdout, stderr, env}} system the "system" module
+ * or a reasonable facimile.
  */
 exports.Stream = function (system) {
     if (!system.stdout)
@@ -56,12 +56,17 @@ exports.Stream = function (system) {
     var stack = [];
     var enabled = UTIL.has(terms, env.TERM);
 
-    /*** */
+    /***
+     * enables terminal coloring.
+     */
     self.enable = function () {
         enabled = true;
     };
 
-    /*** */
+    /***
+     * disables terminal coloring.  All subsequent null prefix
+     * codes will be stripped instead of translated.
+     */
     self.disable = function () {
         enabled = false;
     };
@@ -160,10 +165,12 @@ exports.Stream = function (system) {
     };
 
     /***
-     * @param {Boolean} bold
-     * @param {Number} fore a VT-100, single-digit color
+     * Writes a VT-100 color code from the given terms,
+     * omitting any term that is a null string, `""`.
+     * @param {String} bold
+     * @param {String} fore a VT-100, single-digit color
      * code for the foreground color.
-     * @param {Number} back a VT-100, signle-digit color
+     * @param {String} back a VT-100, signle-digit color
      * code for the background color.
      */
     self.update = function (bold, fore, back) {
@@ -178,7 +185,8 @@ exports.Stream = function (system) {
         );
     };
     
-    /**
+    /***
+     * Moves the cursor to a coordinate.
      * @param {Number} y column
      * @param {Number} x row
      */
@@ -187,6 +195,7 @@ exports.Stream = function (system) {
     };
 
     /***
+     * Moves the cursor by an offset coordinate.
      * @param {Number} y column
      * @param {Number} x row
      */
@@ -207,32 +216,32 @@ exports.Stream = function (system) {
         return self;
     };
 
-    /*** */
+    /*** Moves the cursor to the home position */
     self.home = function () {
         return self.writeCode("\033[H");
     };
 
-    /*** */
+    /*** Clears the screen */
     self.clear = function () {
         return self.writeCode("\033[2J");
     };
-    /*** */
+    /*** Clears the screen above the cursor */
     self.clearUp = function () {
         return self.writeCode("\033[1J");
     };
-    /*** */
+    /*** Clears the screen below the cursor */
     self.cearDown = function () {
         return self.writeCode("\033[J");
     };
-    /*** */
+    /*** Clears the current line */
     self.clearLine = function () {
         return self.writeCode("\033[2K");
     };
-    /*** */
+    /*** Clears the line to the left of the cursor */
     self.clearLeft = function () {
         return self.writeCode("\033[1K");
     };
-    /*** */
+    /*** Clears the line to the right of the cursor */
     self.clearRight = function () {
         return self.writeCode("\033[K");
     };
@@ -246,12 +255,20 @@ exports.Stream = function (system) {
      */
     self.error = {};
 
-    /**** */
+    /****
+     * prints a line of space delimited fields to the error stream.
+     * @params {String} field
+     */
     self.error.print = function () {
         return self.printError.apply(self, arguments);
     };
 
-    /**** */
+    /****
+     * writes a message to the error stream, translating
+     * null-codes to VT-100 escape sequences on the same
+     * channel.
+     * @param {String} message
+     */
     self.error.write = function (message) {
         return self.write(message, true);
     };
@@ -259,29 +276,32 @@ exports.Stream = function (system) {
     return self;
 };
 
-/** */
+/**
+ * A references for the single-digit numbered strings used
+ * in VT-100 escape sequences corresponding to various color names.
+ */
 exports.colors = {
-    /*** */
+    /*** `"0"` */
     "black": "0",
-    /*** */
+    /*** `"1"` */
     "red": "1",
-    /*** */
+    /*** `"2"` */
     "green": "2",
-    /*** */
+    /*** `"3"` */
     "orange": "3",
-    /*** */
+    /*** `"3"` */
     "yellow": "3",
-    /*** */
+    /*** `"4"` */
     "blue": "4",
-    /*** */
+    /*** `"5"` */
     "violet": "5",
-    /*** */
+    /*** `"5"` */
     "magenta": "5",
-    /*** */
+    /*** `"5"` */
     "purple": "5",
-    /*** */
+    /*** `"6"` */
     "cyan": "6",
-    /*** */
+    /*** `"7"` */
     "white": "7"
 }
 
