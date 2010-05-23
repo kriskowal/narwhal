@@ -1,0 +1,135 @@
+{
+    "name": "Transcoder",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/encodings.js",
+    "lineNo": 15,
+    "params": [
+        {
+            "name": "source",
+            "type": "String",
+            "doc": "charset"
+        },
+        {
+            "name": "target",
+            "type": "String",
+            "doc": "charset"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "constructor": true,
+    "doc": "An object that maintains the state for streaming bytes\nencoded in a source character set to a target character\nset, providing a {@link transcode} method for transcoding\nchunks of data from a source buffer to a target buffer.",
+    "children": [
+        {
+            "name": "transcode",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/encodings.js",
+            "lineNo": 26,
+            "params": [
+                {
+                    "name": "source",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "target",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "sourceStart",
+                    "type": "Number",
+                    "doc": "optional (0)"
+                },
+                {
+                    "name": "sourceStop",
+                    "type": "Number",
+                    "doc": "optional (source.length)"
+                },
+                {
+                    "name": "targetStart",
+                    "type": "Number",
+                    "doc": "optional (0)"
+                },
+                {
+                    "name": "targetStop",
+                    "type": "Number",
+                    "doc": "optional (target.length)"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "{source, target, error}",
+                "doc": "state"
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-encodings",
+                "_transcoder"
+            ],
+            "href": "packages---narwhal-lib---narwhal-encodings---_transcoder---transcode"
+        }
+    ],
+    "index": {
+        "transcode": {
+            "name": "transcode",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/encodings.js",
+            "lineNo": 26,
+            "params": [
+                {
+                    "name": "source",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "target",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "sourceStart",
+                    "type": "Number",
+                    "doc": "optional (0)"
+                },
+                {
+                    "name": "sourceStop",
+                    "type": "Number",
+                    "doc": "optional (source.length)"
+                },
+                {
+                    "name": "targetStart",
+                    "type": "Number",
+                    "doc": "optional (0)"
+                },
+                {
+                    "name": "targetStop",
+                    "type": "Number",
+                    "doc": "optional (target.length)"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "{source, target, error}",
+                "doc": "state"
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-encodings",
+                "_transcoder"
+            ],
+            "href": "packages---narwhal-lib---narwhal-encodings---_transcoder---transcode"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-encodings"
+    ],
+    "href": "packages---narwhal-lib---narwhal-encodings---_transcoder"
+}

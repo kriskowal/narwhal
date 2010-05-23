@@ -1,0 +1,319 @@
+{
+    "name": "Signal",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 217,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Signal\nbase prototype for a signal that emits events.",
+    "children": [
+        {
+            "name": "constructor",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 227,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_signal"
+            ],
+            "href": "packages---narwhal---events---_signal---constructor"
+        },
+        {
+            "name": "addListener",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 235,
+            "params": [
+                {
+                    "name": "observer",
+                    "doc": "{Function} a function to call when this signal is emitted.  All observers get called before the signal's \"default action\", if it has one.  Observers are called on a first-come, first-served basis."
+                },
+                {
+                    "name": "Event",
+                    "doc": "{Event type} an optional Event type to be used for the returned Signal that defaults to Event."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "a Signal that is emitted before the given observer."
+            },
+            "doc": "arranges for a given observer function to be called whenever\nthis signal is emitted.  The calling of this observer\nfunction can in turn be observed by the returned signal.",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_signal"
+            ],
+            "href": "packages---narwhal---events---_signal---add-listener"
+        },
+        {
+            "name": "removeListener",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 255,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_signal"
+            ],
+            "href": "packages---narwhal---events---_signal---remove-listener"
+        },
+        {
+            "name": "emit",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 266,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "emits an event with to all observers and the signal's default action, by\napplying each function with the event instance as the activation object\nand the forwarding the given arguments.  Uses the event object to\ndetermine whether to continue propagating from observer to the next, and\nwhether to apply the default action.",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_signal"
+            ],
+            "href": "packages---narwhal---events---_signal---emit"
+        },
+        {
+            "name": "observer",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 298,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "a function that, when called with arbitrary arguments, arranges for the signal to be observed with a given function that receives those arguments."
+            },
+            "doc": "> var x = signal.observer(function (y, z) {\n>     print(\"signal was observed with \" + y + \", \" + z);\n> });\n> x(\"a\", 10);\n> x(\"b\", 20);\n> x.emit();\nsignal was observed with a, 10\nsignal was observed with b, 20",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_signal"
+            ],
+            "href": "packages---narwhal---events---_signal---observer"
+        },
+        {
+            "name": "emitter",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 324,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Function",
+                "doc": "a function that emits this signal when it is called."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_signal"
+            ],
+            "href": "packages---narwhal---events---_signal---emitter"
+        },
+        {
+            "name": "getObservers",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 333,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Array",
+                "doc": "all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_signal"
+            ],
+            "href": "packages---narwhal---events---_signal---get-observers"
+        }
+    ],
+    "index": {
+        "constructor": {
+            "name": "constructor",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 227,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_signal"
+            ],
+            "href": "packages---narwhal---events---_signal---constructor"
+        },
+        "addListener": {
+            "name": "addListener",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 235,
+            "params": [
+                {
+                    "name": "observer",
+                    "doc": "{Function} a function to call when this signal is emitted.  All observers get called before the signal's \"default action\", if it has one.  Observers are called on a first-come, first-served basis."
+                },
+                {
+                    "name": "Event",
+                    "doc": "{Event type} an optional Event type to be used for the returned Signal that defaults to Event."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "a Signal that is emitted before the given observer."
+            },
+            "doc": "arranges for a given observer function to be called whenever\nthis signal is emitted.  The calling of this observer\nfunction can in turn be observed by the returned signal.",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_signal"
+            ],
+            "href": "packages---narwhal---events---_signal---add-listener"
+        },
+        "removeListener": {
+            "name": "removeListener",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 255,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_signal"
+            ],
+            "href": "packages---narwhal---events---_signal---remove-listener"
+        },
+        "emit": {
+            "name": "emit",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 266,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "emits an event with to all observers and the signal's default action, by\napplying each function with the event instance as the activation object\nand the forwarding the given arguments.  Uses the event object to\ndetermine whether to continue propagating from observer to the next, and\nwhether to apply the default action.",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_signal"
+            ],
+            "href": "packages---narwhal---events---_signal---emit"
+        },
+        "observer": {
+            "name": "observer",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 298,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "a function that, when called with arbitrary arguments, arranges for the signal to be observed with a given function that receives those arguments."
+            },
+            "doc": "> var x = signal.observer(function (y, z) {\n>     print(\"signal was observed with \" + y + \", \" + z);\n> });\n> x(\"a\", 10);\n> x(\"b\", 20);\n> x.emit();\nsignal was observed with a, 10\nsignal was observed with b, 20",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_signal"
+            ],
+            "href": "packages---narwhal---events---_signal---observer"
+        },
+        "emitter": {
+            "name": "emitter",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 324,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Function",
+                "doc": "a function that emits this signal when it is called."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_signal"
+            ],
+            "href": "packages---narwhal---events---_signal---emitter"
+        },
+        "getObservers": {
+            "name": "getObservers",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 333,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Array",
+                "doc": "all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_signal"
+            ],
+            "href": "packages---narwhal---events---_signal---get-observers"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events"
+    ],
+    "href": "packages---narwhal---events---_signal"
+}

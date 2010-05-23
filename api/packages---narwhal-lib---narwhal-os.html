@@ -1,0 +1,385 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>narwhal/os</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Provides operating system call support, particularly POSIX calls
+when possible.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#system"><tt>system</tt></a></li>
+    
+        <li><a href="#exec"><tt>exec</tt></a></li>
+    
+        <li><a href="#exec0"><tt>exec0</tt></a></li>
+    
+        <li><a href="#status"><tt>status</tt></a></li>
+    
+        <li><a href="#command"><tt>command</tt></a></li>
+    
+        <li><a href="#enquote"><tt>enquote</tt></a></li>
+    
+        <li><a href="#parse"><tt>parse</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="system"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-os---system.html"><tt>system</tt></a>
+        
+        
+    </h2>
+
+    <p>executes a given command, attached to this process's
+IO streams, and returns the exit status.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>command</tt></th>
+            <td class="B"><tt>Array or String</tt></th>
+            
+            <td class="C"><p>uses "/bin/sh -c" if the command is a string.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>Number exit status</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="exec"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-os---exec.html"><tt>exec</tt></a>
+        
+        
+    </h2>
+
+    <p>Supported in Rhino and Node.  On Rhino, acceptance of the command
+object and the search argument are not yet supported.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>command</tt></th>
+            <td class="B"><tt>String || Array || {args, env, search}</tt></th>
+            
+            <td class="C"><p>or "system" like object</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>env</tt></th>
+            <td class="B"><tt>Object</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>search</tt></th>
+            <td class="B"><tt>Boolean</tt></th>
+            
+            <td class="C"><p>defaults to true</p></td>
+            
+        </tr>
+        
+        
+        
+        <tr>
+            <th class="A"><em>throws</em></th>
+            <td class="B"><tt>Error</tt></th>
+            
+            <td class="C"><p>if execution resumes with the old program image.</p></td>
+            
+        </tr>
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="exec0"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-os---exec-0.html"><tt>exec0</tt></a>
+        
+        
+    </h2>
+
+    <p>Strictly built on Posix <code>execv</code>, <code>execvp</code>, and <code>execvP</code>,
+where the command is provided as the first argument and 
+args[0] is the original path used to execute the command.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>command</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>args</tt></th>
+            <td class="B"><tt>Array * String</tt></th>
+            
+            <td class="C"><p>optional</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>env</tt></th>
+            <td class="B"><tt>Object * String</tt></th>
+            
+            <td class="C"><p>optional</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>search</tt></th>
+            <td class="B"><tt>Boolean</tt></th>
+            
+            <td class="C"><p>optionally whether to use the <code>env.PATH</code> to search for <code>command</code></p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="status"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-os---status.html"><tt>status</tt></a>
+        
+        
+    </h2>
+
+    <p>executes a given command quietly and returns
+the exit status.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>command</tt></th>
+            <td class="B"><tt>Array or String</tt></th>
+            
+            <td class="C"><p>uses "/bin/sh -c" if the command is a string.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>Number exit status</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="command"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-os---command.html"><tt>command</tt></a>
+        
+        
+    </h2>
+
+    <p>executes a given command and returns the
+standard output.  If the exit status is non-zero,
+throws an Error.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>command</tt></th>
+            <td class="B"><tt>Array or String</tt></th>
+            
+            <td class="C"><p>uses "/bin/sh -c" if the command is a string.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>String the standard output of the command</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="enquote"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-os---enquote.html"><tt>enquote</tt></a>
+        
+        
+    </h2>
+
+    <p>enquotes a string such that it is guaranteed to be a single
+argument with no interpolated values for a shell.</p>
+
+<p>WARNING: as yet, this implementation only handles
+enquoting for Unix shell script style arguments.  Further
+development is necessary to enquote and escape arguments
+on Windows.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="parse"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-os---parse.html"><tt>parse</tt></a>
+        
+        
+    </h2>
+
+    <p>parses command line arguments</p>
+
+<p>WARNING: this does not handle all of the edge cases
+of command line argument parsing, nor is suitable for
+general purpose argument enquoting on all platforms.  It
+also will never be able to handle environment variable
+interpolation or other forms of shell quote expansion.
+This utility is used by Narwhal to pare arguments from
+system.env.NARWHAL_OPT.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>command</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>{String} a command composed of space delimited, quoted, or backslash escaped arguments.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>an Array of unquoted arguments.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-os.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

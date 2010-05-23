@@ -1,0 +1,17 @@
+{
+    "name": "0",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/event-loop-hook.js",
+    "lineNo": 7,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "This module is exclusively for the purpose of arranging\n for an \"event-loop-engine\" to begin dispatching events\n when the initial thread of execution runs to its\n completion.\n\n `narwhal/narwhal.js` checks whether this module has been\n loaded after the main module returns and calls the\n \"emit\" method.  No module is intended to call \"emit\"\n manually.\n\n @module",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-event-loop-hook"
+    ],
+    "href": "packages---narwhal-lib---narwhal-event-loop-hook---0"
+}

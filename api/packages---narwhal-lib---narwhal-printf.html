@@ -1,0 +1,262 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>narwhal/printf</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#0"><tt>0</tt></a></li>
+    
+        <li><a href="#printf"><tt>printf</tt></a></li>
+    
+        <li><a href="#fprintf"><tt>fprintf</tt></a></li>
+    
+        <li><a href="#sprintf"><tt>sprintf</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="0"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-printf---0.html"><tt>0</tt></a>
+        
+        
+    </h2>
+
+    <p>provides printf and sprintf.</p>
+
+<p>This code is unrestricted: you are free to use it however you like.</p>
+
+<p>The functions should work as expected, performing left or right alignment,
+truncating strings, outputting numbers with a required precision etc.</p>
+
+<p>For complex cases, these functions follow the Perl implementations of
+(s)printf, allowing arguments to be passed out-of-order, and to set the
+precision or length of the output based on arguments instead of fixed
+numbers.</p>
+
+<p>See http://perldoc.perl.org/functions/sprintf.html for more information.</p>
+
+<p>Implemented:</p>
+
+<ul>
+<li>zero and space-padding</li>
+<li>right and left-alignment,</li>
+<li>base X prefix (binary, octal and hex)</li>
+<li>positive number prefix</li>
+<li>(minimum) width</li>
+<li>precision / truncation / maximum width</li>
+<li>out of order arguments</li>
+</ul>
+
+<p>Not implemented (yet):</p>
+
+<ul>
+<li>vector flag</li>
+<li>size (bytes, words, long-words etc.)</li>
+</ul>
+
+<p>Will not implement:</p>
+
+<ul>
+<li>%n or %p (no pointers in JavaScript)</li>
+</ul>
+
+<p>by Ash Searle, 2007-04-27
+Integrated into Chiron by Kris Kowal, 2007-10-19
+Integrated into Narwhal by Kris Kowal, 2009-07-27</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="printf"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-printf---printf.html"><tt>printf</tt></a>
+        
+        
+    </h2>
+
+    <p>Writes a formatted string to standard output, as
+forwarded from <code>print</code> to <code>SYSTEM.print</code> to
+<code>SYSTEM.stdout.print</code> or intercepted anywhere along that
+chain.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>format</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A">&hellip;<tt>values</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="fprintf"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-printf---fprintf.html"><tt>fprintf</tt></a>
+        
+        
+    </h2>
+
+    <p>Prints a formatted string to a given stream.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>stream</tt></th>
+            <td class="B"><tt>{print}</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>format</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A">&hellip;<tt>values</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="sprintf"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-printf---sprintf.html"><tt>sprintf</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>format</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A">&hellip;<tt>values</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-printf.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

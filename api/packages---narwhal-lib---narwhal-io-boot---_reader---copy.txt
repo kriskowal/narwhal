@@ -1,0 +1,20 @@
+{
+    "name": "copy",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+    "lineNo": 59,
+    "params": [],
+    "errors": [
+        "Did not recognize \"this\" tag."
+    ],
+    "throws": [],
+    "see": [],
+    "doc": "pumps data from this source input stream to the target output\nstream.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-io-boot",
+        "_reader"
+    ],
+    "href": "packages---narwhal-lib---narwhal-io-boot---_reader---copy"
+}

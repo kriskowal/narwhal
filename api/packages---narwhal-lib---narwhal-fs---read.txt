@@ -1,0 +1,26 @@
+{
+    "name": "read",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 143,
+    "params": [
+        {
+            "name": "path"
+        },
+        {
+            "name": "mode",
+            "variadic": true,
+            "doc": "as String, options as Object, permissions as Number"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---read"
+}

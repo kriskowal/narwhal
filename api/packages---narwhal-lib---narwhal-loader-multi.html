@@ -1,0 +1,243 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>narwhal/loader/multi</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Provides a loader that can multiplex multiple loaders
+based on the extension of the found file name.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#MultiLoader"><tt>MultiLoader</tt></a></li>
+    
+        <li><a href="#paths"><tt>paths</tt></a></li>
+    
+        <li><a href="#loader"><tt>loader</tt></a></li>
+    
+        <li><a href="#loaders"><tt>loaders</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="MultiLoader"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-loader-multi---_multi-loader.html"><tt>MultiLoader</tt></a>
+        
+        
+    </h2>
+
+    <p>Constructs a MultiLoader object for loading modules
+from various file formats, based on their extension.</p>
+
+<p>Options include:</p>
+
+<ul>
+<li><code>paths</code> array of fully-qualified paths to search
+for top-level modules</li>
+<li><code>loaders</code> an array of tuples, mapping extensions
+to loader objects supporting:
+<ul><li><code>load(id, path)</code></li>
+<li><code>reload(id, path)</code></li>
+<li><code>hasChanged(id)</code> optionally</li></ul></li>
+<li><code>loader</code> used to create a default <code>loaders</code>, mapping
+both <code>".js"</code> and arbitrary other files to that loader,
+itself defaulting to a file-system backed loader
+constructed with the same options.</li>
+<li><code>debug</code> and other options are forwarded to the
+constructor of <code>Loader</code> if no loaders are specified.</li>
+</ul>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>options</tt></th>
+            <td class="B"><tt>{paths, loader, loaders}</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="paths"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-loader-multi---paths.html"><tt>paths</tt></a>
+        
+        
+    </h2>
+
+    <p>May be modified in-place but not replaced.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="loader"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-loader-multi---loader.html"><tt>loader</tt></a>
+        
+        
+    </h2>
+
+    <p>May be modified in-place but not replaced.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="loaders"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-loader-multi---loaders.html"><tt>loaders</tt></a>
+        
+        
+    </h2>
+
+    <p>May be modified in-place but not replaced.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-loader-multi---loaders---resolve.html"><tt>resolve</tt></a></th> 
+        <td><p>Resolves module identifiers into the top-level,
+or absolute module name space.</p>
+
+<p>An alias to <code>resolve</code> as exported by the <code>loader</code>
+module.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-loader-multi---loaders---resolve-pkg.html"><tt>resolvePkg</tt></a></th> 
+        <td><p>Resolves a module identifier and package pair.</p>
+
+<p>Forwards to the <code>resolvePkg</code> method of the <code>loader</code>
+module.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-loader-multi---loaders---find.html"><tt>find</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-loader-multi---loaders---load.html"><tt>load</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-loader-multi---loaders---reload.html"><tt>reload</tt></a></th> 
+        <td><p>Forces a module to be reloaded, if possible, setting
+or replacing the module factory function in the
+module factory memo.  This function is called by
+<code>load</code> internally to populate the memo and may be
+called externally to freshen the memo.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-loader-multi---loaders---is-loaded.html"><tt>isLoaded</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-loader-multi.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

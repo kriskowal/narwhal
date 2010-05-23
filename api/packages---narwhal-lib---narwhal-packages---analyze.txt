@@ -1,0 +1,17 @@
+{
+    "name": "analyze",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
+    "lineNo": 498,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "analyze\nconstructs prioritized top-level module paths\nbased on the given sorted package array.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-packages"
+    ],
+    "href": "packages---narwhal-lib---narwhal-packages---analyze"
+}

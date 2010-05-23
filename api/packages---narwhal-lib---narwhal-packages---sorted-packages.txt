@@ -1,0 +1,17 @@
+{
+    "name": "sortedPackages",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
+    "lineNo": 428,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "sortedPackages\nreturns an array of packages in order from the most\ndependent to least dependent, sorted based on\ntheir transitive dependencies.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-packages"
+    ],
+    "href": "packages---narwhal-lib---narwhal-packages---sorted-packages"
+}

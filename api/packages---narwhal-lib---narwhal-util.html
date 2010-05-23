@@ -1,0 +1,2250 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>narwhal/util</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>The missing methods.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#operator"><tt>operator</tt></a></li>
+    
+        <li><a href="#no"><tt>no</tt></a></li>
+    
+        <li><a href="#object"><tt>object</tt></a></li>
+    
+        <li><a href="#array"><tt>array</tt></a></li>
+    
+        <li><a href="#isArrayLike"><tt>isArrayLike</tt></a></li>
+    
+        <li><a href="#isArguments"><tt>isArguments</tt></a></li>
+    
+        <li><a href="#apply"><tt>apply</tt></a></li>
+    
+        <li><a href="#copy"><tt>copy</tt></a></li>
+    
+        <li><a href="#deepCopy"><tt>deepCopy</tt></a></li>
+    
+        <li><a href="#repr"><tt>repr</tt></a></li>
+    
+        <li><a href="#keys"><tt>keys</tt></a></li>
+    
+        <li><a href="#values"><tt>values</tt></a></li>
+    
+        <li><a href="#items"><tt>items</tt></a></li>
+    
+        <li><a href="#len"><tt>len</tt></a></li>
+    
+        <li><a href="#has"><tt>has</tt></a></li>
+    
+        <li><a href="#get"><tt>get</tt></a></li>
+    
+        <li><a href="#set"><tt>set</tt></a></li>
+    
+        <li><a href="#getset"><tt>getset</tt></a></li>
+    
+        <li><a href="#del"><tt>del</tt></a></li>
+    
+        <li><a href="#cut"><tt>cut</tt></a></li>
+    
+        <li><a href="#put"><tt>put</tt></a></li>
+    
+        <li><a href="#first"><tt>first</tt></a></li>
+    
+        <li><a href="#last"><tt>last</tt></a></li>
+    
+        <li><a href="#update"><tt>update</tt></a></li>
+    
+        <li><a href="#deepUpdate"><tt>deepUpdate</tt></a></li>
+    
+        <li><a href="#complete"><tt>complete</tt></a></li>
+    
+        <li><a href="#deepComplete"><tt>deepComplete</tt></a></li>
+    
+        <li><a href="#remove"><tt>remove</tt></a></li>
+    
+        <li><a href="#range"><tt>range</tt></a></li>
+    
+        <li><a href="#forEach"><tt>forEach</tt></a></li>
+    
+        <li><a href="#forEachApply"><tt>forEachApply</tt></a></li>
+    
+        <li><a href="#map"><tt>map</tt></a></li>
+    
+        <li><a href="#mapApply"><tt>mapApply</tt></a></li>
+    
+        <li><a href="#every"><tt>every</tt></a></li>
+    
+        <li><a href="#some"><tt>some</tt></a></li>
+    
+        <li><a href="#all"><tt>all</tt></a></li>
+    
+        <li><a href="#any"><tt>any</tt></a></li>
+    
+        <li><a href="#reduce"><tt>reduce</tt></a></li>
+    
+        <li><a href="#reduceRight"><tt>reduceRight</tt></a></li>
+    
+        <li><a href="#zip"><tt>zip</tt></a></li>
+    
+        <li><a href="#transpose"><tt>transpose</tt></a></li>
+    
+        <li><a href="#enumerate"><tt>enumerate</tt></a></li>
+    
+        <li><a href="#is"><tt>is</tt></a></li>
+    
+        <li><a href="#eq"><tt>eq</tt></a></li>
+    
+        <li><a href="#ne"><tt>ne</tt></a></li>
+    
+        <li><a href="#lt"><tt>lt</tt></a></li>
+    
+        <li><a href="#gt"><tt>gt</tt></a></li>
+    
+        <li><a href="#le"><tt>le</tt></a></li>
+    
+        <li><a href="#ge"><tt>ge</tt></a></li>
+    
+        <li><a href="#mul"><tt>mul</tt></a></li>
+    
+        <li><a href="#by"><tt>by</tt></a></li>
+    
+        <li><a href="#compare"><tt>compare</tt></a></li>
+    
+        <li><a href="#reverse"><tt>reverse</tt></a></li>
+    
+        <li><a href="#reversed"><tt>reversed</tt></a></li>
+    
+        <li><a href="#hash"><tt>hash</tt></a></li>
+    
+        <li><a href="#unique"><tt>unique</tt></a></li>
+    
+        <li><a href="#string"><tt>string</tt></a></li>
+    
+        <li><a href="#escape"><tt>escape</tt></a></li>
+    
+        <li><a href="#enquote"><tt>enquote</tt></a></li>
+    
+        <li><a href="#expand"><tt>expand</tt></a></li>
+    
+        <li><a href="#trimBegin"><tt>trimBegin</tt></a></li>
+    
+        <li><a href="#trimEnd"><tt>trimEnd</tt></a></li>
+    
+        <li><a href="#trim"><tt>trim</tt></a></li>
+    
+        <li><a href="#padBegin"><tt>padBegin</tt></a></li>
+    
+        <li><a href="#padEnd"><tt>padEnd</tt></a></li>
+    
+        <li><a href="#splitName"><tt>splitName</tt></a></li>
+    
+        <li><a href="#joinName"><tt>joinName</tt></a></li>
+    
+        <li><a href="#upper"><tt>upper</tt></a></li>
+    
+        <li><a href="#lower"><tt>lower</tt></a></li>
+    
+        <li><a href="#camel"><tt>camel</tt></a></li>
+    
+        <li><a href="#title"><tt>title</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="operator"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---operator.html"><tt>operator</tt></a>
+        
+        
+    </h2>
+
+    <p>a decorator for functions that curry "polymorphically",
+that is, that return a function that can be tested
+against various objects if they're only "partially
+completed", or fewer arguments than needed are used.</p>
+
+<p>this enables the idioms:</p>
+
+<pre><code>[1, 2, 3].every(lt(4)) eq true
+[1, 2, 3].map(add(1)) eq [2, 3, 4]
+[{}, {}, {}].forEach(set('a', 10))
+</code></pre>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="no"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---no.html"><tt>no</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>value</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether the value is null or undefined</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="object"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---object.html"><tt>object</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>object</tt></th>
+            <td class="B"><tt>{toObject} || {length} * [key, value] || Object</tt></th>
+            
+            <td class="C"><p>an object of various types that may be converted to a record object.  Objects with <code>toObject</code> methods are coerced using that method.  "lengthable" objects are converted to key, value pairs with <code>items</code> and converted to objects with the corresponding properties.  Other objects are shallowly copied on their owned properties.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Object</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---object---copy.html"><tt>copy</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---object---deep-copy.html"><tt>deepCopy</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---object---eq.html"><tt>eq</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---object---len.html"><tt>len</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---object---has.html"><tt>has</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---object---keys.html"><tt>keys</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---object---values.html"><tt>values</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---object---items.html"><tt>items</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---object---update.html"><tt>update</tt></a></th> 
+        <td><p>Updates an object with the properties from another object.
+This function is variadic requiring a minimum of two arguments.
+The first argument is the object to update.  Remaining arguments
+are considered the sources for the update.  If multiple sources
+contain values for the same property, the last one with that
+property in the arguments list wins.</p>
+
+<p>example usage:</p>
+
+<pre><code>util.update({}, { hello: "world" });  // -&gt; { hello: "world" }
+util.update({}, { hello: "world" }, { hello: "le monde" }); // -&gt; { hello: "le monde" }
+</code></pre></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---object---deep-update.html"><tt>deepUpdate</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---object---complete.html"><tt>complete</tt></a></th> 
+        <td><p>Updates an object with the properties of another object(s) if those
+properties are not already defined for the target object. First argument is
+the object to complete, the remaining arguments are considered sources to
+complete from. If multiple sources contain the same property, the value of
+the first source with that property will be the one inserted in to the
+target.</p>
+
+<p>example usage:</p>
+
+<pre><code>util.complete({}, { hello: "world" });  // -&gt; { hello: "world" }
+util.complete({ hello: "narwhal" }, { hello: "world" }); // -&gt; { hello: "narwhal" }
+util.complete({}, { hello: "world" }, { hello: "le monde" }); // -&gt; { hello: "world" }
+</code></pre></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---object---deep-complete.html"><tt>deepComplete</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---object---repr.html"><tt>repr</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="array"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---array.html"><tt>array</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---array---coerce.html"><tt>coerce</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---array---copy.html"><tt>copy</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---array---deep-copy.html"><tt>deepCopy</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---array---len.html"><tt>len</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---array---has.html"><tt>has</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---array---put.html"><tt>put</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---array---del.html"><tt>del</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---array---eq.html"><tt>eq</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---array---lt.html"><tt>lt</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---array---repr.html"><tt>repr</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---array---first.html"><tt>first</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---array---last.html"><tt>last</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="isArrayLike"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---is-array-like.html"><tt>isArrayLike</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="isArguments"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---is-arguments.html"><tt>isArguments</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="apply"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---apply.html"><tt>apply</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="copy"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---copy.html"><tt>copy</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="deepCopy"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---deep-copy.html"><tt>deepCopy</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="repr"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---repr.html"><tt>repr</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="keys"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---keys.html"><tt>keys</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="values"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---values.html"><tt>values</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="items"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---items.html"><tt>items</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="len"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---len.html"><tt>len</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="has"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---has.html"><tt>has</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="get"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---get.html"><tt>get</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="set"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---set.html"><tt>set</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="getset"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---getset.html"><tt>getset</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="del"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---del.html"><tt>del</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="cut"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---cut.html"><tt>cut</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="put"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---put.html"><tt>put</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="first"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---first.html"><tt>first</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="last"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---last.html"><tt>last</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="update"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---update.html"><tt>update</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="deepUpdate"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---deep-update.html"><tt>deepUpdate</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="complete"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---complete.html"><tt>complete</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="deepComplete"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---deep-complete.html"><tt>deepComplete</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="remove"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---remove.html"><tt>remove</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="range"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---range.html"><tt>range</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="forEach"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---for-each.html"><tt>forEach</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="forEachApply"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---for-each-apply.html"><tt>forEachApply</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="map"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---map.html"><tt>map</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="mapApply"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---map-apply.html"><tt>mapApply</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="every"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---every.html"><tt>every</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="some"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---some.html"><tt>some</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="all"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---all.html"><tt>all</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="any"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---any.html"><tt>any</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="reduce"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---reduce.html"><tt>reduce</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="reduceRight"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---reduce-right.html"><tt>reduceRight</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="zip"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---zip.html"><tt>zip</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="transpose"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---transpose.html"><tt>transpose</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="enumerate"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---enumerate.html"><tt>enumerate</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="is"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---is.html"><tt>is</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="eq"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---eq.html"><tt>eq</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="ne"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---ne.html"><tt>ne</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="lt"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---lt.html"><tt>lt</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="gt"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---gt.html"><tt>gt</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="le"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---le.html"><tt>le</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="ge"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---ge.html"><tt>ge</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="mul"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---mul.html"><tt>mul</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="by"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---by.html"><tt>by</tt></a>
+        
+        
+    </h2>
+
+    <p>returns a <code>comparator</code> that compares
+values based on the values resultant from
+a given <code>relation</code>.
+accepts a <code>relation</code> and an optional comparator.</p>
+
+<p>To sort a list of objects based on their
+"a" key:</p>
+
+<pre><code>objects.sort(by(get("a")))
+</code></pre>
+
+<p>To get those in descending order:</p>
+
+<pre><code>objects.sort(by(get("a")), desc)
+</code></pre>
+
+<p><code>by</code> returns a comparison function that also tracks
+the arguments you used to construct it.  This permits
+<code>sort</code> and <code>sorted</code> to perform a Schwartzian transform
+which can increase the performance of the sort
+by a factor of 2.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="compare"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---compare.html"><tt>compare</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---compare---sort.html"><tt>sort</tt></a></th> 
+        <td><p>sort
+an in-place array sorter that uses a deep comparison
+function by default (compare), and improves performance if
+you provide a comparator returned by "by", using a
+Schwartzian transform.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---compare---sorted.html"><tt>sorted</tt></a></th> 
+        <td><p>sorted
+returns a sorted copy of an array using a deep
+comparison function by default (compare), and
+improves performance if you provide a comparator
+returned by "by", using a Schwartzian transform.</p></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="reverse"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---reverse.html"><tt>reverse</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="reversed"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---reversed.html"><tt>reversed</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="hash"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---hash.html"><tt>hash</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="unique"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---unique.html"><tt>unique</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="string"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---string.html"><tt>string</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-util---string---mul.html"><tt>mul</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="escape"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---escape.html"><tt>escape</tt></a>
+        
+        
+    </h2>
+
+    <p>escapes all characters of a string that are
+special to JavaScript and many other languages.
+Recognizes all of the relevant
+control characters and formats all other
+non-printable characters as Hex byte escape
+sequences or Unicode escape sequences depending
+on their size.</p>
+
+<p>Pass <code>true</code> as an optional second argument and
+<code>escape</code> produces valid contents for escaped
+JSON strings, wherein non-printable-characters are
+all escaped with the Unicode <code>\u</code> notation.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="enquote"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---enquote.html"><tt>enquote</tt></a>
+        
+        
+    </h2>
+
+    <p>transforms a string into a string literal, escaping
+all characters of a string that are special to
+JavaScript and and some other languages.</p>
+
+<p><code>enquote</code> uses double quotes to be JSON compatible.</p>
+
+<p>Pass <code>true</code> as an optional second argument to
+be strictly JSON compliant, wherein all
+non-printable-characters are represented with
+Unicode escape sequences.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="expand"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---expand.html"><tt>expand</tt></a>
+        
+        
+    </h2>
+
+    <p>transforms tabs to an equivalent number of spaces.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="trimBegin"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---trim-begin.html"><tt>trimBegin</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="trimEnd"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---trim-end.html"><tt>trimEnd</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="trim"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---trim.html"><tt>trim</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="padBegin"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---pad-begin.html"><tt>padBegin</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>value</tt></th>
+            <td class="B"><tt>String || Number</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>a</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+            <td class="C"><p>minimum length of the resultant <code>String</code>: by default, 2</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>a</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>pad string: by default, <code>'0'</code>.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>the value padded up to at least the minimum length.  adds the padding to the begining side of the <code>String</code>.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="padEnd"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---pad-end.html"><tt>padEnd</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>value</tt></th>
+            <td class="B"><tt>String || Number</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>length</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+            <td class="C"><p>a minimum length of the resultant <code>String</code>, by default, 2</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>pad</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>by default, <code>'0'</code>.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>the value padded up to at least the minimum length.  adds the padding to the end side of the <code>String</code>.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="splitName"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---split-name.html"><tt>splitName</tt></a>
+        
+        
+    </h2>
+
+    <p>splits a string into an array of words from an original
+string.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>name</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * String</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="joinName"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---join-name.html"><tt>joinName</tt></a>
+        
+        
+    </h2>
+
+    <p>joins a list of words with a given delimiter
+between alphanumeric words.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>delimiter</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>parts</tt></th>
+            <td class="B"><tt>Array * String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="upper"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---upper.html"><tt>upper</tt></a>
+        
+        
+    </h2>
+
+    <p>converts a name to <code>UPPER CASE</code> using
+a given delimiter between numeric words.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>value</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>delimiter</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="lower"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---lower.html"><tt>lower</tt></a>
+        
+        
+    </h2>
+
+    <p>converts a name to a <code>lower case</code> using
+a given delimiter between numeric words.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>value</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>delimiter</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="camel"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---camel.html"><tt>camel</tt></a>
+        
+        
+    </h2>
+
+    <p>converts a name to <code>camel Case</code> using
+a given delimiter between numeric words.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>value</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>delimiter</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="title"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-util---title.html"><tt>title</tt></a>
+        
+        
+    </h2>
+
+    <p>converts a name to <code>Title Case</code> using
+a given delimiter between numeric words.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>value</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>delimiter</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-util.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

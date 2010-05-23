@@ -1,0 +1,30 @@
+{
+    "name": "sprintf",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/printf.js",
+    "lineNo": 71,
+    "params": [
+        {
+            "name": "format",
+            "type": "String"
+        },
+        {
+            "name": "values",
+            "variadic": true
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "String",
+        "doc": ""
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-printf"
+    ],
+    "href": "packages---narwhal-lib---narwhal-printf---sprintf"
+}

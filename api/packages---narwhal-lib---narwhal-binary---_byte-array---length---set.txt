@@ -1,0 +1,19 @@
+{
+    "name": "set",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+    "lineNo": 520,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-binary",
+        "_byte-array",
+        "length"
+    ],
+    "href": "packages---narwhal-lib---narwhal-binary---_byte-array---length---set"
+}

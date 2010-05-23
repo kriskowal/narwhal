@@ -1,0 +1,18 @@
+{
+    "name": "constructObservable",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 364,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events",
+        "_event-emitter"
+    ],
+    "href": "packages---narwhal---events---_event-emitter---construct-observable"
+}

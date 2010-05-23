@@ -1,0 +1,22 @@
+{
+    "name": "force",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
+    "lineNo": 257,
+    "params": [
+        {
+            "name": "id"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-sandbox",
+        "_sandbox"
+    ],
+    "href": "packages---narwhal-lib---narwhal-sandbox---_sandbox---force"
+}

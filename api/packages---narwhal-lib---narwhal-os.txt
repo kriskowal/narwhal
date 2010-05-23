@@ -1,0 +1,413 @@
+{
+    "name": "narwhal/os",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+    "lineNo": 6,
+    "params": [],
+    "errors": [
+        "Did not recognize \"extends\" tag."
+    ],
+    "throws": [],
+    "see": [],
+    "module": true,
+    "doc": "Provides operating system call support, particularly POSIX calls\nwhen possible.",
+    "type": "module",
+    "id": "narwhal/os",
+    "children": [
+        {
+            "name": "system",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+            "lineNo": 25,
+            "params": [
+                {
+                    "name": "command",
+                    "type": "Array or String",
+                    "doc": "uses \"/bin/sh -c\" if the command is a string."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "Number exit status"
+            },
+            "doc": "executes a given command, attached to this process's\nIO streams, and returns the exit status.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-os"
+            ],
+            "href": "packages---narwhal-lib---narwhal-os---system"
+        },
+        {
+            "name": "exec",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+            "lineNo": 44,
+            "params": [
+                {
+                    "name": "command",
+                    "type": "String || Array || {args, env, search}",
+                    "doc": "or \"system\" like object"
+                },
+                {
+                    "name": "env",
+                    "type": "Object"
+                },
+                {
+                    "name": "search",
+                    "type": "Boolean",
+                    "doc": "defaults to true"
+                }
+            ],
+            "errors": [],
+            "throws": [
+                {
+                    "type": "Error",
+                    "doc": "if execution resumes with the old program image."
+                }
+            ],
+            "see": [],
+            "doc": "Supported in Rhino and Node.  On Rhino, acceptance of the command\nobject and the search argument are not yet supported.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-os"
+            ],
+            "href": "packages---narwhal-lib---narwhal-os---exec"
+        },
+        {
+            "name": "exec0",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+            "lineNo": 79,
+            "params": [
+                {
+                    "name": "command",
+                    "type": "String"
+                },
+                {
+                    "name": "args",
+                    "type": "Array * String",
+                    "doc": "optional"
+                },
+                {
+                    "name": "env",
+                    "type": "Object * String",
+                    "doc": "optional"
+                },
+                {
+                    "name": "search",
+                    "type": "Boolean",
+                    "doc": "optionally whether to use the `env.PATH` to search for `command`"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Strictly built on Posix `execv`, `execvp`, and `execvP`,\nwhere the command is provided as the first argument and \nargs[0] is the original path used to execute the command.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-os"
+            ],
+            "href": "packages---narwhal-lib---narwhal-os---exec-0"
+        },
+        {
+            "name": "status",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+            "lineNo": 92,
+            "params": [
+                {
+                    "name": "command",
+                    "type": "Array or String",
+                    "doc": "uses \"/bin/sh -c\" if the command is a string."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "Number exit status"
+            },
+            "doc": "executes a given command quietly and returns\nthe exit status.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-os"
+            ],
+            "href": "packages---narwhal-lib---narwhal-os---status"
+        },
+        {
+            "name": "command",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+            "lineNo": 106,
+            "params": [
+                {
+                    "name": "command",
+                    "type": "Array or String",
+                    "doc": "uses \"/bin/sh -c\" if the command is a string."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "String the standard output of the command"
+            },
+            "doc": "executes a given command and returns the\nstandard output.  If the exit status is non-zero,\nthrows an Error.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-os"
+            ],
+            "href": "packages---narwhal-lib---narwhal-os---command"
+        },
+        {
+            "name": "enquote",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+            "lineNo": 123,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "enquotes a string such that it is guaranteed to be a single\nargument with no interpolated values for a shell.\n\nWARNING: as yet, this implementation only handles\nenquoting for Unix shell script style arguments.  Further\ndevelopment is necessary to enquote and escape arguments\non Windows.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-os"
+            ],
+            "href": "packages---narwhal-lib---narwhal-os---enquote"
+        },
+        {
+            "name": "parse",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+            "lineNo": 136,
+            "params": [
+                {
+                    "name": "command",
+                    "doc": "{String} a command composed of space delimited, quoted, or backslash escaped arguments."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "an Array of unquoted arguments."
+            },
+            "doc": "parses command line arguments\n\nWARNING: this does not handle all of the edge cases\nof command line argument parsing, nor is suitable for\ngeneral purpose argument enquoting on all platforms.  It\nalso will never be able to handle environment variable\ninterpolation or other forms of shell quote expansion.\nThis utility is used by Narwhal to pare arguments from\nsystem.env.NARWHAL_OPT.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-os"
+            ],
+            "href": "packages---narwhal-lib---narwhal-os---parse"
+        }
+    ],
+    "index": {
+        "system": {
+            "name": "system",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+            "lineNo": 25,
+            "params": [
+                {
+                    "name": "command",
+                    "type": "Array or String",
+                    "doc": "uses \"/bin/sh -c\" if the command is a string."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "Number exit status"
+            },
+            "doc": "executes a given command, attached to this process's\nIO streams, and returns the exit status.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-os"
+            ],
+            "href": "packages---narwhal-lib---narwhal-os---system"
+        },
+        "exec": {
+            "name": "exec",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+            "lineNo": 44,
+            "params": [
+                {
+                    "name": "command",
+                    "type": "String || Array || {args, env, search}",
+                    "doc": "or \"system\" like object"
+                },
+                {
+                    "name": "env",
+                    "type": "Object"
+                },
+                {
+                    "name": "search",
+                    "type": "Boolean",
+                    "doc": "defaults to true"
+                }
+            ],
+            "errors": [],
+            "throws": [
+                {
+                    "type": "Error",
+                    "doc": "if execution resumes with the old program image."
+                }
+            ],
+            "see": [],
+            "doc": "Supported in Rhino and Node.  On Rhino, acceptance of the command\nobject and the search argument are not yet supported.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-os"
+            ],
+            "href": "packages---narwhal-lib---narwhal-os---exec"
+        },
+        "exec0": {
+            "name": "exec0",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+            "lineNo": 79,
+            "params": [
+                {
+                    "name": "command",
+                    "type": "String"
+                },
+                {
+                    "name": "args",
+                    "type": "Array * String",
+                    "doc": "optional"
+                },
+                {
+                    "name": "env",
+                    "type": "Object * String",
+                    "doc": "optional"
+                },
+                {
+                    "name": "search",
+                    "type": "Boolean",
+                    "doc": "optionally whether to use the `env.PATH` to search for `command`"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Strictly built on Posix `execv`, `execvp`, and `execvP`,\nwhere the command is provided as the first argument and \nargs[0] is the original path used to execute the command.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-os"
+            ],
+            "href": "packages---narwhal-lib---narwhal-os---exec-0"
+        },
+        "status": {
+            "name": "status",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+            "lineNo": 92,
+            "params": [
+                {
+                    "name": "command",
+                    "type": "Array or String",
+                    "doc": "uses \"/bin/sh -c\" if the command is a string."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "Number exit status"
+            },
+            "doc": "executes a given command quietly and returns\nthe exit status.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-os"
+            ],
+            "href": "packages---narwhal-lib---narwhal-os---status"
+        },
+        "command": {
+            "name": "command",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+            "lineNo": 106,
+            "params": [
+                {
+                    "name": "command",
+                    "type": "Array or String",
+                    "doc": "uses \"/bin/sh -c\" if the command is a string."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "String the standard output of the command"
+            },
+            "doc": "executes a given command and returns the\nstandard output.  If the exit status is non-zero,\nthrows an Error.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-os"
+            ],
+            "href": "packages---narwhal-lib---narwhal-os---command"
+        },
+        "enquote": {
+            "name": "enquote",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+            "lineNo": 123,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "enquotes a string such that it is guaranteed to be a single\nargument with no interpolated values for a shell.\n\nWARNING: as yet, this implementation only handles\nenquoting for Unix shell script style arguments.  Further\ndevelopment is necessary to enquote and escape arguments\non Windows.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-os"
+            ],
+            "href": "packages---narwhal-lib---narwhal-os---enquote"
+        },
+        "parse": {
+            "name": "parse",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+            "lineNo": 136,
+            "params": [
+                {
+                    "name": "command",
+                    "doc": "{String} a command composed of space delimited, quoted, or backslash escaped arguments."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "an Array of unquoted arguments."
+            },
+            "doc": "parses command line arguments\n\nWARNING: this does not handle all of the edge cases\nof command line argument parsing, nor is suitable for\ngeneral purpose argument enquoting on all platforms.  It\nalso will never be able to handle environment variable\ninterpolation or other forms of shell quote expansion.\nThis utility is used by Narwhal to pare arguments from\nsystem.env.NARWHAL_OPT.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-os"
+            ],
+            "href": "packages---narwhal-lib---narwhal-os---parse"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib"
+    ],
+    "href": "packages---narwhal-lib---narwhal-os"
+}

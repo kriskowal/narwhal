@@ -1,0 +1,22 @@
+{
+    "name": "getPropagation",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 196,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Boolean",
+        "doc": "whether this event instructs the emitting signal to continue propagating to further observers."
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events",
+        "_event"
+    ],
+    "href": "packages---narwhal---events---_event---get-propagation"
+}

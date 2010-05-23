@@ -1,0 +1,316 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>narwhal/mime</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>This module provides basic functions for handling mime-types. It can
+handle matching mime-types against a list of media-ranges. See section
+14.1 of the HTTP specification [RFC 2616] for a complete explanation.</p>
+
+<p><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1">http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1</a></p>
+
+<p>A port to JavaScript of Joe Gregorio's MIME-Type Parser:</p>
+
+<p><a href="http://code.google.com/p/mimeparse/">http://code.google.com/p/mimeparse/</a></p>
+
+<p>Ported by J. Chris Anderson <a href="&#x6D;a&#105;&#108;&#x74;&#x6F;:&#x6A;&#x63;&#104;&#x72;&#x69;&#115;&#64;&#x61;&#112;&#x61;&#99;h&#x65;&#46;o&#x72;&#103;">&#x6A;&#x63;&#104;&#x72;&#x69;&#115;&#64;&#x61;&#112;&#x61;&#99;h&#x65;&#46;o&#x72;&#103;</a>, targeting the Spidermonkey runtime.</p>
+
+<p>To run the tests, open mimeparse-js-test.html in a browser.
+Ported from version 0.1.2.
+Comments are mostly excerpted from the original.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#parseMimeType"><tt>parseMimeType</tt></a></li>
+    
+        <li><a href="#fitnessAndQualityParsed"><tt>fitnessAndQualityParsed</tt></a></li>
+    
+        <li><a href="#qualityParsed"><tt>qualityParsed</tt></a></li>
+    
+        <li><a href="#quality"><tt>quality</tt></a></li>
+    
+        <li><a href="#bestMatch"><tt>bestMatch</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="parseMimeType"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-mime---parse-mime-type.html"><tt>parseMimeType</tt></a>
+        
+        
+    </h2>
+
+    <p>Carves up a mime-type and returns an Array of the
+[type, subtype, params] where "params" is a Hash of all
+the parameters for the media range.</p>
+
+<p>For example, the media range "application/xhtml;q=0.5" would
+get parsed into:</p>
+
+<pre><code>["application", "xhtml", { "q" : "0.5" }]
+</code></pre>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>mimeType</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>[type, subtype, params]</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="fitnessAndQualityParsed"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-mime---fitness-and-quality-parsed.html"><tt>fitnessAndQualityParsed</tt></a>
+        
+        
+    </h2>
+
+    <p>Find the best match for a given mime-type against
+a list of media<em>ranges that have already been
+parsed by parseMediaRange(). Returns an array of
+the fitness value and the value of the 'q' quality
+parameter of the best match, or (-1, 0) if no match
+was found. Just as for qualityParsed(), 'parsed</em>ranges'
+must be a list of parsed media ranges.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>mimeType</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>as from an HTTP Content-Type header.</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>parsedRanges</tt></th>
+            <td class="B"><tt>Array</tt></th>
+            
+            <td class="C"><p>as from an HTTP Accept header and processed with <code>parseMediaRange</code>.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="qualityParsed"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-mime---quality-parsed.html"><tt>qualityParsed</tt></a>
+        
+        
+    </h2>
+
+    <p>Find the best match for a given mime-type against
+a list of media_ranges that have already been
+parsed by parseMediaRange(). Returns the
+'q' quality parameter of the best match, 0 if no
+match was found. This function bahaves the same as quality()
+except that 'parsedRanges' must be a list of
+parsed media ranges.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>mimeType</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>parsedRanges</tt></th>
+            <td class="B"><tt>Array</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="quality"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-mime---quality.html"><tt>quality</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns the quality 'q' of a mime-type when compared
+against the media-ranges in ranges. For example::</p>
+
+<pre><code>js&gt; MIME.quality('text/html','text/*;q=0.3, text/html;q=0.7, text/html;level=1, text/html;level=2;q=0.4, *\/*;q=0.5')
+0.7
+</code></pre>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>mimeType</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>as from an HTTP Content-Type header</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>ranges</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>as from an HTTP Accept header</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="bestMatch"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-mime---best-match.html"><tt>bestMatch</tt></a>
+        
+        
+    </h2>
+
+    <p>Takes a list of supported mime-types and finds the best
+match for all the media-ranges listed in header. The value of
+header must be a string that conforms to the format of the
+HTTP Accept: header. The value of 'supported' is a list of
+mime-types::</p>
+
+<pre><code>js&gt; MIME.bestMatch(['application/xbel+xml', 'text/xml'], 'text/*;q=0.5,*\/*; q=0.1')
+"text/xml"
+</code></pre>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>MIME</tt></th>
+            <td class="B"><tt>Array * String</tt></th>
+            
+            <td class="C"><p>types</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>an</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>HTTP Accept header</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-mime.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

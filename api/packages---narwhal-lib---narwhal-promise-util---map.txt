@@ -1,0 +1,35 @@
+{
+    "name": "map",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise-util.js",
+    "lineNo": 130,
+    "params": [
+        {
+            "name": "values",
+            "type": "Array * Promise"
+        },
+        {
+            "name": "callback",
+            "type": "Function"
+        },
+        {
+            "name": "thisp",
+            "type": "Promise * Object",
+            "doc": "optional this object for the callback"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Promise * Array",
+        "doc": "a promise for an array of the returned results of the callback on each respective resolved value."
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-promise-util"
+    ],
+    "href": "packages---narwhal-lib---narwhal-promise-util---map"
+}

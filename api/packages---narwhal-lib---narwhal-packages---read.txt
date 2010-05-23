@@ -1,0 +1,17 @@
+{
+    "name": "read",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
+    "lineNo": 204,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "read\nrecursively loads all package data from package.json files\nand packages/ directories.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-packages"
+    ],
+    "href": "packages---narwhal-lib---narwhal-packages---read"
+}

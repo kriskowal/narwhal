@@ -1,0 +1,536 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>narwhal/fs-boot</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Pure JavaScript implementations of file system path
+manipulation.</p>
+
+<p>This module depends on the non-CommonJS "narwhal/engine"
+module, particularly for an "os" property that has the
+words "windows" or "winnt" to distinguish Windows from
+Unix file systems.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#ROOT"><tt>ROOT</tt></a></li>
+    
+        <li><a href="#SEPARATOR"><tt>SEPARATOR</tt></a></li>
+    
+        <li><a href="#ALT_SEPARATOR"><tt>ALT_SEPARATOR</tt></a></li>
+    
+        <li><a href="#SEPARATORS_RE"><tt>SEPARATORS_RE</tt></a></li>
+    
+        <li><a href="#split"><tt>split</tt></a></li>
+    
+        <li><a href="#join"><tt>join</tt></a></li>
+    
+        <li><a href="#resolve"><tt>resolve</tt></a></li>
+    
+        <li><a href="#normal"><tt>normal</tt></a></li>
+    
+        <li><a href="#isRelative"><tt>isRelative</tt></a></li>
+    
+        <li><a href="#isRoot"><tt>isRoot</tt></a></li>
+    
+        <li><a href="#root"><tt>root</tt></a></li>
+    
+        <li><a href="#directory"><tt>directory</tt></a></li>
+    
+        <li><a href="#base"><tt>base</tt></a></li>
+    
+        <li><a href="#extension"><tt>extension</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="ROOT"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs-boot---__root.html"><tt>ROOT</tt></a>
+        
+        
+    </h2>
+
+    <ul>
+<li><code>/</code> on Unix</li>
+<li><code>\</code> on Windows</li>
+</ul>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="SEPARATOR"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs-boot---__separator.html"><tt>SEPARATOR</tt></a>
+        
+        
+    </h2>
+
+    <ul>
+<li><code>/</code> on Unix</li>
+<li><code>\</code> on Windows</li>
+</ul>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="ALT_SEPARATOR"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs-boot---__alt-separator.html"><tt>ALT_SEPARATOR</tt></a>
+        
+        
+    </h2>
+
+    <ul>
+<li>undefined on Unix</li>
+<li><code>/</code> on Windows</li>
+</ul>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="SEPARATORS_RE"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs-boot---__separators-re.html"><tt>SEPARATORS_RE</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="split"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs-boot---split.html"><tt>split</tt></a>
+        
+        
+    </h2>
+
+    <p>separates a path into components.  If the path is
+absolute, the first path component is the root of the
+file system, indicated by an empty string on Unix, and a
+drive letter followed by a colon on Windows.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * String</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="join"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs-boot---join.html"><tt>join</tt></a>
+        
+        
+    </h2>
+
+    <p>Takes file system paths as variadic arguments and treats
+each as a file or directory path and returns the path
+arrived by traversing into the those paths.  All
+arguments except for the last must be paths to
+directories for the result to be meaningful.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>path</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="resolve"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs-boot---resolve.html"><tt>resolve</tt></a>
+        
+        
+    </h2>
+
+    <p>Takes file system paths as variadic arguments and treats
+each path as a location, in the URL sense, resolving each
+new location based on the previous.  For example, if the
+first argument is the absolute path of a JSON file, and
+the second argument is a path mentioned in that JSON
+file, <code>resolve</code> returns the absolute path of the
+mentioned file.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>path</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="normal"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs-boot---normal.html"><tt>normal</tt></a>
+        
+        
+    </h2>
+
+    <p>Takes paths as any number of arguments and reduces them
+into a single path in normal form, removing all "." path
+components, and reducing ".." path components by removing
+the previous path component if possible.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>path</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs-boot---normal---is-absolute.html"><tt>isAbsolute</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="isRelative"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs-boot---is-relative.html"><tt>isRelative</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether the given path does not begin at the root of the file system or a drive letter.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="isRoot"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs-boot---is-root.html"><tt>isRoot</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether the given path component corresponds to the root of the file system or a drive letter, as applicable.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="root"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs-boot---root.html"><tt>root</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>the Unix root path or corresponding Windows drive for a given path.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="directory"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs-boot---directory.html"><tt>directory</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>the parent directory of the given path.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="base"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs-boot---base.html"><tt>base</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>extention</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>an optional extention to detect and remove if it exists.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>the last component of a path, without the given extension if the extension is provided and matches the given file.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="extension"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs-boot---extension.html"><tt>extension</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>the extension (e.g., <code>txt</code>) of the file at the given path.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-fs-boot.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

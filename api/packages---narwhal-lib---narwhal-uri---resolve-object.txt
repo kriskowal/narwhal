@@ -1,0 +1,20 @@
+{
+    "name": "resolveObject",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+    "lineNo": 288,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "doc": "an object representing a URL resolved from a relative location and a source location."
+    },
+    "doc": "resolveObject",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-uri"
+    ],
+    "href": "packages---narwhal-lib---narwhal-uri---resolve-object"
+}

@@ -1,0 +1,17 @@
+{
+    "name": "alphabet36",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+    "lineNo": 29,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-struct"
+    ],
+    "href": "packages---narwhal-lib---narwhal-struct---alphabet-36"
+}

@@ -1,0 +1,19 @@
+{
+    "name": "SEPARATORS_RE",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs-boot.js",
+    "lineNo": 59,
+    "params": [],
+    "errors": [
+        "Did not recognize \"function\" tag."
+    ],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs-boot"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs-boot---__separators-re"
+}

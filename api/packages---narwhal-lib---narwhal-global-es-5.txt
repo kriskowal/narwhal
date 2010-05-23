@@ -1,0 +1,21 @@
+{
+    "name": "narwhal/global-es5",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/global-es5.js",
+    "lineNo": 11,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "module": true,
+    "doc": "Brings an environment as close to ECMAScript 5 compliance\nas is possible with the facilities of erstwhile engines.\n\nES5 Draft\nhttp://www.ecma-international.org/publications/files/drafts/tc39-2009-050.pdf\n\nNOTE: this is a draft, and as such, the URL is subject to change.  If the\nlink is broken, check in the parent directory for the latest TC39 PDF.\nhttp://www.ecma-international.org/publications/files/drafts/\n\nPrevious ES5 Draft\nhttp://www.ecma-international.org/publications/files/drafts/tc39-2009-025.pdf\nThis is a broken link to the previous draft of ES5 on which most of the\nnumbered specification references and quotes herein were taken.  Updating\nthese references and quotes to reflect the new document would be a welcome\nvolunteer project.",
+    "type": "module",
+    "id": "narwhal/global-es5",
+    "children": [],
+    "index": {},
+    "heritage": [
+        "packages",
+        "narwhal-lib"
+    ],
+    "href": "packages---narwhal-lib---narwhal-global-es-5"
+}

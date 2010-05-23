@@ -1,0 +1,20 @@
+{
+    "name": "constructor",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 164,
+    "params": [],
+    "errors": [
+        "Did not recognize \"classmethod\" tag."
+    ],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events",
+        "_event"
+    ],
+    "href": "packages---narwhal---events---_event---constructor"
+}

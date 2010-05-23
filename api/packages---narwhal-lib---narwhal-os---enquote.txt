@@ -1,0 +1,17 @@
+{
+    "name": "enquote",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+    "lineNo": 123,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "enquotes a string such that it is guaranteed to be a single\nargument with no interpolated values for a shell.\n\nWARNING: as yet, this implementation only handles\nenquoting for Unix shell script style arguments.  Further\ndevelopment is necessary to enquote and escape arguments\non Windows.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-os"
+    ],
+    "href": "packages---narwhal-lib---narwhal-os---enquote"
+}

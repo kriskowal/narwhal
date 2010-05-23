@@ -1,0 +1,18 @@
+{
+    "name": "valueOf",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+    "lineNo": 157,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-binary",
+        "_binary"
+    ],
+    "href": "packages---narwhal-lib---narwhal-binary---_binary---value-of"
+}

@@ -1,0 +1,21 @@
+{
+    "name": "toSource",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
+    "lineNo": 88,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "doc": "an evaluable representation of the error."
+    },
+    "doc": "WARNING: This method is not specified.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "assert",
+        "_assertion-error"
+    ],
+    "href": "packages---narwhal-lib---assert---_assertion-error---to-source"
+}

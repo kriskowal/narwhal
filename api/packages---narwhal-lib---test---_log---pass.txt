@@ -1,0 +1,23 @@
+{
+    "name": "pass",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
+    "lineNo": 232,
+    "params": [
+        {
+            "name": "message",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "test",
+        "_log"
+    ],
+    "href": "packages---narwhal-lib---test---_log---pass"
+}

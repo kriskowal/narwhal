@@ -1,0 +1,1 @@
+{"name":"format","markup":"markdown","fileName":"/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js","lineNo":235,"params":[],"errors":[],"throws":[],"see":[],"doc":"format\naccepts a parsed URI object and returns\nthe corresponding string.","heritage":["packages","narwhal-lib","narwhal-uri"],"href":"packages---narwhal-lib---narwhal-uri---format"}

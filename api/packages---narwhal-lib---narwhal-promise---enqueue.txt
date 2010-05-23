@@ -1,0 +1,22 @@
+{
+    "name": "enqueue",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+    "lineNo": 69,
+    "params": [
+        {
+            "name": "task",
+            "type": "Function"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Performs a task in a future turn of the event loop.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-promise"
+    ],
+    "href": "packages---narwhal-lib---narwhal-promise---enqueue"
+}

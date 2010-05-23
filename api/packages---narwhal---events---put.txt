@@ -1,0 +1,33 @@
+{
+    "name": "put",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 1134,
+    "params": [
+        {
+            "name": "target",
+            "doc": "promise or value for target object"
+        },
+        {
+            "name": "property",
+            "doc": "name of property to set"
+        },
+        {
+            "name": "value",
+            "doc": "new value of property"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "doc": "promise for the return value"
+    },
+    "doc": "Sets the value of a property in a future turn.",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events"
+    ],
+    "href": "packages---narwhal---events---put"
+}

@@ -1,0 +1,18 @@
+{
+    "name": "home",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+    "lineNo": 210,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-term",
+        "move-to"
+    ],
+    "href": "packages---narwhal-lib---narwhal-term---move-to---home"
+}

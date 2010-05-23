@@ -1,0 +1,253 @@
+{
+    "name": "narwhal/querystring",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/querystring.js",
+    "lineNo": 4,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "module": true,
+    "doc": "HTTP Query String Utilities",
+    "type": "module",
+    "id": "narwhal/querystring",
+    "children": [
+        {
+            "name": "unescape",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/querystring.js",
+            "lineNo": 13,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-querystring"
+            ],
+            "href": "packages---narwhal-lib---narwhal-querystring---unescape"
+        },
+        {
+            "name": "escape",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/querystring.js",
+            "lineNo": 18,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-querystring"
+            ],
+            "href": "packages---narwhal-lib---narwhal-querystring---escape"
+        },
+        {
+            "name": "stringify",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/querystring.js",
+            "lineNo": 25,
+            "params": [
+                {
+                    "name": "obj",
+                    "doc": "{Variant} any arbitrary value to convert to query string"
+                },
+                {
+                    "name": "sep",
+                    "doc": "{String} (optional) Character that should join param k=v pairs together. Default: \"&\""
+                },
+                {
+                    "name": "eq",
+                    "doc": "{String} (optional) Character that should join keys to their values. Default: \"=\""
+                },
+                {
+                    "name": "name",
+                    "doc": "{String} (optional) Name of the current key, for handling children recursively."
+                }
+            ],
+            "errors": [
+                "Did not recognize \"method\" tag.",
+                "Did not recognize \"static\" tag."
+            ],
+            "throws": [],
+            "see": [],
+            "doc": "Converts an arbitrary value to a Query String representation.\n\nObjects with cyclic references trigger an exception.",
+            "children": [
+                {
+                    "name": "parseQuery",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/querystring.js",
+                    "lineNo": 80,
+                    "params": [],
+                    "errors": [
+                        "Did not recognize \"static\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-querystring",
+                        "stringify"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-querystring---stringify---parse-query"
+                }
+            ],
+            "index": {
+                "parseQuery": {
+                    "name": "parseQuery",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/querystring.js",
+                    "lineNo": 80,
+                    "params": [],
+                    "errors": [
+                        "Did not recognize \"static\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-querystring",
+                        "stringify"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-querystring---stringify---parse-query"
+                }
+            },
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-querystring"
+            ],
+            "href": "packages---narwhal-lib---narwhal-querystring---stringify"
+        }
+    ],
+    "index": {
+        "unescape": {
+            "name": "unescape",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/querystring.js",
+            "lineNo": 13,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-querystring"
+            ],
+            "href": "packages---narwhal-lib---narwhal-querystring---unescape"
+        },
+        "escape": {
+            "name": "escape",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/querystring.js",
+            "lineNo": 18,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-querystring"
+            ],
+            "href": "packages---narwhal-lib---narwhal-querystring---escape"
+        },
+        "stringify": {
+            "name": "stringify",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/querystring.js",
+            "lineNo": 25,
+            "params": [
+                {
+                    "name": "obj",
+                    "doc": "{Variant} any arbitrary value to convert to query string"
+                },
+                {
+                    "name": "sep",
+                    "doc": "{String} (optional) Character that should join param k=v pairs together. Default: \"&\""
+                },
+                {
+                    "name": "eq",
+                    "doc": "{String} (optional) Character that should join keys to their values. Default: \"=\""
+                },
+                {
+                    "name": "name",
+                    "doc": "{String} (optional) Name of the current key, for handling children recursively."
+                }
+            ],
+            "errors": [
+                "Did not recognize \"method\" tag.",
+                "Did not recognize \"static\" tag."
+            ],
+            "throws": [],
+            "see": [],
+            "doc": "Converts an arbitrary value to a Query String representation.\n\nObjects with cyclic references trigger an exception.",
+            "children": [
+                {
+                    "name": "parseQuery",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/querystring.js",
+                    "lineNo": 80,
+                    "params": [],
+                    "errors": [
+                        "Did not recognize \"static\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-querystring",
+                        "stringify"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-querystring---stringify---parse-query"
+                }
+            ],
+            "index": {
+                "parseQuery": {
+                    "name": "parseQuery",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/querystring.js",
+                    "lineNo": 80,
+                    "params": [],
+                    "errors": [
+                        "Did not recognize \"static\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-querystring",
+                        "stringify"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-querystring---stringify---parse-query"
+                }
+            },
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-querystring"
+            ],
+            "href": "packages---narwhal-lib---narwhal-querystring---stringify"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib"
+    ],
+    "href": "packages---narwhal-lib---narwhal-querystring"
+}

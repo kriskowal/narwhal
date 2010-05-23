@@ -1,0 +1,18 @@
+{
+    "name": "addCancelback",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 889,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events",
+        "_promise"
+    ],
+    "href": "packages---narwhal---events---_promise---add-cancelback"
+}

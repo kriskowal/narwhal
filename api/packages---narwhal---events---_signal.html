@@ -1,0 +1,303 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>Signal</tt>
+        
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Signal
+base prototype for a signal that emits events.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#constructor"><tt>constructor</tt></a></li>
+    
+        <li><a href="#addListener"><tt>addListener</tt></a></li>
+    
+        <li><a href="#removeListener"><tt>removeListener</tt></a></li>
+    
+        <li><a href="#emit"><tt>emit</tt></a></li>
+    
+        <li><a href="#observer"><tt>observer</tt></a></li>
+    
+        <li><a href="#emitter"><tt>emitter</tt></a></li>
+    
+        <li><a href="#getObservers"><tt>getObservers</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="constructor"></a>
+    <h2>
+        <a href="packages---narwhal---events---_signal---constructor.html"><tt>constructor</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="addListener"></a>
+    <h2>
+        <a href="packages---narwhal---events---_signal---add-listener.html"><tt>addListener</tt></a>
+        
+        
+    </h2>
+
+    <p>arranges for a given observer function to be called whenever
+this signal is emitted.  The calling of this observer
+function can in turn be observed by the returned signal.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>observer</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>{Function} a function to call when this signal is emitted.  All observers get called before the signal's "default action", if it has one.  Observers are called on a first-come, first-served basis.</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>Event</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>{Event type} an optional Event type to be used for the returned Signal that defaults to Event.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>a Signal that is emitted before the given observer.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="removeListener"></a>
+    <h2>
+        <a href="packages---narwhal---events---_signal---remove-listener.html"><tt>removeListener</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="emit"></a>
+    <h2>
+        <a href="packages---narwhal---events---_signal---emit.html"><tt>emit</tt></a>
+        
+        
+    </h2>
+
+    <p>emits an event with to all observers and the signal's default action, by
+applying each function with the event instance as the activation object
+and the forwarding the given arguments.  Uses the event object to
+determine whether to continue propagating from observer to the next, and
+whether to apply the default action.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="observer"></a>
+    <h2>
+        <a href="packages---narwhal---events---_signal---observer.html"><tt>observer</tt></a>
+        
+        
+    </h2>
+
+    <blockquote>
+  <p>var x = signal.observer(function (y, z) {
+      print("signal was observed with " + y + ", " + z);
+  });
+  x("a", 10);
+  x("b", 20);
+  x.emit();
+  signal was observed with a, 10
+  signal was observed with b, 20</p>
+</blockquote>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>a function that, when called with arbitrary arguments, arranges for the signal to be observed with a given function that receives those arguments.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="emitter"></a>
+    <h2>
+        <a href="packages---narwhal---events---_signal---emitter.html"><tt>emitter</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Function</tt></td>
+            <td class="C"><p>a function that emits this signal when it is called.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="getObservers"></a>
+    <h2>
+        <a href="packages---narwhal---events---_signal---get-observers.html"><tt>getObservers</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array</tt></td>
+            <td class="C"><p>all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal---events---_signal.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

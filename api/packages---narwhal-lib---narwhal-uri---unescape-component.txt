@@ -1,0 +1,17 @@
+{
+    "name": "unescapeComponent",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+    "lineNo": 98,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-uri"
+    ],
+    "href": "packages---narwhal-lib---narwhal-uri---unescape-component"
+}

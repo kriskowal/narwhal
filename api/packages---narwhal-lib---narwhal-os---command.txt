@@ -1,0 +1,26 @@
+{
+    "name": "command",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+    "lineNo": 106,
+    "params": [
+        {
+            "name": "command",
+            "type": "Array or String",
+            "doc": "uses \"/bin/sh -c\" if the command is a string."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "doc": "String the standard output of the command"
+    },
+    "doc": "executes a given command and returns the\nstandard output.  If the exit status is non-zero,\nthrows an Error.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-os"
+    ],
+    "href": "packages---narwhal-lib---narwhal-os---command"
+}

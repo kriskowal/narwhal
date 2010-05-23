@@ -1,0 +1,417 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>narwhal/promise-util</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#delay"><tt>delay</tt></a></li>
+    
+        <li><a href="#reduce"><tt>reduce</tt></a></li>
+    
+        <li><a href="#all"><tt>all</tt></a></li>
+    
+        <li><a href="#forEach"><tt>forEach</tt></a></li>
+    
+        <li><a href="#sum"><tt>sum</tt></a></li>
+    
+        <li><a href="#whenAll"><tt>whenAll</tt></a></li>
+    
+        <li><a href="#mapDefer"><tt>mapDefer</tt></a></li>
+    
+        <li><a href="#map"><tt>map</tt></a></li>
+    
+        <li><a href="#Queue"><tt>Queue</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="delay"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise-util---delay.html"><tt>delay</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>timeout</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Promise * undefined</tt></td>
+            <td class="C"><p>a promise for <code>undefined</code> that will resolve after <code>timeout</code> miliseconds.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="reduce"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise-util---reduce.html"><tt>reduce</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="all"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise-util---all.html"><tt>all</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>values</tt></th>
+            <td class="B"><tt>Array * Promise</tt></th>
+            
+            <td class="C"><p>that may include promises.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Promise * Array</tt></td>
+            <td class="C"><p>a promise for an array of each resolved value respectively.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="forEach"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise-util---for-each.html"><tt>forEach</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="sum"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise-util---sum.html"><tt>sum</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>values</tt></th>
+            <td class="B"><tt>Array * Promise</tt></th>
+            
+            <td class="C"><p>a promise for an array of promises.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Promise * Array</tt></td>
+            <td class="C"><p>a promise for the sum of the resolved.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="whenAll"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise-util---when-all.html"><tt>whenAll</tt></a>
+        
+        
+    </h2>
+
+    <p>Wraps a <code>when</code> block</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>resolved</tt></th>
+            <td class="B"><tt>Function</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>rejected</tt></th>
+            <td class="B"><tt>Function</tt></th>
+            
+            <td class="C"><p>optional</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="mapDefer"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise-util---map-defer.html"><tt>mapDefer</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>values</tt></th>
+            <td class="B"><tt>Array * Promise</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>callback</tt></th>
+            <td class="B"><tt>Function</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>thisp</tt></th>
+            <td class="B"><tt>Promise * Object</tt></th>
+            
+            <td class="C"><p>optional this object for the callback</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * Promise</tt></td>
+            <td class="C"><p>an array of promises for the returned results of the callback on each respective resolved value.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="map"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise-util---map.html"><tt>map</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>values</tt></th>
+            <td class="B"><tt>Array * Promise</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>callback</tt></th>
+            <td class="B"><tt>Function</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>thisp</tt></th>
+            <td class="B"><tt>Promise * Object</tt></th>
+            
+            <td class="C"><p>optional this object for the callback</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Promise * Array</tt></td>
+            <td class="C"><p>a promise for an array of the returned results of the callback on each respective resolved value.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Queue"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise-util---_queue.html"><tt>Queue</tt></a>
+        
+        
+    </h2>
+
+    <p>A promise queue.  Each promise returned by get is
+eventually resolved by a value given to put, in the order
+in which they are requested and received.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-promise-util---_queue---get.html"><tt>get</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-promise-util---_queue---put.html"><tt>put</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-promise-util.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+    "name": "integer",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+    "lineNo": 809,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-args",
+        "_option"
+    ],
+    "href": "packages---narwhal-lib---narwhal-args---_option---integer"
+}

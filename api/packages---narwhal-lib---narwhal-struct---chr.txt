@@ -1,0 +1,17 @@
+{
+    "name": "chr",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+    "lineNo": 62,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Returns the character for a given character code ordinal (offset in the\nASCII or Unicode tables).\n\n* inverse: `ord`",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-struct"
+    ],
+    "href": "packages---narwhal-lib---narwhal-struct---chr"
+}

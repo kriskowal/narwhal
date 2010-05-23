@@ -1,0 +1,21 @@
+{
+    "name": "narwhal/global-commonjs",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/global-commonjs.js",
+    "lineNo": 4,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "module": true,
+    "doc": "Attempts to patch the existing free objects to bring the\ncontext up to compliance with CommonJS specifications.\n\nThis module is required during Narwhal's bootstrapping so\nthat all modules.",
+    "type": "module",
+    "id": "narwhal/global-commonjs",
+    "children": [],
+    "index": {},
+    "heritage": [
+        "packages",
+        "narwhal-lib"
+    ],
+    "href": "packages---narwhal-lib---narwhal-global-commonjs"
+}

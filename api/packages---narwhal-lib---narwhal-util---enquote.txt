@@ -1,0 +1,17 @@
+{
+    "name": "enquote",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+    "lineNo": 1073,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "transforms a string into a string literal, escaping\nall characters of a string that are special to\nJavaScript and and some other languages.\n\n`enquote` uses double quotes to be JSON compatible.\n\nPass `true` as an optional second argument to\nbe strictly JSON compliant, wherein all\nnon-printable-characters are represented with\nUnicode escape sequences.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-util"
+    ],
+    "href": "packages---narwhal-lib---narwhal-util---enquote"
+}

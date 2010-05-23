@@ -1,0 +1,29 @@
+{
+    "name": "moveBy",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+    "lineNo": 189,
+    "params": [
+        {
+            "name": "y",
+            "type": "Number",
+            "doc": "column"
+        },
+        {
+            "name": "x",
+            "type": "Number",
+            "doc": "row"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-term",
+        "move-to"
+    ],
+    "href": "packages---narwhal-lib---narwhal-term---move-to---move-by"
+}

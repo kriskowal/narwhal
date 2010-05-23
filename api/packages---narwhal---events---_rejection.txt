@@ -1,0 +1,165 @@
+{
+    "name": "Rejection",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 897,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "A type of Promise that represents rejection of a promise for some given\nreason.",
+    "children": [
+        {
+            "name": "constructor",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 908,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_rejection"
+            ],
+            "href": "packages---narwhal---events---_rejection---constructor"
+        },
+        {
+            "name": "prototype",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 912,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_rejection"
+            ],
+            "href": "packages---narwhal---events---_rejection---prototype"
+        },
+        {
+            "name": "toSource",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 926,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_rejection"
+            ],
+            "href": "packages---narwhal---events---_rejection---to-source"
+        },
+        {
+            "name": "toString",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 928,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_rejection"
+            ],
+            "href": "packages---narwhal---events---_rejection---to-string"
+        }
+    ],
+    "index": {
+        "constructor": {
+            "name": "constructor",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 908,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_rejection"
+            ],
+            "href": "packages---narwhal---events---_rejection---constructor"
+        },
+        "prototype": {
+            "name": "prototype",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 912,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_rejection"
+            ],
+            "href": "packages---narwhal---events---_rejection---prototype"
+        },
+        "toSource": {
+            "name": "toSource",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 926,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_rejection"
+            ],
+            "href": "packages---narwhal---events---_rejection---to-source"
+        },
+        "toString": {
+            "name": "toString",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 928,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_rejection"
+            ],
+            "href": "packages---narwhal---events---_rejection---to-string"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events"
+    ],
+    "href": "packages---narwhal---events---_rejection"
+}

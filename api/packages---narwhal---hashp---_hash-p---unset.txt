@@ -1,0 +1,18 @@
+{
+    "name": "unset",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/hashp.js",
+    "lineNo": 36,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "hashp",
+        "_hash-p"
+    ],
+    "href": "packages---narwhal---hashp---_hash-p---unset"
+}

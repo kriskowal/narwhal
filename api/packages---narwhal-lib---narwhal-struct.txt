@@ -1,0 +1,329 @@
+{
+    "name": "narwhal/struct",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+    "lineNo": 4,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "module": true,
+    "doc": "Provides functions for working with binary data.",
+    "type": "module",
+    "id": "narwhal/struct",
+    "children": [
+        {
+            "name": "alphabet16Upper",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+            "lineNo": 14,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-struct"
+            ],
+            "href": "packages---narwhal-lib---narwhal-struct---alphabet-16-upper"
+        },
+        {
+            "name": "alphabet16Lower",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+            "lineNo": 18,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-struct"
+            ],
+            "href": "packages---narwhal-lib---narwhal-struct---alphabet-16-lower"
+        },
+        {
+            "name": "alphabet16",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+            "lineNo": 22,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "`alphabet16Lower` is the default hexadecimal alphabet.\nThis value can be overridden on the module\nand function level.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-struct"
+            ],
+            "href": "packages---narwhal-lib---narwhal-struct---alphabet-16"
+        },
+        {
+            "name": "alphabet36",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+            "lineNo": 29,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-struct"
+            ],
+            "href": "packages---narwhal-lib---narwhal-struct---alphabet-36"
+        },
+        {
+            "name": "alphabet64",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+            "lineNo": 33,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-struct"
+            ],
+            "href": "packages---narwhal-lib---narwhal-struct---alphabet-64"
+        },
+        {
+            "name": "padBase64",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+            "lineNo": 37,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "base-64 pad character. \"=\" for strict RFC compliance, \"\" for brevity\n\"=\" by default.\nThis value can be overridden on the module\nand function level.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-struct"
+            ],
+            "href": "packages---narwhal-lib---narwhal-struct---pad-base-64"
+        },
+        {
+            "name": "characterSize",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+            "lineNo": 45,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "bits per input character. 8 - ASCII; 16 - Unicode\nThis value can be overridden on the module\nand function level.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-struct"
+            ],
+            "href": "packages---narwhal-lib---narwhal-struct---character-size"
+        },
+        {
+            "name": "ord",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+            "lineNo": 52,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Returns the character code ordinal (offset in the ASCII or Unicode tables)\nfor a given single character. \n\n* inverse: `chr`",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-struct"
+            ],
+            "href": "packages---narwhal-lib---narwhal-struct---ord"
+        },
+        {
+            "name": "chr",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+            "lineNo": 62,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Returns the character for a given character code ordinal (offset in the\nASCII or Unicode tables).\n\n* inverse: `ord`",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-struct"
+            ],
+            "href": "packages---narwhal-lib---narwhal-struct---chr"
+        }
+    ],
+    "index": {
+        "alphabet16Upper": {
+            "name": "alphabet16Upper",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+            "lineNo": 14,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-struct"
+            ],
+            "href": "packages---narwhal-lib---narwhal-struct---alphabet-16-upper"
+        },
+        "alphabet16Lower": {
+            "name": "alphabet16Lower",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+            "lineNo": 18,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-struct"
+            ],
+            "href": "packages---narwhal-lib---narwhal-struct---alphabet-16-lower"
+        },
+        "alphabet16": {
+            "name": "alphabet16",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+            "lineNo": 22,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "`alphabet16Lower` is the default hexadecimal alphabet.\nThis value can be overridden on the module\nand function level.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-struct"
+            ],
+            "href": "packages---narwhal-lib---narwhal-struct---alphabet-16"
+        },
+        "alphabet36": {
+            "name": "alphabet36",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+            "lineNo": 29,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-struct"
+            ],
+            "href": "packages---narwhal-lib---narwhal-struct---alphabet-36"
+        },
+        "alphabet64": {
+            "name": "alphabet64",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+            "lineNo": 33,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-struct"
+            ],
+            "href": "packages---narwhal-lib---narwhal-struct---alphabet-64"
+        },
+        "padBase64": {
+            "name": "padBase64",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+            "lineNo": 37,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "base-64 pad character. \"=\" for strict RFC compliance, \"\" for brevity\n\"=\" by default.\nThis value can be overridden on the module\nand function level.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-struct"
+            ],
+            "href": "packages---narwhal-lib---narwhal-struct---pad-base-64"
+        },
+        "characterSize": {
+            "name": "characterSize",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+            "lineNo": 45,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "bits per input character. 8 - ASCII; 16 - Unicode\nThis value can be overridden on the module\nand function level.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-struct"
+            ],
+            "href": "packages---narwhal-lib---narwhal-struct---character-size"
+        },
+        "ord": {
+            "name": "ord",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+            "lineNo": 52,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Returns the character code ordinal (offset in the ASCII or Unicode tables)\nfor a given single character. \n\n* inverse: `chr`",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-struct"
+            ],
+            "href": "packages---narwhal-lib---narwhal-struct---ord"
+        },
+        "chr": {
+            "name": "chr",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/struct.js",
+            "lineNo": 62,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Returns the character for a given character code ordinal (offset in the\nASCII or Unicode tables).\n\n* inverse: `ord`",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-struct"
+            ],
+            "href": "packages---narwhal-lib---narwhal-struct---chr"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib"
+    ],
+    "href": "packages---narwhal-lib---narwhal-struct"
+}

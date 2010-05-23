@@ -1,0 +1,26 @@
+{
+    "name": "parseMimeType",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/mime.js",
+    "lineNo": 28,
+    "params": [
+        {
+            "name": "mimeType",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "[type, subtype, params]",
+        "doc": ""
+    },
+    "doc": "Carves up a mime-type and returns an Array of the\n[type, subtype, params] where \"params\" is a Hash of all\nthe parameters for the media range.\n\nFor example, the media range \"application/xhtml;q=0.5\" would\nget parsed into:\n\n    [\"application\", \"xhtml\", { \"q\" : \"0.5\" }]",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-mime"
+    ],
+    "href": "packages---narwhal-lib---narwhal-mime---parse-mime-type"
+}

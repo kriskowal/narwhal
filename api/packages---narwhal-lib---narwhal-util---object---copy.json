@@ -1,0 +1,1 @@
+{"name":"copy","markup":"markdown","fileName":"/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js","lineNo":95,"params":[{"name":"object"}],"errors":[],"throws":[],"see":[],"returns":{"doc":"a shallow copy on all owned properties"},"doc":"","heritage":["packages","narwhal-lib","narwhal-util","object"],"href":"packages---narwhal-lib---narwhal-util---object---copy"}

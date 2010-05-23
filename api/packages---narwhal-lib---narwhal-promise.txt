@@ -1,0 +1,679 @@
+{
+    "name": "narwhal/promise",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+    "lineNo": 19,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "module": true,
+    "doc": "Provides a robust API for interacting with functions that\ncan neither block execution nor resolve a return value\nimmediately.  Such functions may return promises if they\nfind that they must perform a long latency operation in\ntheir transitive function call tree, and will eventually\nresolve or reject thir returned promise with a value or\na reason for failure.  These resolutions and rejections\ncan be observed and composed with other promises, and\nrejections percolate in a manner analogous to `try`, \n`catch`, and `finally`.\n\nIn addition, this module provides facilities that permit\ninteractions to be requested on the eventually resolved\nvalue of a promise and forwarded along a pipeline to\nreduce chattiness.  This permits high-performance,\nobject-granular interaction with distant processes.\n\nThis implementation is a prototype conforming to the\nalternate promise proposal for CommonJS:\nhttp://wiki.commonjs.org/wiki/Promises/B\n\nThis implementation and the specification are based on\nTyler Close's `ref_send.js`.",
+    "type": "module",
+    "id": "narwhal/promise",
+    "children": [
+        {
+            "name": "enqueue",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 69,
+            "params": [
+                {
+                    "name": "task",
+                    "type": "Function"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Performs a task in a future turn of the event loop.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---enqueue"
+        },
+        {
+            "name": "defer",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 75,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Constructs a {promise, resolve} object.\n\nThe resolver is a callback to invoke with a more resolved value for the\npromise. To fulfill the promise, invoke the resolver with any value that is\nnot a function. To reject the promise, invoke the resolver with a rejection\nobject. To put the promise in the same state as another promise, invoke the\nresolver with that other promise.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---defer"
+        },
+        {
+            "name": "Promise",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 125,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Constructs a Promise with a promise descriptor object and optional fallback\nfunction.  The descriptor contains methods like when(rejected), get(name),\nput(name, value), post(name, args), delete(name), and valueOf(), which all\nreturn either a value, a promise for a value, or a rejection.  The fallback\naccepts the operation name, a resolver, and any further arguments that would\nhave been forwarded to the appropriate method above had a method been\nprovided with the proper name.  The API makes no guarantees about the nature\nof the returned object, apart from that it is usable whereever promises are\nbought and sold.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---_promise"
+        },
+        {
+            "name": "isPromise",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 175,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "whether the given object is a promise. Otherwise it is a resolved value."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---is-promise"
+        },
+        {
+            "name": "reject",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 184,
+            "params": [
+                {
+                    "name": "reason",
+                    "doc": "value describing the failure"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Constructs a rejected promise.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---reject"
+        },
+        {
+            "name": "ref",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 201,
+            "params": [
+                {
+                    "name": "value",
+                    "doc": "immediate reference"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Constructs a promise for an immediate reference.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---ref"
+        },
+        {
+            "name": "Method",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 236,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Constructs a promise method that can be used to safely observe resolution of\na promise for an arbitrarily named method like \"propfind\" in a future turn.\n\n\"Method\" constructs methods like \"get(promise, name)\" and \"put(promise)\".",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---_method"
+        },
+        {
+            "name": "when",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 256,
+            "params": [
+                {
+                    "name": "value",
+                    "doc": "promise or immediate reference to observe"
+                },
+                {
+                    "name": "resolve",
+                    "doc": "function to be called with the resolved value"
+                },
+                {
+                    "name": "rejected",
+                    "doc": "function to be called with the rejection reason"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "promise for the return value from the invoked callback"
+            },
+            "doc": "Registers an observer on a promise.\n\nGuarantees:\n\n1. that resolved and rejected will be called only once.\n2. that either the resolved callback or the rejected callback will be\n   called, but not both.\n3. that resolved and rejected will not be called in this turn.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---when"
+        },
+        {
+            "name": "asap",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 289,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---asap"
+        },
+        {
+            "name": "get",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 309,
+            "params": [
+                {
+                    "name": "object",
+                    "doc": "promise or immediate reference for target object"
+                },
+                {
+                    "name": "name",
+                    "doc": "name of property to get"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "promise for the property value"
+            },
+            "doc": "Gets the value of a property in a future turn.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---get"
+        },
+        {
+            "name": "put",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 317,
+            "params": [
+                {
+                    "name": "object",
+                    "doc": "promise or immediate reference for object object"
+                },
+                {
+                    "name": "name",
+                    "doc": "name of property to set"
+                },
+                {
+                    "name": "value",
+                    "doc": "new value of property"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "promise for the return value"
+            },
+            "doc": "Sets the value of a property in a future turn.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---put"
+        },
+        {
+            "name": "del",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 326,
+            "params": [
+                {
+                    "name": "object",
+                    "doc": "promise or immediate reference for target object"
+                },
+                {
+                    "name": "name",
+                    "doc": "name of property to delete"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "promise for the return value"
+            },
+            "doc": "Deletes a property in a future turn.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---del"
+        },
+        {
+            "name": "post",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 334,
+            "params": [
+                {
+                    "name": "object",
+                    "doc": "promise or immediate reference for target object"
+                },
+                {
+                    "name": "name",
+                    "doc": "name of method to invoke"
+                },
+                {
+                    "name": "argv",
+                    "doc": "array of invocation arguments"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "promise for the return value"
+            },
+            "doc": "Invokes a method in a future turn.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---post"
+        },
+        {
+            "name": "defined",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 343,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Guarantees that the give promise resolves to a defined, non-null value.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---defined"
+        }
+    ],
+    "index": {
+        "enqueue": {
+            "name": "enqueue",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 69,
+            "params": [
+                {
+                    "name": "task",
+                    "type": "Function"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Performs a task in a future turn of the event loop.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---enqueue"
+        },
+        "defer": {
+            "name": "defer",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 75,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Constructs a {promise, resolve} object.\n\nThe resolver is a callback to invoke with a more resolved value for the\npromise. To fulfill the promise, invoke the resolver with any value that is\nnot a function. To reject the promise, invoke the resolver with a rejection\nobject. To put the promise in the same state as another promise, invoke the\nresolver with that other promise.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---defer"
+        },
+        "Promise": {
+            "name": "Promise",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 125,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Constructs a Promise with a promise descriptor object and optional fallback\nfunction.  The descriptor contains methods like when(rejected), get(name),\nput(name, value), post(name, args), delete(name), and valueOf(), which all\nreturn either a value, a promise for a value, or a rejection.  The fallback\naccepts the operation name, a resolver, and any further arguments that would\nhave been forwarded to the appropriate method above had a method been\nprovided with the proper name.  The API makes no guarantees about the nature\nof the returned object, apart from that it is usable whereever promises are\nbought and sold.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---_promise"
+        },
+        "isPromise": {
+            "name": "isPromise",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 175,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "whether the given object is a promise. Otherwise it is a resolved value."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---is-promise"
+        },
+        "reject": {
+            "name": "reject",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 184,
+            "params": [
+                {
+                    "name": "reason",
+                    "doc": "value describing the failure"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Constructs a rejected promise.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---reject"
+        },
+        "ref": {
+            "name": "ref",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 201,
+            "params": [
+                {
+                    "name": "value",
+                    "doc": "immediate reference"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Constructs a promise for an immediate reference.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---ref"
+        },
+        "Method": {
+            "name": "Method",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 236,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Constructs a promise method that can be used to safely observe resolution of\na promise for an arbitrarily named method like \"propfind\" in a future turn.\n\n\"Method\" constructs methods like \"get(promise, name)\" and \"put(promise)\".",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---_method"
+        },
+        "when": {
+            "name": "when",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 256,
+            "params": [
+                {
+                    "name": "value",
+                    "doc": "promise or immediate reference to observe"
+                },
+                {
+                    "name": "resolve",
+                    "doc": "function to be called with the resolved value"
+                },
+                {
+                    "name": "rejected",
+                    "doc": "function to be called with the rejection reason"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "promise for the return value from the invoked callback"
+            },
+            "doc": "Registers an observer on a promise.\n\nGuarantees:\n\n1. that resolved and rejected will be called only once.\n2. that either the resolved callback or the rejected callback will be\n   called, but not both.\n3. that resolved and rejected will not be called in this turn.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---when"
+        },
+        "asap": {
+            "name": "asap",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 289,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---asap"
+        },
+        "get": {
+            "name": "get",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 309,
+            "params": [
+                {
+                    "name": "object",
+                    "doc": "promise or immediate reference for target object"
+                },
+                {
+                    "name": "name",
+                    "doc": "name of property to get"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "promise for the property value"
+            },
+            "doc": "Gets the value of a property in a future turn.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---get"
+        },
+        "put": {
+            "name": "put",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 317,
+            "params": [
+                {
+                    "name": "object",
+                    "doc": "promise or immediate reference for object object"
+                },
+                {
+                    "name": "name",
+                    "doc": "name of property to set"
+                },
+                {
+                    "name": "value",
+                    "doc": "new value of property"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "promise for the return value"
+            },
+            "doc": "Sets the value of a property in a future turn.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---put"
+        },
+        "del": {
+            "name": "del",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 326,
+            "params": [
+                {
+                    "name": "object",
+                    "doc": "promise or immediate reference for target object"
+                },
+                {
+                    "name": "name",
+                    "doc": "name of property to delete"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "promise for the return value"
+            },
+            "doc": "Deletes a property in a future turn.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---del"
+        },
+        "post": {
+            "name": "post",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 334,
+            "params": [
+                {
+                    "name": "object",
+                    "doc": "promise or immediate reference for target object"
+                },
+                {
+                    "name": "name",
+                    "doc": "name of method to invoke"
+                },
+                {
+                    "name": "argv",
+                    "doc": "array of invocation arguments"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "promise for the return value"
+            },
+            "doc": "Invokes a method in a future turn.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---post"
+        },
+        "defined": {
+            "name": "defined",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+            "lineNo": 343,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Guarantees that the give promise resolves to a defined, non-null value.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise---defined"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib"
+    ],
+    "href": "packages---narwhal-lib---narwhal-promise"
+}

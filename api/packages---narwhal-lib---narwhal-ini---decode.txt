@@ -1,0 +1,27 @@
+{
+    "name": "decode",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/ini.js",
+    "lineNo": 18,
+    "params": [
+        {
+            "name": "encoded",
+            "type": "String",
+            "doc": "INI encoded text."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Array * Object",
+        "doc": "decoded where the section key, `\"-\"` signifies the default sections."
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-ini"
+    ],
+    "href": "packages---narwhal-lib---narwhal-ini---decode"
+}

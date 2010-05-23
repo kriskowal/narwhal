@@ -1,0 +1,407 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>EventEmitter</tt>
+        
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Emitter
+base prototype for objects with observable, named, event signals.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#constructor"><tt>constructor</tt></a></li>
+    
+        <li><a href="#constructObservable"><tt>constructObservable</tt></a></li>
+    
+        <li><a href="#observable"><tt>observable</tt></a></li>
+    
+        <li><a href="#emit"><tt>emit</tt></a></li>
+    
+        <li><a href="#addListener"><tt>addListener</tt></a></li>
+    
+        <li><a href="#removeListener"><tt>removeListener</tt></a></li>
+    
+        <li><a href="#listeners"><tt>listeners</tt></a></li>
+    
+        <li><a href="#setSignal"><tt>setSignal</tt></a></li>
+    
+        <li><a href="#getSignal"><tt>getSignal</tt></a></li>
+    
+        <li><a href="#hasSignal"><tt>hasSignal</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="constructor"></a>
+    <h2>
+        <a href="packages---narwhal---events---_event-emitter---constructor.html"><tt>constructor</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="constructObservable"></a>
+    <h2>
+        <a href="packages---narwhal---events---_event-emitter---construct-observable.html"><tt>constructObservable</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="observable"></a>
+    <h2>
+        <a href="packages---narwhal---events---_event-emitter---observable.html"><tt>observable</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="emit"></a>
+    <h2>
+        <a href="packages---narwhal---events---_event-emitter---emit.html"><tt>emit</tt></a>
+        
+        
+    </h2>
+
+    <p>emits an event to all observers of signal with a particular name.
+Further arguments are applied to each observer.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>name</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>{String} the name of the signal to emit.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="addListener"></a>
+    <h2>
+        <a href="packages---narwhal---events---_event-emitter---add-listener.html"><tt>addListener</tt></a>
+        
+        
+    </h2>
+
+    <p>adds an observer to this object's signal for a given name.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>name</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>{String} the name of the signal to observe.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="removeListener"></a>
+    <h2>
+        <a href="packages---narwhal---events---_event-emitter---remove-listener.html"><tt>removeListener</tt></a>
+        
+        
+    </h2>
+
+    <p>removes an observer from this object's signal for a given name.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>name</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>{String}</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>observer</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>{Function}</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="listeners"></a>
+    <h2>
+        <a href="packages---narwhal---events---_event-emitter---listeners.html"><tt>listeners</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="setSignal"></a>
+    <h2>
+        <a href="packages---narwhal---events---_event-emitter---set-signal.html"><tt>setSignal</tt></a>
+        
+        
+    </h2>
+
+    <p>adds a Signal slot to this event emitter with a given name.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>name</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>{String} the name of the signal slot.  Only one signal can be created for each name.</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>signal</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>an optional function or Signal object</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>Event</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>an optional event type that will be instantiated and passed as the activation object to each observer each time the signal emits an event.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>a signal, albeit one wrapped around the given function.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="getSignal"></a>
+    <h2>
+        <a href="packages---narwhal---events---_event-emitter---get-signal.html"><tt>getSignal</tt></a>
+        
+        
+    </h2>
+
+    <p>returns the Signal for a given name.  Throws an error if
+no signal has been slotted by the given name.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>name</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>{String} name of the signal to get.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Signal</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="hasSignal"></a>
+    <h2>
+        <a href="packages---narwhal---events---_event-emitter---has-signal.html"><tt>hasSignal</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>boolean</tt></td>
+            <td class="C"><p>whether a Signal has been registered for the given name.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal---events---_event-emitter.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

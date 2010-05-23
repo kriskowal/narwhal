@@ -1,0 +1,27 @@
+{
+    "name": "encode",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/ini.js",
+    "lineNo": 53,
+    "params": [
+        {
+            "name": "unencoded",
+            "type": "Object || Array * Object",
+            "doc": "where the section key, `\"-\"`, signifies the default section.  If a single section is provided, it is the default section."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "String",
+        "doc": "encoded"
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-ini"
+    ],
+    "href": "packages---narwhal-lib---narwhal-ini---encode"
+}

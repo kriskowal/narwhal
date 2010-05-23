@@ -1,0 +1,1 @@
+{"name":"copy","markup":"markdown","fileName":"/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js","lineNo":192,"params":[{"name":"source","doc":"path"},{"name":"target","doc":"path"}],"errors":[],"throws":[],"see":[],"doc":"","heritage":["packages","narwhal-lib","narwhal-fs"],"href":"packages---narwhal-lib---narwhal-fs---copy"}

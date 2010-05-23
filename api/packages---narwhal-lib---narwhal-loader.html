@@ -1,0 +1,219 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>narwhal/loader</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Provides a file-system-backed module loader
+implementation, as used by Narwhal's bootstrapping, and
+instantiable for nested module systems.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#Loader"><tt>Loader</tt></a></li>
+    
+        <li><a href="#resolvePkg"><tt>resolvePkg</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="Loader"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-loader---_loader.html"><tt>Loader</tt></a>
+        
+        
+    </h2>
+
+    <p>Creates a module loader for plain-text modules stored
+on the local file system with the given options.</p>
+
+<ul>
+<li><code>factories</code> is a pre-initialized map of top-level
+module identifiers to functions that accept a record of
+free variables to instantiate a module.</li>
+<li><code>paths</code> is an <code>Array</code> of fully-qualified path <code>String</code>s
+wherein to search for top-level module identifiers
+in order.  Paths are sought in the outer loop, thus
+have lower precedence than extensions.</li>
+<li><code>extensions</code> is an <code>Array</code> of extensions to search for,
+including the dot <code>.</code> if applicable, or an empty string
+to match all files.  The default is <code>["", ".js"]</code>.
+Extensions are sought in an inner loop, having higher
+precedence than paths.</li>
+<li><code>debug</code> is whether to print debug messages.</li>
+</ul>
+
+<p>In a module context, <code>require.loader</code> is or contains 
+(as in a <code>MultiLoader</code> which can multiplex extensions to
+alternate loaders) a <code>Loader</code> instance.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-loader---_loader---resolve.html"><tt>resolve</tt></a></th> 
+        <td><p>Resolves module identifiers into the top-level,
+or absolute module name space.</p>
+
+<p>An alias to <code>resolve</code> as exported by this module.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-loader---_loader---resolve-pkg.html"><tt>resolvePkg</tt></a></th> 
+        <td><p>Resolves a module identifier and package pair.</p>
+
+<p>Forwards to the <code>resolvePkg</code> method of this module.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-loader---_loader---find.html"><tt>find</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-loader---_loader---fetch.html"><tt>fetch</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-loader---_loader---_module.html"><tt>Module</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-loader---_loader---load.html"><tt>load</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-loader---_loader---reload.html"><tt>reload</tt></a></th> 
+        <td><p>Forces a module to be reloaded, setting or replacing
+the module factory function in the module factory
+memo.  This function is called by <code>load</code> internally
+to populate the memo and may be called externally
+to freshen the memo.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-loader---_loader---is-loaded.html"><tt>isLoaded</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-loader---_loader---has-changed.html"><tt>hasChanged</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-loader---_loader---paths.html"><tt>paths</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-loader---_loader---extensions.html"><tt>extensions</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-loader---_loader---resolve.html"><tt>resolve</tt></a></th> 
+        <td><p>Resolves module identifiers into the top-level,
+or absolute module name space.</p></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="resolvePkg"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-loader---resolve-pkg.html"><tt>resolvePkg</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-loader.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

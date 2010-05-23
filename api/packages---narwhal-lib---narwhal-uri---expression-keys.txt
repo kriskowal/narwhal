@@ -1,0 +1,17 @@
+{
+    "name": "expressionKeys",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+    "lineNo": 128,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "members of a parsed URI object that you get\nfrom evaluting the strict regular expression.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-uri"
+    ],
+    "href": "packages---narwhal-lib---narwhal-uri---expression-keys"
+}

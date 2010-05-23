@@ -1,0 +1,27 @@
+{
+    "name": "hmac_sha",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sha.js",
+    "lineNo": 33,
+    "params": [
+        {
+            "name": "key"
+        },
+        {
+            "name": "data"
+        },
+        {
+            "name": "characterSize"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-sha"
+    ],
+    "href": "packages---narwhal-lib---narwhal-sha---hmac-sha"
+}

@@ -1,0 +1,222 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>narwhal/sandbox</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#Sandbox"><tt>Sandbox</tt></a></li>
+    
+        <li><a href="#sandbox"><tt>sandbox</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="Sandbox"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-sandbox---_sandbox.html"><tt>Sandbox</tt></a>
+        
+        
+    </h2>
+
+    <p>Creates a <code>require</code> function, and arranges for modules
+to be executed and their exports memoized, in a lexical
+scope that includes:</p>
+
+<ul>
+<li><code>require(id)</code> with support for identifiers relative to
+the calling module.</li>
+<li><code>require.loader</code> for direct access to the module
+loader, which can be used in nested sandboxes.</li>
+<li><code>require.force(id)</code></li>
+<li><code>require.once(id, scope)</code> to execute but not memoize
+a module, with an optional object that owns additional
+free variables to inject into the module's lexical
+scope.</li>
+<li><code>module</code>
+<ul><li><code>id</code></li>
+<li><code>path</code></li></ul></li>
+<li><code>exports</code></li>
+</ul>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>options</tt></th>
+            <td class="B"><tt>{loader, modules, debug}</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>require(id)</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-sandbox---_sandbox---load.html"><tt>load</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-sandbox---_sandbox---once.html"><tt>once</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-sandbox---_sandbox---force.html"><tt>force</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-sandbox---_sandbox---main.html"><tt>main</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-sandbox---_sandbox---loader.html"><tt>loader</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-sandbox---_sandbox---system.html"><tt>system</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-sandbox---_sandbox---paths.html"><tt>paths</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-sandbox---_sandbox---extensions.html"><tt>extensions</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-sandbox---_sandbox---debug.html"><tt>debug</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="sandbox"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-sandbox---sandbox.html"><tt>sandbox</tt></a>
+        
+        
+    </h2>
+
+    <p>Creates a sandbox and executes a main module in the
+sandbox.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>main</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>a top-level identifier for the main module to execute in the sandbox.</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>system</tt></th>
+            <td class="B"><tt>{print, ...}</tt></th>
+            
+            <td class="C"><p>an alternate system module.</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>options</tt></th>
+            <td class="B"><tt>{prefix, loader, modules, print, debug}</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-sandbox.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

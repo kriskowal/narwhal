@@ -1,0 +1,25 @@
+{
+    "name": "wait",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 1165,
+    "params": [
+        {
+            "name": "object",
+            "doc": "promise or value to wait for"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "doc": "the value of the promise"
+    },
+    "doc": "Waits for the given promise to finish, blocking (and executing\nother events) if necessary to wait for the promise to finish. If\ntarget is not a promise it will return the target immediately. If\nthe promise results in an rejection, that rejection will be\nthrown.",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events"
+    ],
+    "href": "packages---narwhal---events---wait"
+}

@@ -1,0 +1,30 @@
+{
+    "name": "lower",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+    "lineNo": 1243,
+    "params": [
+        {
+            "name": "value",
+            "type": "String"
+        },
+        {
+            "name": "delimiter",
+            "type": "String"
+        }
+    ],
+    "errors": [
+        "Did not recognize \"see\" tag.",
+        "Did not recognize \"see\" tag.",
+        "Did not recognize \"see\" tag."
+    ],
+    "throws": [],
+    "see": [],
+    "doc": "converts a name to a `lower case` using\na given delimiter between numeric words.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-util"
+    ],
+    "href": "packages---narwhal-lib---narwhal-util---lower"
+}

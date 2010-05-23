@@ -1,0 +1,1 @@
+{"name":"put","markup":"markdown","fileName":"/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise-util.js","lineNo":187,"params":[{"name":"value","doc":"a resolution"}],"errors":[],"throws":[],"see":[],"doc":"","heritage":["packages","narwhal-lib","narwhal-promise-util","_queue"],"href":"packages---narwhal-lib---narwhal-promise-util---_queue---put"}

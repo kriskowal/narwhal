@@ -1,0 +1,26 @@
+{
+    "name": "fail",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
+    "lineNo": 111,
+    "params": [
+        {
+            "name": "options",
+            "doc": "properties for initializing the AssertionError."
+        }
+    ],
+    "errors": [],
+    "throws": [
+        {
+            "doc": "an AssertionError."
+        }
+    ],
+    "see": [],
+    "doc": "WARNING: This method is not specified.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "assert"
+    ],
+    "href": "packages---narwhal-lib---assert---fail"
+}

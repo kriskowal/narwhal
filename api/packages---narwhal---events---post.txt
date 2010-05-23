@@ -1,0 +1,33 @@
+{
+    "name": "post",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 1145,
+    "params": [
+        {
+            "name": "target",
+            "doc": "promise or value for target object"
+        },
+        {
+            "name": "methodName",
+            "doc": "name of method to invoke"
+        },
+        {
+            "name": "args",
+            "doc": "array of invocation arguments"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "doc": "promise for the return value"
+    },
+    "doc": "Invokes a method in a future turn.",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events"
+    ],
+    "href": "packages---narwhal---events---post"
+}

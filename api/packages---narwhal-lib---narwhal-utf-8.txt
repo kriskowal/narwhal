@@ -1,0 +1,82 @@
+{
+    "type": "module",
+    "id": "narwhal/utf8",
+    "name": "narwhal/utf8",
+    "children": [
+        {
+            "name": "encode",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/utf8.js",
+            "lineNo": 8,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "converts a Unicode character string into a UTF-8\ncharacter stream.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-utf-8"
+            ],
+            "href": "packages---narwhal-lib---narwhal-utf-8---encode"
+        },
+        {
+            "name": "decode",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/utf8.js",
+            "lineNo": 38,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Converts a UTF-8 character string into a\nUnicode character string.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-utf-8"
+            ],
+            "href": "packages---narwhal-lib---narwhal-utf-8---decode"
+        }
+    ],
+    "index": {
+        "encode": {
+            "name": "encode",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/utf8.js",
+            "lineNo": 8,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "converts a Unicode character string into a UTF-8\ncharacter stream.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-utf-8"
+            ],
+            "href": "packages---narwhal-lib---narwhal-utf-8---encode"
+        },
+        "decode": {
+            "name": "decode",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/utf8.js",
+            "lineNo": 38,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Converts a UTF-8 character string into a\nUnicode character string.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-utf-8"
+            ],
+            "href": "packages---narwhal-lib---narwhal-utf-8---decode"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib"
+    ],
+    "href": "packages---narwhal-lib---narwhal-utf-8"
+}

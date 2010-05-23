@@ -1,0 +1,1296 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>events</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Basic events, signals, emitters, observers, observables,
+deferreds, and promises.</p>
+
+<p>Typical usage:</p>
+
+<pre><code>var Q = require("promise");
+var {promise, resolve, reject} = Q.defer();
+asyncOperation(function () {
+    try {
+        resolve("ok result");
+    } catch (exception) {
+        reject(exception);
+    }
+});
+return promise;
+
+// meanwhile...
+
+Q.when(promise, function (value) {
+    print("ok " + value);
+});
+</code></pre>
+
+<p>Optionally accepts an errback and progress notifier:</p>
+
+<pre><code>Q.when(promise, function (value) {
+    print("ok " + value);
+}, function (error) {
+    print("error " + value);
+}, function (progress) {
+    print("progress " + progress.toFixed(1) + "%");
+});
+</code></pre>
+
+<p>Object-oriented variation:</p>
+
+<pre><code>// "then" and "when" are both acceptable
+promise.then(function (value) {
+    print("ok " + value);
+});
+</code></pre>
+
+<p>Using event emitters:</p>
+
+<pre><code>deferred.observe("ok", function (value) { });
+deferred.observe("error", function (value) { });
+deferred.observe("cancel", function (value) { });
+deferred.observe("progress", function (progress) { });
+
+promise.observe("ok", function (value) { });
+promise.observe("error", function (value) { });
+promise.observe("cancel", function (value) { });
+promise.observe("progress", function (progress) { });
+</code></pre>
+
+<p>Continued deferrence works:</p>
+
+<pre><code>var resolution = Q.when(async1(), function () {
+    return Q.when(async2(), function () {
+        return Q.when(async3(), function () {
+            return resolution;
+        };
+    });
+});
+
+Q.when(resolution, function () {
+    print(resolution);
+});
+</code></pre>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#Event"><tt>Event</tt></a></li>
+    
+        <li><a href="#Signal"><tt>Signal</tt></a></li>
+    
+        <li><a href="#EventEmitter"><tt>EventEmitter</tt></a></li>
+    
+        <li><a href="#Observable"><tt>Observable</tt></a></li>
+    
+        <li><a href="#Deferred"><tt>Deferred</tt></a></li>
+    
+        <li><a href="#Promise"><tt>Promise</tt></a></li>
+    
+        <li><a href="#Rejection"><tt>Rejection</tt></a></li>
+    
+        <li><a href="#Reference"><tt>Reference</tt></a></li>
+    
+        <li><a href="#defer"><tt>defer</tt></a></li>
+    
+        <li><a href="#promise"><tt>promise</tt></a></li>
+    
+        <li><a href="#isPromise"><tt>isPromise</tt></a></li>
+    
+        <li><a href="#ref"><tt>ref</tt></a></li>
+    
+        <li><a href="#valueOf"><tt>valueOf</tt></a></li>
+    
+        <li><a href="#reject"><tt>reject</tt></a></li>
+    
+        <li><a href="#when"><tt>when</tt></a></li>
+    
+        <li><a href="#whenPromise"><tt>whenPromise</tt></a></li>
+    
+        <li><a href="#get"><tt>get</tt></a></li>
+    
+        <li><a href="#put"><tt>put</tt></a></li>
+    
+        <li><a href="#post"><tt>post</tt></a></li>
+    
+        <li><a href="#del"><tt>del</tt></a></li>
+    
+        <li><a href="#wait"><tt>wait</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="Event"></a>
+    <h2>
+        <a href="packages---narwhal---events---_event.html"><tt>Event</tt></a>
+        
+        
+    </h2>
+
+    <p>An activation object for event observers that permits an observer to affect
+whether the an event continues to propagate to other observers and whether
+the emitting signal completes its default action.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_event---constructor.html"><tt>constructor</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_event---stop.html"><tt>stop</tt></a></th> 
+        <td><p>prevents further propagation and the default action of the emitting
+signal.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_event---stop-propagation.html"><tt>stopPropagation</tt></a></th> 
+        <td><p>prevents further propagation of the emitting signal</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_event---cancel-default.html"><tt>cancelDefault</tt></a></th> 
+        <td><p>prevents the default action of the emitting signal.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_event---get-propagation.html"><tt>getPropagation</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_event---get-defaulting.html"><tt>getDefaulting</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="Signal"></a>
+    <h2>
+        <a href="packages---narwhal---events---_signal.html"><tt>Signal</tt></a>
+        
+        
+    </h2>
+
+    <p>Signal
+base prototype for a signal that emits events.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_signal---constructor.html"><tt>constructor</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_signal---add-listener.html"><tt>addListener</tt></a></th> 
+        <td><p>arranges for a given observer function to be called whenever
+this signal is emitted.  The calling of this observer
+function can in turn be observed by the returned signal.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_signal---remove-listener.html"><tt>removeListener</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_signal---emit.html"><tt>emit</tt></a></th> 
+        <td><p>emits an event with to all observers and the signal's default action, by
+applying each function with the event instance as the activation object
+and the forwarding the given arguments.  Uses the event object to
+determine whether to continue propagating from observer to the next, and
+whether to apply the default action.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_signal---observer.html"><tt>observer</tt></a></th> 
+        <td><blockquote>
+  <p>var x = signal.observer(function (y, z) {
+      print("signal was observed with " + y + ", " + z);
+  });
+  x("a", 10);
+  x("b", 20);
+  x.emit();
+  signal was observed with a, 10
+  signal was observed with b, 20</p>
+</blockquote></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_signal---emitter.html"><tt>emitter</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_signal---get-observers.html"><tt>getObservers</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="EventEmitter"></a>
+    <h2>
+        <a href="packages---narwhal---events---_event-emitter.html"><tt>EventEmitter</tt></a>
+        
+        
+    </h2>
+
+    <p>Emitter
+base prototype for objects with observable, named, event signals.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_event-emitter---constructor.html"><tt>constructor</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_event-emitter---construct-observable.html"><tt>constructObservable</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_event-emitter---observable.html"><tt>observable</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_event-emitter---emit.html"><tt>emit</tt></a></th> 
+        <td><p>emits an event to all observers of signal with a particular name.
+Further arguments are applied to each observer.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_event-emitter---add-listener.html"><tt>addListener</tt></a></th> 
+        <td><p>adds an observer to this object's signal for a given name.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_event-emitter---remove-listener.html"><tt>removeListener</tt></a></th> 
+        <td><p>removes an observer from this object's signal for a given name.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_event-emitter---listeners.html"><tt>listeners</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_event-emitter---set-signal.html"><tt>setSignal</tt></a></th> 
+        <td><p>adds a Signal slot to this event emitter with a given name.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_event-emitter---get-signal.html"><tt>getSignal</tt></a></th> 
+        <td><p>returns the Signal for a given name.  Throws an error if
+no signal has been slotted by the given name.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_event-emitter---has-signal.html"><tt>hasSignal</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="Observable"></a>
+    <h2>
+        <a href="packages---narwhal---events---_observable.html"><tt>Observable</tt></a>
+        
+        
+    </h2>
+
+    <p>Observable &lt; Emitter
+a mixin type for any object that can emit events when certain property
+functions are called.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_observable---constructor.html"><tt>constructor</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_observable---set-signal-raw.html"><tt>setSignalRaw</tt></a></th> 
+        <td><p>sets a signal using the Emitter system, bypassing the Observable's
+setSignal behavior of adding the emitter as a property of the instance.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_observable---set-signal.html"><tt>setSignal</tt></a></th> 
+        <td><p>adds a signal slot for the given name and sets it to a property of the
+activation object (this).  This property function should only be called
+during the process of constructing this instance.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_observable---prototype.html"><tt>prototype</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="Deferred"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred.html"><tt>Deferred</tt></a>
+        
+        
+    </h2>
+
+    <p>a type of Deferred that corresponds to the future state of a
+value, including both the promise of for that value to be
+resolved, and a resolver which provides the means to advance the
+progress of the promise on its way to resolution.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---constructor.html"><tt>constructor</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---emit-success.html"><tt>emitSuccess</tt></a></th> 
+        <td><p>resolves the promise or defers it further with a new promise.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---reject.html"><tt>reject</tt></a></th> 
+        <td><p>rejects the promise by resolving it with a Rejection with 
+a given "reason"</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---when.html"><tt>when</tt></a></th> 
+        <td><p>forwards the "when" message to the contained promise to
+emulate the promise API.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---progress.html"><tt>progress</tt></a></th> 
+        <td><p>a signal that can be called to set the progress state
+of the deferrence to a number between 0 and 1, or can
+be observed with the "observe" method.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---get-progress.html"><tt>getProgress</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---ok.html"><tt>ok</tt></a></th> 
+        <td><p>a signal that can be observed but not explicitly emitted for when the
+promise is fully resolved.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---error.html"><tt>error</tt></a></th> 
+        <td><p>a signal that can be observed but not explicitly emitted for when the
+promise is rejected.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---cancel.html"><tt>cancel</tt></a></th> 
+        <td><p>a signal that rejects the promise and notifies any observers.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---timeout.html"><tt>timeout</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---then.html"><tt>then</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---emit-error.html"><tt>emitError</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---errback.html"><tt>errback</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---add-callback.html"><tt>addCallback</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---add-errback.html"><tt>addErrback</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---add-both.html"><tt>addBoth</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---to-source.html"><tt>toSource</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---to-string.html"><tt>toString</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="Promise"></a>
+    <h2>
+        <a href="packages---narwhal---events---_promise.html"><tt>Promise</tt></a>
+        
+        
+    </h2>
+
+    <p>An object that represents a promise to provide a value eventually.  When
+this value is provided or fails to be provided can be observed using
+"Q.when(promise, ok, error, progress)".</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_promise---constructor.html"><tt>constructor</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_promise---emit.html"><tt>emit</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_promise---wait.html"><tt>wait</tt></a></th> 
+        <td><p>blocks until this promise has been resolved or rejected, if the
+underlying engine supports blocking promises.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_promise---prototype.html"><tt>prototype</tt></a></th> 
+        <td><p>a signal that rejects this promise with a cancellation error, or the
+given error and notifies all observers.  Observers are afforded an
+opportunity to prevent cancellation through their event object.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_promise---then.html"><tt>then</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_promise---no-such-method.html"><tt>noSuchMethod</tt></a></th> 
+        <td><p>rejects Promise API calls that are not supported by this type of promise.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_promise---to-source.html"><tt>toSource</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_promise---to-string.html"><tt>toString</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_promise---add-callback.html"><tt>addCallback</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_promise---add-errback.html"><tt>addErrback</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_promise---add-both.html"><tt>addBoth</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_promise---add-cancelback.html"><tt>addCancelback</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="Rejection"></a>
+    <h2>
+        <a href="packages---narwhal---events---_rejection.html"><tt>Rejection</tt></a>
+        
+        
+    </h2>
+
+    <p>A type of Promise that represents rejection of a promise for some given
+reason.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_rejection---constructor.html"><tt>constructor</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_rejection---prototype.html"><tt>prototype</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_rejection---to-source.html"><tt>toSource</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_rejection---to-string.html"><tt>toString</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="Reference"></a>
+    <h2>
+        <a href="packages---narwhal---events---_reference.html"><tt>Reference</tt></a>
+        
+        
+    </h2>
+
+    <p>A type of Promise that represents a value on its way to resolution.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_reference---constructor.html"><tt>constructor</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_reference---value-of.html"><tt>valueOf</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_reference---when.html"><tt>when</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_reference---get.html"><tt>get</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_reference---post.html"><tt>post</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_reference---put.html"><tt>put</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_reference---del.html"><tt>del</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_reference---near.html"><tt>near</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="defer"></a>
+    <h2>
+        <a href="packages---narwhal---events---defer.html"><tt>defer</tt></a>
+        
+        
+    </h2>
+
+    <p>returns a Deferred.  A future is an Emitter and contains
+a promise and its corresponding resolver.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="promise"></a>
+    <h2>
+        <a href="packages---narwhal---events---promise.html"><tt>promise</tt></a>
+        
+        
+    </h2>
+
+    <p>given any value, a reference promise, a resolved promise, or a
+rejected promise, return a promise.  If the given object is not a
+promise, it will be wrapped as a reference promise.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="isPromise"></a>
+    <h2>
+        <a href="packages---narwhal---events---is-promise.html"><tt>isPromise</tt></a>
+        
+        
+    </h2>
+
+    <p>returns whether a given object is recognized
+as a promise.  Presently, this amounts to duck-typing
+on the presence of a "then" property function, but
+could conceivably be done by checking whether the object
+is an instance of Promise.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>object</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>whether the given object is a promise.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="ref"></a>
+    <h2>
+        <a href="packages---narwhal---events---ref.html"><tt>ref</tt></a>
+        
+        
+    </h2>
+
+    <p>returns a Reference.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>value</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="valueOf"></a>
+    <h2>
+        <a href="packages---narwhal---events---value-of.html"><tt>valueOf</tt></a>
+        
+        
+    </h2>
+
+    <p>given any value, a reference promise, a resolved promise, or a
+rejected promise, attempt to return the most resolved form of the
+value.  If the promise is resolved, this will be a non-promise
+object.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="reject"></a>
+    <h2>
+        <a href="packages---narwhal---events---reject.html"><tt>reject</tt></a>
+        
+        
+    </h2>
+
+    <p>returns a Rejection</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>reason</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>{Error}</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="when"></a>
+    <h2>
+        <a href="packages---narwhal---events---when.html"><tt>when</tt></a>
+        
+        
+    </h2>
+
+    <p>Registers an observer on a promise.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>value</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>promise or value to observe</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>resolvedCallback</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>function to be called with the resolved value</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>rejectCallback</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>function to be called with the rejection reason</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>progressCallback</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>function to be called when progress is made</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>promise for the return value from the invoked callback or the value if it is a non-promise value</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="whenPromise"></a>
+    <h2>
+        <a href="packages---narwhal---events---when-promise.html"><tt>whenPromise</tt></a>
+        
+        
+    </h2>
+
+    <p>Registers an observer on a promise.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>value</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>promise or value to observe</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>resolvedCallback</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>function to be called with the resolved value</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>rejectCallback</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>function to be called with the rejection reason</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>progressCallback</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>function to be called when progress is made</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>promise for the return value from the invoked callback</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="get"></a>
+    <h2>
+        <a href="packages---narwhal---events---get.html"><tt>get</tt></a>
+        
+        
+    </h2>
+
+    <p>Gets the value of a property in a future turn.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>target</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>promise or value for target object</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>property</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>name of property to get</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>promise for the property value</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="put"></a>
+    <h2>
+        <a href="packages---narwhal---events---put.html"><tt>put</tt></a>
+        
+        
+    </h2>
+
+    <p>Sets the value of a property in a future turn.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>target</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>promise or value for target object</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>property</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>name of property to set</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>value</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>new value of property</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>promise for the return value</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="post"></a>
+    <h2>
+        <a href="packages---narwhal---events---post.html"><tt>post</tt></a>
+        
+        
+    </h2>
+
+    <p>Invokes a method in a future turn.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>target</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>promise or value for target object</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>methodName</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>name of method to invoke</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>args</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>array of invocation arguments</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>promise for the return value</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="del"></a>
+    <h2>
+        <a href="packages---narwhal---events---del.html"><tt>del</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="wait"></a>
+    <h2>
+        <a href="packages---narwhal---events---wait.html"><tt>wait</tt></a>
+        
+        
+    </h2>
+
+    <p>Waits for the given promise to finish, blocking (and executing
+other events) if necessary to wait for the promise to finish. If
+target is not a promise it will return the target immediately. If
+the promise results in an rejection, that rejection will be
+thrown.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>object</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>promise or value to wait for</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>the value of the promise</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal---events.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

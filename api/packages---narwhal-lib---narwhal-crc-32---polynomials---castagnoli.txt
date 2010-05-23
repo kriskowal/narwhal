@@ -1,0 +1,18 @@
+{
+    "name": "castagnoli",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/crc32.js",
+    "lineNo": 21,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-crc-32",
+        "polynomials"
+    ],
+    "href": "packages---narwhal-lib---narwhal-crc-32---polynomials---castagnoli"
+}

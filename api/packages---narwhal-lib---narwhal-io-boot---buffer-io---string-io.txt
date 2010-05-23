@@ -1,0 +1,20 @@
+{
+    "name": "StringIO",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+    "lineNo": 537,
+    "params": [],
+    "errors": [
+        "Did not recognize \"extends\" tag."
+    ],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-io-boot",
+        "buffer-io"
+    ],
+    "href": "packages---narwhal-lib---narwhal-io-boot---buffer-io---string-io"
+}

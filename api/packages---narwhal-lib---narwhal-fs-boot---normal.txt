@@ -1,0 +1,69 @@
+{
+    "name": "normal",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs-boot.js",
+    "lineNo": 167,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "String",
+        "doc": "path"
+    },
+    "doc": "Takes paths as any number of arguments and reduces them\ninto a single path in normal form, removing all \".\" path\ncomponents, and reducing \"..\" path components by removing\nthe previous path component if possible.",
+    "children": [
+        {
+            "name": "isAbsolute",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs-boot.js",
+            "lineNo": 210,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Boolean",
+                "doc": "whether the given path begins at the root of the file system or a drive letter."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-fs-boot",
+                "normal"
+            ],
+            "href": "packages---narwhal-lib---narwhal-fs-boot---normal---is-absolute"
+        }
+    ],
+    "index": {
+        "isAbsolute": {
+            "name": "isAbsolute",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs-boot.js",
+            "lineNo": 210,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Boolean",
+                "doc": "whether the given path begins at the root of the file system or a drive letter."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-fs-boot",
+                "normal"
+            ],
+            "href": "packages---narwhal-lib---narwhal-fs-boot---normal---is-absolute"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs-boot"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs-boot---normal"
+}

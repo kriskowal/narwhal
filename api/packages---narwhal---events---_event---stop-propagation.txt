@@ -1,0 +1,18 @@
+{
+    "name": "stopPropagation",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 182,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "prevents further propagation of the emitting signal",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events",
+        "_event"
+    ],
+    "href": "packages---narwhal---events---_event---stop-propagation"
+}

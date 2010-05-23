@@ -1,0 +1,169 @@
+{
+    "name": "Observable",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 456,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Observable < Emitter\na mixin type for any object that can emit events when certain property\nfunctions are called.",
+    "children": [
+        {
+            "name": "constructor",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 467,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_observable"
+            ],
+            "href": "packages---narwhal---events---_observable---constructor"
+        },
+        {
+            "name": "setSignalRaw",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 473,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "sets a signal using the Emitter system, bypassing the Observable's\nsetSignal behavior of adding the emitter as a property of the instance.",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_observable"
+            ],
+            "href": "packages---narwhal---events---_observable---set-signal-raw"
+        },
+        {
+            "name": "setSignal",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 479,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "adds a signal slot for the given name and sets it to a property of the\nactivation object (this).  This property function should only be called\nduring the process of constructing this instance.",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_observable"
+            ],
+            "href": "packages---narwhal---events---_observable---set-signal"
+        },
+        {
+            "name": "prototype",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 492,
+            "params": [],
+            "errors": [
+                "Did not recognize \"signal\" tag."
+            ],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_observable"
+            ],
+            "href": "packages---narwhal---events---_observable---prototype"
+        }
+    ],
+    "index": {
+        "constructor": {
+            "name": "constructor",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 467,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_observable"
+            ],
+            "href": "packages---narwhal---events---_observable---constructor"
+        },
+        "setSignalRaw": {
+            "name": "setSignalRaw",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 473,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "sets a signal using the Emitter system, bypassing the Observable's\nsetSignal behavior of adding the emitter as a property of the instance.",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_observable"
+            ],
+            "href": "packages---narwhal---events---_observable---set-signal-raw"
+        },
+        "setSignal": {
+            "name": "setSignal",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 479,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "adds a signal slot for the given name and sets it to a property of the\nactivation object (this).  This property function should only be called\nduring the process of constructing this instance.",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_observable"
+            ],
+            "href": "packages---narwhal---events---_observable---set-signal"
+        },
+        "prototype": {
+            "name": "prototype",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/lib/events.js",
+            "lineNo": 492,
+            "params": [],
+            "errors": [
+                "Did not recognize \"signal\" tag."
+            ],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal",
+                "events",
+                "_observable"
+            ],
+            "href": "packages---narwhal---events---_observable---prototype"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events"
+    ],
+    "href": "packages---narwhal---events---_observable"
+}

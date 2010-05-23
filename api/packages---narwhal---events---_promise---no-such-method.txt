@@ -1,0 +1,18 @@
+{
+    "name": "noSuchMethod",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 849,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "rejects Promise API calls that are not supported by this type of promise.",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events",
+        "_promise"
+    ],
+    "href": "packages---narwhal---events---_promise---no-such-method"
+}

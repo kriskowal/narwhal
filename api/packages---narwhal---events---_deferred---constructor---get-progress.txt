@@ -1,0 +1,19 @@
+{
+    "name": "getProgress",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 577,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events",
+        "_deferred",
+        "constructor"
+    ],
+    "href": "packages---narwhal---events---_deferred---constructor---get-progress"
+}

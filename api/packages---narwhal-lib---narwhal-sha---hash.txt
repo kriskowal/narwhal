@@ -1,0 +1,27 @@
+{
+    "name": "hash",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sha.js",
+    "lineNo": 24,
+    "params": [
+        {
+            "name": "string",
+            "type": "String || Binary || Buffer"
+        },
+        {
+            "name": "characterSize",
+            "type": "Number",
+            "doc": "(optional)"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-sha"
+    ],
+    "href": "packages---narwhal-lib---narwhal-sha---hash"
+}

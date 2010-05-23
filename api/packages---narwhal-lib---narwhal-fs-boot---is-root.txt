@@ -1,0 +1,21 @@
+{
+    "name": "isRoot",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs-boot.js",
+    "lineNo": 237,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Boolean",
+        "doc": "whether the given path component corresponds to the root of the file system or a drive letter, as applicable."
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs-boot"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs-boot---is-root"
+}

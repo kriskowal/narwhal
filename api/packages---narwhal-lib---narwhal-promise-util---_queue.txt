@@ -1,0 +1,109 @@
+{
+    "name": "Queue",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise-util.js",
+    "lineNo": 155,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "A promise queue.  Each promise returned by get is\neventually resolved by a value given to put, in the order\nin which they are requested and received.",
+    "children": [
+        {
+            "name": "get",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise-util.js",
+            "lineNo": 176,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "a promise"
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise-util",
+                "_queue"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise-util---_queue---get"
+        },
+        {
+            "name": "put",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise-util.js",
+            "lineNo": 187,
+            "params": [
+                {
+                    "name": "value",
+                    "doc": "a resolution"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise-util",
+                "_queue"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise-util---_queue---put"
+        }
+    ],
+    "index": {
+        "get": {
+            "name": "get",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise-util.js",
+            "lineNo": 176,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "a promise"
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise-util",
+                "_queue"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise-util---_queue---get"
+        },
+        "put": {
+            "name": "put",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise-util.js",
+            "lineNo": 187,
+            "params": [
+                {
+                    "name": "value",
+                    "doc": "a resolution"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-promise-util",
+                "_queue"
+            ],
+            "href": "packages---narwhal-lib---narwhal-promise-util---_queue---put"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-promise-util"
+    ],
+    "href": "packages---narwhal-lib---narwhal-promise-util---_queue"
+}

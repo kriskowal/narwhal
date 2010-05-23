@@ -1,0 +1,26 @@
+{
+    "name": "splitName",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+    "lineNo": 1185,
+    "params": [
+        {
+            "name": "name",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Array * String",
+        "doc": ""
+    },
+    "doc": "splits a string into an array of words from an original\nstring.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-util"
+    ],
+    "href": "packages---narwhal-lib---narwhal-util---split-name"
+}

@@ -1,0 +1,1 @@
+{"name":"emitter","markup":"markdown","fileName":"/Users/kris/narwhal+node/lib/events.js","lineNo":324,"params":[],"errors":[],"throws":[],"see":[],"returns":{"type":"Function","doc":"a function that emits this signal when it is called."},"doc":"","heritage":["packages","narwhal","events","_signal"],"href":"packages---narwhal---events---_signal---emitter"}

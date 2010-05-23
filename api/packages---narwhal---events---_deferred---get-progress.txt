@@ -1,0 +1,21 @@
+{
+    "name": "getProgress",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 633,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "doc": "the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress."
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events",
+        "_deferred"
+    ],
+    "href": "packages---narwhal---events---_deferred---get-progress"
+}

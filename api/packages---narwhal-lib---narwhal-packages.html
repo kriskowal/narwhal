@@ -1,0 +1,712 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>narwhal/packages</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#resources"><tt>resources</tt></a></li>
+    
+        <li><a href="#resourceIfExists"><tt>resourceIfExists</tt></a></li>
+    
+        <li><a href="#resource"><tt>resource</tt></a></li>
+    
+        <li><a href="#main"><tt>main</tt></a></li>
+    
+        <li><a href="#load"><tt>load</tt></a></li>
+    
+        <li><a href="#read"><tt>read</tt></a></li>
+    
+        <li><a href="#verify"><tt>verify</tt></a></li>
+    
+        <li><a href="#sortedPackages"><tt>sortedPackages</tt></a></li>
+    
+        <li><a href="#analyze"><tt>analyze</tt></a></li>
+    
+        <li><a href="#synthesize"><tt>synthesize</tt></a></li>
+    
+        <li><a href="#addJsPaths"><tt>addJsPaths</tt></a></li>
+    
+        <li><a href="#normalizePackageDescriptor"><tt>normalizePackageDescriptor</tt></a></li>
+    
+        <li><a href="#readUsing"><tt>readUsing</tt></a></li>
+    
+        <li><a href="#updateUsingCatalog"><tt>updateUsingCatalog</tt></a></li>
+    
+        <li><a href="#normalize"><tt>normalize</tt></a></li>
+    
+        <li><a href="#normalizePackage"><tt>normalizePackage</tt></a></li>
+    
+        <li><a href="#Package"><tt>Package</tt></a></li>
+    
+        <li><a href="#Author"><tt>Author</tt></a></li>
+    
+        <li><a href="#Version"><tt>Version</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="resources"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---resources.html"><tt>resources</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A">&hellip;<tt>paths</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>a variadic list of path terms.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array</tt></td>
+            <td class="C"><p>an array of all files that match the given paths in every package.  Each of the variadic path terms may be replaced with their configured equivalents in their respective package, as described by the <code>directories</code> property in the given package's <code>package.json</code> file.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="resourceIfExists"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---resource-if-exists.html"><tt>resourceIfExists</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A">&hellip;<tt>paths</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>variadically, for a path in any overlayed package.  Packages complying to the CommonJS Packages/1.0 specification may have a <code>package.json</code> file with a <code>directories</code> property.  Each variadic term in the path that corresponds to one of the remapped directory names will get replaced with the corresponding value in each respective package.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Path || Undefined</tt></td>
+            <td class="C"><p>a path object from <code>narwhal/fs</code> in the <code>narwhal-lib</code> package for the file in the first package that contains a corresponding path, or <code>undefined</code> if no matching file exists.  If the paths correspond to an absolute path, returns that as a path object.  @throws {Error} an error if no corresponding path exists.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="resource"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---resource.html"><tt>resource</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A">&hellip;<tt>paths</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>variadically, for a path in any overlayed package. Packages complying to the CommonJS Packages/1.0 specification may have a <code>package.json</code> file with a <code>directories</code> property.  Each variadic term in the path that corresponds to one of the remapped directory names will get replaced with the corresponding value in each respective package.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Path</tt></td>
+            <td class="C"><p>a path object from <code>narwhal/fs</code> in the <code>narwhal-lib</code> package for the file in the first package that contains a corresponding path.  If the paths correspond to an absolute path, returns that as a path object.</p></td>
+        </tr> 
+        
+        
+        <tr>
+            <th class="A"><em>throws</em></th>
+            <td class="B"><tt>Error</tt></th>
+            
+            <td class="C"><p>an error if no corresponding path exists.</p></td>
+            
+        </tr>
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="main"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---main.html"><tt>main</tt></a>
+        
+        
+    </h2>
+
+    <p>Finds, reads, and analyzes overlayed packages then
+applies those findings to the module loader and memoizes
+the results as properties of this module.  This involves
+a breadth-first- search for packages and packages within
+packages, and performing engine-specific configuration.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="load"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---load.html"><tt>load</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>prefixes</tt></th>
+            <td class="B"><tt>Array</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>options</tt></th>
+            <td class="B"><tt>Object</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-packages---load---using-catalog.html"><tt>usingCatalog</tt></a></th> 
+        <td><p>Set by <code>main</code>.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-packages---load---order.html"><tt>order</tt></a></th> 
+        <td><p>an array of the same packages in the
+<code>catalog</code> in order from most to least dependent, so that
+you are guaranteed that, if a package depends on another,
+it appears before it in <code>order</code>.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-packages---load---root.html"><tt>root</tt></a></th> 
+        <td><p>the active package.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-packages---load---catalog.html"><tt>catalog</tt></a></th> 
+        <td><p>A mapping of engine package names to engine package objects,
+for all installed engine packages.</p></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="read"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---read.html"><tt>read</tt></a>
+        
+        
+    </h2>
+
+    <p>read
+recursively loads all package data from package.json files
+and packages/ directories.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="verify"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---verify.html"><tt>verify</tt></a>
+        
+        
+    </h2>
+
+    <p>scans a package object for missing dependencies and
+throws away any package that has unmet dependencies.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="sortedPackages"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---sorted-packages.html"><tt>sortedPackages</tt></a>
+        
+        
+    </h2>
+
+    <p>sortedPackages
+returns an array of packages in order from the most
+dependent to least dependent, sorted based on
+their transitive dependencies.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="analyze"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---analyze.html"><tt>analyze</tt></a>
+        
+        
+    </h2>
+
+    <p>analyze
+constructs prioritized top-level module paths
+based on the given sorted package array.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="synthesize"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---synthesize.html"><tt>synthesize</tt></a>
+        
+        
+    </h2>
+
+    <p>synthesize
+applies the results of the analysis on the current
+execution environment.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="addJsPaths"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---add-js-paths.html"><tt>addJsPaths</tt></a>
+        
+        
+    </h2>
+
+    <p>addJsPaths</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="normalizePackageDescriptor"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---normalize-package-descriptor.html"><tt>normalizePackageDescriptor</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="readUsing"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---read-using.html"><tt>readUsing</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="updateUsingCatalog"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---update-using-catalog.html"><tt>updateUsingCatalog</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="normalize"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---normalize.html"><tt>normalize</tt></a>
+        
+        
+    </h2>
+
+    <p>normalize
+normalizes all of the packages in a catalog</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="normalizePackage"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---normalize-package.html"><tt>normalizePackage</tt></a>
+        
+        
+    </h2>
+
+    <p>normalizePackage</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Package"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---_package.html"><tt>Package</tt></a>
+        
+        
+    </h2>
+
+    <p>A package descriptor.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>initial</tt></th>
+            <td class="B"><tt>Object</tt></th>
+            
+            <td class="C"><p>optional property values</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-packages---_package---resource.html"><tt>resource</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="Author"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---_author.html"><tt>Author</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-packages---_author---name.html"><tt>name</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-packages---_author---url.html"><tt>url</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-packages---_author---email.html"><tt>email</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-packages---_author---to-string.html"><tt>toString</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-packages---_author---regexp.html"><tt>regexp</tt></a></th> 
+        <td><p>A regular expression that matches against author strings
+like <code>Author Name (http://example.com/) &lt;author@example.com&gt;</code>,
+where each component is optional.</p></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="Version"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-packages---_version.html"><tt>Version</tt></a>
+        
+        
+    </h2>
+
+    <p>Normalizes <code>undefined</code> to an empty <code>Array</code>.
+Normalizes a <code>String</code> to an <code>Array</code> of <code>String</code>s.
+All other values are returned unaltered.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>version</tt></th>
+            <td class="B"><tt>Undefined || String || Version</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * String</tt></td>
+            <td class="C"><p>a normalized version</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-packages.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

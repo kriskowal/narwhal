@@ -1,0 +1,1 @@
+{"name":"Assert","markup":"markdown","fileName":"/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js","lineNo":325,"params":[],"errors":[],"throws":[],"see":[],"constructor":true,"returns":{"doc":"a new assertion logger that reports to this log."},"doc":"","heritage":["packages","narwhal-lib","test","_log"],"href":"packages---narwhal-lib---test---_log---_assert"}

@@ -1,0 +1,36 @@
+{
+    "name": "padBegin",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+    "lineNo": 1159,
+    "params": [
+        {
+            "name": "value",
+            "type": "String || Number"
+        },
+        {
+            "name": "a",
+            "type": "Number",
+            "doc": "minimum length of the resultant `String`: by default, 2"
+        },
+        {
+            "name": "a",
+            "type": "String",
+            "doc": "pad string: by default, `'0'`."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "String",
+        "doc": "the value padded up to at least the minimum length.  adds the padding to the begining side of the `String`."
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-util"
+    ],
+    "href": "packages---narwhal-lib---narwhal-util---pad-begin"
+}

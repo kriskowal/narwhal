@@ -1,0 +1,17 @@
+{
+    "name": "processNextEvent",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/event-loop.js",
+    "lineNo": 60,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "WARNING: The existence of this method is not\nguaranteed on all engines.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-event-loop"
+    ],
+    "href": "packages---narwhal-lib---narwhal-event-loop---process-next-event"
+}

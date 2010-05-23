@@ -1,0 +1,18 @@
+{
+    "name": "black",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+    "lineNo": 264,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-term",
+        "colors"
+    ],
+    "href": "packages---narwhal-lib---narwhal-term---colors---black"
+}

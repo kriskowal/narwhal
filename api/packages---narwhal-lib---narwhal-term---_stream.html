@@ -1,0 +1,326 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>Stream</tt>
+        
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Constructs a terminal output stream that translates
+literate color encodings like "\0blue(I'm blue\0)" into
+VT-100 escape sequences, maintaining independent stacks
+for foreground, background, and font weight so terminal
+settings are restored when they are out of scope.</p>
+
+<p>Escape sequences are channeled to the <code>stderr</code> channel to
+preserve the consistency of the data written to <code>stdout</code>,
+such that it can be safely pipelined.  The translating
+functions coordinate flushing of <code>stdout</code> and <code>stderr</code>
+to ensure that formatting is applied correctly.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>the</tt></th>
+            <td class="B"><tt>{stdout, stderr, env}</tt></th>
+            
+            <td class="C"><p>"system" module or a reasonable facimile.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#enable"><tt>enable</tt></a></li>
+    
+        <li><a href="#disable"><tt>disable</tt></a></li>
+    
+        <li><a href="#writeCode"><tt>writeCode</tt></a></li>
+    
+        <li><a href="#print"><tt>print</tt></a></li>
+    
+        <li><a href="#printError"><tt>printError</tt></a></li>
+    
+        <li><a href="#write"><tt>write</tt></a></li>
+    
+        <li><a href="#update"><tt>update</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="enable"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-term---_stream---enable.html"><tt>enable</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="disable"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-term---_stream---disable.html"><tt>disable</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="writeCode"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-term---_stream---write-code.html"><tt>writeCode</tt></a>
+        
+        
+    </h2>
+
+    <p>Writes and flushes a VT-100 escape sequence to the
+error stream if the stream is enabled, coordinating
+the flushing of output and errput to guarantee that
+colors are interleaved properly.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>code</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="print"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-term---_stream---print.html"><tt>print</tt></a>
+        
+        
+    </h2>
+
+    <p>Prints a line of space separated fields, translating
+any encountered null-tokens to VT-100 sequences,
+coordinating standard input and output.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A">&hellip;<tt>fields</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="printError"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-term---_stream---print-error.html"><tt>printError</tt></a>
+        
+        
+    </h2>
+
+    <p>Prints a line of space separated fields to standard
+error.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="write"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-term---_stream---write.html"><tt>write</tt></a>
+        
+        
+    </h2>
+
+    <p>Writes a string, tranlating null-prefix-codes to VT-100
+codes.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>string</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>toError</tt></th>
+            <td class="B"><tt>Boolean</tt></th>
+            
+            <td class="C"><p>(optional) dictates that the string should be shunted to standard error instead of out.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="update"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-term---_stream---update.html"><tt>update</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>bold</tt></th>
+            <td class="B"><tt>Boolean</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>fore</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+            <td class="C"><p>a VT-100, single-digit color code for the foreground color.</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>back</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+            <td class="C"><p>a VT-100, signle-digit color code for the background color.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-term---_stream.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

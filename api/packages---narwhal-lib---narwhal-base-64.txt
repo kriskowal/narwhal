@@ -1,0 +1,91 @@
+{
+    "name": "narwhal/base64",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/base64.js",
+    "lineNo": 13,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "module": true,
+    "doc": "",
+    "type": "module",
+    "id": "narwhal/base64",
+    "children": [
+        {
+            "name": "encode",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/base64.js",
+            "lineNo": 33,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-base-64"
+            ],
+            "href": "packages---narwhal-lib---narwhal-base-64---encode"
+        },
+        {
+            "name": "decode",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/base64.js",
+            "lineNo": 69,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-base-64"
+            ],
+            "href": "packages---narwhal-lib---narwhal-base-64---decode"
+        }
+    ],
+    "index": {
+        "encode": {
+            "name": "encode",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/base64.js",
+            "lineNo": 33,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-base-64"
+            ],
+            "href": "packages---narwhal-lib---narwhal-base-64---encode"
+        },
+        "decode": {
+            "name": "decode",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/base64.js",
+            "lineNo": 69,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-base-64"
+            ],
+            "href": "packages---narwhal-lib---narwhal-base-64---decode"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib"
+    ],
+    "href": "packages---narwhal-lib---narwhal-base-64"
+}

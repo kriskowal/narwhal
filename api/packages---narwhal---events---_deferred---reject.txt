@@ -1,0 +1,23 @@
+{
+    "name": "reject",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 604,
+    "params": [
+        {
+            "name": "reason",
+            "doc": "{Error}"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "rejects the promise by resolving it with a Rejection with \na given \"reason\"",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events",
+        "_deferred"
+    ],
+    "href": "packages---narwhal---events---_deferred---reject"
+}

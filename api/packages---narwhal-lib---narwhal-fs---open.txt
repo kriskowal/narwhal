@@ -1,0 +1,17 @@
+{
+    "name": "open",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 32,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---open"
+}

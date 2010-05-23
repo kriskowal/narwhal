@@ -1,0 +1,32 @@
+{
+    "name": "resource",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
+    "lineNo": 67,
+    "params": [
+        {
+            "name": "paths",
+            "variadic": true,
+            "doc": "variadically, for a path in any overlayed package. Packages complying to the CommonJS Packages/1.0 specification may have a `package.json` file with a `directories` property.  Each variadic term in the path that corresponds to one of the remapped directory names will get replaced with the corresponding value in each respective package."
+        }
+    ],
+    "errors": [],
+    "throws": [
+        {
+            "type": "Error",
+            "doc": "an error if no corresponding path exists."
+        }
+    ],
+    "see": [],
+    "returns": {
+        "type": "Path",
+        "doc": "a path object from `narwhal/fs` in the `narwhal-lib` package for the file in the first package that contains a corresponding path.  If the paths correspond to an absolute path, returns that as a path object."
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-packages"
+    ],
+    "href": "packages---narwhal-lib---narwhal-packages---resource"
+}

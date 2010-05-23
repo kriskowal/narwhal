@@ -1,0 +1,37 @@
+{
+    "name": "exec0",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+    "lineNo": 79,
+    "params": [
+        {
+            "name": "command",
+            "type": "String"
+        },
+        {
+            "name": "args",
+            "type": "Array * String",
+            "doc": "optional"
+        },
+        {
+            "name": "env",
+            "type": "Object * String",
+            "doc": "optional"
+        },
+        {
+            "name": "search",
+            "type": "Boolean",
+            "doc": "optionally whether to use the `env.PATH` to search for `command`"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Strictly built on Posix `execv`, `execvp`, and `execvP`,\nwhere the command is provided as the first argument and \nargs[0] is the original path used to execute the command.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-os"
+    ],
+    "href": "packages---narwhal-lib---narwhal-os---exec-0"
+}

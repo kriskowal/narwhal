@@ -1,0 +1,22 @@
+{
+    "name": "getDefaulting",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 204,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Boolean",
+        "doc": "whether this event instructs the emitting signal to apply its default action."
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events",
+        "_event"
+    ],
+    "href": "packages---narwhal---events---_event---get-defaulting"
+}

@@ -1,0 +1,1 @@
+{"name":"encode","markup":"markdown","fileName":"/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/utf8.js","lineNo":8,"params":[],"errors":[],"throws":[],"see":[],"doc":"converts a Unicode character string into a UTF-8\ncharacter stream.","heritage":["packages","narwhal-lib","narwhal-utf-8"],"href":"packages---narwhal-lib---narwhal-utf-8---encode"}

@@ -1,0 +1,18 @@
+{
+    "name": "printUsage",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+    "lineNo": 200,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-args",
+        "_parser"
+    ],
+    "href": "packages---narwhal-lib---narwhal-args---_parser---print-usage"
+}

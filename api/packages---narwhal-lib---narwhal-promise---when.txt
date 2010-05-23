@@ -1,0 +1,33 @@
+{
+    "name": "when",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+    "lineNo": 256,
+    "params": [
+        {
+            "name": "value",
+            "doc": "promise or immediate reference to observe"
+        },
+        {
+            "name": "resolve",
+            "doc": "function to be called with the resolved value"
+        },
+        {
+            "name": "rejected",
+            "doc": "function to be called with the rejection reason"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "doc": "promise for the return value from the invoked callback"
+    },
+    "doc": "Registers an observer on a promise.\n\nGuarantees:\n\n1. that resolved and rejected will be called only once.\n2. that either the resolved callback or the rejected callback will be\n   called, but not both.\n3. that resolved and rejected will not be called in this turn.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-promise"
+    ],
+    "href": "packages---narwhal-lib---narwhal-promise---when"
+}

@@ -1,0 +1,22 @@
+{
+    "name": "ref",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+    "lineNo": 201,
+    "params": [
+        {
+            "name": "value",
+            "doc": "immediate reference"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Constructs a promise for an immediate reference.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-promise"
+    ],
+    "href": "packages---narwhal-lib---narwhal-promise---ref"
+}

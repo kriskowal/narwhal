@@ -1,0 +1,649 @@
+{
+    "name": "narwhal/logger",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+    "lineNo": 4,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "module": true,
+    "doc": "Provides basic logging, and logging types instantiable\nfor alternate output streams.",
+    "type": "module",
+    "id": "narwhal/logger",
+    "children": [
+        {
+            "name": "Logger",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+            "lineNo": 24,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "children": [
+                {
+                    "name": "SEV_LABEL",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 34,
+                    "params": [],
+                    "errors": [
+                        "Did not recognize \"classproperty\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---__sev-label"
+                },
+                {
+                    "name": "fatal",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 37,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---fatal"
+                },
+                {
+                    "name": "error",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 38,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---error"
+                },
+                {
+                    "name": "warn",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 39,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---warn"
+                },
+                {
+                    "name": "info",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 40,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---info"
+                },
+                {
+                    "name": "debug",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 41,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---debug"
+                },
+                {
+                    "name": "add",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 49,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---add"
+                },
+                {
+                    "name": "format",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 56,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---format"
+                }
+            ],
+            "index": {
+                "SEV_LABEL": {
+                    "name": "SEV_LABEL",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 34,
+                    "params": [],
+                    "errors": [
+                        "Did not recognize \"classproperty\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---__sev-label"
+                },
+                "fatal": {
+                    "name": "fatal",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 37,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---fatal"
+                },
+                "error": {
+                    "name": "error",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 38,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---error"
+                },
+                "warn": {
+                    "name": "warn",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 39,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---warn"
+                },
+                "info": {
+                    "name": "info",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 40,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---info"
+                },
+                "debug": {
+                    "name": "debug",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 41,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---debug"
+                },
+                "add": {
+                    "name": "add",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 49,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---add"
+                },
+                "format": {
+                    "name": "format",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 56,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---format"
+                }
+            },
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-logger"
+            ],
+            "href": "packages---narwhal-lib---narwhal-logger---_logger"
+        }
+    ],
+    "index": {
+        "Logger": {
+            "name": "Logger",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+            "lineNo": 24,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "children": [
+                {
+                    "name": "SEV_LABEL",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 34,
+                    "params": [],
+                    "errors": [
+                        "Did not recognize \"classproperty\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---__sev-label"
+                },
+                {
+                    "name": "fatal",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 37,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---fatal"
+                },
+                {
+                    "name": "error",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 38,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---error"
+                },
+                {
+                    "name": "warn",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 39,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---warn"
+                },
+                {
+                    "name": "info",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 40,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---info"
+                },
+                {
+                    "name": "debug",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 41,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---debug"
+                },
+                {
+                    "name": "add",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 49,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---add"
+                },
+                {
+                    "name": "format",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 56,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---format"
+                }
+            ],
+            "index": {
+                "SEV_LABEL": {
+                    "name": "SEV_LABEL",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 34,
+                    "params": [],
+                    "errors": [
+                        "Did not recognize \"classproperty\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---__sev-label"
+                },
+                "fatal": {
+                    "name": "fatal",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 37,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---fatal"
+                },
+                "error": {
+                    "name": "error",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 38,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---error"
+                },
+                "warn": {
+                    "name": "warn",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 39,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---warn"
+                },
+                "info": {
+                    "name": "info",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 40,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---info"
+                },
+                "debug": {
+                    "name": "debug",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 41,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---debug"
+                },
+                "add": {
+                    "name": "add",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 49,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---add"
+                },
+                "format": {
+                    "name": "format",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+                    "lineNo": 56,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-logger",
+                        "_logger"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-logger---_logger---format"
+                }
+            },
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-logger"
+            ],
+            "href": "packages---narwhal-lib---narwhal-logger---_logger"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib"
+    ],
+    "href": "packages---narwhal-lib---narwhal-logger"
+}

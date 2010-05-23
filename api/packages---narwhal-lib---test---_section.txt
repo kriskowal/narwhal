@@ -1,0 +1,75 @@
+{
+    "name": "Section",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
+    "lineNo": 336,
+    "params": [
+        {
+            "name": "stream",
+            "type": "WriterStream"
+        },
+        {
+            "name": "indent",
+            "type": "String",
+            "doc": "a prefix for each line printed with the `print` method."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Section adapters wrap any object with a print\nmethod such that every line is indented.",
+    "children": [
+        {
+            "name": "print",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
+            "lineNo": 349,
+            "params": [
+                {
+                    "name": "message"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "test",
+                "_section"
+            ],
+            "href": "packages---narwhal-lib---test---_section---print"
+        }
+    ],
+    "index": {
+        "print": {
+            "name": "print",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
+            "lineNo": 349,
+            "params": [
+                {
+                    "name": "message"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "test",
+                "_section"
+            ],
+            "href": "packages---narwhal-lib---test---_section---print"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "test"
+    ],
+    "href": "packages---narwhal-lib---test---_section"
+}

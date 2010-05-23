@@ -1,0 +1,347 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>loaders</tt>
+        
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>May be modified in-place but not replaced.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#resolve"><tt>resolve</tt></a></li>
+    
+        <li><a href="#resolvePkg"><tt>resolvePkg</tt></a></li>
+    
+        <li><a href="#find"><tt>find</tt></a></li>
+    
+        <li><a href="#load"><tt>load</tt></a></li>
+    
+        <li><a href="#reload"><tt>reload</tt></a></li>
+    
+        <li><a href="#isLoaded"><tt>isLoaded</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="resolve"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-loader-multi---loaders---resolve.html"><tt>resolve</tt></a>
+        
+        
+    </h2>
+
+    <p>Resolves module identifiers into the top-level,
+or absolute module name space.</p>
+
+<p>An alias to <code>resolve</code> as exported by the <code>loader</code>
+module.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>id</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>a relative or top-level identifier.</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>baseId</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>a top-level identifier.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>the corresponding top-level identifier.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="resolvePkg"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-loader-multi---loaders---resolve-pkg.html"><tt>resolvePkg</tt></a>
+        
+        
+    </h2>
+
+    <p>Resolves a module identifier and package pair.</p>
+
+<p>Forwards to the <code>resolvePkg</code> method of the <code>loader</code>
+module.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>id</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>a relative or top-level identifier.</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>baseId</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>a top-level identifier.</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>pkg</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>a package reference, scoped to the current package.</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>basePkg</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>a package reference</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>[id: String, pkg: String]</tt></td>
+            <td class="C"><p>the corresponding top-level identifier and package identifier.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="find"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-loader-multi---loaders---find.html"><tt>find</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>topId</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Function(lexicalScope Object)</tt></td>
+            <td class="C"><p>factory a module factory ("maker") function.</p></td>
+        </tr> 
+        
+        
+        <tr>
+            <th class="A"><em>throws</em></th>
+            <td class="B"><tt>Error</tt></th>
+            
+            <td class="C"><p>of no module can be found with the given top-level identifier.</p></td>
+            
+        </tr>
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="load"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-loader-multi---loaders---load.html"><tt>load</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>topId</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>an optional path to provide a hint about where to find the text corresponding to the given topId, provided merely to avoid recomputation.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Function(scope: Object)</tt></td>
+            <td class="C"><p>the memoized module factory function corresponding to the given top-level identifier.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="reload"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-loader-multi---loaders---reload.html"><tt>reload</tt></a>
+        
+        
+    </h2>
+
+    <p>Forces a module to be reloaded, if possible, setting
+or replacing the module factory function in the
+module factory memo.  This function is called by
+<code>load</code> internally to populate the memo and may be
+called externally to freshen the memo.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>an optional path to provide a hint about where to find the text corresponding to the given topId, provided merely to avoid recomputation.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="isLoaded"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-loader-multi---loaders---is-loaded.html"><tt>isLoaded</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether a module factory function has already been loaded for the given identifier.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-loader-multi---loaders.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

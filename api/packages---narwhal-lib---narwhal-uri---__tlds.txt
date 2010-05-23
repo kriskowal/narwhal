@@ -1,0 +1,17 @@
+{
+    "name": "TLDS",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+    "lineNo": 9,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Top level domains, in upper-case.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-uri"
+    ],
+    "href": "packages---narwhal-lib---narwhal-uri---__tlds"
+}

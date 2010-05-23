@@ -1,0 +1,27 @@
+{
+    "name": "hash",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sha256.js",
+    "lineNo": 15,
+    "params": [
+        {
+            "name": "string",
+            "type": "String"
+        },
+        {
+            "name": "characterSize",
+            "type": "Number",
+            "doc": "(optional)"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "hash",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-sha-256"
+    ],
+    "href": "packages---narwhal-lib---narwhal-sha-256---hash"
+}

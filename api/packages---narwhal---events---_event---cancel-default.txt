@@ -1,0 +1,18 @@
+{
+    "name": "cancelDefault",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 189,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "prevents the default action of the emitting signal.",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events",
+        "_event"
+    ],
+    "href": "packages---narwhal---events---_event---cancel-default"
+}

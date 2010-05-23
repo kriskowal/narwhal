@@ -1,0 +1,18 @@
+{
+    "name": "put",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 982,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events",
+        "_reference"
+    ],
+    "href": "packages---narwhal---events---_reference---put"
+}

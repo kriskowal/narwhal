@@ -1,0 +1,58 @@
+{
+    "type": "module",
+    "id": "narwhal/deprecated",
+    "name": "narwhal/deprecated",
+    "children": [
+        {
+            "name": "deprecated",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/deprecated.js",
+            "lineNo": 6,
+            "params": [
+                {
+                    "name": "warning",
+                    "type": "String"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Prints a deprecation warning to standard output, with\nterminal colors if possible.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-deprecated"
+            ],
+            "href": "packages---narwhal-lib---narwhal-deprecated---deprecated"
+        }
+    ],
+    "index": {
+        "deprecated": {
+            "name": "deprecated",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/deprecated.js",
+            "lineNo": 6,
+            "params": [
+                {
+                    "name": "warning",
+                    "type": "String"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Prints a deprecation warning to standard output, with\nterminal colors if possible.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-deprecated"
+            ],
+            "href": "packages---narwhal-lib---narwhal-deprecated---deprecated"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib"
+    ],
+    "href": "packages---narwhal-lib---narwhal-deprecated"
+}

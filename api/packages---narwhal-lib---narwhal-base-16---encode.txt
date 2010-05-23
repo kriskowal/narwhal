@@ -1,0 +1,17 @@
+{
+    "name": "encode",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/base16.js",
+    "lineNo": 14,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-base-16"
+    ],
+    "href": "packages---narwhal-lib---narwhal-base-16---encode"
+}

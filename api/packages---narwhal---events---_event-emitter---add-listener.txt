@@ -1,0 +1,23 @@
+{
+    "name": "addListener",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 389,
+    "params": [
+        {
+            "name": "name",
+            "doc": "{String} the name of the signal to observe."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "adds an observer to this object's signal for a given name.",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events",
+        "_event-emitter"
+    ],
+    "href": "packages---narwhal---events---_event-emitter---add-listener"
+}

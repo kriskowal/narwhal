@@ -1,0 +1,17 @@
+{
+    "name": "Promise",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+    "lineNo": 125,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Constructs a Promise with a promise descriptor object and optional fallback\nfunction.  The descriptor contains methods like when(rejected), get(name),\nput(name, value), post(name, args), delete(name), and valueOf(), which all\nreturn either a value, a promise for a value, or a rejection.  The fallback\naccepts the operation name, a resolver, and any further arguments that would\nhave been forwarded to the appropriate method above had a method been\nprovided with the proper name.  The API makes no guarantees about the nature\nof the returned object, apart from that it is usable whereever promises are\nbought and sold.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-promise"
+    ],
+    "href": "packages---narwhal-lib---narwhal-promise---_promise"
+}

@@ -1,0 +1,590 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>Deferred</tt>
+        
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>a type of Deferred that corresponds to the future state of a
+value, including both the promise of for that value to be
+resolved, and a resolver which provides the means to advance the
+progress of the promise on its way to resolution.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#constructor"><tt>constructor</tt></a></li>
+    
+        <li><a href="#emitSuccess"><tt>emitSuccess</tt></a></li>
+    
+        <li><a href="#reject"><tt>reject</tt></a></li>
+    
+        <li><a href="#when"><tt>when</tt></a></li>
+    
+        <li><a href="#progress"><tt>progress</tt></a></li>
+    
+        <li><a href="#getProgress"><tt>getProgress</tt></a></li>
+    
+        <li><a href="#ok"><tt>ok</tt></a></li>
+    
+        <li><a href="#error"><tt>error</tt></a></li>
+    
+        <li><a href="#cancel"><tt>cancel</tt></a></li>
+    
+        <li><a href="#timeout"><tt>timeout</tt></a></li>
+    
+        <li><a href="#then"><tt>then</tt></a></li>
+    
+        <li><a href="#emitError"><tt>emitError</tt></a></li>
+    
+        <li><a href="#errback"><tt>errback</tt></a></li>
+    
+        <li><a href="#addCallback"><tt>addCallback</tt></a></li>
+    
+        <li><a href="#addErrback"><tt>addErrback</tt></a></li>
+    
+        <li><a href="#addBoth"><tt>addBoth</tt></a></li>
+    
+        <li><a href="#toSource"><tt>toSource</tt></a></li>
+    
+        <li><a href="#toString"><tt>toString</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="constructor"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred---constructor.html"><tt>constructor</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---constructor---emit.html"><tt>emit</tt></a></th> 
+        <td><p>a Deferred's promise differs from a normal event Emitter
+because it has two states: "waiting" and "resolved".  When
+the promise is waiting, all event emissions are queued.  When
+the promise is either resolved or rejected, all of those
+events are emitted.  All subsequent emissions are sent
+immediately.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---constructor---value-of.html"><tt>valueOf</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---constructor---progress.html"><tt>progress</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal---events---_deferred---constructor---get-progress.html"><tt>getProgress</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="emitSuccess"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred---emit-success.html"><tt>emitSuccess</tt></a>
+        
+        
+    </h2>
+
+    <p>resolves the promise or defers it further with a new promise.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="reject"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred---reject.html"><tt>reject</tt></a>
+        
+        
+    </h2>
+
+    <p>rejects the promise by resolving it with a Rejection with 
+a given "reason"</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>reason</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>{Error}</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="when"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred---when.html"><tt>when</tt></a>
+        
+        
+    </h2>
+
+    <p>forwards the "when" message to the contained promise to
+emulate the promise API.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="progress"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred---progress.html"><tt>progress</tt></a>
+        
+        
+    </h2>
+
+    <p>a signal that can be called to set the progress state
+of the deferrence to a number between 0 and 1, or can
+be observed with the "observe" method.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>progress</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>{Number} between 0 and 1 inclusive.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="getProgress"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred---get-progress.html"><tt>getProgress</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>the progress of the deferred or undefined if that is unknown. User interface widgets should take "undefined" as a queue to display indefinite progress.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="ok"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred---ok.html"><tt>ok</tt></a>
+        
+        
+    </h2>
+
+    <p>a signal that can be observed but not explicitly emitted for when the
+promise is fully resolved.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="error"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred---error.html"><tt>error</tt></a>
+        
+        
+    </h2>
+
+    <p>a signal that can be observed but not explicitly emitted for when the
+promise is rejected.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="cancel"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred---cancel.html"><tt>cancel</tt></a>
+        
+        
+    </h2>
+
+    <p>a signal that rejects the promise and notifies any observers.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="timeout"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred---timeout.html"><tt>timeout</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>time</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>{Number} in miliseconds, at which point the corresponding promise will be rejected if it has not been resolved.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="then"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred---then.html"><tt>then</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="emitError"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred---emit-error.html"><tt>emitError</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="errback"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred---errback.html"><tt>errback</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="addCallback"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred---add-callback.html"><tt>addCallback</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="addErrback"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred---add-errback.html"><tt>addErrback</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="addBoth"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred---add-both.html"><tt>addBoth</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="toSource"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred---to-source.html"><tt>toSource</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="toString"></a>
+    <h2>
+        <a href="packages---narwhal---events---_deferred---to-string.html"><tt>toString</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal---events---_deferred.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

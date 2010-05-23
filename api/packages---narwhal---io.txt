@@ -1,0 +1,23 @@
+{
+    "name": "io",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/io.js",
+    "lineNo": 1,
+    "params": [],
+    "errors": [
+        "Did not recognize \"extends\" tag."
+    ],
+    "throws": [],
+    "see": [],
+    "module": true,
+    "doc": "",
+    "type": "module",
+    "id": "io",
+    "children": [],
+    "index": {},
+    "heritage": [
+        "packages",
+        "narwhal"
+    ],
+    "href": "packages---narwhal---io"
+}

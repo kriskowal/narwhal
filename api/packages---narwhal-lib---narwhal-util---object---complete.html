@@ -1,0 +1,80 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>complete</tt>
+        
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Updates an object with the properties of another object(s) if those
+properties are not already defined for the target object. First argument is
+the object to complete, the remaining arguments are considered sources to
+complete from. If multiple sources contain the same property, the value of
+the first source with that property will be the one inserted in to the
+target.</p>
+
+<p>example usage:</p>
+
+<pre><code>util.complete({}, { hello: "world" });  // -&gt; { hello: "world" }
+util.complete({ hello: "narwhal" }, { hello: "world" }); // -&gt; { hello: "narwhal" }
+util.complete({}, { hello: "world" }, { hello: "le monde" }); // -&gt; { hello: "world" }
+</code></pre>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-util---object---complete.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

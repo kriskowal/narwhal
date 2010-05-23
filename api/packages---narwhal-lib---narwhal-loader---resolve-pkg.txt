@@ -1,0 +1,17 @@
+{
+    "name": "resolvePkg",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/loader.js",
+    "lineNo": 262,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-loader"
+    ],
+    "href": "packages---narwhal-lib---narwhal-loader---resolve-pkg"
+}

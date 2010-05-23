@@ -1,0 +1,27 @@
+{
+    "name": "getSignal",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 431,
+    "params": [
+        {
+            "name": "name",
+            "doc": "{String} name of the signal to get."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Signal",
+        "doc": ""
+    },
+    "doc": "returns the Signal for a given name.  Throws an error if\nno signal has been slotted by the given name.",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events",
+        "_event-emitter"
+    ],
+    "href": "packages---narwhal---events---_event-emitter---get-signal"
+}

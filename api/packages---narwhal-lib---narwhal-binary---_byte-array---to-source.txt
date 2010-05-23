@@ -1,0 +1,18 @@
+{
+    "name": "toSource",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+    "lineNo": 844,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-binary",
+        "_byte-array"
+    ],
+    "href": "packages---narwhal-lib---narwhal-binary---_byte-array---to-source"
+}

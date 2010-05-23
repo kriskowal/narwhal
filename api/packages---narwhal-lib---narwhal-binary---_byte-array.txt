@@ -1,0 +1,1045 @@
+{
+    "name": "ByteArray",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+    "lineNo": 433,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "children": [
+        {
+            "name": "length",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 511,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "children": [
+                {
+                    "name": "get",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+                    "lineNo": 514,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-binary",
+                        "_byte-array",
+                        "length"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-binary---_byte-array---length---get"
+                },
+                {
+                    "name": "set",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+                    "lineNo": 520,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-binary",
+                        "_byte-array",
+                        "length"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-binary---_byte-array---length---set"
+                }
+            ],
+            "index": {
+                "get": {
+                    "name": "get",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+                    "lineNo": 514,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-binary",
+                        "_byte-array",
+                        "length"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-binary---_byte-array---length---get"
+                },
+                "set": {
+                    "name": "set",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+                    "lineNo": 520,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-binary",
+                        "_byte-array",
+                        "length"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-binary---_byte-array---length---set"
+                }
+            },
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---length"
+        },
+        {
+            "name": "set",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 558,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---set"
+        },
+        {
+            "name": "toString",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 586,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---to-string"
+        },
+        {
+            "name": "concat",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 604,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---concat"
+        },
+        {
+            "name": "pop",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 634,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---pop"
+        },
+        {
+            "name": "push",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 645,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---push"
+        },
+        {
+            "name": "extendRight",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 659,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---extend-right"
+        },
+        {
+            "name": "shift",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 665,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---shift"
+        },
+        {
+            "name": "unshift",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 677,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---unshift"
+        },
+        {
+            "name": "extendLeft",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 693,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---extend-left"
+        },
+        {
+            "name": "reverse",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 699,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---reverse"
+        },
+        {
+            "name": "slice",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 716,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---slice"
+        },
+        {
+            "name": "sort",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 724,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---sort"
+        },
+        {
+            "name": "splice",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 740,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---splice"
+        },
+        {
+            "name": "split",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 759,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---split"
+        },
+        {
+            "name": "filter",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 773,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---filter"
+        },
+        {
+            "name": "forEach",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 785,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---for-each"
+        },
+        {
+            "name": "every",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 792,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---every"
+        },
+        {
+            "name": "some",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 801,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---some"
+        },
+        {
+            "name": "map",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 810,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---map"
+        },
+        {
+            "name": "reduce",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 819,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---reduce"
+        },
+        {
+            "name": "reduceRight",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 828,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---reduce-right"
+        },
+        {
+            "name": "displace",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 838,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---displace"
+        },
+        {
+            "name": "toSource",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 844,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---to-source"
+        }
+    ],
+    "index": {
+        "length": {
+            "name": "length",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 511,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "children": [
+                {
+                    "name": "get",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+                    "lineNo": 514,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-binary",
+                        "_byte-array",
+                        "length"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-binary---_byte-array---length---get"
+                },
+                {
+                    "name": "set",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+                    "lineNo": 520,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-binary",
+                        "_byte-array",
+                        "length"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-binary---_byte-array---length---set"
+                }
+            ],
+            "index": {
+                "get": {
+                    "name": "get",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+                    "lineNo": 514,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-binary",
+                        "_byte-array",
+                        "length"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-binary---_byte-array---length---get"
+                },
+                "set": {
+                    "name": "set",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+                    "lineNo": 520,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-binary",
+                        "_byte-array",
+                        "length"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-binary---_byte-array---length---set"
+                }
+            },
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---length"
+        },
+        "set": {
+            "name": "set",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 558,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---set"
+        },
+        "toString": {
+            "name": "toString",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 586,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---to-string"
+        },
+        "concat": {
+            "name": "concat",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 604,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---concat"
+        },
+        "pop": {
+            "name": "pop",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 634,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---pop"
+        },
+        "push": {
+            "name": "push",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 645,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---push"
+        },
+        "extendRight": {
+            "name": "extendRight",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 659,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---extend-right"
+        },
+        "shift": {
+            "name": "shift",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 665,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---shift"
+        },
+        "unshift": {
+            "name": "unshift",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 677,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---unshift"
+        },
+        "extendLeft": {
+            "name": "extendLeft",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 693,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---extend-left"
+        },
+        "reverse": {
+            "name": "reverse",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 699,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---reverse"
+        },
+        "slice": {
+            "name": "slice",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 716,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---slice"
+        },
+        "sort": {
+            "name": "sort",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 724,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---sort"
+        },
+        "splice": {
+            "name": "splice",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 740,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---splice"
+        },
+        "split": {
+            "name": "split",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 759,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---split"
+        },
+        "filter": {
+            "name": "filter",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 773,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---filter"
+        },
+        "forEach": {
+            "name": "forEach",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 785,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---for-each"
+        },
+        "every": {
+            "name": "every",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 792,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---every"
+        },
+        "some": {
+            "name": "some",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 801,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---some"
+        },
+        "map": {
+            "name": "map",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 810,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---map"
+        },
+        "reduce": {
+            "name": "reduce",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 819,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---reduce"
+        },
+        "reduceRight": {
+            "name": "reduceRight",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 828,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---reduce-right"
+        },
+        "displace": {
+            "name": "displace",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 838,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---displace"
+        },
+        "toSource": {
+            "name": "toSource",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/binary.js",
+            "lineNo": 844,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-binary",
+                "_byte-array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-binary---_byte-array---to-source"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-binary"
+    ],
+    "href": "packages---narwhal-lib---narwhal-binary---_byte-array"
+}

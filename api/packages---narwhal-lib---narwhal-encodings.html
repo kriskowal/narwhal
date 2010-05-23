@@ -1,0 +1,262 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>narwhal/encodings</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Provides character set encoders, decoders, and transcoders.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#Transcoder"><tt>Transcoder</tt></a></li>
+    
+        <li><a href="#DecoderReader"><tt>DecoderReader</tt></a></li>
+    
+        <li><a href="#EncoderWriter"><tt>EncoderWriter</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="Transcoder"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-encodings---_transcoder.html"><tt>Transcoder</tt></a>
+        
+        
+    </h2>
+
+    <p>An object that maintains the state for streaming bytes
+encoded in a source character set to a target character
+set, providing a {@link transcode} method for transcoding
+chunks of data from a source buffer to a target buffer.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>source</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>charset</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>target</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>charset</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-encodings---_transcoder---transcode.html"><tt>transcode</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="DecoderReader"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-encodings---_decoder-reader.html"><tt>DecoderReader</tt></a>
+        
+        
+    </h2>
+
+    <p>An input stream decorator that transforms a byte stream
+into a character stream with the given character set.</p>
+
+<ul>
+<li>reads bytes</li>
+<li>returns character</li>
+</ul>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>raw</tt></th>
+            <td class="B"><tt>ByteReader</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>charset</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>length</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+            <td class="C"><p>optional buffer length</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-encodings---_decoder-reader---raw.html"><tt>raw</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-encodings---_decoder-reader---charset.html"><tt>charset</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-encodings---_decoder-reader---read-max.html"><tt>readMax</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-encodings---_decoder-reader---read-block.html"><tt>readBlock</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-encodings---_decoder-reader---read-all.html"><tt>readAll</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-encodings---_decoder-reader---read-line.html"><tt>readLine</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-encodings---_decoder-reader---close.html"><tt>close</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="EncoderWriter"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-encodings---_encoder-writer.html"><tt>EncoderWriter</tt></a>
+        
+        
+    </h2>
+
+    <ul>
+<li>accepts characters</li>
+<li>writes bytes</li>
+</ul>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-encodings---_encoder-writer---write.html"><tt>write</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-encodings---_encoder-writer---flush.html"><tt>flush</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-encodings---_encoder-writer---close.html"><tt>close</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-encodings.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+    "name": "isPromise",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 1035,
+    "params": [
+        {
+            "name": "object"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "doc": "whether the given object is a promise."
+    },
+    "doc": "returns whether a given object is recognized\nas a promise.  Presently, this amounts to duck-typing\non the presence of a \"then\" property function, but\ncould conceivably be done by checking whether the object\nis an instance of Promise.",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events"
+    ],
+    "href": "packages---narwhal---events---is-promise"
+}

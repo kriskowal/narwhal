@@ -1,0 +1,24 @@
+{
+    "name": "reload",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/loader/multi.js",
+    "lineNo": 157,
+    "params": [
+        {
+            "name": "path",
+            "type": "String",
+            "doc": "an optional path to provide a hint about where to find the text corresponding to the given topId, provided merely to avoid recomputation."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Forces a module to be reloaded, if possible, setting\nor replacing the module factory function in the\nmodule factory memo.  This function is called by\n`load` internally to populate the memo and may be\ncalled externally to freshen the memo.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-loader-multi",
+        "loaders"
+    ],
+    "href": "packages---narwhal-lib---narwhal-loader-multi---loaders---reload"
+}

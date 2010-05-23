@@ -1,0 +1,18 @@
+{
+    "name": "del",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 990,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events",
+        "_reference"
+    ],
+    "href": "packages---narwhal---events---_reference---del"
+}

@@ -1,0 +1,1 @@
+{"name":"hasSignal","markup":"markdown","fileName":"/Users/kris/narwhal+node/lib/events.js","lineNo":443,"params":[],"errors":[],"throws":[],"see":[],"returns":{"type":"boolean","doc":"whether a Signal has been registered for the given name."},"doc":"","heritage":["packages","narwhal","events","_event-emitter"],"href":"packages---narwhal---events---_event-emitter---has-signal"}

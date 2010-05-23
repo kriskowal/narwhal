@@ -1,0 +1,99 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>MultiLoader</tt>
+        
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Constructs a MultiLoader object for loading modules
+from various file formats, based on their extension.</p>
+
+<p>Options include:</p>
+
+<ul>
+<li><code>paths</code> array of fully-qualified paths to search
+for top-level modules</li>
+<li><code>loaders</code> an array of tuples, mapping extensions
+to loader objects supporting:
+<ul><li><code>load(id, path)</code></li>
+<li><code>reload(id, path)</code></li>
+<li><code>hasChanged(id)</code> optionally</li></ul></li>
+<li><code>loader</code> used to create a default <code>loaders</code>, mapping
+both <code>".js"</code> and arbitrary other files to that loader,
+itself defaulting to a file-system backed loader
+constructed with the same options.</li>
+<li><code>debug</code> and other options are forwarded to the
+constructor of <code>Loader</code> if no loaders are specified.</li>
+</ul>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>options</tt></th>
+            <td class="B"><tt>{paths, loader, loaders}</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-loader-multi---_multi-loader.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

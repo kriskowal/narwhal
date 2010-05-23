@@ -1,0 +1,25 @@
+{
+    "name": "no",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+    "lineNo": 60,
+    "params": [
+        {
+            "name": "value"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Boolean",
+        "doc": "whether the value is null or undefined"
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-util"
+    ],
+    "href": "packages---narwhal-lib---narwhal-util---no"
+}

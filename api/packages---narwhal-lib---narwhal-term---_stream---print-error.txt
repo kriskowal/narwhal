@@ -1,0 +1,18 @@
+{
+    "name": "printError",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+    "lineNo": 97,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Prints a line of space separated fields to standard\nerror.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-term",
+        "_stream"
+    ],
+    "href": "packages---narwhal-lib---narwhal-term---_stream---print-error"
+}

@@ -1,0 +1,43 @@
+{
+    "name": "resolvePkg",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/loader/multi.js",
+    "lineNo": 81,
+    "params": [
+        {
+            "name": "id",
+            "type": "String",
+            "doc": "a relative or top-level identifier."
+        },
+        {
+            "name": "baseId",
+            "type": "String",
+            "doc": "a top-level identifier."
+        },
+        {
+            "name": "pkg",
+            "type": "String",
+            "doc": "a package reference, scoped to the current package."
+        },
+        {
+            "name": "basePkg",
+            "type": "String",
+            "doc": "a package reference"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "[id: String, pkg: String]",
+        "doc": "the corresponding top-level identifier and package identifier."
+    },
+    "doc": "Resolves a module identifier and package pair.\n\nForwards to the `resolvePkg` method of the `loader`\nmodule.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-loader-multi",
+        "loaders"
+    ],
+    "href": "packages---narwhal-lib---narwhal-loader-multi---loaders---resolve-pkg"
+}

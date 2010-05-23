@@ -1,0 +1,22 @@
+{
+    "name": "reject",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 1070,
+    "params": [
+        {
+            "name": "reason",
+            "doc": "{Error}"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "returns a Rejection",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events"
+    ],
+    "href": "packages---narwhal---events---reject"
+}

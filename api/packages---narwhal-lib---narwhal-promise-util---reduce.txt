@@ -1,0 +1,17 @@
+{
+    "name": "reduce",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise-util.js",
+    "lineNo": 30,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-promise-util"
+    ],
+    "href": "packages---narwhal-lib---narwhal-promise-util---reduce"
+}

@@ -1,0 +1,296 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>Reader</tt>
+        
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Common traits of input streams.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#read"><tt>read</tt></a></li>
+    
+        <li><a href="#readBlock"><tt>readBlock</tt></a></li>
+    
+        <li><a href="#readAll"><tt>readAll</tt></a></li>
+    
+        <li><a href="#copy"><tt>copy</tt></a></li>
+    
+        <li><a href="#next"><tt>next</tt></a></li>
+    
+        <li><a href="#iterator"><tt>iterator</tt></a></li>
+    
+        <li><a href="#forEach"><tt>forEach</tt></a></li>
+    
+        <li><a href="#Writer"><tt>Writer</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="read"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-io-boot---_reader---read.html"><tt>read</tt></a>
+        
+        
+    </h2>
+
+    <p>routes <code>read</code> calls to <code>readAll</code>, <code>readBlock</code>, or
+<code>readMax(n)</code> depending on whether the argument is
+<code>undefined</code>, <code>null</code>, or a <code>Number</code> respectively.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="readBlock"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-io-boot---_reader---read-block.html"><tt>readBlock</tt></a>
+        
+        
+    </h2>
+
+    <p>as a default implementation, calls <code>readMax</code> with no
+argument.  This is intended to be overriden or replaced
+if block size information is available.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="readAll"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-io-boot---_reader---read-all.html"><tt>readAll</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Buffer</tt></td>
+            <td class="C"><p>the entirety of the remaining input.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="copy"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-io-boot---_reader---copy.html"><tt>copy</tt></a>
+        
+        
+    </h2>
+
+    <p>pumps data from this source input stream to the target output
+stream.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="next"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-io-boot---_reader---next.html"><tt>next</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Buffer</tt></td>
+            <td class="C"><p>the next chunk of input (from <code>read(null)</code>, or @throws <code>StopIteration</code> if the next chunk is empty.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="iterator"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-io-boot---_reader---iterator.html"><tt>iterator</tt></a>
+        
+        
+    </h2>
+
+    <p>A suitable implementation of <code>iterator</code> for any type that
+is itself an iterator, not merely iterable.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>this</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="forEach"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-io-boot---_reader---for-each.html"><tt>forEach</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Writer"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-io-boot---_reader---_writer.html"><tt>Writer</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-io-boot---_reader.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

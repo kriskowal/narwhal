@@ -1,0 +1,18 @@
+{
+    "name": "error",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/logger.js",
+    "lineNo": 38,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-logger",
+        "_logger"
+    ],
+    "href": "packages---narwhal-lib---narwhal-logger---_logger---error"
+}

@@ -1,0 +1,93 @@
+{
+    "name": "Argument",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+    "lineNo": 546,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "children": [
+        {
+            "name": "name",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 552,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_argument"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_argument---name"
+        },
+        {
+            "name": "optional",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 558,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_argument"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_argument---optional"
+        }
+    ],
+    "index": {
+        "name": {
+            "name": "name",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 552,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_argument"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_argument---name"
+        },
+        "optional": {
+            "name": "optional",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 558,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_argument"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_argument---optional"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-args"
+    ],
+    "href": "packages---narwhal-lib---narwhal-args---_argument"
+}

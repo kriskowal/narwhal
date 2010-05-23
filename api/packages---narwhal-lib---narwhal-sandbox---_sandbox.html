@@ -1,0 +1,421 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>Sandbox</tt>
+        
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Creates a <code>require</code> function, and arranges for modules
+to be executed and their exports memoized, in a lexical
+scope that includes:</p>
+
+<ul>
+<li><code>require(id)</code> with support for identifiers relative to
+the calling module.</li>
+<li><code>require.loader</code> for direct access to the module
+loader, which can be used in nested sandboxes.</li>
+<li><code>require.force(id)</code></li>
+<li><code>require.once(id, scope)</code> to execute but not memoize
+a module, with an optional object that owns additional
+free variables to inject into the module's lexical
+scope.</li>
+<li><code>module</code>
+<ul><li><code>id</code></li>
+<li><code>path</code></li></ul></li>
+<li><code>exports</code></li>
+</ul>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>options</tt></th>
+            <td class="B"><tt>{loader, modules, debug}</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>require(id)</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#load"><tt>load</tt></a></li>
+    
+        <li><a href="#once"><tt>once</tt></a></li>
+    
+        <li><a href="#force"><tt>force</tt></a></li>
+    
+        <li><a href="#main"><tt>main</tt></a></li>
+    
+        <li><a href="#loader"><tt>loader</tt></a></li>
+    
+        <li><a href="#system"><tt>system</tt></a></li>
+    
+        <li><a href="#paths"><tt>paths</tt></a></li>
+    
+        <li><a href="#extensions"><tt>extensions</tt></a></li>
+    
+        <li><a href="#debug"><tt>debug</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="load"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-sandbox---_sandbox---load.html"><tt>load</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>id</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>baseId</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>(optional if <code>id</code> is top-level)</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>pkg</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>(optional)</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>basePkg</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>(optional)</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="once"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-sandbox---_sandbox---once.html"><tt>once</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>id</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>baseId</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>(optional if <code>id</code> is top-level)</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>pkg</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>(optional)</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>basePkg</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>(optional)</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>scope</tt></th>
+            <td class="B"><tt>Object</tt></th>
+            
+            <td class="C"><p>(optional)</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="force"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-sandbox---_sandbox---force.html"><tt>force</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>id</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="main"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-sandbox---_sandbox---main.html"><tt>main</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>id</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>(optional)</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="loader"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-sandbox---_sandbox---loader.html"><tt>loader</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="system"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-sandbox---_sandbox---system.html"><tt>system</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="paths"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-sandbox---_sandbox---paths.html"><tt>paths</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="extensions"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-sandbox---_sandbox---extensions.html"><tt>extensions</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="debug"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-sandbox---_sandbox---debug.html"><tt>debug</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-sandbox---_sandbox.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

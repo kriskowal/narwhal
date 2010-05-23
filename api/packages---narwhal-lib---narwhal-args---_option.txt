@@ -1,0 +1,1119 @@
+{
+    "name": "Option",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+    "lineNo": 564,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "children": [
+        {
+            "name": "_",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 605,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---_"
+        },
+        {
+            "name": "__",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 612,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---__"
+        },
+        {
+            "name": "name",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 619,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---name"
+        },
+        {
+            "name": "displayName",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 625,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---display-name"
+        },
+        {
+            "name": "getDisplayName",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 631,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---get-display-name"
+        },
+        {
+            "name": "getName",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 638,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---get-name"
+        },
+        {
+            "name": "action",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 652,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---action"
+        },
+        {
+            "name": "set",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 663,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---set"
+        },
+        {
+            "name": "push",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 678,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---push"
+        },
+        {
+            "name": "inc",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 689,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---inc"
+        },
+        {
+            "name": "dec",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 696,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---dec"
+        },
+        {
+            "name": "choices",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 703,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---choices"
+        },
+        {
+            "name": "def",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 735,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---def"
+        },
+        {
+            "name": "validate",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 742,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---validate"
+        },
+        {
+            "name": "input",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 759,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---input"
+        },
+        {
+            "name": "output",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 769,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---output"
+        },
+        {
+            "name": "number",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 779,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---number"
+        },
+        {
+            "name": "oct",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 789,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---oct"
+        },
+        {
+            "name": "hex",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 799,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---hex"
+        },
+        {
+            "name": "integer",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 809,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---integer"
+        },
+        {
+            "name": "natural",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 819,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---natural"
+        },
+        {
+            "name": "whole",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 829,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---whole"
+        },
+        {
+            "name": "bool",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 839,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---bool"
+        },
+        {
+            "name": "todo",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 846,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---todo"
+        },
+        {
+            "name": "inverse",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 860,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---inverse"
+        },
+        {
+            "name": "help",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 882,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---help"
+        },
+        {
+            "name": "halt",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 888,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---halt"
+        },
+        {
+            "name": "hidden",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 894,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---hidden"
+        },
+        {
+            "name": "end",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 900,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---end"
+        },
+        {
+            "name": "option",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 905,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---option"
+        },
+        {
+            "name": "end",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 910,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---end"
+        }
+    ],
+    "index": {
+        "_": {
+            "name": "_",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 605,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---_"
+        },
+        "__": {
+            "name": "__",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 612,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---__"
+        },
+        "name": {
+            "name": "name",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 619,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---name"
+        },
+        "displayName": {
+            "name": "displayName",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 625,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---display-name"
+        },
+        "getDisplayName": {
+            "name": "getDisplayName",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 631,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---get-display-name"
+        },
+        "getName": {
+            "name": "getName",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 638,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---get-name"
+        },
+        "action": {
+            "name": "action",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 652,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---action"
+        },
+        "set": {
+            "name": "set",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 663,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---set"
+        },
+        "push": {
+            "name": "push",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 678,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---push"
+        },
+        "inc": {
+            "name": "inc",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 689,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---inc"
+        },
+        "dec": {
+            "name": "dec",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 696,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---dec"
+        },
+        "choices": {
+            "name": "choices",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 703,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---choices"
+        },
+        "def": {
+            "name": "def",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 735,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---def"
+        },
+        "validate": {
+            "name": "validate",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 742,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---validate"
+        },
+        "input": {
+            "name": "input",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 759,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---input"
+        },
+        "output": {
+            "name": "output",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 769,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---output"
+        },
+        "number": {
+            "name": "number",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 779,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---number"
+        },
+        "oct": {
+            "name": "oct",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 789,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---oct"
+        },
+        "hex": {
+            "name": "hex",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 799,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---hex"
+        },
+        "integer": {
+            "name": "integer",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 809,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---integer"
+        },
+        "natural": {
+            "name": "natural",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 819,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---natural"
+        },
+        "whole": {
+            "name": "whole",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 829,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---whole"
+        },
+        "bool": {
+            "name": "bool",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 839,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---bool"
+        },
+        "todo": {
+            "name": "todo",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 846,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---todo"
+        },
+        "inverse": {
+            "name": "inverse",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 860,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---inverse"
+        },
+        "help": {
+            "name": "help",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 882,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---help"
+        },
+        "halt": {
+            "name": "halt",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 888,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---halt"
+        },
+        "hidden": {
+            "name": "hidden",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 894,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---hidden"
+        },
+        "end": {
+            "name": "end",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 910,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---end"
+        },
+        "option": {
+            "name": "option",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+            "lineNo": 905,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-args",
+                "_option"
+            ],
+            "href": "packages---narwhal-lib---narwhal-args---_option---option"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-args"
+    ],
+    "href": "packages---narwhal-lib---narwhal-args---_option"
+}

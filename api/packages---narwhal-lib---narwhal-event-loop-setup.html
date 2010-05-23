@@ -1,0 +1,145 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>narwhal/event-loop-setup</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#setEventLoop"><tt>setEventLoop</tt></a></li>
+    
+        <li><a href="#getEventLoop"><tt>getEventLoop</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="setEventLoop"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-event-loop-setup---set-event-loop.html"><tt>setEventLoop</tt></a>
+        
+        
+    </h2>
+
+    <p>Configures the system to use a particular event loop
+implementation.  The event loop must support the event
+loop API:</p>
+
+<ul>
+<li><code>setTimeout</code></li>
+<li><code>clearTimeout</code></li>
+<li><code>setInterval</code></li>
+<li><code>clearInterval</code></li>
+<li><code>enqueue</code> is optional; if it is not provided, the
+event-loop module will provide one in terms of
+setTimeout(task, 0).</li>
+</ul>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+        <tr>
+            <th class="A"><em>throws</em></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>Error if an event loop has already been configured.</p></td>
+            
+        </tr>
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="getEventLoop"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-event-loop-setup---get-event-loop.html"><tt>getEventLoop</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns an event loop implementation.  If no event loop
+has been configured, configures the "event-loop-engine"
+module as the default implementation.  After this method
+has been called, the event loop cannot be changed.
+The "event-loop" module itself uses this method the first
+time it is required.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-event-loop-setup.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

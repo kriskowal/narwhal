@@ -1,0 +1,129 @@
+{
+    "name": "URI",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+    "lineNo": 42,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Uniform Resource Identifier (URI) - RFC3986\nhttp://www.ietf.org/rfc/rfc3986.txt",
+    "children": [
+        {
+            "name": "resolve",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 63,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri",
+                "__uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---__uri---resolve"
+        },
+        {
+            "name": "to",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 68,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri",
+                "__uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---__uri---to"
+        },
+        {
+            "name": "from",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 73,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri",
+                "__uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---__uri---from"
+        }
+    ],
+    "index": {
+        "resolve": {
+            "name": "resolve",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 63,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri",
+                "__uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---__uri---resolve"
+        },
+        "to": {
+            "name": "to",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 68,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri",
+                "__uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---__uri---to"
+        },
+        "from": {
+            "name": "from",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 73,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri",
+                "__uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---__uri---from"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-uri"
+    ],
+    "href": "packages---narwhal-lib---narwhal-uri---__uri"
+}

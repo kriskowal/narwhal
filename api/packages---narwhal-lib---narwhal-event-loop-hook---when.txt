@@ -1,0 +1,25 @@
+{
+    "name": "when",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/event-loop-hook.js",
+    "lineNo": 22,
+    "params": [
+        {
+            "name": "observer",
+            "doc": "{Function}"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "doc": "undefined"
+    },
+    "doc": "Arrange for an observer function to be called after the\n\"main\" module returns.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-event-loop-hook"
+    ],
+    "href": "packages---narwhal-lib---narwhal-event-loop-hook---when"
+}

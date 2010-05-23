@@ -1,0 +1,23 @@
+{
+    "name": "iterator",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+    "lineNo": 88,
+    "params": [],
+    "errors": [
+        "Did not recognize \"this\" tag."
+    ],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "doc": "this"
+    },
+    "doc": "A suitable implementation of `iterator` for any type that\nis itself an iterator, not merely iterable.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-io-boot",
+        "_reader"
+    ],
+    "href": "packages---narwhal-lib---narwhal-io-boot---_reader---iterator"
+}

@@ -1,0 +1,364 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>test</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Facilities for running and logging unit test modules.</p>
+
+<p>An implementation and extension of the CommonJS Unit
+Testing 1.0 Specification's <code>test</code> module.
+http://wiki.commonjs.org/wiki/Unit_Testing/1.0</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#parser"><tt>parser</tt></a></li>
+    
+        <li><a href="#run"><tt>run</tt></a></li>
+    
+        <li><a href="#Log"><tt>Log</tt></a></li>
+    
+        <li><a href="#Section"><tt>Section</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="parser"></a>
+    <h2>
+        <a href="packages---narwhal-lib---test---parser.html"><tt>parser</tt></a>
+        
+        
+    </h2>
+
+    <p>an arguments parser from the <code>narwhal/args</code>
+module for parsing command line arguments.</p>
+
+<pre><code>TERM= js -m test --help
+
+Usage: test.js TEST [OPTIONS]
+ --no-color
+ --loop
+ --show-stack-traces
+ --show-passes
+ -q --quiet
+ -h --help: displays usage information (final option)
+</code></pre>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="run"></a>
+    <h2>
+        <a href="packages---narwhal-lib---test---run.html"><tt>run</tt></a>
+        
+        
+    </h2>
+
+    <p>Runs and reports the results of a unit test or a tree of
+unit tests.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>test</tt></th>
+            <td class="B"><tt>Test ~ {test*: Function || This, setup?: Function, teardown?: Function}</tt></th>
+            
+            <td class="C"><ul>
+<li>a test object including <code>test*</code> functions or nested test * objects.</li>
+</ul></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>log</tt></th>
+            <td class="B"><tt>Log ~ {pass, fail, error, section}</tt></th>
+            
+            <td class="C"><p>a log object for reporting test results.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Number</tt></td>
+            <td class="C"><p>0 if all tests pass.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Log"></a>
+    <h2>
+        <a href="packages---narwhal-lib---test---_log.html"><tt>Log</tt></a>
+        
+        
+    </h2>
+
+    <p>A stream logger for test results, suitable for running
+command line unit tests.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>name</tt></th>
+            <td class="B"><tt>string</tt></th>
+            
+            <td class="C"><p>the name of the</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>options</tt></th>
+            <td class="B"><tt>{quiet: Boolean, showPasses: Boolean, showStackTraces: Boolean}</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>parent</tt></th>
+            <td class="B"><tt>Log || Undefined</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>root</tt></th>
+            <td class="B"><tt>Log || Undefined</tt></th>
+            
+            <td class="C"><p>defaults to <code>this</code></p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_log---options.html"><tt>options</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_log---stream.html"><tt>stream</tt></a></th> 
+        <td><p>a section object with an appropriate
+level of indentation</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_log---name.html"><tt>name</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_log---parent.html"><tt>parent</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_log---root.html"><tt>root</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_log---passes.html"><tt>passes</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_log---fails.html"><tt>fails</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_log---errors.html"><tt>errors</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_log---flush.html"><tt>flush</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_log---pass.html"><tt>pass</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_log---fail.html"><tt>fail</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_log---error.html"><tt>error</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_log---begin.html"><tt>begin</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_log---end.html"><tt>end</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_log---report.html"><tt>report</tt></a></th> 
+        <td><p>Prints final tallies of passed, failed, and errored
+tests.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_log---print.html"><tt>print</tt></a></th> 
+        <td><p>A proxy for printing to the associated stream, where
+each print is indented appropriately for the depth
+of the section.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_log---section.html"><tt>section</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_log---_assert.html"><tt>Assert</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="Section"></a>
+    <h2>
+        <a href="packages---narwhal-lib---test---_section.html"><tt>Section</tt></a>
+        
+        
+    </h2>
+
+    <p>Section adapters wrap any object with a print
+method such that every line is indented.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>stream</tt></th>
+            <td class="B"><tt>WriterStream</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>indent</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>a prefix for each line printed with the <code>print</code> method.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---test---_section---print.html"><tt>print</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---test.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

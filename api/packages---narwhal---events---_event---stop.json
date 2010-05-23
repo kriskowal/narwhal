@@ -1,0 +1,1 @@
+{"name":"stop","markup":"markdown","fileName":"/Users/kris/narwhal+node/lib/events.js","lineNo":173,"params":[],"errors":[],"throws":[],"see":[],"doc":"prevents further propagation and the default action of the emitting\nsignal.","heritage":["packages","narwhal","events","_event"],"href":"packages---narwhal---events---_event---stop"}

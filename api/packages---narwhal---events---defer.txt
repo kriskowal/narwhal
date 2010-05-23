@@ -1,0 +1,17 @@
+{
+    "name": "defer",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 1014,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "returns a Deferred.  A future is an Emitter and contains\na promise and its corresponding resolver.",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events"
+    ],
+    "href": "packages---narwhal---events---defer"
+}

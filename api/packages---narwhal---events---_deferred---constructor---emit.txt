@@ -1,0 +1,19 @@
+{
+    "name": "emit",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 541,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "a Deferred's promise differs from a normal event Emitter\nbecause it has two states: \"waiting\" and \"resolved\".  When\nthe promise is waiting, all event emissions are queued.  When\nthe promise is either resolved or rejected, all of those\nevents are emitted.  All subsequent emissions are sent\nimmediately.",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events",
+        "_deferred",
+        "constructor"
+    ],
+    "href": "packages---narwhal---events---_deferred---constructor---emit"
+}

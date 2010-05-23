@@ -1,0 +1,910 @@
+{
+    "type": "module",
+    "id": "narwhal/uri",
+    "name": "narwhal/uri",
+    "children": [
+        {
+            "name": "TLDS",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 9,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Top level domains, in upper-case.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---__tlds"
+        },
+        {
+            "name": "URI",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 42,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Uniform Resource Identifier (URI) - RFC3986\nhttp://www.ietf.org/rfc/rfc3986.txt",
+            "children": [
+                {
+                    "name": "resolve",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+                    "lineNo": 63,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-uri",
+                        "__uri"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-uri---__uri---resolve"
+                },
+                {
+                    "name": "to",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+                    "lineNo": 68,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-uri",
+                        "__uri"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-uri---__uri---to"
+                },
+                {
+                    "name": "from",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+                    "lineNo": 73,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-uri",
+                        "__uri"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-uri---__uri---from"
+                }
+            ],
+            "index": {
+                "resolve": {
+                    "name": "resolve",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+                    "lineNo": 63,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-uri",
+                        "__uri"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-uri---__uri---resolve"
+                },
+                "to": {
+                    "name": "to",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+                    "lineNo": 68,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-uri",
+                        "__uri"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-uri---__uri---to"
+                },
+                "from": {
+                    "name": "from",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+                    "lineNo": 73,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-uri",
+                        "__uri"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-uri---__uri---from"
+                }
+            },
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---__uri"
+        },
+        {
+            "name": "toString",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 78,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Convert the URI to a String.",
+            "children": [
+                {
+                    "name": "parse",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+                    "lineNo": 85,
+                    "params": [],
+                    "errors": [
+                        "Did not recognize \"classmethod\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-uri",
+                        "to-string"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-uri---to-string---parse"
+                }
+            ],
+            "index": {
+                "parse": {
+                    "name": "parse",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+                    "lineNo": 85,
+                    "params": [],
+                    "errors": [
+                        "Did not recognize \"classmethod\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-uri",
+                        "to-string"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-uri---to-string---parse"
+                }
+            },
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---to-string"
+        },
+        {
+            "name": "unescape",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 93,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---unescape"
+        },
+        {
+            "name": "unescapeComponent",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 98,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---unescape-component"
+        },
+        {
+            "name": "keys",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 105,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "members of a parsed URI object.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---keys"
+        },
+        {
+            "name": "expressionKeys",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 128,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "members of a parsed URI object that you get\nfrom evaluting the strict regular expression.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---expression-keys"
+        },
+        {
+            "name": "strictExpression",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 150,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "strictExpression",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---strict-expression"
+        },
+        {
+            "name": "Parser",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 181,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "returns a URI parser function given\na regular expression that renders \n`expressionKeys` and returns an `Object`\nmapping all `keys` to values.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---_parser"
+        },
+        {
+            "name": "parse",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 230,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "parse\na strict URI parser.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---parse"
+        },
+        {
+            "name": "format",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 235,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "format\naccepts a parsed URI object and returns\nthe corresponding string.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---format"
+        },
+        {
+            "name": "resolveObject",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 288,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "an object representing a URL resolved from a relative location and a source location."
+            },
+            "doc": "resolveObject",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---resolve-object"
+        },
+        {
+            "name": "relativeObject",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 355,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "an object representing a relative URL to a given target URL from a source URL."
+            },
+            "doc": "relativeObject",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---relative-object"
+        },
+        {
+            "name": "resolve",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 414,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "a URL resovled to a relative URL from a source URL."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---resolve"
+        },
+        {
+            "name": "relative",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 421,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "a relative URL to a target from a source."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---relative"
+        },
+        {
+            "name": "pathToUri",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 428,
+            "params": [
+                {
+                    "name": "path",
+                    "doc": "a String or String-like object, possibly a Path object, representing a file system Path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "a URI as a String"
+            },
+            "doc": "converts a file-system path to a URI.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---path-to-uri"
+        }
+    ],
+    "index": {
+        "TLDS": {
+            "name": "TLDS",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 9,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Top level domains, in upper-case.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---__tlds"
+        },
+        "URI": {
+            "name": "URI",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 42,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Uniform Resource Identifier (URI) - RFC3986\nhttp://www.ietf.org/rfc/rfc3986.txt",
+            "children": [
+                {
+                    "name": "resolve",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+                    "lineNo": 63,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-uri",
+                        "__uri"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-uri---__uri---resolve"
+                },
+                {
+                    "name": "to",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+                    "lineNo": 68,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-uri",
+                        "__uri"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-uri---__uri---to"
+                },
+                {
+                    "name": "from",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+                    "lineNo": 73,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-uri",
+                        "__uri"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-uri---__uri---from"
+                }
+            ],
+            "index": {
+                "resolve": {
+                    "name": "resolve",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+                    "lineNo": 63,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-uri",
+                        "__uri"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-uri---__uri---resolve"
+                },
+                "to": {
+                    "name": "to",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+                    "lineNo": 68,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-uri",
+                        "__uri"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-uri---__uri---to"
+                },
+                "from": {
+                    "name": "from",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+                    "lineNo": 73,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-uri",
+                        "__uri"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-uri---__uri---from"
+                }
+            },
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---__uri"
+        },
+        "toString": {
+            "name": "toString",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 78,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Convert the URI to a String.",
+            "children": [
+                {
+                    "name": "parse",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+                    "lineNo": 85,
+                    "params": [],
+                    "errors": [
+                        "Did not recognize \"classmethod\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-uri",
+                        "to-string"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-uri---to-string---parse"
+                }
+            ],
+            "index": {
+                "parse": {
+                    "name": "parse",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+                    "lineNo": 85,
+                    "params": [],
+                    "errors": [
+                        "Did not recognize \"classmethod\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-uri",
+                        "to-string"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-uri---to-string---parse"
+                }
+            },
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---to-string"
+        },
+        "unescape": {
+            "name": "unescape",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 93,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---unescape"
+        },
+        "unescapeComponent": {
+            "name": "unescapeComponent",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 98,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---unescape-component"
+        },
+        "keys": {
+            "name": "keys",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 105,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "members of a parsed URI object.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---keys"
+        },
+        "expressionKeys": {
+            "name": "expressionKeys",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 128,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "members of a parsed URI object that you get\nfrom evaluting the strict regular expression.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---expression-keys"
+        },
+        "strictExpression": {
+            "name": "strictExpression",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 150,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "strictExpression",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---strict-expression"
+        },
+        "Parser": {
+            "name": "Parser",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 181,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "returns a URI parser function given\na regular expression that renders \n`expressionKeys` and returns an `Object`\nmapping all `keys` to values.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---_parser"
+        },
+        "parse": {
+            "name": "parse",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 230,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "parse\na strict URI parser.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---parse"
+        },
+        "format": {
+            "name": "format",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 235,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "format\naccepts a parsed URI object and returns\nthe corresponding string.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---format"
+        },
+        "resolveObject": {
+            "name": "resolveObject",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 288,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "an object representing a URL resolved from a relative location and a source location."
+            },
+            "doc": "resolveObject",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---resolve-object"
+        },
+        "relativeObject": {
+            "name": "relativeObject",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 355,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "an object representing a relative URL to a given target URL from a source URL."
+            },
+            "doc": "relativeObject",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---relative-object"
+        },
+        "resolve": {
+            "name": "resolve",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 414,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "a URL resovled to a relative URL from a source URL."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---resolve"
+        },
+        "relative": {
+            "name": "relative",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 421,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "a relative URL to a target from a source."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---relative"
+        },
+        "pathToUri": {
+            "name": "pathToUri",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/uri.js",
+            "lineNo": 428,
+            "params": [
+                {
+                    "name": "path",
+                    "doc": "a String or String-like object, possibly a Path object, representing a file system Path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "a URI as a String"
+            },
+            "doc": "converts a file-system path to a URI.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-uri"
+            ],
+            "href": "packages---narwhal-lib---narwhal-uri---path-to-uri"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib"
+    ],
+    "href": "packages---narwhal-lib---narwhal-uri"
+}

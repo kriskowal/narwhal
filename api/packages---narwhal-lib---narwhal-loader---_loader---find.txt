@@ -1,0 +1,32 @@
+{
+    "name": "find",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/loader.js",
+    "lineNo": 97,
+    "params": [
+        {
+            "name": "topId",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [
+        {
+            "type": "Error",
+            "doc": "of no module can be found with the given top-level identifier."
+        }
+    ],
+    "see": [],
+    "returns": {
+        "type": "Function(lexicalScope Object)",
+        "doc": "factory a module factory (\"maker\") function."
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-loader",
+        "_loader"
+    ],
+    "href": "packages---narwhal-lib---narwhal-loader---_loader---find"
+}

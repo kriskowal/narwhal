@@ -1,0 +1,71 @@
+/* layout */
+html,body{margin:0;padding:0}
+body{text-align:center}
+p{margin:0 10px 10px}
+div#header{position:relative;padding-left:200px}
+div#header h1{height:80px;line-height:80px;margin:0;padding-left:10px;#EEE;}
+div#container{text-align:left}
+div#content p{line-height:1.4}
+div#footer p{margin:0;padding:5px 10px}
+div#container{width:800px;margin:0 auto}
+div#content{float:right;width:600px}
+div#navigation{float:left;width:200px}
+div#extra{clear:both;width:100%;padding:1em}
+
+/* alignment */
+div#extra {text-align: center}
+
+/* style */
+body {
+    font-family:
+        "Book Antiqua",
+        Palatino,
+        "Palatino Linotype",
+        "Palatino LT STD",
+        Georgia,
+        serif;
+}
+
+/*whatsupdoc*/
+
+td, th {
+    padding: 3px 1ex;
+    vertical-align: top;
+    border-bottom: 1px #cccccc solid;
+}
+
+.form th {
+    text-align: right;
+}
+
+.A {
+    width: 80px;
+}
+.B {
+    width: 150px;
+}
+
+.error {
+    color: red;
+}
+
+#logo-container {
+    height: 256px;
+    width: 0px;
+    position: relative;
+}
+
+#logo {
+    position: absolute;
+    left: -100px;
+    width: 256px;
+    height: 256px;
+    padding: 0;
+    background-image: url(../images/narwhal-256.png);
+    background-repeat: no-repeat;
+}
+
+table {
+    margin-bottom: 1em;
+}
+

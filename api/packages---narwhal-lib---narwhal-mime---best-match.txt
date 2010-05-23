@@ -1,0 +1,28 @@
+{
+    "name": "bestMatch",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/mime.js",
+    "lineNo": 161,
+    "params": [
+        {
+            "name": "MIME",
+            "type": "Array * String",
+            "doc": "types"
+        },
+        {
+            "name": "an",
+            "type": "String",
+            "doc": "HTTP Accept header"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Takes a list of supported mime-types and finds the best\nmatch for all the media-ranges listed in header. The value of\nheader must be a string that conforms to the format of the\nHTTP Accept: header. The value of 'supported' is a list of\nmime-types::\n\n    js> MIME.bestMatch(['application/xbel+xml', 'text/xml'], 'text/*;q=0.5,*\\/*; q=0.1')\n    \"text/xml\"",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-mime"
+    ],
+    "href": "packages---narwhal-lib---narwhal-mime---best-match"
+}

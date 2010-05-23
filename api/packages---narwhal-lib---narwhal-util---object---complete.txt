@@ -1,0 +1,23 @@
+{
+    "name": "complete",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+    "lineNo": 219,
+    "params": [],
+    "errors": [
+        "Did not recognize \"type\" tag."
+    ],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "doc": "completed object"
+    },
+    "doc": "Updates an object with the properties of another object(s) if those\nproperties are not already defined for the target object. First argument is\nthe object to complete, the remaining arguments are considered sources to\ncomplete from. If multiple sources contain the same property, the value of\nthe first source with that property will be the one inserted in to the\ntarget.\n\nexample usage:\n\n    util.complete({}, { hello: \"world\" });  // -> { hello: \"world\" }\n    util.complete({ hello: \"narwhal\" }, { hello: \"world\" }); // -> { hello: \"narwhal\" }\n    util.complete({}, { hello: \"world\" }, { hello: \"le monde\" }); // -> { hello: \"world\" }",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-util",
+        "object"
+    ],
+    "href": "packages---narwhal-lib---narwhal-util---object---complete"
+}

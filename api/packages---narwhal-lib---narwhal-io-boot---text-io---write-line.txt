@@ -1,0 +1,18 @@
+{
+    "name": "writeLine",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+    "lineNo": 372,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-io-boot",
+        "text-io"
+    ],
+    "href": "packages---narwhal-lib---narwhal-io-boot---text-io---write-line"
+}

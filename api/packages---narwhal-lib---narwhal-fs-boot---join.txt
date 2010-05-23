@@ -1,0 +1,21 @@
+{
+    "name": "join",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs-boot.js",
+    "lineNo": 101,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "String",
+        "doc": "path"
+    },
+    "doc": "Takes file system paths as variadic arguments and treats\neach as a file or directory path and returns the path\narrived by traversing into the those paths.  All\narguments except for the last must be paths to\ndirectories for the result to be meaningful.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs-boot"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs-boot---join"
+}

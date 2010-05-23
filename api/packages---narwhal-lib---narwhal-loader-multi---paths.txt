@@ -1,0 +1,19 @@
+{
+    "name": "paths",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/loader/multi.js",
+    "lineNo": 47,
+    "params": [],
+    "errors": [
+        "Did not recognize \"readonly\" tag."
+    ],
+    "throws": [],
+    "see": [],
+    "doc": "May be modified in-place but not replaced.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-loader-multi"
+    ],
+    "href": "packages---narwhal-lib---narwhal-loader-multi---paths"
+}

@@ -1,0 +1,1 @@
+{"name":"valueOf","markup":"markdown","fileName":"/Users/kris/narwhal+node/lib/events.js","lineNo":558,"params":[],"errors":[],"throws":[],"see":[],"returns":{"doc":"either a promise or the resolved value for the promise."},"doc":"","heritage":["packages","narwhal","events","_deferred","constructor"],"href":"packages---narwhal---events---_deferred---constructor---value-of"}

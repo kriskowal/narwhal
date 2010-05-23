@@ -1,0 +1,18 @@
+{
+    "name": "setSignalRaw",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/lib/events.js",
+    "lineNo": 473,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "sets a signal using the Emitter system, bypassing the Observable's\nsetSignal behavior of adding the emitter as a property of the instance.",
+    "heritage": [
+        "packages",
+        "narwhal",
+        "events",
+        "_observable"
+    ],
+    "href": "packages---narwhal---events---_observable---set-signal-raw"
+}

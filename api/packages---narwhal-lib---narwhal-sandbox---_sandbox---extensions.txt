@@ -1,0 +1,20 @@
+{
+    "name": "extensions",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
+    "lineNo": 284,
+    "params": [],
+    "errors": [
+        "Did not recognize \"property\" tag."
+    ],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-sandbox",
+        "_sandbox"
+    ],
+    "href": "packages---narwhal-lib---narwhal-sandbox---_sandbox---extensions"
+}

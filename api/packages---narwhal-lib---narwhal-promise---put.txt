@@ -1,0 +1,33 @@
+{
+    "name": "put",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+    "lineNo": 317,
+    "params": [
+        {
+            "name": "object",
+            "doc": "promise or immediate reference for object object"
+        },
+        {
+            "name": "name",
+            "doc": "name of property to set"
+        },
+        {
+            "name": "value",
+            "doc": "new value of property"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "doc": "promise for the return value"
+    },
+    "doc": "Sets the value of a property in a future turn.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-promise"
+    ],
+    "href": "packages---narwhal-lib---narwhal-promise---put"
+}

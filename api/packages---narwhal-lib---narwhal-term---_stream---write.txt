@@ -1,0 +1,28 @@
+{
+    "name": "write",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+    "lineNo": 108,
+    "params": [
+        {
+            "name": "string",
+            "type": "String"
+        },
+        {
+            "name": "toError",
+            "type": "Boolean",
+            "doc": "(optional) dictates that the string should be shunted to standard error instead of out."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Writes a string, tranlating null-prefix-codes to VT-100\ncodes.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-term",
+        "_stream"
+    ],
+    "href": "packages---narwhal-lib---narwhal-term---_stream---write"
+}

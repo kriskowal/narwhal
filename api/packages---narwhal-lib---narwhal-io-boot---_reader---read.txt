@@ -1,0 +1,18 @@
+{
+    "name": "read",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+    "lineNo": 16,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "routes `read` calls to `readAll`, `readBlock`, or\n`readMax(n)` depending on whether the argument is\n`undefined`, `null`, or a `Number` respectively.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-io-boot",
+        "_reader"
+    ],
+    "href": "packages---narwhal-lib---narwhal-io-boot---_reader---read"
+}

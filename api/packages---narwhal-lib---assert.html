@@ -1,0 +1,729 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>assert</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Methods for throwing or logging on failed assertions,
+useful for unit testing.</p>
+
+<p>An implementation of the CommonJS Unit Testing 1.0
+Specification's <code>assert</code> module.
+http://wiki.commonjs.org/wiki/Unit_Testing/1.0</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#AssertionError"><tt>AssertionError</tt></a></li>
+    
+        <li><a href="#fail"><tt>fail</tt></a></li>
+    
+        <li><a href="#pass"><tt>pass</tt></a></li>
+    
+        <li><a href="#error"><tt>error</tt></a></li>
+    
+        <li><a href="#section"><tt>section</tt></a></li>
+    
+        <li><a href="#ok"><tt>ok</tt></a></li>
+    
+        <li><a href="#equal"><tt>equal</tt></a></li>
+    
+        <li><a href="#notEqual"><tt>notEqual</tt></a></li>
+    
+        <li><a href="#deepEqual"><tt>deepEqual</tt></a></li>
+    
+        <li><a href="#notDeepEqual"><tt>notDeepEqual</tt></a></li>
+    
+        <li><a href="#strictEqual"><tt>strictEqual</tt></a></li>
+    
+        <li><a href="#notStrictEqual"><tt>notStrictEqual</tt></a></li>
+    
+        <li><a href="#message"><tt>message</tt></a></li>
+    
+        <li><a href="#Assert"><tt>Assert</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="AssertionError"></a>
+    <h2>
+        <a href="packages---narwhal-lib---assert---_assertion-error.html"><tt>AssertionError</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>properties</tt></th>
+            <td class="B"><tt>string || {message: String, ...}</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>name: "AssertionError", message: String, "actual", "expected", "operator", ...</tt></td>
+            <td class="C"><p>an error, that may contain backtrace information on Rhino and V8.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---assert---_assertion-error---to-string.html"><tt>toString</tt></a></th> 
+        <td><p>WARNING: This method is not specified.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---assert---_assertion-error---to-source.html"><tt>toSource</tt></a></th> 
+        <td><p>WARNING: This method is not specified.</p></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="fail"></a>
+    <h2>
+        <a href="packages---narwhal-lib---assert---fail.html"><tt>fail</tt></a>
+        
+        
+    </h2>
+
+    <p>WARNING: This method is not specified.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>options</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>properties for initializing the AssertionError.</p></td>
+            
+        </tr>
+        
+        
+        
+        <tr>
+            <th class="A"><em>throws</em></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>an AssertionError.</p></td>
+            
+        </tr>
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="pass"></a>
+    <h2>
+        <a href="packages---narwhal-lib---assert---pass.html"><tt>pass</tt></a>
+        
+        
+    </h2>
+
+    <p>Called by the test runner when a test passes.</p>
+
+<p>This method is inteded to be overridden by inheritors,
+particularly loggers.  The base implementation is a
+no-op.</p>
+
+<p>WARNING: This method is not specified.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="error"></a>
+    <h2>
+        <a href="packages---narwhal-lib---assert---error.html"><tt>error</tt></a>
+        
+        
+    </h2>
+
+    <p>Called by the test runner when a test errors out.</p>
+
+<p>This method is inteded to be overridden by inheritors,
+particularly loggers.  The base implementation is a
+no-op.</p>
+
+<p>WARNING: This method is not specified.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>message</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="section"></a>
+    <h2>
+        <a href="packages---narwhal-lib---assert---section.html"><tt>section</tt></a>
+        
+        
+    </h2>
+
+    <p>Called by the test runner when a test errors begins
+a new section of tests and is expected to return an
+object suitable for sending log messages like "pass",
+"error", "fail", and "section".</p>
+
+<p>This method is inteded to be overridden by inheritors,
+particularly loggers.  The base implementation is a
+no-op.</p>
+
+<p>WARNING: This method is not specified.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>this</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="ok"></a>
+    <h2>
+        <a href="packages---narwhal-lib---assert---ok.html"><tt>ok</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>value</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>message</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>optional</p></td>
+            
+        </tr>
+        
+        
+        
+        <tr>
+            <th class="A"><em>throws</em></th>
+            <td class="B"><tt>AssertionError</tt></th>
+            
+            <td class="C"><p>an error with the given message if value is not truthy</p></td>
+            
+        </tr>
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="equal"></a>
+    <h2>
+        <a href="packages---narwhal-lib---assert---equal.html"><tt>equal</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>actual</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>expected</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>message</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>optional</p></td>
+            
+        </tr>
+        
+        
+        
+        <tr>
+            <th class="A"><em>throws</em></th>
+            <td class="B"><tt>AssertionError</tt></th>
+            
+            <td class="C"><p>an error with the given message if the actual and expected values are not loosely equal (<code>!=</code>).</p></td>
+            
+        </tr>
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="notEqual"></a>
+    <h2>
+        <a href="packages---narwhal-lib---assert---not-equal.html"><tt>notEqual</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>actual</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>expected</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>message</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>optional</p></td>
+            
+        </tr>
+        
+        
+        
+        <tr>
+            <th class="A"><em>throws</em></th>
+            <td class="B"><tt>AssertionError</tt></th>
+            
+            <td class="C"><p>an error with the given message if the actual and expected values are loosely equal (<code>==</code>).</p></td>
+            
+        </tr>
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="deepEqual"></a>
+    <h2>
+        <a href="packages---narwhal-lib---assert---deep-equal.html"><tt>deepEqual</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>actual</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>expected</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>message</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>optional</p></td>
+            
+        </tr>
+        
+        
+        
+        <tr>
+            <th class="A"><em>throws</em></th>
+            <td class="B"><tt>AssertionError</tt></th>
+            
+            <td class="C"><p>an error with the given message if the actual and expected values are not deeply equivalent, for their transitive properties.</p></td>
+            
+        </tr>
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="notDeepEqual"></a>
+    <h2>
+        <a href="packages---narwhal-lib---assert---not-deep-equal.html"><tt>notDeepEqual</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>actual</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>expected</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>message</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>optional</p></td>
+            
+        </tr>
+        
+        
+        
+        <tr>
+            <th class="A"><em>throws</em></th>
+            <td class="B"><tt>AssertionError</tt></th>
+            
+            <td class="C"><p>an error with the given message if the actual and expected values are deeply equivalent, for their transitive properties.</p></td>
+            
+        </tr>
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="strictEqual"></a>
+    <h2>
+        <a href="packages---narwhal-lib---assert---strict-equal.html"><tt>strictEqual</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>actual</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>expected</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>message</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>optional</p></td>
+            
+        </tr>
+        
+        
+        
+        <tr>
+            <th class="A"><em>throws</em></th>
+            <td class="B"><tt>AssertionError</tt></th>
+            
+            <td class="C"><p>an error with the given message if the actual and expected values are not strictly equal (<code>!==</code>).</p></td>
+            
+        </tr>
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="notStrictEqual"></a>
+    <h2>
+        <a href="packages---narwhal-lib---assert---not-strict-equal.html"><tt>notStrictEqual</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>actual</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>expected</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>message</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>optional</p></td>
+            
+        </tr>
+        
+        
+        
+        <tr>
+            <th class="A"><em>throws</em></th>
+            <td class="B"><tt>AssertionError</tt></th>
+            
+            <td class="C"><p>an error with the given message if the actual and expected values are strictly equal (<code>===</code>).</p></td>
+            
+        </tr>
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="message"></a>
+    <h2>
+        <a href="packages---narwhal-lib---assert---message.html"><tt>message</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>block</tt></th>
+            <td class="B"><tt>Function</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>message</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>optional</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>Error</tt></th>
+            <td class="B"><tt>Function</tt></th>
+            
+            <td class="C"><p>optional, shifts left by one positional argument if <code>message</code> is omitted, or <code>Error</code> by default.  @throws {AssertionError} calls the given block and throw an error with the given message if the block does not throw an error of the given type.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Assert"></a>
+    <h2>
+        <a href="packages---narwhal-lib---assert---_assert.html"><tt>Assert</tt></a>
+        
+        
+    </h2>
+
+    <p>Constructs a logging <code>assert</code> object.
+WARNING: This method is not specified.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>log</tt></th>
+            <td class="B"><tt>Log * {pass, fail, error, section}</tt></th>
+            
+            <td class="C"><p>an object, inherited from the assert module itself, that will send messages to the given log object instead of throwing exceptions.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>assert</tt></td>
+            <td class="C"><p>an object inheriting prototypically from the <code>assert</code> module itself, with <code>pass</code>, <code>fail</code>, <code>error</code>, and <code>section</code> overridden to forward messages to the given <code>Log</code> object.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---assert.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

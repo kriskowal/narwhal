@@ -1,0 +1,90 @@
+{
+    "type": "module",
+    "id": "narwhal/event-loop-setup",
+    "name": "narwhal/event-loop-setup",
+    "children": [
+        {
+            "name": "setEventLoop",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/event-loop-setup.js",
+            "lineNo": 6,
+            "params": [],
+            "errors": [],
+            "throws": [
+                {
+                    "doc": "Error if an event loop has already been configured."
+                }
+            ],
+            "see": [],
+            "doc": "Configures the system to use a particular event loop\nimplementation.  The event loop must support the event\nloop API:\n\n* `setTimeout`\n* `clearTimeout`\n* `setInterval`\n* `clearInterval`\n* `enqueue` is optional; if it is not provided, the\n  event-loop module will provide one in terms of\n  setTimeout(task, 0).",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-event-loop-setup"
+            ],
+            "href": "packages---narwhal-lib---narwhal-event-loop-setup---set-event-loop"
+        },
+        {
+            "name": "getEventLoop",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/event-loop-setup.js",
+            "lineNo": 29,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Returns an event loop implementation.  If no event loop\nhas been configured, configures the \"event-loop-engine\"\nmodule as the default implementation.  After this method\nhas been called, the event loop cannot be changed.\nThe \"event-loop\" module itself uses this method the first\ntime it is required.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-event-loop-setup"
+            ],
+            "href": "packages---narwhal-lib---narwhal-event-loop-setup---get-event-loop"
+        }
+    ],
+    "index": {
+        "setEventLoop": {
+            "name": "setEventLoop",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/event-loop-setup.js",
+            "lineNo": 6,
+            "params": [],
+            "errors": [],
+            "throws": [
+                {
+                    "doc": "Error if an event loop has already been configured."
+                }
+            ],
+            "see": [],
+            "doc": "Configures the system to use a particular event loop\nimplementation.  The event loop must support the event\nloop API:\n\n* `setTimeout`\n* `clearTimeout`\n* `setInterval`\n* `clearInterval`\n* `enqueue` is optional; if it is not provided, the\n  event-loop module will provide one in terms of\n  setTimeout(task, 0).",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-event-loop-setup"
+            ],
+            "href": "packages---narwhal-lib---narwhal-event-loop-setup---set-event-loop"
+        },
+        "getEventLoop": {
+            "name": "getEventLoop",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/event-loop-setup.js",
+            "lineNo": 29,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Returns an event loop implementation.  If no event loop\nhas been configured, configures the \"event-loop-engine\"\nmodule as the default implementation.  After this method\nhas been called, the event loop cannot be changed.\nThe \"event-loop\" module itself uses this method the first\ntime it is required.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-event-loop-setup"
+            ],
+            "href": "packages---narwhal-lib---narwhal-event-loop-setup---get-event-loop"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib"
+    ],
+    "href": "packages---narwhal-lib---narwhal-event-loop-setup"
+}

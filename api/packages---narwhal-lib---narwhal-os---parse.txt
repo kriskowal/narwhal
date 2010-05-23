@@ -1,0 +1,25 @@
+{
+    "name": "parse",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/os.js",
+    "lineNo": 136,
+    "params": [
+        {
+            "name": "command",
+            "doc": "{String} a command composed of space delimited, quoted, or backslash escaped arguments."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "doc": "an Array of unquoted arguments."
+    },
+    "doc": "parses command line arguments\n\nWARNING: this does not handle all of the edge cases\nof command line argument parsing, nor is suitable for\ngeneral purpose argument enquoting on all platforms.  It\nalso will never be able to handle environment variable\ninterpolation or other forms of shell quote expansion.\nThis utility is used by Narwhal to pare arguments from\nsystem.env.NARWHAL_OPT.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-os"
+    ],
+    "href": "packages---narwhal-lib---narwhal-os---parse"
+}

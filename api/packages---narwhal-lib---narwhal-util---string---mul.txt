@@ -1,0 +1,18 @@
+{
+    "name": "mul",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+    "lineNo": 1021,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-util",
+        "string"
+    ],
+    "href": "packages---narwhal-lib---narwhal-util---string---mul"
+}

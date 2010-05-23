@@ -1,0 +1,632 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>narwhal/promise</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Provides a robust API for interacting with functions that
+can neither block execution nor resolve a return value
+immediately.  Such functions may return promises if they
+find that they must perform a long latency operation in
+their transitive function call tree, and will eventually
+resolve or reject thir returned promise with a value or
+a reason for failure.  These resolutions and rejections
+can be observed and composed with other promises, and
+rejections percolate in a manner analogous to <code>try</code>, 
+<code>catch</code>, and <code>finally</code>.</p>
+
+<p>In addition, this module provides facilities that permit
+interactions to be requested on the eventually resolved
+value of a promise and forwarded along a pipeline to
+reduce chattiness.  This permits high-performance,
+object-granular interaction with distant processes.</p>
+
+<p>This implementation is a prototype conforming to the
+alternate promise proposal for CommonJS:
+http://wiki.commonjs.org/wiki/Promises/B</p>
+
+<p>This implementation and the specification are based on
+Tyler Close's <code>ref_send.js</code>.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#enqueue"><tt>enqueue</tt></a></li>
+    
+        <li><a href="#defer"><tt>defer</tt></a></li>
+    
+        <li><a href="#Promise"><tt>Promise</tt></a></li>
+    
+        <li><a href="#isPromise"><tt>isPromise</tt></a></li>
+    
+        <li><a href="#reject"><tt>reject</tt></a></li>
+    
+        <li><a href="#ref"><tt>ref</tt></a></li>
+    
+        <li><a href="#Method"><tt>Method</tt></a></li>
+    
+        <li><a href="#when"><tt>when</tt></a></li>
+    
+        <li><a href="#asap"><tt>asap</tt></a></li>
+    
+        <li><a href="#get"><tt>get</tt></a></li>
+    
+        <li><a href="#put"><tt>put</tt></a></li>
+    
+        <li><a href="#del"><tt>del</tt></a></li>
+    
+        <li><a href="#post"><tt>post</tt></a></li>
+    
+        <li><a href="#defined"><tt>defined</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="enqueue"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise---enqueue.html"><tt>enqueue</tt></a>
+        
+        
+    </h2>
+
+    <p>Performs a task in a future turn of the event loop.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>task</tt></th>
+            <td class="B"><tt>Function</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="defer"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise---defer.html"><tt>defer</tt></a>
+        
+        
+    </h2>
+
+    <p>Constructs a {promise, resolve} object.</p>
+
+<p>The resolver is a callback to invoke with a more resolved value for the
+promise. To fulfill the promise, invoke the resolver with any value that is
+not a function. To reject the promise, invoke the resolver with a rejection
+object. To put the promise in the same state as another promise, invoke the
+resolver with that other promise.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Promise"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise---_promise.html"><tt>Promise</tt></a>
+        
+        
+    </h2>
+
+    <p>Constructs a Promise with a promise descriptor object and optional fallback
+function.  The descriptor contains methods like when(rejected), get(name),
+put(name, value), post(name, args), delete(name), and valueOf(), which all
+return either a value, a promise for a value, or a rejection.  The fallback
+accepts the operation name, a resolver, and any further arguments that would
+have been forwarded to the appropriate method above had a method been
+provided with the proper name.  The API makes no guarantees about the nature
+of the returned object, apart from that it is usable whereever promises are
+bought and sold.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="isPromise"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise---is-promise.html"><tt>isPromise</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>whether the given object is a promise. Otherwise it is a resolved value.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="reject"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise---reject.html"><tt>reject</tt></a>
+        
+        
+    </h2>
+
+    <p>Constructs a rejected promise.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>reason</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>value describing the failure</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="ref"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise---ref.html"><tt>ref</tt></a>
+        
+        
+    </h2>
+
+    <p>Constructs a promise for an immediate reference.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>value</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>immediate reference</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Method"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise---_method.html"><tt>Method</tt></a>
+        
+        
+    </h2>
+
+    <p>Constructs a promise method that can be used to safely observe resolution of
+a promise for an arbitrarily named method like "propfind" in a future turn.</p>
+
+<p>"Method" constructs methods like "get(promise, name)" and "put(promise)".</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="when"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise---when.html"><tt>when</tt></a>
+        
+        
+    </h2>
+
+    <p>Registers an observer on a promise.</p>
+
+<p>Guarantees:</p>
+
+<ol>
+<li>that resolved and rejected will be called only once.</li>
+<li>that either the resolved callback or the rejected callback will be
+called, but not both.</li>
+<li>that resolved and rejected will not be called in this turn.</li>
+</ol>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>value</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>promise or immediate reference to observe</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>resolve</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>function to be called with the resolved value</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>rejected</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>function to be called with the rejection reason</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>promise for the return value from the invoked callback</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="asap"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise---asap.html"><tt>asap</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="get"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise---get.html"><tt>get</tt></a>
+        
+        
+    </h2>
+
+    <p>Gets the value of a property in a future turn.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>object</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>promise or immediate reference for target object</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>name</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>name of property to get</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>promise for the property value</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="put"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise---put.html"><tt>put</tt></a>
+        
+        
+    </h2>
+
+    <p>Sets the value of a property in a future turn.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>object</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>promise or immediate reference for object object</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>name</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>name of property to set</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>value</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>new value of property</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>promise for the return value</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="del"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise---del.html"><tt>del</tt></a>
+        
+        
+    </h2>
+
+    <p>Deletes a property in a future turn.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>object</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>promise or immediate reference for target object</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>name</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>name of property to delete</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>promise for the return value</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="post"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise---post.html"><tt>post</tt></a>
+        
+        
+    </h2>
+
+    <p>Invokes a method in a future turn.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>object</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>promise or immediate reference for target object</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>name</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>name of method to invoke</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>argv</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>array of invocation arguments</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>promise for the return value</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="defined"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-promise---defined.html"><tt>defined</tt></a>
+        
+        
+    </h2>
+
+    <p>Guarantees that the give promise resolves to a defined, non-null value.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-promise.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

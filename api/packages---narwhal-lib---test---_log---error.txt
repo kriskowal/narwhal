@@ -1,0 +1,27 @@
+{
+    "name": "error",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
+    "lineNo": 263,
+    "params": [
+        {
+            "name": "exception",
+            "type": "Error"
+        },
+        {
+            "name": "message",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "test",
+        "_log"
+    ],
+    "href": "packages---narwhal-lib---test---_log---error"
+}

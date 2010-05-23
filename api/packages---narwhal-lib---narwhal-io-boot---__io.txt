@@ -1,0 +1,496 @@
+{
+    "name": "IO",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+    "lineNo": 124,
+    "params": [
+        {
+            "name": "input"
+        },
+        {
+            "name": "output"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Unifies an input and an output stream into a single API.",
+    "children": [
+        {
+            "name": "read",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 134,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---read"
+        },
+        {
+            "name": "readMax",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 139,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---read-max"
+        },
+        {
+            "name": "readBlock",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 144,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---read-block"
+        },
+        {
+            "name": "readAll",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 149,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---read-all"
+        },
+        {
+            "name": "readInto",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 154,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---read-into"
+        },
+        {
+            "name": "write",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 159,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---write"
+        },
+        {
+            "name": "writeFrom",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 164,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---write-from"
+        },
+        {
+            "name": "flush",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 169,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---flush"
+        },
+        {
+            "name": "close",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 175,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---close"
+        },
+        {
+            "name": "copy",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 183,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---copy"
+        },
+        {
+            "name": "next",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 186,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---next"
+        },
+        {
+            "name": "iterator",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 191,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---iterator"
+        },
+        {
+            "name": "forEach",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 194,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---for-each"
+        }
+    ],
+    "index": {
+        "read": {
+            "name": "read",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 134,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---read"
+        },
+        "readMax": {
+            "name": "readMax",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 139,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---read-max"
+        },
+        "readBlock": {
+            "name": "readBlock",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 144,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---read-block"
+        },
+        "readAll": {
+            "name": "readAll",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 149,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---read-all"
+        },
+        "readInto": {
+            "name": "readInto",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 154,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---read-into"
+        },
+        "write": {
+            "name": "write",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 159,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---write"
+        },
+        "writeFrom": {
+            "name": "writeFrom",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 164,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---write-from"
+        },
+        "flush": {
+            "name": "flush",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 169,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---flush"
+        },
+        "close": {
+            "name": "close",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 175,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---close"
+        },
+        "copy": {
+            "name": "copy",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 183,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---copy"
+        },
+        "next": {
+            "name": "next",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 186,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---next"
+        },
+        "iterator": {
+            "name": "iterator",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 191,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---iterator"
+        },
+        "forEach": {
+            "name": "forEach",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+            "lineNo": 194,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-io-boot",
+                "__io"
+            ],
+            "href": "packages---narwhal-lib---narwhal-io-boot---__io---for-each"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-io-boot"
+    ],
+    "href": "packages---narwhal-lib---narwhal-io-boot---__io"
+}

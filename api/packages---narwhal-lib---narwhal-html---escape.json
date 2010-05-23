@@ -1,0 +1,1 @@
+{"name":"escape","markup":"markdown","fileName":"/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/html.js","lineNo":11,"params":[],"errors":["Could not recognize `@param` \"\""],"throws":[],"see":[],"doc":"Escape significant HTML characters as HTML entities.","heritage":["packages","narwhal-lib","narwhal-html"],"href":"packages---narwhal-lib---narwhal-html---escape"}

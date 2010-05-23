@@ -1,0 +1,17 @@
+{
+    "name": "by",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+    "lineNo": 894,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "returns a `comparator` that compares\nvalues based on the values resultant from\na given `relation`.\naccepts a `relation` and an optional comparator.\n\nTo sort a list of objects based on their\n\"a\" key:\n\n    objects.sort(by(get(\"a\")))\n\nTo get those in descending order:\n\n    objects.sort(by(get(\"a\")), desc)\n\n`by` returns a comparison function that also tracks\nthe arguments you used to construct it.  This permits\n`sort` and `sorted` to perform a Schwartzian transform\nwhich can increase the performance of the sort\nby a factor of 2.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-util"
+    ],
+    "href": "packages---narwhal-lib---narwhal-util---by"
+}

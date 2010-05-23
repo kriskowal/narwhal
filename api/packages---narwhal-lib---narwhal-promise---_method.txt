@@ -1,0 +1,17 @@
+{
+    "name": "Method",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js",
+    "lineNo": 236,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Constructs a promise method that can be used to safely observe resolution of\na promise for an arbitrarily named method like \"propfind\" in a future turn.\n\n\"Method\" constructs methods like \"get(promise, name)\" and \"put(promise)\".",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-promise"
+    ],
+    "href": "packages---narwhal-lib---narwhal-promise---_method"
+}

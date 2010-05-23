@@ -1,0 +1,849 @@
+{
+    "name": "Buffer",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+    "lineNo": 31,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "children": [
+        {
+            "name": "copy",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 34,
+            "params": [
+                {
+                    "name": "target"
+                },
+                {
+                    "name": "start",
+                    "doc": "(0)"
+                },
+                {
+                    "name": "stop",
+                    "doc": "(this.length)"
+                },
+                {
+                    "name": "targetStart",
+                    "doc": "(0)"
+                }
+            ],
+            "errors": [],
+            "throws": [
+                {
+                    "doc": "an Error if the source or target ranges are out of their respective bounds."
+                }
+            ],
+            "see": [],
+            "returns": {
+                "doc": "this"
+            },
+            "doc": "(targetStop is targetStart + (stop - stop))",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---copy"
+        },
+        {
+            "name": "copyFrom",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 47,
+            "params": [
+                {
+                    "name": "source"
+                },
+                {
+                    "name": "start",
+                    "doc": "(0)"
+                },
+                {
+                    "name": "stop",
+                    "doc": "(target.length)"
+                },
+                {
+                    "name": "sourceStart",
+                    "doc": "(0)"
+                }
+            ],
+            "errors": [],
+            "throws": [
+                {
+                    "doc": "an Error if the source or target ranges are out of their respective bounds."
+                }
+            ],
+            "see": [],
+            "returns": {
+                "doc": "this"
+            },
+            "doc": "(sourceStop is sourceStart + (stop - start))",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---copy-from"
+        },
+        {
+            "name": "range",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 60,
+            "params": [
+                {
+                    "name": "start",
+                    "doc": "optional (0)"
+                },
+                {
+                    "name": "stop",
+                    "doc": "optional (this.length)"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Buffer",
+                "doc": "that views a part of this buffer's allocated bytes, such that changes to either are reflected in the other.."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---range"
+        },
+        {
+            "name": "slice",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 69,
+            "params": [
+                {
+                    "name": "start",
+                    "doc": "optional (0)"
+                },
+                {
+                    "name": "stop",
+                    "doc": "optional (this.length)"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Buffer",
+                "doc": "that contains a copy of a part of this buffer's allocated bytes, such that changes to this buffer and the new buffer are isolated."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---slice"
+        },
+        {
+            "name": "utf8Slice",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 88,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---utf-8-slice"
+        },
+        {
+            "name": "utf8Write",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 89,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---utf-8-write"
+        },
+        {
+            "name": "asciiWrite",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 90,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---ascii-write"
+        },
+        {
+            "name": "asciiRange",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 91,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---ascii-range"
+        },
+        {
+            "name": "toString",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 93,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---to-string"
+        },
+        {
+            "name": "toStringRadix",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 109,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---to-string-radix"
+        },
+        {
+            "name": "toStringCharset",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 115,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---to-string-charset"
+        },
+        {
+            "name": "fromString",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 141,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---from-string"
+        },
+        {
+            "name": "fromStringRadix",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 154,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---from-string-radix"
+        },
+        {
+            "name": "fromStringCharset",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 160,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---from-string-charset"
+        },
+        {
+            "name": "valueOf",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 193,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---value-of"
+        },
+        {
+            "name": "fromNumber",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 213,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---from-number"
+        },
+        {
+            "name": "toSource",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 232,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---to-source"
+        },
+        {
+            "name": "toArray",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 238,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---to-array"
+        },
+        {
+            "name": "charCodeAt",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 244,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---char-code-at"
+        }
+    ],
+    "index": {
+        "copy": {
+            "name": "copy",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 34,
+            "params": [
+                {
+                    "name": "target"
+                },
+                {
+                    "name": "start",
+                    "doc": "(0)"
+                },
+                {
+                    "name": "stop",
+                    "doc": "(this.length)"
+                },
+                {
+                    "name": "targetStart",
+                    "doc": "(0)"
+                }
+            ],
+            "errors": [],
+            "throws": [
+                {
+                    "doc": "an Error if the source or target ranges are out of their respective bounds."
+                }
+            ],
+            "see": [],
+            "returns": {
+                "doc": "this"
+            },
+            "doc": "(targetStop is targetStart + (stop - stop))",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---copy"
+        },
+        "copyFrom": {
+            "name": "copyFrom",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 47,
+            "params": [
+                {
+                    "name": "source"
+                },
+                {
+                    "name": "start",
+                    "doc": "(0)"
+                },
+                {
+                    "name": "stop",
+                    "doc": "(target.length)"
+                },
+                {
+                    "name": "sourceStart",
+                    "doc": "(0)"
+                }
+            ],
+            "errors": [],
+            "throws": [
+                {
+                    "doc": "an Error if the source or target ranges are out of their respective bounds."
+                }
+            ],
+            "see": [],
+            "returns": {
+                "doc": "this"
+            },
+            "doc": "(sourceStop is sourceStart + (stop - start))",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---copy-from"
+        },
+        "range": {
+            "name": "range",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 60,
+            "params": [
+                {
+                    "name": "start",
+                    "doc": "optional (0)"
+                },
+                {
+                    "name": "stop",
+                    "doc": "optional (this.length)"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Buffer",
+                "doc": "that views a part of this buffer's allocated bytes, such that changes to either are reflected in the other.."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---range"
+        },
+        "slice": {
+            "name": "slice",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 69,
+            "params": [
+                {
+                    "name": "start",
+                    "doc": "optional (0)"
+                },
+                {
+                    "name": "stop",
+                    "doc": "optional (this.length)"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Buffer",
+                "doc": "that contains a copy of a part of this buffer's allocated bytes, such that changes to this buffer and the new buffer are isolated."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---slice"
+        },
+        "utf8Slice": {
+            "name": "utf8Slice",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 88,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---utf-8-slice"
+        },
+        "utf8Write": {
+            "name": "utf8Write",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 89,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---utf-8-write"
+        },
+        "asciiWrite": {
+            "name": "asciiWrite",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 90,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---ascii-write"
+        },
+        "asciiRange": {
+            "name": "asciiRange",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 91,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---ascii-range"
+        },
+        "toString": {
+            "name": "toString",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 93,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---to-string"
+        },
+        "toStringRadix": {
+            "name": "toStringRadix",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 109,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---to-string-radix"
+        },
+        "toStringCharset": {
+            "name": "toStringCharset",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 115,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---to-string-charset"
+        },
+        "fromString": {
+            "name": "fromString",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 141,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---from-string"
+        },
+        "fromStringRadix": {
+            "name": "fromStringRadix",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 154,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---from-string-radix"
+        },
+        "fromStringCharset": {
+            "name": "fromStringCharset",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 160,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---from-string-charset"
+        },
+        "valueOf": {
+            "name": "valueOf",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 193,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---value-of"
+        },
+        "fromNumber": {
+            "name": "fromNumber",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 213,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---from-number"
+        },
+        "toSource": {
+            "name": "toSource",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 232,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---to-source"
+        },
+        "toArray": {
+            "name": "toArray",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 238,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---to-array"
+        },
+        "charCodeAt": {
+            "name": "charCodeAt",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+            "lineNo": 244,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-buffer",
+                "_buffer"
+            ],
+            "href": "packages---narwhal-lib---narwhal-buffer---_buffer---char-code-at"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-buffer"
+    ],
+    "href": "packages---narwhal-lib---narwhal-buffer---_buffer"
+}

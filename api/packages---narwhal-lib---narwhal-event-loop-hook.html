@@ -1,0 +1,148 @@
+<html>
+    <head>
+    
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>narwhal/event-loop-hook</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>This module is exclusively for the purpose of arranging
+for an "event-loop-engine" to begin dispatching events
+when the initial thread of execution runs to its
+completion.</p>
+
+<p><code>narwhal/narwhal.js</code> checks whether this module has been
+loaded after the main module returns and calls the
+"emit" method.  No module is intended to call "emit"
+manually.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#when"><tt>when</tt></a></li>
+    
+        <li><a href="#emit"><tt>emit</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="when"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-event-loop-hook---when.html"><tt>when</tt></a>
+        
+        
+    </h2>
+
+    <p>Arrange for an observer function to be called after the
+"main" module returns.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>observer</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>{Function}</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>undefined</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="emit"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-event-loop-hook---emit.html"><tt>emit</tt></a>
+        
+        
+    </h2>
+
+    <p>This method, called by the engine after the "main" module
+returns, invokes all of the observers (intended to be a
+single event loop runner registered by an
+"event-loop-engine") in the order they were requested.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-event-loop-hook.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

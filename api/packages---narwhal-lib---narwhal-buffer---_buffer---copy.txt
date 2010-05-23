@@ -1,0 +1,41 @@
+{
+    "name": "copy",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/buffer.js",
+    "lineNo": 34,
+    "params": [
+        {
+            "name": "target"
+        },
+        {
+            "name": "start",
+            "doc": "(0)"
+        },
+        {
+            "name": "stop",
+            "doc": "(this.length)"
+        },
+        {
+            "name": "targetStart",
+            "doc": "(0)"
+        }
+    ],
+    "errors": [],
+    "throws": [
+        {
+            "doc": "an Error if the source or target ranges are out of their respective bounds."
+        }
+    ],
+    "see": [],
+    "returns": {
+        "doc": "this"
+    },
+    "doc": "(targetStop is targetStart + (stop - stop))",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-buffer",
+        "_buffer"
+    ],
+    "href": "packages---narwhal-lib---narwhal-buffer---_buffer---copy"
+}

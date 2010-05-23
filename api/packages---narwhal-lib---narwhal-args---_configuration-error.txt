@@ -1,0 +1,17 @@
+{
+    "name": "ConfigurationError",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/args.js",
+    "lineNo": 26,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-args"
+    ],
+    "href": "packages---narwhal-lib---narwhal-args---_configuration-error"
+}

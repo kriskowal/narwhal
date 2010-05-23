@@ -1,0 +1,1 @@
+{"name":"defined","markup":"markdown","fileName":"/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/promise.js","lineNo":343,"params":[],"errors":[],"throws":[],"see":[],"doc":"Guarantees that the give promise resolves to a defined, non-null value.","heritage":["packages","narwhal-lib","narwhal-promise"],"href":"packages---narwhal-lib---narwhal-promise---defined"}

@@ -1,0 +1,17 @@
+{
+    "name": "escape",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+    "lineNo": 1029,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "escapes all characters of a string that are\nspecial to JavaScript and many other languages.\nRecognizes all of the relevant\ncontrol characters and formats all other\nnon-printable characters as Hex byte escape\nsequences or Unicode escape sequences depending\non their size.\n\nPass `true` as an optional second argument and\n`escape` produces valid contents for escaped\nJSON strings, wherein non-printable-characters are\nall escaped with the Unicode `\\u` notation.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-util"
+    ],
+    "href": "packages---narwhal-lib---narwhal-util---escape"
+}

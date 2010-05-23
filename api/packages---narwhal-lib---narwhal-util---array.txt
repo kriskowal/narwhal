@@ -1,0 +1,453 @@
+{
+    "name": "array",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+    "lineNo": 300,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "children": [
+        {
+            "name": "coerce",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 329,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---coerce"
+        },
+        {
+            "name": "copy",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 337,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---copy"
+        },
+        {
+            "name": "deepCopy",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 341,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---deep-copy"
+        },
+        {
+            "name": "len",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 347,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---len"
+        },
+        {
+            "name": "has",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 353,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---has"
+        },
+        {
+            "name": "put",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 359,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---put"
+        },
+        {
+            "name": "del",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 366,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---del"
+        },
+        {
+            "name": "eq",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 373,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---eq"
+        },
+        {
+            "name": "lt",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 383,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---lt"
+        },
+        {
+            "name": "repr",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 393,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---repr"
+        },
+        {
+            "name": "first",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 399,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---first"
+        },
+        {
+            "name": "last",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 405,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---last"
+        }
+    ],
+    "index": {
+        "coerce": {
+            "name": "coerce",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 329,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---coerce"
+        },
+        "copy": {
+            "name": "copy",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 337,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---copy"
+        },
+        "deepCopy": {
+            "name": "deepCopy",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 341,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---deep-copy"
+        },
+        "len": {
+            "name": "len",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 347,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---len"
+        },
+        "has": {
+            "name": "has",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 353,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---has"
+        },
+        "put": {
+            "name": "put",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 359,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---put"
+        },
+        "del": {
+            "name": "del",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 366,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---del"
+        },
+        "eq": {
+            "name": "eq",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 373,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---eq"
+        },
+        "lt": {
+            "name": "lt",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 383,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---lt"
+        },
+        "repr": {
+            "name": "repr",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 393,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---repr"
+        },
+        "first": {
+            "name": "first",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 399,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---first"
+        },
+        "last": {
+            "name": "last",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/util.js",
+            "lineNo": 405,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-util",
+                "array"
+            ],
+            "href": "packages---narwhal-lib---narwhal-util---array---last"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-util"
+    ],
+    "href": "packages---narwhal-lib---narwhal-util---array"
+}
