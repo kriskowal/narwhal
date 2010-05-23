@@ -1,6 +1,18 @@
 
 // -- kriskowal Kris Kowal Copyright (C) 2009-2010 MIT License
 
+/**
+ * Attempts to patch the existing free objects to bring the
+ * context up to compliance with CommonJS specifications.
+ *
+ * This module is required during Narwhal's bootstrapping so
+ * that all modules.
+ *
+ * @module
+ */
+
+/*whatsupdoc*/
+
 require("./global-es5");
 
 // https://wiki.mozilla.org/ServerJS/Binary/B

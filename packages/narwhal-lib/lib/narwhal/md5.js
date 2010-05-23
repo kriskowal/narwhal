@@ -21,7 +21,9 @@ var struct = require("./struct");
  */
 
 /*** hash
-    returns a hex string of the md5 hash for a given string.
+    @param {String || Buffer || ByteString || ByteArray}
+    string
+    @returns a hex string of the MD5 hash for a given string.
 */
 exports.hash = function (s, _characterSize) {
     if (util.no(_characterSize)) _characterSize = struct.characterSize;

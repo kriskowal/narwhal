@@ -3,8 +3,8 @@
 // -- Hannes Wallnöfer
 
 var system = require("system");
-var fs = require("file");
-var packages = require("packages");
+var FS = require("narwhal/fs");
+var PACKAGES = require("narwhal/packages");
 var util = require("util");
 var json = require("json");
 var http = require("http-client");
@@ -13,6 +13,9 @@ exports.catalogVersion = 2;
 exports.minCatalogVersion = 2;
 
 var args = require("args");
+
+/**
+ */
 var parser = exports.parser = new args.Parser();
 
 parser.help('A Narwhal project package manager.');
@@ -59,28 +62,40 @@ parser.helpful();
 // utilities
 //
 
+/**
+ */
 exports.getDirectory = function () {
-    return fs.path(system.prefixes[0]);
+    return FS.path(system.prefixes[0]);
 };
 
+/**
+ */
 exports.getPackagesDirectory = function () {
     return exports.getDirectory().join('packages');
 };
 
+/**
+ */
 exports.getTuskDirectory = function () {
     var tuskDirectory = exports.getDirectory().join('.tusk');
     tuskDirectory.mkdirs();
     return tuskDirectory;
 }
 
+/**
+ */
 exports.getZipsDirectory = function () {
     return exports.getDirectory().join('zips');
 };
 
+/**
+ */
 exports.getCatalogPath = function () {
     return exports.getTuskDirectory().join('catalog.json');
 };
 
+/**
+ */
 exports.readCatalog = function () {
     var catalogPath = exports.getCatalogPath();
     if (!catalogPath.exists())
@@ -90,10 +105,12 @@ exports.readCatalog = function () {
     var catalog = json.decode(catalogPath.read({charset: 'utf-8'}));
     if (catalog.version === undefined || +catalog.version < exports.minCatalogVersion)
         throw new Error("catalog is out of date.  use tusk update or create-catalog");
-    packages.normalize(catalog.packages);
+    PACKAGES.normalize(catalog.packages);
     return catalog;
 };
 
+/**
+ */
 exports.writeCatalog = function (catalog) {
     var catalogPath = exports.getCatalogPath();
     print('Writing ' + catalogPath);
@@ -103,10 +120,14 @@ exports.writeCatalog = function (catalog) {
     );
 };
 
+/**
+ */
 exports.update = function (options) {
     require('./tusk/update').update.call(this, options);
 };
 
+/**
+ */
 exports.getSourcesPath = function () {
     var try1 = exports.getTuskDirectory().join('sources.json');
     var try2 = exports.getDirectory().join('sources.json');
@@ -116,6 +137,8 @@ exports.getSourcesPath = function () {
         return try2;
 };
 
+/**
+ */
 exports.readSources = function () {
     var sources = json.decode(exports.getSourcesPath().read(
         {charset: 'utf-8'}
@@ -132,6 +155,8 @@ exports.readSources = function () {
     return sources;
 };
 
+/**
+ */
 exports.writeSources = function (sources) {
     return exports.getSourcesPath().write(
         json.encode(sources, null, 4),
@@ -139,10 +164,14 @@ exports.writeSources = function (sources) {
     );
 };
 
+/**
+ */
 exports.getNotesPath = function () {
     return exports.getTuskDirectory().join('notes.json');
 };
 
+/**
+ */
 exports.readNotes = function () {
     var notesPath = exports.getNotesPath();
     if (!notesPath.isFile())
@@ -152,6 +181,8 @@ exports.readNotes = function () {
     ));
 };
 
+/**
+ */
 exports.writeNotes = function (notes) {
     return exports.getNotesPath().write(
         json.encode(notes, null, 4),
@@ -159,6 +190,8 @@ exports.writeNotes = function (notes) {
     );
 };
 
+/**
+ */
 exports.getHttpStore = function () {
     var Store = require("http/fs-store").Store;
     var store = new Store(exports.getTuskDirectory().join("http"));
@@ -170,6 +203,8 @@ exports.getHttpStore = function () {
 
 // run it
 
+/**
+ */
 exports.main = function (args) {
     var options = parser.parse(args);
     if (!options.acted)

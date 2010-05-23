@@ -1,34 +1,40 @@
 
 // -- kriskowal Kris Kowal Copyright (C) 2009-2010 MIT License
 
+/**
+ * Provides functions for working with binary data.
+ * @module
+ */
+
+/*whatsupdoc*/
+
 var util = require("./util");
 var binary = require("./binary");
 
-/*** alphabet16Upper
+/**
 */
 exports.alphabet16Upper = "0123456789ABCDEF";
 
-/*** alphabet16Lower
+/**
 */
 exports.alphabet16Lower = "0123456789abcdef";
 
-/*** alphabet16
-    ``alphabet16Lower`` is the default hexadecimal alphabet.
+/**
+    `alphabet16Lower` is the default hexadecimal alphabet.
     This value can be overridden on the module
     and function level.
 */
-
 exports.alphabet16 = exports.alphabet16Lower;
 
-/*** alphabet36
+/**
 */
 exports.alphabet36 = "0123456789abcdefghijklmnopqrstuvwxyz";
 
-/*** alphabet64
+/**
 */
 exports.alphabet64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
-/*** padBase64 
+/**
     base-64 pad character. "=" for strict RFC compliance, "" for brevity
     "=" by default.
     This value can be overridden on the module
@@ -36,30 +42,28 @@ exports.alphabet64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345
 */
 exports.padBase64 = "=";
 
-/*** characterSize
+/**
     bits per input character. 8 - ASCII; 16 - Unicode
     This value can be overridden on the module
     and function level.
 */
 exports.characterSize = 8; 
 
-/*** ord
+/**
     Returns the character code ordinal (offset in the ASCII or Unicode tables)
     for a given single character. 
 
-     - inverse: `chr`
-
+    * inverse: `chr`
 */
 exports.ord = function (chr) {
     return chr.charCodeAt();
 };
 
-/*** chr
+/**
     Returns the character for a given character code ordinal (offset in the
     ASCII or Unicode tables).
 
-     - inverse: `ord`
-
+    * inverse: `ord`
 */
 exports.chr = function (ord) {
     return String.fromCharCode(ord);

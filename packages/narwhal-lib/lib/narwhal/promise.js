@@ -2,18 +2,46 @@
 // Tyler Close
 // Ported by Kris Kowal
 // Variation to illustrated ideas for improvements on the API.
-// * Deferred, Rejection, Reference instead of defer, reject, ref, and promise.
 // * Promise constructor that takes a descriptor and fallback.
 // * near has been changed to valueOf, and uses a valueOf operator instead
 //   an undefined operator, to reduce special cases.
-// * variadic arguments are used internally where applicable (POST arguments
-//   have not yet been altered.
+
+// TODO finally construct
+// TODO progress construct
 
 /*
  * Copyright 2007-2009 Tyler Close under the terms of the MIT X license found
  * at http://www.opensource.org/licenses/mit-license.html
  *
  * ref_send.js version: 2009-05-11
+ */
+
+/**
+ * Provides a robust API for interacting with functions that
+ * can neither block execution nor resolve a return value
+ * immediately.  Such functions may return promises if they
+ * find that they must perform a long latency operation in
+ * their transitive function call tree, and will eventually
+ * resolve or reject thir returned promise with a value or
+ * a reason for failure.  These resolutions and rejections
+ * can be observed and composed with other promises, and
+ * rejections percolate in a manner analogous to `try`, 
+ * `catch`, and `finally`.
+ *
+ * In addition, this module provides facilities that permit
+ * interactions to be requested on the eventually resolved
+ * value of a promise and forwarded along a pipeline to
+ * reduce chattiness.  This permits high-performance,
+ * object-granular interaction with distant processes.
+ *
+ * This implementation is a prototype conforming to the
+ * alternate promise proposal for CommonJS:
+ * http://wiki.commonjs.org/wiki/Promises/B
+ *
+ * This implementation and the specification are based on
+ * Tyler Close's `ref_send.js`.
+ *
+ * @module
  */
 
 /*whatsupdoc*/

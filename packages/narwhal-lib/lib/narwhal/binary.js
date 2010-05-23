@@ -5,6 +5,12 @@
 // -- tschaub
 // -- nrstott Nathan Stott
 
+/**
+ * @fileoverview
+ */
+
+/*whatsupdoc*/
+
 var engine = require("narwhal/binary-engine"),
     B_ALLOC = engine.B_ALLOC,
     B_LENGTH = engine.B_LENGTH,
@@ -18,13 +24,25 @@ var engine = require("narwhal/binary-engine"),
     B_ENCODE_DEFAULT = engine.B_ENCODE_DEFAULT,
     B_TRANSCODE = engine.B_TRANSCODE;
     
+/**
+ * A base type for `ByteString` and `ByteArray`.
+ */
+
 var Binary = exports.Binary = function() {
     // this._bytes
     // this._offset
     // this._length
 };
 
+/***
+ * @name length
+ * @property
+ * @enumerable false
+ * @configurable false
+ */
 Object.defineProperty(Binary.prototype, "length", {
+    /****
+     */
     "get": function () {
         return this._length;
     },
@@ -34,6 +52,8 @@ Object.defineProperty(Binary.prototype, "length", {
 
 // toArray() - n array of the byte values
 // toArray(charset) - an array of the code points, decoded
+/***
+ */
 Binary.prototype.toArray = function(charset) {
     if (arguments.length === 0) {
         var array = new Array(this._length);
@@ -59,6 +79,8 @@ Binary.prototype.toArray = function(charset) {
 
 // toByteArray() - just a copy
 // toByteArray(sourceCharset, targetCharset) - transcoded
+/***
+ */
 Binary.prototype.toByteArray = function(sourceCodec, targetCodec) {
     if (arguments.length < 2)
         return new ByteArray(this);
@@ -72,6 +94,8 @@ Binary.prototype.toByteArray = function(sourceCodec, targetCodec) {
 
 // toByteString() - byte for byte copy
 // toByteString(sourceCharset, targetCharset) - transcoded
+/***
+ */
 Binary.prototype.toByteString = function(sourceCodec, targetCodec) {
     if (arguments.length < 2)
         return new ByteString(this);
@@ -86,6 +110,8 @@ Binary.prototype.toByteString = function(sourceCodec, targetCodec) {
 // decodeToString()
 // decodeToString(charset) - returns a String from its decoded bytes in a given charset. If no charset is provided, or if the charset is "undefined", assumes the default system encoding.
 // decodeToString(number) - returns a String from its decoded bytes in a given base, like 64, 32, 16, 8, 2
+/***
+ */
 Binary.prototype.decodeToString = function(charset) {
     if (charset) {
         if (typeof charset == "number")
@@ -99,6 +125,8 @@ Binary.prototype.decodeToString = function(charset) {
 };
 
 // get(offset) - Return the byte at offset as a Number.
+/***
+ */
 Binary.prototype.get = function(offset) {
     if (offset < 0 || offset >= this._length)
         return NaN;
@@ -108,6 +136,8 @@ Binary.prototype.get = function(offset) {
     return B_GET(this._bytes, this._offset + offset)
 };
 
+/***
+ */
 Binary.prototype.indexOf = function(byteValue, start, stop) {
     // HACK: use ByteString's slice since we know we won't be modifying result
     var array = ByteString.prototype.slice.apply(this, [start, stop]).toArray(),
@@ -115,6 +145,8 @@ Binary.prototype.indexOf = function(byteValue, start, stop) {
     return (result < 0) ? -1 : result + (start || 0);
 };
 
+/***
+ */
 Binary.prototype.lastIndexOf = function(byteValue, start, stop) {
     // HACK: use ByteString's slice since we know we won't be modifying result
     var array = ByteString.prototype.slice.apply(this, [start, stop]).toArray(),
@@ -122,6 +154,8 @@ Binary.prototype.lastIndexOf = function(byteValue, start, stop) {
     return (result < 0) ? -1 : result + (start || 0);
 };
 
+/***
+ */
 // valueOf()
 Binary.prototype.valueOf = function() {
     return this;
@@ -129,6 +163,8 @@ Binary.prototype.valueOf = function() {
 
 /* ByteString */
 
+/**
+ */
 var ByteString = exports.ByteString = function() {
     if (!(this instanceof ByteString)) {
         if (arguments.length == 0)
@@ -204,9 +240,18 @@ var ByteString = exports.ByteString = function() {
 
 ByteString.prototype = new Binary();
 
+/***
+ * @name length
+ */
+/****
+ * @name get
+ */
 ByteString.prototype.__defineGetter__("length", function() {
     return this._length;
 });
+/****
+ * @name set
+ */
 ByteString.prototype.__defineSetter__("length", function(length) {
 });
 
@@ -223,6 +268,7 @@ ByteString.prototype.__defineSetter__("length", function(length) {
 //  - implemented on Binary
 
 // toString()
+/*** */
 ByteString.prototype.toString = function(charset) {
     if (charset)
         return this.decodeToString(charset);
@@ -233,7 +279,9 @@ ByteString.prototype.toString = function(charset) {
 // decodeToString(charset) - Returns the decoded ByteArray as a string.
 //  - implemented on Binary
 
+/*** */
 ByteString.prototype.byteAt =
+/*** */
 ByteString.prototype.charAt = function(offset) {
     var byteValue = this.get(offset);
     
@@ -247,6 +295,7 @@ ByteString.prototype.charAt = function(offset) {
 // lastIndexOf() - implemented on Binary
 
 // charCodeAt(offset)
+/*** */
 ByteString.prototype.charCodeAt = Binary.prototype.get;
 
 // get(offset) - implemented on Binary
@@ -255,6 +304,7 @@ ByteString.prototype.charCodeAt = Binary.prototype.get;
 // charAt(offset) ByteString - implemented on Binary
 
 // split(delimiter, [options])
+/*** */
 ByteString.prototype.split = function(delimiters, options) {
     var options = options || {},
         count = options.count === undefined ? -1 : options.count,
@@ -318,6 +368,7 @@ ByteString.prototype.split = function(delimiters, options) {
 // slice()
 // slice(begin)
 // slice(begin, end)
+/*** */
 ByteString.prototype.slice = function(begin, end) {
     if (begin === undefined)
         begin = 0;
@@ -337,6 +388,7 @@ ByteString.prototype.slice = function(begin, end) {
 
 // substr(start)
 // substr(start, length)
+/*** */
 ByteString.prototype.substr = function(start, length) {
     if (start !== undefined) {
         if (length !== undefined)
@@ -349,6 +401,7 @@ ByteString.prototype.substr = function(start, length) {
 
 // substring(first)
 // substring(first, last)
+/*** */
 ByteString.prototype.substring = function(from, to) {
     if (from !== undefined) {
         if (to !== undefined)
@@ -363,6 +416,7 @@ ByteString.prototype.substring = function(from, to) {
 // [] ByteString - TODO
 
 // toSource()
+/*** */
 ByteString.prototype.toSource = function() {
     return "ByteString(["+this.toArray().join(",")+"])";
 };
@@ -376,6 +430,7 @@ ByteString.prototype.toSource = function() {
 // ByteArray(arrayOfBytes) - Use numbers in arrayOfBytes as contents.
 //     Throws an exception if any element is outside the range 0...255 (TODO).
 // ByteArray(string, charset) - Create a ByteArray from a Javascript string, the result being encoded with charset.
+/** */
 var ByteArray = exports.ByteArray = function() {
     if (!this instanceof ByteArray) {
         if (arguments.length == 0)
@@ -453,9 +508,18 @@ var ByteArray = exports.ByteArray = function() {
 
 ByteArray.prototype = new Binary();
 
+/***
+ * @name length
+ */
+/****
+ * @name get
+ */
 ByteArray.prototype.__defineGetter__("length", function() {
     return this._length;
 });
+/****
+ * @name set
+ */
 ByteArray.prototype.__defineSetter__("length", function(length) {
     if (typeof length !== "number")
         return;
@@ -491,6 +555,7 @@ ByteArray.prototype.__defineSetter__("length", function(length) {
 });
 
 // FIXME: array notation for set and get
+/*** */
 ByteArray.prototype.set = function(index, b) {
     // If any element is outside the range 0...255, an exception (TODO) is thrown.
     if (b < 0 || b > 0xFF)
@@ -518,6 +583,7 @@ ByteArray.prototype.set = function(index, b) {
 
 // toString() - a string representation like "[ByteArray 10]"
 // toString(charset) - an alias for decodeToString(charset)
+/*** */
 ByteArray.prototype.toString = function(charset) {
     if (charset)
         return this.decodeToString(charset);
@@ -535,6 +601,7 @@ ByteArray.prototype.toString = function(charset) {
 
 // concat(other ByteArray|ByteString|Array)
 // TODO: I'm assuming Array means an array of ByteStrings/ByteArrays, not an array of integers.
+/*** */
 ByteArray.prototype.concat = function() {
     var components = [this],
         totalLength = this._length;
@@ -564,6 +631,7 @@ ByteArray.prototype.concat = function() {
 };
 
 // pop() -> byte Number
+/*** */
 ByteArray.prototype.pop = function() {
     if (this._length === 0)
         return undefined;
@@ -574,6 +642,7 @@ ByteArray.prototype.pop = function() {
 };
 
 // push(...variadic Numbers...)-> count Number
+/*** */
 ByteArray.prototype.push = function() {
     var length, newLength = this.length += length = arguments.length;
     try {
@@ -587,11 +656,13 @@ ByteArray.prototype.push = function() {
 };
 
 // extendRight(...variadic Numbers / Arrays / ByteArrays / ByteStrings ...)
+/*** */
 ByteArray.prototype.extendRight = function() {
     throw "NYI";
 };
 
 // shift() -> byte Number
+/*** */
 ByteArray.prototype.shift = function() {
     if (this._length === 0)
         return undefined;
@@ -603,6 +674,7 @@ ByteArray.prototype.shift = function() {
 };
 
 // unshift(...variadic Numbers...) -> count Number
+/*** */
 ByteArray.prototype.unshift = function() {
     var copy = this.slice();
     this.length = 0;
@@ -618,11 +690,13 @@ ByteArray.prototype.unshift = function() {
 };
 
 // extendLeft(...variadic Numbers / Arrays / ByteArrays / ByteStrings ...)
+/*** */
 ByteArray.prototype.extendLeft = function() {
     throw "NYI";
 };
 
 // reverse() in place reversal
+/*** */
 ByteArray.prototype.reverse = function() {
     // "limit" is halfway, rounded down. "top" is the last index.
     var limit = Math.floor(this._length/2) + this._offset,
@@ -639,6 +713,7 @@ ByteArray.prototype.reverse = function() {
 };
 
 // slice()
+/*** */
 ByteArray.prototype.slice = function() {
     return new ByteArray(ByteString.prototype.slice.apply(this, arguments));
 };
@@ -646,6 +721,7 @@ ByteArray.prototype.slice = function() {
 var numericCompareFunction = function(o1, o2) { return o1 - o2; };
 
 // sort([compareFunction])
+/*** */
 ByteArray.prototype.sort = function(compareFunction) {
     // FIXME: inefficient?
     
@@ -661,6 +737,7 @@ ByteArray.prototype.sort = function(compareFunction) {
 };
 
 // splice()
+/*** */
 ByteArray.prototype.splice = function(index, howMany /*, elem1, elem2 */) {
     if (index === undefined) return;
     if (index < 0) index += this.length;
@@ -679,6 +756,7 @@ ByteArray.prototype.splice = function(index, howMany /*, elem1, elem2 */) {
 // lastIndexOf() - implemented on Binary
 
 // split() Returns an array of ByteArrays instead of ByteStrings.
+/*** */
 ByteArray.prototype.split = function() {
     var components = ByteString.prototype.split.apply(this.toByteString(), arguments);
     
@@ -692,6 +770,7 @@ ByteArray.prototype.split = function() {
 };
 
 // filter(callback[, thisObject])
+/*** */
 ByteArray.prototype.filter = function(callback, thisObject) {
     var result = new ByteArray(this._length);
     for (var i = 0, length = this._length; i < length; i++) {
@@ -703,12 +782,14 @@ ByteArray.prototype.filter = function(callback, thisObject) {
 };
 
 // forEach(callback[, thisObject]);
+/*** */
 ByteArray.prototype.forEach = function(callback, thisObject) {
     for (var i = 0, length = this._length; i < length; i++)
         callback.apply(thisObject, [this.get(i), i, this]);
 };
 
 // every(callback[, thisObject])
+/*** */
 ByteArray.prototype.every = function(callback, thisObject) {
     for (var i = 0, length = this._length; i < length; i++)
         if (!callback.apply(thisObject, [this.get(i), i, this]))
@@ -717,6 +798,7 @@ ByteArray.prototype.every = function(callback, thisObject) {
 };
 
 // some(callback[, thisObject])
+/*** */
 ByteArray.prototype.some = function(callback, thisObject) {
     for (var i = 0, length = this._length; i < length; i++)
         if (callback.apply(thisObject, [this.get(i), i, this]))
@@ -725,6 +807,7 @@ ByteArray.prototype.some = function(callback, thisObject) {
 };
 
 // map(callback[, thisObject]);
+/*** */
 ByteArray.prototype.map = function(callback, thisObject) {
     var result = new ByteArray(this._length);
     for (var i = 0, length = this._length; i < length; i++)
@@ -733,6 +816,7 @@ ByteArray.prototype.map = function(callback, thisObject) {
 };
 
 // reduce(callback[, initialValue])
+/*** */
 ByteArray.prototype.reduce = function(callback, initialValue) {
     var value = initialValue;
     for (var i = 0, length = this._length; i < length; i++)
@@ -741,6 +825,7 @@ ByteArray.prototype.reduce = function(callback, initialValue) {
 };
 
 // reduceRight(callback[, initialValue])
+/*** */
 ByteArray.prototype.reduceRight = function(callback, initialValue) {
     var value = initialValue;
     for (var i = this._length-1; i > 0; i--)
@@ -750,11 +835,13 @@ ByteArray.prototype.reduceRight = function(callback, initialValue) {
 
 // displace(begin, end, values/ByteStrings/ByteArrays/Arrays...) -> length
 //     begin/end are specified like for slice. Can be used like splice but does not return the removed elements.
+/*** */
 ByteArray.prototype.displace = function(begin, end) {
     throw "NYI";
 };
 
 // toSource() returns a string like "ByteArray([])" for a null byte-array.
+/*** */
 ByteArray.prototype.toSource = function() {
     return "ByteArray(["+this.toArray().join(",")+"])";
 };

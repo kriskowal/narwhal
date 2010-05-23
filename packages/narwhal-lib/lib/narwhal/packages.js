@@ -2,43 +2,98 @@
 // -- kriskowal Kris Kowal Copyright (C) 2009-2010 MIT License
 // -- cadorn Christoph Dorn
 
+/*whatsupdoc*/
+
 var SYSTEM = require("system");
 var ENGINE = require("./engine");
 var UTIL = require("./util");
 var FS = require("./fs");
 var URI = require("./uri");
 
-exports.resourceIfExists = function (path) {
+/**
+ * @params paths a variadic list of path terms.
+ * @returns {Array} an array of all files that match the given paths
+ * in every package.  Each of the variadic path terms may be
+ * replaced with their configured equivalents in their respective
+ * package, as described by the `directories` property in the given
+ * package's `package.json` file.
+ */
+exports.resources = function () {
+    var resources = [];
+    var path = FS.join(arguments);
     if (FS.isAbsolute(path)) {
         if (FS.exists(path))
-            return FS.path(path);
-        return;
+            return [FS.path(path)];
+        return [];
     }
     for (var i = 0, length = exports.order.length; i < length; i++) {
-        var info = exports.order[i];
-        var resource = info.directory.join(path);
+        var descriptor = exports.order[i];
+        var terms = Array.prototype.map.call(arguments, function (term) {
+            if (descriptor.directories) {
+                if (UTIL.has(descriptor.directories, term))
+                    return UTIL.get(descriptor.directories, term);
+            }
+            return term;
+        });
+        var resource = descriptor.directory.join.apply(descriptor.directory, terms);
         if (resource.exists())
-            return resource;
+            resources.push(resource);
     }
+    return resources;
 };
 
-exports.resource = function (path) {
-    var resource = exports.resourceIfExists(path);
+/**
+ * @params paths variadically, for a path in any overlayed
+ * package.  Packages complying to the CommonJS Packages/1.0
+ * specification may have a `package.json` file with a
+ * `directories` property.  Each variadic term in the path
+ * that corresponds to one of the remapped directory names
+ * will get replaced with the corresponding value in each
+ * respective package.
+ * @returns {Path || Undefined} a path object from
+ * `narwhal/fs` in the `narwhal-lib` package for the file in
+ * the first package that contains a corresponding path, or
+ * `undefined` if no matching file exists.  If the paths
+ * correspond to an absolute path, returns that as a path
+ * object.  @throws {Error} an error if no corresponding
+ * path exists.
+ */
+exports.resourceIfExists = function () {
+    var resources = exports.resources.apply(this, arguments);
+    if (resources.length)
+        return resources.shift();
+};
+
+/**
+ * @params paths variadically, for a path in any overlayed package.
+ * Packages complying to the CommonJS Packages/1.0 specification may
+ * have a `package.json` file with a `directories` property.  Each
+ * variadic term in the path that corresponds to one of the remapped
+ * directory names will get replaced with the corresponding value in
+ * each respective package.
+ * @returns {Path} a path object from `narwhal/fs` in the
+ * `narwhal-lib` package for the file in the first package that
+ * contains a corresponding path.  If the paths correspond to an
+ * absolute path, returns that as a path object.
+ * @throws {Error} an error if no corresponding path exists.
+ */
+exports.resource = function () {
+    path = FS.join(arguments);
+    var resource = exports.resourceIfExists.apply(this, arguments);
     if (resource) {
         return resource;
     }
     throw new Error("Could not locate " + path + " in any package.");
 };
 
+/**
+ * Finds, reads, and analyzes overlayed packages then
+ * applies those findings to the module loader and memoizes
+ * the results as properties of this module.  This involves
+ * a breadth-first- search for packages and packages within
+ * packages, and performing engine-specific configuration.
+ */
 exports.main = function main() {
-    // finds, reads, and analyzes packages,
-    // then applies its findings (synthesizes)
-    // to the loader and system.
-    // this involves a breadth first search for packages
-    // and packages within packages (read),
-    // and performing engine-specific analysis and
-    // synthesis.
-
 
     if (ENGINE.prefixes === undefined)
         throw new Error(
@@ -48,10 +103,16 @@ exports.main = function main() {
 
     ENGINE.packages = ENGINE.packages || [];
 
-    exports.load(ENGINE.packages.concat(ENGINE.prefixes));
-
+    UTIL.update(
+        exports,
+        exports.load(ENGINE.packages.concat(ENGINE.prefixes))
+    );
 };
 
+/**
+ * @param {Array} prefixes
+ * @param {Object} options
+ */
 exports.load = function (prefixes, options) {
 
     // the packages engine module, if it exists,
@@ -107,16 +168,40 @@ exports.load = function (prefixes, options) {
     });
 
     // record results
+    /***
+     * {Object * Package} an object mapping package names to `Package`
+     * objects.  Set by `main`.
+     */
     exports.catalog = catalog;
+    /***
+     * Set by `main`.
+     */
     exports.usingCatalog = usingCatalog;
+    /***
+     * {Array * Package} an array of the same packages in the
+     * `catalog` in order from most to least dependent, so that
+     * you are guaranteed that, if a package depends on another,
+     * it appears before it in `order`.  
+     */
     exports.order = order;
+    /***
+     * {Package} the active package.
+     */
     exports.root = root;
-    exports.analysis = analysis;
-    exports.engines = analysis.engines;
-    return exports;
+    /***
+     * A mapping of engine package names to engine package objects,
+     * for all installed engine packages.
+     */
+    return {
+        "catalog": catalog,
+        "usingCatalog": usingCatalog,
+        "order": order,
+        "root": root,
+        "engines": analysis.engines
+    };
 };
 
-/*** read
+/** read
     recursively loads all package data from package.json files
     and packages/ directories.
 */
@@ -171,10 +256,10 @@ exports.read = function read(prefixes, catalog, usingCatalog, options) {
                 continue;
             }
 
-            var packageDatum;
+            var descriptor;
             try {
-                var packageDatumJson = packageDirectory.join('package.json').read({"charset": "UTF-8"});
-                packageDatum = JSON.parse(packageDatumJson || '{}');
+                var descriptorJson = packageDirectory.join('package.json').read({"charset": "UTF-8"});
+                descriptor = exports.Package(JSON.parse(descriptorJson || '{}'));
                 
                 // look for local, user overrides
                 var local = packageDirectory.join('local.json');
@@ -182,7 +267,7 @@ exports.read = function read(prefixes, catalog, usingCatalog, options) {
                     local = JSON.parse(local.read({"charset": "UTF-8"}));
                     for (var name in local) {
                         if (Object.prototype.hasOwnProperty.call(local, name)) {
-                            packageDatum[name] = local[name];
+                            descriptor[name] = local[name];
                         }
                     }
                 }
@@ -191,7 +276,7 @@ exports.read = function read(prefixes, catalog, usingCatalog, options) {
                 var localOverlay = packageDirectory.join('package.local.json');
                 if (localOverlay.isFile()) {
                     UTIL.deepUpdate(
-                        packageDatum,
+                        descriptor,
                         JSON.parse(localOverlay.read({"charset": "UTF-8"}))
                     );
                 }
@@ -201,8 +286,8 @@ exports.read = function read(prefixes, catalog, usingCatalog, options) {
                 // using packages do not namespace their modules in a way that
                 // is compatible with system packages.
                 if (
-                    UTIL.has(packageDatum, "type") &&
-                    packageDatum.type == "using"
+                    UTIL.has(descriptor, "type") &&
+                    descriptor.type == "using"
                 ) {
                     continue;
                 }
@@ -219,10 +304,10 @@ exports.read = function read(prefixes, catalog, usingCatalog, options) {
                     name = dependencyInfo.name;
                 } else {
                     // set name based on package*.json "name" property
-                    name = packageDatum.name || name;
+                    name = descriptor.name || name;
                 }
-                catalog[name] = packageDatum;
-                packageDatum.directory = packageDirectory;
+                catalog[name] = descriptor;
+                descriptor.directory = packageDirectory;
 
                 // add this system package to the usingCatalog
                 exports.updateUsingCatalog(
@@ -230,17 +315,17 @@ exports.read = function read(prefixes, catalog, usingCatalog, options) {
                     usingCatalog,
                     packageDirectory,
                     name,
-                    packageDatum
+                    descriptor
                 );
 
                 // if a dependency is referring to a 'using' package ID we add
                 // the package being referenced to the system package catalog
-                if (!packageDatum.dependencies)
-                    packageDatum.dependencies = [];
-                if (!Array.isArray(packageDatum.dependencies)) {
-                    packageDatum.dependencies = Object.keys(packageDatum.dependencies);
+                if (!descriptor.dependencies)
+                    descriptor.dependencies = [];
+                if (!Array.isArray(descriptor.dependencies)) {
+                    descriptor.dependencies = Object.keys(descriptor.dependencies);
                 }
-                packageDatum.dependencies.forEach(function(dependency) {
+                descriptor.dependencies.forEach(function(dependency) {
                     if (
                         UTIL.has(usingCatalog, dependency) &&
                         !UTIL.has(catalog, dependency)
@@ -255,16 +340,16 @@ exports.read = function read(prefixes, catalog, usingCatalog, options) {
                 });
                 
                 // normalize authors
-                if (packageDatum.author)
-                    packageDatum.author = new exports.Author(packageDatum.author);
-                if (!packageDatum.contributors)
-                    packageDatum.contributors = [];
-                packageDatum.contributors = packageDatum.contributors.map(function (contributor) {
+                if (descriptor.author)
+                    descriptor.author = new exports.Author(descriptor.author);
+                if (!descriptor.contributors)
+                    descriptor.contributors = [];
+                descriptor.contributors = descriptor.contributors.map(function (contributor) {
                     return new exports.Author(contributor);
                 });
 
                 // enqueue sub packages
-                var packagesDirectories = packageDatum.packages;
+                var packagesDirectories = descriptor.packages;
                 if (typeof packagesDirectories == "string")
                     packagesDirectories = [packagesDirectories];
                 if (packagesDirectories === undefined)
@@ -283,7 +368,7 @@ exports.read = function read(prefixes, catalog, usingCatalog, options) {
                 // the first package we encounter gets
                 // top-billing, the root package
                 if (!root)
-                    root = packageDatum;
+                    root = descriptor;
 
             } catch (exception) {
                 SYSTEM.log.error("Could not load package '" + name + "'. " + exception);
@@ -297,10 +382,10 @@ exports.read = function read(prefixes, catalog, usingCatalog, options) {
     return root;
 };
 
-/*** verify
-    scans a package object for missing dependencies and throws away
-    any package that has unmet dependencies.
-*/
+/**
+ * scans a package object for missing dependencies and
+ * throws away any package that has unmet dependencies.
+ */
 exports.verify = function verify(catalog) {
     for (var name in catalog) {
         if (Object.prototype.hasOwnProperty.call(catalog, name)) {
@@ -317,12 +402,12 @@ exports.verify = function verify(catalog) {
 };
 
 var scan = function scan(catalog, name) {
-    var packageDatum = catalog[name];
-    if (!packageDatum)
+    var descriptor = catalog[name];
+    if (!descriptor)
         throw name;
     try {
-        if (packageDatum.dependencies) {
-            packageDatum.dependencies.forEach(function (dependency) {
+        if (descriptor.dependencies) {
+            descriptor.dependencies.forEach(function (dependency) {
                 scan(catalog, dependency);
             });
         }
@@ -340,7 +425,7 @@ var scan = function scan(catalog, name) {
     }
 };
 
-/*** sortedPackages
+/** sortedPackages
     returns an array of packages in order from the most
     dependent to least dependent, sorted based on
     their transitive dependencies.
@@ -410,7 +495,7 @@ exports.sortedPackages = function (graph) {
     return sorted;
 };
 
-/*** analyze
+/** analyze
     constructs prioritized top-level module paths
     based on the given sorted package array.    
 */
@@ -418,71 +503,71 @@ exports.analyze = function analyze(analysis, catalog) {
     analysis.libPaths = [];
     analysis.preloadModules = [];
     analysis.engines = {};
-    catalog.forEach(function (info) {
+    catalog.forEach(function (descriptor) {
 
         // libraries
-        if (typeof info.lib == 'string')
-            info.lib = [info.lib];
-        if (!info.lib)
-            info.lib = ['lib'];
+        if (typeof descriptor.lib == 'string')
+            descriptor.lib = [descriptor.lib];
+        if (!descriptor.lib)
+            descriptor.lib = ['lib'];
 
         // resolve the lib paths
-        for (var i = 0; i < info.lib.length; i++) {
-            info.lib[i] = info.directory.join(info.lib[i]);
+        for (var i = 0; i < descriptor.lib.length; i++) {
+            descriptor.lib[i] = descriptor.directory.join(descriptor.lib[i]);
         }
 
-        if (!info.engine) {
+        if (!descriptor.engine) {
 
             // engines
             var engines = 'engines';
             var engineLibs = [];
-            if (info.engines)
-                engines = info.engines;
+            if (descriptor.engines)
+                engines = descriptor.engines;
                 
             if (!ENGINE.engines)
-                throw "No system.engines set";
+                throw "No ENGINE.engines set";
 
             ENGINE.engines.forEach(function (engine) {
-                var engineDir = info.directory.join(engines, engine, 'lib');
+                var engineDir = descriptor.directory.join(engines, engine, 'lib');
                 if (engineDir.isDirectory()) 
                     engineLibs.push(engineDir);
             });
 
             for (var i = 0; i < engineLibs.length; i++) {
-                engineLibs[i] = info.directory.join(engineLibs[i]);
+                engineLibs[i] = descriptor.directory.join(engineLibs[i]);
             }
 
             analysis.libPaths.unshift.apply(
                 analysis.libPaths,
-                engineLibs.concat(info.lib)
+                engineLibs.concat(descriptor.lib)
             );
 
         } else {
             // the package is an engine.  install its lib path
             //  if it is active.
 
-            var name = info.engine || info.name;
-            analysis.engines[name] = info;
+            var name = descriptor.engine || descriptor.name;
+            analysis.engines[name] = descriptor;
             if (UTIL.has(ENGINE.engines, name)) {
                 analysis.libPaths.unshift.apply(
                     analysis.libPaths,
-                    info.lib
+                    descriptor.lib
                 );
             }
 
         }
         
         // add any preload librarys to analysis
-        if (info.preload) {
-            if (typeof info.preload == "string")
-                info.preload = [info.preload];
-            analysis.preloadModules.unshift.apply(analysis.preloadModules, info.preload);
+        if (descriptor.preload) {
+            if (typeof descriptor.preload == "string")
+                descriptor.preload = [descriptor.preload];
+            analysis.preloadModules.unshift.apply(analysis.preloadModules, descriptor.preload);
         }
     });
     
 };
 
-/*** synthesize
+/** synthesize
     applies the results of the analysis on the current
     execution environment.
 */
@@ -490,7 +575,7 @@ exports.synthesize = function synthesize(analysis) {
     exports.addJsPaths(analysis.libPaths);
 };
 
-/*** addJsPaths
+/** addJsPaths
 */
 exports.addJsPaths = function addJsPaths(jsPaths) {
     // add package paths to the loader
@@ -501,6 +586,8 @@ exports.addJsPaths = function addJsPaths(jsPaths) {
         );
 };
 
+/**
+ */
 exports.normalizePackageDescriptor = function(descriptor) {
     if (!descriptor)
         return descriptor;
@@ -531,6 +618,8 @@ exports.normalizePackageDescriptor = function(descriptor) {
     return id.replace(/\\/g, "/");	// windows compatibility
 }
 
+/**
+ */
 exports.readUsing = function (options, usingCatalog, basePath, subPath) {
     subPath = subPath || FS.Path("./");
 
@@ -545,7 +634,7 @@ exports.readUsing = function (options, usingCatalog, basePath, subPath) {
     if (path.join("package.json").exists()) {
 
         var packageDatumJson = path.join("package.json").read().toString();
-        var packageDatum = JSON.parse(packageDatumJson || '{}');
+        var packageDatum = exports.Package(JSON.parse(packageDatumJson || '{}'));
 
         // overlay local package file
         var localOverlay = path.join('package.local.json');
@@ -566,6 +655,8 @@ exports.readUsing = function (options, usingCatalog, basePath, subPath) {
     }
 }
 
+/**
+ */
 exports.updateUsingCatalog = function(options, usingCatalog, path, id, packageDatum) {
     if (!UTIL.has(usingCatalog, id)) {
         usingCatalog[id] = {
@@ -575,8 +666,8 @@ exports.updateUsingCatalog = function(options, usingCatalog, path, id, packageDa
         };
     }
     if (UTIL.has(packageDatum, "using")) {
-        UTIL.every(packageDatum.using, function(pair) {
-            usingCatalog[id]["packages"][pair[0]] = exports.normalizePackageDescriptor(pair[1]);
+        UTIL.forEachApply(packageDatum.using, function(key, value) {
+            usingCatalog[id]["packages"][key] = exports.normalizePackageDescriptor(value);
         });
     }
     if (UTIL.has(options, "includeBuildDependencies") &&
@@ -584,60 +675,94 @@ exports.updateUsingCatalog = function(options, usingCatalog, path, id, packageDa
        UTIL.has(packageDatum, "build") &&
        UTIL.has(packageDatum.build, "using")) {
 
-        UTIL.every(packageDatum.build.using, function(pair) {
-            usingCatalog[id]["packages"][pair[0]] = exports.normalizePackageDescriptor(pair[1]);
+        UTIL.forEachApply(packageDatum.build.using, function(key, value) {
+            usingCatalog[id]["packages"][key] = exports.normalizePackageDescriptor(value);
         });
     }
 }
 
-
-/*** normalize
-*/
+/** normalize
+ * normalizes all of the packages in a catalog
+ */
 exports.normalize = function (catalog) {
     for (var name in catalog) {
         if (Object.prototype.hasOwnProperty.call(catalog, name)) {
-            exports.normalizePackage(catalog[name]);
+            catalog[name] = exports.normalizePackage(catalog[name]);
         }
     }
 };
 
-/*** normalizePackage
+/** normalizePackage
 */
-exports.normalizePackage = function (info) {
+exports.normalizePackage = function (descriptor) {
 
     var names = [];
     // normalize authors
-    if (!info.contributors)
-        info.contributors = [];
-    info.contributors = info.contributors.map(function (contributor) {
+    if (!descriptor.contributors)
+        descriptor.contributors = [];
+    descriptor.contributors = descriptor.contributors.map(function (contributor) {
         var author = new exports.Author(contributor);
         names.push(author.name)
         return author;
     });
 
     ['maintainer', 'author'].forEach(function (name) {
-        if (!info[name])
+        if (!descriptor[name])
             return;
-        info[name] = new exports.Author(info[name]);
-        if (names.indexOf(info[name].name) < 0)
-            info.contributors.unshift(info[name]);
+        descriptor[name] = new exports.Author(descriptor[name]);
+        if (names.indexOf(descriptor[name].name) < 0)
+            descriptor.contributors.unshift(descriptor[name]);
     });
 
-    info.dependencies = info.dependencies || [];
+    descriptor.dependencies = descriptor.dependencies || [];
 
-    info.version = exports.Version(info.version);
+    descriptor.version = exports.Version(descriptor.version);
 
+    return descriptor;
 };
 
-/*** Author
-*/
+/**
+ * A package descriptor.
+ * @param {Object} initial optional property values
+ * @constructor
+ */
+exports.Package = function (options) {
+    var self = Object.create(exports.Package.prototype);
+    UTIL.update(self, options);
+    return self;
+};
+
+/***
+ * @params {String} path components.  Each term may be replaced
+ * if a corresponding entry exists in the package's `package.json`
+ * package descriptor's `directories` property.
+ * @returns {Path} a path in the package, regardless of whether
+ * a corresponding file exists.
+ */
+exports.Package.prototype.resource = function (paths) {
+    var descriptor = this;
+    if (!descriptor.directories)
+        descriptor.directories = {};
+    return descriptor.directory.join.apply(
+        this.directory,
+        paths.map(function (term) {
+            return UTIL.get(descriptor, term, term);
+        })
+    );
+};
+
+/**
+ */
 exports.Author = function (author) {
     if (!(this instanceof exports.Author))
         return new exports.Author(author);
     if (typeof author == "string") {
         var match = author.match(exports.Author.regexp);
+        /*** @property */
         this.name = UTIL.trim(match[1]);
+        /*** @property */
         this.url = match[2];
+        /*** @property */
         this.email = match[3];
     } else {
         this.name = author.name;
@@ -646,6 +771,12 @@ exports.Author = function (author) {
     }
 };
 
+/***
+ * @returns {String} a string like
+ * `Author Name (http://example.com/) <author@example.com>`,
+ * where each component is optional.
+ * @method
+ */
 exports.Author.prototype.toString = function () {
     return [
         this.name,
@@ -656,6 +787,12 @@ exports.Author.prototype.toString = function () {
     }).join(' ');
 };
 
+/***
+ * A regular expression that matches against author strings
+ * like `Author Name (http://example.com/) <author@example.com>`,
+ * where each component is optional.
+ * @classproperty
+ */
 exports.Author.regexp = new RegExp(
     "(?:" +
         "([^\\(<]*)" +
@@ -671,7 +808,12 @@ exports.Author.regexp = new RegExp(
 );
 
 /**
-*/
+ * Normalizes `undefined` to an empty `Array`.
+ * Normalizes a `String` to an `Array` of `String`s.
+ * All other values are returned unaltered.
+ * @param {Undefined || String || Version} version
+ * @returns {Array * String} a normalized version
+ */
 exports.Version = function (version) {
     if (typeof version == "undefined")
         return [];

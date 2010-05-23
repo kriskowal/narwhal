@@ -1,8 +1,14 @@
 
 // -- kriskowal Kris Kowal Copyright (C) 2009-2010 MIT License
-// gmosx, George Moschovitis
+// -- gmosx George Moschovitis TODO
+
+/*whatsupdoc*/
 
 // Based on: http://data.iana.org/TLD/tlds-alpha-by-domain.txt
+
+/**
+ * Top level domains, in upper-case.
+ */
 var TLDS = exports.TLDS = [
     "AC","AD","AE","AERO","AF","AG","AI","AL","AM","AN","AO","AQ","AR","ARPA","AS","ASIA","AT","AU","AW","AX","AZ",
     "BA","BB","BD","BE","BF","BG","BH","BI","BIZ","BJ","BM","BN","BO","BR","BS","BT","BV","BW","BY","BZ",
@@ -54,14 +60,17 @@ var URI = exports.URI = function (uri) {
 
 };
 
+/*** */
 URI.prototype.resolve = function (other) {
     return exports.resolve(this, other);
 };
 
+/*** */
 URI.prototype.to = function (other) {
     return exports.relative(this, other);
 };
 
+/*** */
 URI.prototype.from = function (other) {
     return exports.relative(other, this);
 };
@@ -73,22 +82,27 @@ URI.prototype.toString = function () {
     return exports.format(this);
 }
 
+/***
+ * @classmethod
+ */
 URI.parse = function(uri) {
     require("./deprecated").deprecated("URI.parse is deprecated, use require('uri').parse");
     return new URI(uri);
 }
 
+/** */
 exports.unescape = URI.unescape = function(uri, plus) {
     return decodeURI(uri).replace(/\+/g, " ");
 }
 
+/** */
 exports.unescapeComponent = URI.unescapeComponent = function(uri, plus) {
     return decodeURIComponent(uri).replace(/\+/g, " ");
 }
 
 // from Chiron's HTTP module:
 
-/**** keys
+/**
     members of a parsed URI object.
 */
 exports.keys = [
@@ -111,7 +125,7 @@ exports.keys = [
     "anchor"
 ];
 
-/**** expressionKeys
+/**
     members of a parsed URI object that you get
     from evaluting the strict regular expression.
 */
@@ -133,7 +147,7 @@ exports.expressionKeys = [
     "anchor"
 ];
 
-/**** strictExpression
+/** strictExpression
 */
 exports.strictExpression = new RegExp( /* url */
     "^" +
@@ -164,7 +178,7 @@ exports.strictExpression = new RegExp( /* url */
     "(?:#(.*))?" /*anchor */
 );
 
-/**** Parser
+/**
     returns a URI parser function given
     a regular expression that renders 
     `expressionKeys` and returns an `Object`
@@ -213,12 +227,12 @@ exports.Parser = function (expression) {
     };
 };
 
-/**** parse
+/** parse
     a strict URI parser.
 */
 exports.parse = exports.Parser(exports.strictExpression);
 
-/**** format
+/** format
     accepts a parsed URI object and returns
     the corresponding string.
 */
@@ -271,8 +285,8 @@ exports.format = function (object) {
     ) || object.url || "";
 };
 
-/**** resolveObject
-    returns an object representing a URL resolved from
+/** resolveObject
+    @returns an object representing a URL resolved from
     a relative location and a source location.
 */
 exports.resolveObject = function (source, relative) {
@@ -338,8 +352,8 @@ exports.resolveObject = function (source, relative) {
     return source;
 };
 
-/**** relativeObject
-    returns an object representing a relative URL to
+/** relativeObject
+    @returns an object representing a relative URL to
     a given target URL from a source URL.
 */
 exports.relativeObject = function (source, target) {

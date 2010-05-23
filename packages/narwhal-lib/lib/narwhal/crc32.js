@@ -5,17 +5,26 @@
 // with contributions:
 // -- cadorn Christoph Dorn
 
+/**
+ * @module
+ */
+
 var util = require('./util');
 
-/*** polynomials
+/*whatsupdoc*/
+
+/**
 */
 exports.polynomials = {
+    /*** */
     'ieee802_3': 0xEDB88320,
+    /*** */
     'castagnoli': 0x82F63B78,
+    /*** */
     'kooperman': 0xEB31D82E
 };
 
-/*** Table
+/**
 */
 exports.Table = function (polynomial) {
     var term, table = [];
@@ -32,13 +41,14 @@ exports.Table = function (polynomial) {
     return table;
 };
 
-/*** table
+/**
 */
 exports.table = exports.Table(exports.polynomials.ieee802_3);
 
-/*** hash
-    returns the crc32 hash for a string as an integer.
-*/
+/**
+ * @param {String}
+ * @returns {Number} the crc32 hash for a string as an integer.
+ */
 exports.hash = function (bin, table) {
     if (util.no(table))
         table = exports.table;

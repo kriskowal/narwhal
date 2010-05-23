@@ -6,10 +6,12 @@
  * Pure JavaScript implementations of file system path
  * manipulation.
  *
- * This module depends on the non CommonJS "engine" module,
- * particularly for an "os" property that has the words
- * "windows" or "winnt" to distinguish Windows from Unix
- * file systems.
+ * This module depends on the non-CommonJS "narwhal/engine"
+ * module, particularly for an "os" property that has the
+ * words "windows" or "winnt" to distinguish Windows from
+ * Unix file systems.
+ *
+ * @module
  */
 
 // NOTE: this file may be used is the engine bootstrapping
@@ -17,24 +19,26 @@
 // narwhal.js
 
 /*whatsupdoc*/
-/*markup markdown*/
 
 var ENGINE = require("narwhal/engine");
 
 /**
  * @name ROOT
+ *
  * * `/` on Unix
  * * `\` on Windows
  */
 
 /**
  * @name SEPARATOR
+ *
  * * `/` on Unix
  * * `\` on Windows
  */
 
 /**
  * @name ALT_SEPARATOR
+ *
  * * undefined on Unix
  * * `/` on Windows
  */

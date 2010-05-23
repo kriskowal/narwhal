@@ -1,6 +1,4 @@
 
-// http://wiki.commonjs.org/wiki/Unit_Testing/1.0
-
 // -- zaach Zachary Carter
 // -- kriskowal Kris Kowal Copyright (C) 2009-2010 MIT License
 //   original skeleton
@@ -10,6 +8,19 @@
 //   editions backported from NodeJS
 // -- ashb Ash Berlin 
 //   contributions annotated
+
+/**
+ * Methods for throwing or logging on failed assertions,
+ * useful for unit testing.
+ *
+ * An implementation of the CommonJS Unit Testing 1.0
+ * Specification's `assert` module.
+ * http://wiki.commonjs.org/wiki/Unit_Testing/1.0
+ *
+ * @fileoverview
+ */
+
+/*whatsupdoc*/
 
 var UTIL = require("narwhal/util");
 var ENGINE = require("narwhal/engine");
@@ -23,6 +34,13 @@ var assert = exports;
 // 2. The AssertionError is defined in assert.
 // new assert.AssertionError({message: message, actual: actual, expected: expected})
 
+/**
+ * @constructor
+ * @param {string || {message: String, ...}} properties
+ * @returns {name: "AssertionError", message: String,
+ * "actual", "expected", "operator", ...} an error, that
+ * may contain backtrace information on Rhino and V8.
+ */
 assert.AssertionError = function (options) {
     if (typeof options == "string")
         options = {"message": options};
@@ -45,6 +63,10 @@ assert.AssertionError = function (options) {
 
 // XXX extension
 // Ash Berlin
+/***
+ * WARNING: This method is not specified.
+ * @returns a representation of the error.
+ */
 assert.AssertionError.prototype.toString = function (){
     if (this.message) {
         return [
@@ -63,6 +85,10 @@ assert.AssertionError.prototype.toString = function (){
 
 // XXX extension
 // Ash Berlin
+/***
+ * WARNING: This method is not specified.
+ * @returns an evaluable representation of the error.
+ */
 assert.AssertionError.prototype.toSource = function () {
     return "new (require('assert').AssertionError)(" + Object.prototype.toSource.call(this) + ")";
 };
@@ -82,22 +108,62 @@ assert.AssertionError.prototype = Object.create(Error.prototype);
 // both the actual and expected values to the assertion error for
 // display purposes.
 
+/**
+ * WARNING: This method is not specified.
+ * @param options properties for initializing the
+ * AssertionError.
+ * @throws an AssertionError.
+ */
 assert.fail = function (options) {
     throw new assert.AssertionError(options);
 };
 
 // XXX extension
 // stub for logger protocol
+/**
+ * Called by the test runner when a test passes.
+ *
+ * This method is inteded to be overridden by inheritors,
+ * particularly loggers.  The base implementation is a
+ * no-op.
+ *
+ * WARNING: This method is not specified.
+ */
 assert.pass = function () {
 };
 
 // XXX extension
 // stub for logger protocol
+/**
+ * Called by the test runner when a test errors out.
+ *
+ * This method is inteded to be overridden by inheritors,
+ * particularly loggers.  The base implementation is a
+ * no-op.
+ *
+ * WARNING: This method is not specified.
+ *
+ * @param {String} message
+ */
 assert.error = function () {
 };
 
 // XXX extension
 // stub for logger protocol
+/**
+ * Called by the test runner when a test errors begins
+ * a new section of tests and is expected to return an
+ * object suitable for sending log messages like "pass",
+ * "error", "fail", and "section".
+ *
+ * This method is inteded to be overridden by inheritors,
+ * particularly loggers.  The base implementation is a
+ * no-op.
+ *
+ * WARNING: This method is not specified.
+ *
+ * @returns this
+ */
 assert.section = function () {
     return this;
 };
@@ -109,6 +175,12 @@ assert.section = function () {
 // message_opt);. To test strictly for the value true, use
 // assert.strictEqual(true, guard, message_opt);.
 
+/**
+ * @param value
+ * @param {String} message optional
+ * @throws {AssertionError} an error with the given message
+ * if value is not truthy
+ */
 assert.ok = function (value, message) {
     if (!!!value)
         (this.fail || assert.fail)({
@@ -125,6 +197,14 @@ assert.ok = function (value, message) {
 // ==.
 // assert.equal(actual, expected, message_opt);
 
+/**
+ * @param actual
+ * @param expected
+ * @param {String} message optional
+ * @throws {AssertionError} an error with the given message
+ * if the actual and expected values are not loosely equal
+ * (`!=`).
+ */
 assert.equal = function (actual, expected, message) {
     if (actual != expected)
         (this.fail || assert.fail)({
@@ -141,6 +221,14 @@ assert.equal = function (actual, expected, message) {
 // 6. The non-equality assertion tests for whether two objects are not equal
 // with != assert.notEqual(actual, expected, message_opt);
 
+/**
+ * @param actual
+ * @param expected
+ * @param {String} message optional
+ * @throws {AssertionError} an error with the given message
+ * if the actual and expected values are loosely equal
+ * (`==`).
+ */
 assert.notEqual = function (actual, expected, message) {
     if (actual == expected)
         (this.fail || assert.fail)({
@@ -156,6 +244,14 @@ assert.notEqual = function (actual, expected, message) {
 // 7. The equivalence assertion tests a deep equality relation.
 // assert.deepEqual(actual, expected, message_opt);
 
+/**
+ * @param actual
+ * @param expected
+ * @param {String} message optional
+ * @throws {AssertionError} an error with the given message
+ * if the actual and expected values are not deeply equivalent,
+ * for their transitive properties.
+ */
 assert.deepEqual = function (actual, expected, message) {
     if (!deepEqual(actual, expected))
         (this.fail || assert.fail)({
@@ -223,6 +319,14 @@ function arrayEquiv(a, b, stack) {
 // 8. The non-equivalence assertion tests for any deep inequality.
 // assert.notDeepEqual(actual, expected, message_opt);
 
+/**
+ * @param actual
+ * @param expected
+ * @param {String} message optional
+ * @throws {AssertionError} an error with the given message
+ * if the actual and expected values are deeply equivalent,
+ * for their transitive properties.
+ */
 assert.notDeepEqual = function (actual, expected, message) {
     if (deepEqual(actual, expected))
         (this.fail || assert.fail)({
@@ -238,6 +342,14 @@ assert.notDeepEqual = function (actual, expected, message) {
 // 9. The strict equality assertion tests strict equality, as determined by ===.
 // assert.strictEqual(actual, expected, message_opt);
 
+/**
+ * @param actual
+ * @param expected
+ * @param {String} message optional
+ * @throws {AssertionError} an error with the given message
+ * if the actual and expected values are not strictly equal
+ * (`!==`).
+ */
 assert.strictEqual = function (actual, expected, message) {
     if (actual !== expected)
         (this.fail || assert.fail)({
@@ -253,6 +365,14 @@ assert.strictEqual = function (actual, expected, message) {
 // 10. The strict non-equality assertion tests for strict inequality, as determined by !==.
 // assert.notStrictEqual(actual, expected, message_opt);
 
+/**
+ * @param actual
+ * @param expected
+ * @param {String} message optional
+ * @throws {AssertionError} an error with the given message
+ * if the actual and expected values are strictly equal
+ * (`===`).
+ */
 assert.notStrictEqual = function (actual, expected, message) {
     if (actual === expected)
         (this.fail || assert.fail)({
@@ -268,6 +388,15 @@ assert.notStrictEqual = function (actual, expected, message) {
 // 11. Expected to throw an error:
 // assert.throws(block, Error_opt, message_opt);
 
+/**
+ * @param {Function} block
+ * @param {String} message optional
+ * @param {Function} Error optional, shifts left by one
+ * positional argument if `message` is omitted, or `Error`
+ * by default.  @throws {AssertionError} calls the given
+ * block and throw an error with the given message if the
+ * block does not throw an error of the given type.
+ */
 assert["throws"] = function (block, Error, message) {
     var threw = false,
         exception = null;
@@ -306,6 +435,20 @@ assert["throws"] = function (block, Error, message) {
 };
 
 // XXX extension
+/**
+ * Constructs a logging `assert` object.
+ * WARNING: This method is not specified.
+ *
+ * @constructor
+ * @param {Log * {pass, fail, error, section}} log an
+ * object, inherited from the assert module itself, that
+ * will send messages to the given log object instead of
+ * throwing exceptions.
+ * @returns {assert} an object inheriting prototypically
+ * from the `assert` module itself, with `pass`, `fail`,
+ * `error`, and `section` overridden to forward messages to
+ * the given `Log` object.
+ */
 assert.Assert = function (log) {
     var self = Object.create(assert);
     self.pass = log.pass.bind(log);

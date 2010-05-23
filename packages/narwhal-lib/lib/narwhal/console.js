@@ -1,4 +1,13 @@
 
+// Authors, Copyright, License
+// -- gozala TODO
+
+/**
+ * @module
+ */
+
+/* whatsupdoc */
+
 var ASSERT = require("assert");
 var UTIL = require("./util");
 var TERM = require("./term"),
@@ -28,11 +37,17 @@ var timeDump = dump("time", "purple"),
     countDump = dump("count", "orange"),
     dumpDir = dump();
 
+/** */
 exports.log = dump("log");
+/** */
 exports.debug = dump("debug", "cyan");
+/** */
 exports.info = dump("info", "blue");
+/** */
 exports.warn = dump("warn", "yellow");
+/** */
 exports.error = dump("error", "red");
+/** */
 exports.assert = function assert(expression) {
     var message = slice.call(arguments, 1).join(" ");
     if (expression)
@@ -42,31 +57,42 @@ exports.assert = function assert(expression) {
     return exports;
 };
 
+/** */
 exports.dir = exports.dirxml = function dir(thing) {
     dumpDir(represent(thing));
     return exports;
 }
 
+/** */
 exports.group = function group() {
     dumpGroup.apply(null, arguments)
     INDENT += "    ";
     return exports;
 }
+
+/** */
 exports.groupEnd = function groupEnd() {
     INDENT = INDENT.substr(0, Math.max(INDENT.length - 1, 0));
 }
 
+/** */
 exports.time = function time(name) {
     timeHash[name] = (new Date()).getTime();
     return exports;
 }
+
+/** */
 exports.timeEnd = function time(name) {
     timeDump(name || "", (new Date()).getTime() - timeHash[name]);
     return exports;
 }
+
+/** */
 exports.count = function count(title) {
     countDump(title || "", countHash[title] = ((countHash[title] || 0) + 1));
 }
+
+/** */
 exports.profile = exports.profileEnd = function () {
     print("NYI")
 };

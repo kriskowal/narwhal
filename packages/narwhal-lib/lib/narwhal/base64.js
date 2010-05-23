@@ -10,6 +10,12 @@
 // -- kriskowal Kris Kowal Copyright (C) 2009-2010 MIT License
 // -- cadorn Christoph Dorn
 
+/**
+ * @fileoverview
+ */
+
+/*whatsupdoc*/
+
 var encodeChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 var decodeChars = [
     -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
@@ -22,8 +28,9 @@ var decodeChars = [
     41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, -1, -1, -1, -1, -1
 ];
 
-var binary = require('narwhal/binary');
+var BINARY = require('narwhal/binary');
 
+/** */
 exports.encode = function (str) {
     var out, i, length;
     var c1, c2, c3;
@@ -56,9 +63,10 @@ exports.encode = function (str) {
         out.push(encodeChars.charCodeAt(((c2 & 0xF) << 2) | ((c3 & 0xC0) >>6)));
         out.push(encodeChars.charCodeAt(c3 & 0x3F));
     }
-    return binary.ByteString(out).toString('ascii');
+    return BINARY.ByteString(out).toString('ascii');
 };
 
+/** */
 exports.decode = function (str) {
     var c1, c2, c3, c4;
     var i, length, out;

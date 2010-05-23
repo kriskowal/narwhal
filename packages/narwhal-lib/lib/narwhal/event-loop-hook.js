@@ -2,20 +2,19 @@
 // -- kriskowal Kris Kowal Copyright (C) 2009-2010 MIT License
 
 /*whatsupdoc*/
-/*markup markdown*/
 
 /**
- *  This module is exclusively for the purpose of arranging
- *  for an "event-loop-engine" to begin dispatching events
- *  when the initial thread of execution runs to its
- *  completion.
+ * This module is exclusively for the purpose of arranging
+ * for an "event-loop-engine" to begin dispatching events
+ * when the initial thread of execution runs to its
+ * completion.
  *
- *  `narwhal/narwhal.js` checks whether this module has been
- *  loaded after the main module returns and calls the
- *  "emit" method.  No module is intended to call "emit"
- *  manually.
+ * `narwhal/narwhal.js` checks whether this module has been
+ * loaded after the main module returns and calls the
+ * "emit" method.  No module is intended to call "emit"
+ * manually.
  *
- *  @module
+ * @module
 */
 
 var observers = [];

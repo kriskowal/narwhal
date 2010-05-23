@@ -1,6 +1,8 @@
 
 // -- kriskowal Kris Kowal Copyright (C) 2009-2010 MIT License
 
+/*whatsupdoc*/
+
 var FS = require("file");
 var TUSK = require("../tusk");
 var UTIL = require("util");
