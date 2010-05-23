@@ -1,6 +1,6 @@
 {
     "name": "narwhal",
-    "version": "0.2.3",
+    "version": "0.5.0",
     "description": "A general purpose JavaScript platform",
     "keywords": ["javascript", "engine", "platform"],
     "contributors": [
