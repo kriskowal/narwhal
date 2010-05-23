@@ -105,6 +105,7 @@ exports.run = function(test, log) {
 }
 
 var _run = function (test, log, options) {
+    var result = 0;
 
     if (typeof test === "string")
         test = require(test);
