@@ -11,7 +11,7 @@ var loopLevel = 0,
     shuttingDown, 
     queue = new java.util.concurrent.LinkedBlockingQueue();
 
-require("event-loop-hook").when(function () {
+require("narwhal/event-loop-hook").when(function () {
     if (exports.hasPendingEvents())
         exports.enterEventLoop(function () {
             exports.shutdown();

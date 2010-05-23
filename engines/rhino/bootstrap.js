@@ -126,9 +126,8 @@
 
     try {
         narwhal({
-            "engine": {
+            "narwhal/engine": {
                 global: global,
-                evalGlobal: evalGlobal,
                 importScripts: importScripts,
                 engine: 'rhino',
                 engines: ['rhino', 'default'],
