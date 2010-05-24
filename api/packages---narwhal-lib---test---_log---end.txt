@@ -2,7 +2,7 @@
     "name": "end",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-    "lineNo": 285,
+    "lineNo": 286,
     "params": [],
     "errors": [],
     "throws": [],

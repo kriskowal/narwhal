@@ -1,6 +1,7 @@
 <html>
     <head>
     
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title></title>
     
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -25,7 +26,19 @@
             
 
     
-    <p>WARNING: This method is not specified.</p>
+    <p>Called polymorphically by <code>assert</code> objects, particularly
+this assert module, when a test fails.  The behavior of
+this implementation of <code>fail</code> is to throw an <code>AssertionError</code>,
+but by prototypically inheriting the <code>assert</code> module, using
+<code>Object.create</code> or its ilk, and overriding <code>fail</code>, it is possible
+to trivially create variations that log failures rather
+than throwing.  The <code>test</code> module sends such an object to
+each <code>test*</code> method in a unit test tree so that tests have
+the option of logging instead of throwing.  Because each
+test receives a different <code>assert</code> object, the logs are
+associable with the individual test.</p>
+
+<p>WARNING: This method is not specified.</p>
     
 
     <!-- TODO params or throws or returns -->
@@ -44,9 +57,7 @@
         
         <tr>
             <th class="A"><em>throws</em></th>
-            <td class="B"></th>
-            
-            <td class="C"><p>an AssertionError.</p></td>
+            <td class="B"><tt>AssertionError</tt></th>
             
         </tr>
         

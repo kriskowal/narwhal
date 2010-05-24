@@ -2,7 +2,7 @@
     "name": "stream",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-    "lineNo": 288,
+    "lineNo": 308,
     "params": [],
     "errors": [],
     "throws": [],

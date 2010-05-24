@@ -1,0 +1,18 @@
+{
+    "name": "grant",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+    "lineNo": 137,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "fs-base",
+        "__unix-bits-reversed"
+    ],
+    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---grant"
+}

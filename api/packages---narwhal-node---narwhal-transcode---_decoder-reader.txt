@@ -1,0 +1,497 @@
+{
+    "name": "DecoderReader",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+    "lineNo": 15,
+    "params": [
+        {
+            "name": "raw",
+            "type": "ByteReader"
+        },
+        {
+            "name": "charset",
+            "type": "String"
+        },
+        {
+            "name": "length",
+            "type": "Number",
+            "doc": "(optional) internal buffer size, defaults to 1024."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "A synchronous stream decorator that transforms byte\nreading into string reading along a given character\nset.",
+    "children": [
+        {
+            "name": "read",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 58,
+            "params": [
+                {
+                    "name": "max",
+                    "type": "Number || Undefined || Null",
+                    "doc": "the maximum number of bytes to read.  Undefined implies all remaining bytes.  Null implies the default byte block size."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "String",
+                "doc": "characters read"
+            },
+            "doc": "Reads a string, either all remaning characters,\nor a chunk.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---read"
+        },
+        {
+            "name": "readMax",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 74,
+            "params": [
+                {
+                    "name": "max",
+                    "type": "Number",
+                    "doc": "the maximum number of bytes to read."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "String",
+                "doc": "characters read"
+            },
+            "doc": "Reads a string, from the given maximum number of\nbytes.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---read-max"
+        },
+        {
+            "name": "readAll",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 96,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "String",
+                "doc": "all remaining data."
+            },
+            "doc": "Reads and transcodes all reamaning bytes to\ncharacters.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---read-all"
+        },
+        {
+            "name": "readLine",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 113,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "String",
+                "doc": "line"
+            },
+            "doc": "Reads a single line.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---read-line"
+        },
+        {
+            "name": "readLines",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 133,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Array * String",
+                "doc": "lines, including their newline characters, if there are any, not including the last line if it is empty."
+            },
+            "doc": "Reads all reamaining lines.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---read-lines"
+        },
+        {
+            "name": "next",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 149,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Reads the next line or throws StopIteration",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---next"
+        },
+        {
+            "name": "iterator",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 159,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "{next}",
+                "doc": "this"
+            },
+            "doc": "Provides an object conforming to the iterator\nprotocol for iterating the lines of the stream.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---iterator"
+        },
+        {
+            "name": "forEach",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 168,
+            "params": [
+                {
+                    "name": "write",
+                    "type": "Function"
+                },
+                {
+                    "name": "thisPointer",
+                    "type": "Object",
+                    "doc": "the `this` value to provide the `write` function."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Calls a function with each remaining line of data\nfrom the stream.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---for-each"
+        },
+        {
+            "name": "copy",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 187,
+            "params": [
+                {
+                    "name": "output",
+                    "type": "WriteStream"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Copies all data from this stream to a given\noutput stream.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---copy"
+        },
+        {
+            "name": "close",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 200,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Closes the underlying raw byte stream.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---close"
+        }
+    ],
+    "index": {
+        "read": {
+            "name": "read",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 58,
+            "params": [
+                {
+                    "name": "max",
+                    "type": "Number || Undefined || Null",
+                    "doc": "the maximum number of bytes to read.  Undefined implies all remaining bytes.  Null implies the default byte block size."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "String",
+                "doc": "characters read"
+            },
+            "doc": "Reads a string, either all remaning characters,\nor a chunk.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---read"
+        },
+        "readMax": {
+            "name": "readMax",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 74,
+            "params": [
+                {
+                    "name": "max",
+                    "type": "Number",
+                    "doc": "the maximum number of bytes to read."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "String",
+                "doc": "characters read"
+            },
+            "doc": "Reads a string, from the given maximum number of\nbytes.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---read-max"
+        },
+        "readAll": {
+            "name": "readAll",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 96,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "String",
+                "doc": "all remaining data."
+            },
+            "doc": "Reads and transcodes all reamaning bytes to\ncharacters.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---read-all"
+        },
+        "readLine": {
+            "name": "readLine",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 113,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "String",
+                "doc": "line"
+            },
+            "doc": "Reads a single line.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---read-line"
+        },
+        "readLines": {
+            "name": "readLines",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 133,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Array * String",
+                "doc": "lines, including their newline characters, if there are any, not including the last line if it is empty."
+            },
+            "doc": "Reads all reamaining lines.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---read-lines"
+        },
+        "next": {
+            "name": "next",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 149,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Reads the next line or throws StopIteration",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---next"
+        },
+        "iterator": {
+            "name": "iterator",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 159,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "{next}",
+                "doc": "this"
+            },
+            "doc": "Provides an object conforming to the iterator\nprotocol for iterating the lines of the stream.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---iterator"
+        },
+        "forEach": {
+            "name": "forEach",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 168,
+            "params": [
+                {
+                    "name": "write",
+                    "type": "Function"
+                },
+                {
+                    "name": "thisPointer",
+                    "type": "Object",
+                    "doc": "the `this` value to provide the `write` function."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Calls a function with each remaining line of data\nfrom the stream.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---for-each"
+        },
+        "copy": {
+            "name": "copy",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 187,
+            "params": [
+                {
+                    "name": "output",
+                    "type": "WriteStream"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Copies all data from this stream to a given\noutput stream.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---copy"
+        },
+        "close": {
+            "name": "close",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 200,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Closes the underlying raw byte stream.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_decoder-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---close"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-transcode"
+    ],
+    "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader"
+}

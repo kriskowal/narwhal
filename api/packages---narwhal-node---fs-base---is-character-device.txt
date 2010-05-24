@@ -1,0 +1,17 @@
+{
+    "name": "isCharacterDevice",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+    "lineNo": 889,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "/!\\ Warning: beyond specification. Not necessarily\ninteroperable.",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "fs-base"
+    ],
+    "href": "packages---narwhal-node---fs-base---is-character-device"
+}

@@ -1,0 +1,153 @@
+{
+    "name": "EncoderWriter",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+    "lineNo": 211,
+    "params": [
+        {
+            "name": "raw",
+            "type": "Buffer"
+        },
+        {
+            "name": "charset",
+            "type": "String"
+        },
+        {
+            "name": "length",
+            "type": "Number",
+            "doc": "(optional) internal buffer size, defaults to 1024."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "A synchronous stream decorator that transforms string\nwriting into byte writing along a given character set.",
+    "children": [
+        {
+            "name": "write",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 228,
+            "params": [
+                {
+                    "name": "text",
+                    "type": "String"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Writes text to the stream.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_encoder-writer"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_encoder-writer---write"
+        },
+        {
+            "name": "flush",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 257,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Flushes all written data through the underlying\nraw stream.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_encoder-writer"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_encoder-writer---flush"
+        },
+        {
+            "name": "close",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 266,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Closes the underlying raw stream.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_encoder-writer"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_encoder-writer---close"
+        }
+    ],
+    "index": {
+        "write": {
+            "name": "write",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 228,
+            "params": [
+                {
+                    "name": "text",
+                    "type": "String"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Writes text to the stream.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_encoder-writer"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_encoder-writer---write"
+        },
+        "flush": {
+            "name": "flush",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 257,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Flushes all written data through the underlying\nraw stream.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_encoder-writer"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_encoder-writer---flush"
+        },
+        "close": {
+            "name": "close",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+            "lineNo": 266,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Closes the underlying raw stream.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-transcode",
+                "_encoder-writer"
+            ],
+            "href": "packages---narwhal-node---narwhal-transcode---_encoder-writer---close"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-transcode"
+    ],
+    "href": "packages---narwhal-node---narwhal-transcode---_encoder-writer"
+}

@@ -2,7 +2,7 @@
     "name": "deepEqual",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-    "lineNo": 247,
+    "lineNo": 284,
     "params": [
         {
             "name": "actual"

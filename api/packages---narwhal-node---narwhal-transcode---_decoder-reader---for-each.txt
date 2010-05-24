@@ -1,0 +1,28 @@
+{
+    "name": "forEach",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+    "lineNo": 168,
+    "params": [
+        {
+            "name": "write",
+            "type": "Function"
+        },
+        {
+            "name": "thisPointer",
+            "type": "Object",
+            "doc": "the `this` value to provide the `write` function."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Calls a function with each remaining line of data\nfrom the stream.",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-transcode",
+        "_decoder-reader"
+    ],
+    "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---for-each"
+}

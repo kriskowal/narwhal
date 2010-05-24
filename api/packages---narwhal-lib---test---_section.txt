@@ -2,7 +2,7 @@
     "name": "Section",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-    "lineNo": 336,
+    "lineNo": 337,
     "params": [
         {
             "name": "stream",
@@ -23,7 +23,7 @@
             "name": "print",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 349,
+            "lineNo": 350,
             "params": [
                 {
                     "name": "message"
@@ -47,7 +47,7 @@
             "name": "print",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 349,
+            "lineNo": 350,
             "params": [
                 {
                     "name": "message"

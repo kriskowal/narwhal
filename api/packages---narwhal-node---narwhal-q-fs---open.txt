@@ -1,0 +1,26 @@
+{
+    "name": "open",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-fs.js",
+    "lineNo": 19,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Promise * Stream",
+        "doc": "a stream from the `narwhal/q-io` module."
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-q-fs"
+    ],
+    "href": "packages---narwhal-node---narwhal-q-fs---open"
+}

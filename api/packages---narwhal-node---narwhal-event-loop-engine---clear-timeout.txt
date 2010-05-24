@@ -1,0 +1,22 @@
+{
+    "name": "clearTimeout",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/event-loop-engine.js",
+    "lineNo": 60,
+    "params": [
+        {
+            "name": "token",
+            "doc": "an opaque token, as returned by `setTimeout`"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Aborts a timeout.",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-event-loop-engine"
+    ],
+    "href": "packages---narwhal-node---narwhal-event-loop-engine---clear-timeout"
+}

@@ -1,0 +1,1939 @@
+{
+    "name": "fs-base",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+    "lineNo": 7,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "module": true,
+    "doc": "Low-level file system API.\n\nAn implementation of the CommonJS specification,\n[http://wiki.commonjs.org/wiki/Filesystem/A/0](http://wiki.commonjs.org/wiki/Filesystem/A/0).",
+    "type": "module",
+    "id": "fs-base",
+    "children": [
+        {
+            "name": "Permissions",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 88,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---_permissions"
+        },
+        {
+            "name": "UNIX_BITS",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 96,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---__unix-bits"
+        },
+        {
+            "name": "UNIX_BITS_REVERSED",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 107,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "children": [
+                {
+                    "name": "update",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 111,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---update"
+                },
+                {
+                    "name": "grant",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 137,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---grant"
+                },
+                {
+                    "name": "deny",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 151,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---deny"
+                },
+                {
+                    "name": "can",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 165,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---can"
+                },
+                {
+                    "name": "toUnix",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 176,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---to-unix"
+                },
+                {
+                    "name": "get",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 189,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---get"
+                }
+            ],
+            "index": {
+                "update": {
+                    "name": "update",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 111,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---update"
+                },
+                "grant": {
+                    "name": "grant",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 137,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---grant"
+                },
+                "deny": {
+                    "name": "deny",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 151,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---deny"
+                },
+                "can": {
+                    "name": "can",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 165,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---can"
+                },
+                "toUnix": {
+                    "name": "toUnix",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 176,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---to-unix"
+                },
+                "get": {
+                    "name": "get",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 189,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---get"
+                }
+            },
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---__unix-bits-reversed"
+        },
+        {
+            "name": "openRaw",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 239,
+            "params": [
+                {
+                    "name": "path",
+                    "type": "String"
+                },
+                {
+                    "name": "mode",
+                    "type": "Object",
+                    "doc": "optional"
+                },
+                {
+                    "name": "permissions",
+                    "type": "Permissions || Object",
+                    "doc": "optional"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "a raw byte stream"
+            },
+            "doc": "Open a file for reading.\n\nThe following combinations of true `read`, `write`, `update` *\nand `append` properties are supported:\n\n* `read`: read only\n* `write`: write only, truncates, creates if necessary\n* `append`: write only, append, creates if necessary\n* `read` and `update`: read and write, does not create, does not\n  truncate\n* `write` and `update`: read and write, trancates, creates if\n  necessary\n* `append` and `update`: read and write, does not truncate,\n  creates if necessary\n\nOn some varieties of UNIX, \"append\" causes all writes to be\nappended, regardless of the seek position.\n\nThe following additional properties can be set on the\noptions and are used when the underlying system supports\nthem:\n\n* `exclusive`: prevents the file from being opened if it\n  a file already exists. Atomicity of the `exclusive` open\n  can be used to coordinate processes like daemons.\n* `truncate`: explicitly requests truncation of the file\n  upon successful open.\n* `create`: explicitly requests creation if the file\n  does not exist.\n\nThe following properties can also be specified but are\nnot mentioned in the CommonJS standard:\n\n* `xSync`: requests that data be written to disk immediately.\n* `xNarwhalNoControlTty`: requests that, if the opened file is\n  a terminal device or pseudo terminal, that the calling\n  process does not become the controller for that terminal.\n* `xNarwhalNoFollow`: ensures that symbolic links are not followed,\n  which prevents certain kinds of attacks that take\n  advantage of race conditions in opening files where the\n  attacker subverts a write by injecting a symbolic link\n  at a path that is known to be opened by a process with\n  authority in excess of its own.\n* `xNarwhalDirectory`",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---open-raw"
+        },
+        {
+            "name": "move",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 362,
+            "params": [
+                {
+                    "name": "source",
+                    "type": "Source",
+                    "doc": "file or directory path"
+                },
+                {
+                    "name": "target",
+                    "type": "String",
+                    "doc": "file or directory path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Move the file or directory `source` to `target` using the\nunderlying OS semantics including atomicity and moving files into\na target directory if the target is a directory (as opposed to\nreplacing it).",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---move"
+        },
+        {
+            "name": "remove",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 385,
+            "params": [
+                {
+                    "name": "path",
+                    "type": "String",
+                    "doc": "path to a file (not a directory)."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Attempt to remove the `file` from disk. To remove\ndirectories use {@link fs-base.removeDirectory}.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---remove"
+        },
+        {
+            "name": "touch",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 412,
+            "params": [
+                {
+                    "name": "path",
+                    "type": "String"
+                },
+                {
+                    "name": "mtime",
+                    "type": "Date",
+                    "doc": "optional"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "'touch' the path, setting the last modified date to\n`mtime` or now. If there is no file or directory at\n`path`, an empty file will be created.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---touch"
+        },
+        {
+            "name": "makeDirectory",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 445,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Creates a (single) directory. If parent directories do\nnot exist they will not be created by this method.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---make-directory"
+        },
+        {
+            "name": "removeDirectory",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 468,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Removes an empty directory. A symbolic link is itself\nremoved, rather than the directory it resolves to being\nremoved.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---remove-directory"
+        },
+        {
+            "name": "canonical",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 518,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Resolve symlinks and canonicalize `path`. If it is a\ndirectory, the returned string will be guarenteed to have\na trailing '/'",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---canonical"
+        },
+        {
+            "name": "workingDirectory",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 572,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "String",
+                "doc": ""
+            },
+            "doc": "Get the process's current working directory.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---working-directory"
+        },
+        {
+            "name": "changeWorkingDirectory",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 596,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Change the process's current working directory.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---change-working-directory"
+        },
+        {
+            "name": "group",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 632,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---group"
+        },
+        {
+            "name": "changeGroup",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 686,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---change-group"
+        },
+        {
+            "name": "permissions",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 701,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---permissions"
+        },
+        {
+            "name": "changePermissions",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 720,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---change-permissions"
+        },
+        {
+            "name": "symbolicLink",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 747,
+            "params": [
+                {
+                    "name": "source"
+                },
+                {
+                    "name": "target"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---symbolic-link"
+        },
+        {
+            "name": "hardLink",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 768,
+            "params": [
+                {
+                    "name": "source"
+                },
+                {
+                    "name": "target"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---hard-link"
+        },
+        {
+            "name": "readLink",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 789,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "path"
+            },
+            "doc": "See: http://www.opengroup.org/onlinepubs/000095399/functions/readlink.html\n\"POSIX readlink function\"",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---read-link"
+        },
+        {
+            "name": "exists",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 810,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Boolean",
+                "doc": "whether a file (of any kind, including directories) exists at the given path"
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---exists"
+        },
+        {
+            "name": "isFile",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 846,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Boolean",
+                "doc": "whether a regular file exists at the given path."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---is-file"
+        },
+        {
+            "name": "isDirectory",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 860,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Boolean",
+                "doc": "whether a directory exists at the given path."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---is-directory"
+        },
+        {
+            "name": "isLink",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 876,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Boolean",
+                "doc": "whether a symbolic link exists at the given path."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---is-link"
+        },
+        {
+            "name": "isBlockDevice",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 883,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "/!\\ Warning: beyond specification. Not necessarily\ninteroperable.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---is-block-device"
+        },
+        {
+            "name": "isCharacterDevice",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 889,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "/!\\ Warning: beyond specification. Not necessarily\ninteroperable.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---is-character-device"
+        },
+        {
+            "name": "isFifo",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 895,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "/!\\ Warning: beyond specification. Not necessarily\ninteroperable.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---is-fifo"
+        },
+        {
+            "name": "isSocket",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 901,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "/!\\ Warning: beyond specification. Not necessarily\ninteroperable.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---is-socket"
+        },
+        {
+            "name": "isReadable",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 915,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Boolean",
+                "doc": "whether `path` is readable."
+            },
+            "doc": "Warning: this function provides information about the\nprocess owner's rights for information and display\npurposes only. The only reliable way to detect whether\na file is writable or readable, without race coditions,\nis to attempt to open the file.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---is-readable"
+        },
+        {
+            "name": "isWritable",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 938,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Warning: this function provides information about the\nprocess owner's rights for information and display\npurposes only. The only reliable way to detect whether\na file is writable or readable, without race coditions,\nis to attempt to open the file.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---is-writable"
+        },
+        {
+            "name": "same",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 960,
+            "params": [
+                {
+                    "name": "pathA"
+                },
+                {
+                    "name": "pathB"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "whether the paths refer to the same physical storage."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---same"
+        },
+        {
+            "name": "sameFilesystem",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 983,
+            "params": [
+                {
+                    "name": "pathA"
+                },
+                {
+                    "name": "pathB"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Boolean",
+                "doc": "whether the paths are on the same file system."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---same-filesystem"
+        },
+        {
+            "name": "size",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 1011,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Return the size of the file in bytes. Due to the way that\nECMAScript behaves, if the file is larger than 65,536,\nterabytes accuracy will be lost.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---size"
+        },
+        {
+            "name": "lastModified",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 1030,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Get the last modification time of `path` as a JavaScript\n`Date` object.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---last-modified"
+        },
+        {
+            "name": "list",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 1053,
+            "params": [
+                {
+                    "name": "path",
+                    "doc": "to a directory"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Array * String",
+                "doc": "an array of the names of the files in a given directory."
+            },
+            "doc": "The self ('.') and parent ('..') directory entries will\nnot be returned.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---list"
+        }
+    ],
+    "index": {
+        "Permissions": {
+            "name": "Permissions",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 88,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---_permissions"
+        },
+        "UNIX_BITS": {
+            "name": "UNIX_BITS",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 96,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---__unix-bits"
+        },
+        "UNIX_BITS_REVERSED": {
+            "name": "UNIX_BITS_REVERSED",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 107,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "children": [
+                {
+                    "name": "update",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 111,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---update"
+                },
+                {
+                    "name": "grant",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 137,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---grant"
+                },
+                {
+                    "name": "deny",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 151,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---deny"
+                },
+                {
+                    "name": "can",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 165,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---can"
+                },
+                {
+                    "name": "toUnix",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 176,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---to-unix"
+                },
+                {
+                    "name": "get",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 189,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---get"
+                }
+            ],
+            "index": {
+                "update": {
+                    "name": "update",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 111,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---update"
+                },
+                "grant": {
+                    "name": "grant",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 137,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---grant"
+                },
+                "deny": {
+                    "name": "deny",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 151,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---deny"
+                },
+                "can": {
+                    "name": "can",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 165,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---can"
+                },
+                "toUnix": {
+                    "name": "toUnix",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 176,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---to-unix"
+                },
+                "get": {
+                    "name": "get",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 189,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "narwhal-node",
+                        "fs-base",
+                        "__unix-bits-reversed"
+                    ],
+                    "href": "packages---narwhal-node---fs-base---__unix-bits-reversed---get"
+                }
+            },
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---__unix-bits-reversed"
+        },
+        "openRaw": {
+            "name": "openRaw",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 239,
+            "params": [
+                {
+                    "name": "path",
+                    "type": "String"
+                },
+                {
+                    "name": "mode",
+                    "type": "Object",
+                    "doc": "optional"
+                },
+                {
+                    "name": "permissions",
+                    "type": "Permissions || Object",
+                    "doc": "optional"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "a raw byte stream"
+            },
+            "doc": "Open a file for reading.\n\nThe following combinations of true `read`, `write`, `update` *\nand `append` properties are supported:\n\n* `read`: read only\n* `write`: write only, truncates, creates if necessary\n* `append`: write only, append, creates if necessary\n* `read` and `update`: read and write, does not create, does not\n  truncate\n* `write` and `update`: read and write, trancates, creates if\n  necessary\n* `append` and `update`: read and write, does not truncate,\n  creates if necessary\n\nOn some varieties of UNIX, \"append\" causes all writes to be\nappended, regardless of the seek position.\n\nThe following additional properties can be set on the\noptions and are used when the underlying system supports\nthem:\n\n* `exclusive`: prevents the file from being opened if it\n  a file already exists. Atomicity of the `exclusive` open\n  can be used to coordinate processes like daemons.\n* `truncate`: explicitly requests truncation of the file\n  upon successful open.\n* `create`: explicitly requests creation if the file\n  does not exist.\n\nThe following properties can also be specified but are\nnot mentioned in the CommonJS standard:\n\n* `xSync`: requests that data be written to disk immediately.\n* `xNarwhalNoControlTty`: requests that, if the opened file is\n  a terminal device or pseudo terminal, that the calling\n  process does not become the controller for that terminal.\n* `xNarwhalNoFollow`: ensures that symbolic links are not followed,\n  which prevents certain kinds of attacks that take\n  advantage of race conditions in opening files where the\n  attacker subverts a write by injecting a symbolic link\n  at a path that is known to be opened by a process with\n  authority in excess of its own.\n* `xNarwhalDirectory`",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---open-raw"
+        },
+        "move": {
+            "name": "move",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 362,
+            "params": [
+                {
+                    "name": "source",
+                    "type": "Source",
+                    "doc": "file or directory path"
+                },
+                {
+                    "name": "target",
+                    "type": "String",
+                    "doc": "file or directory path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Move the file or directory `source` to `target` using the\nunderlying OS semantics including atomicity and moving files into\na target directory if the target is a directory (as opposed to\nreplacing it).",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---move"
+        },
+        "remove": {
+            "name": "remove",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 385,
+            "params": [
+                {
+                    "name": "path",
+                    "type": "String",
+                    "doc": "path to a file (not a directory)."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Attempt to remove the `file` from disk. To remove\ndirectories use {@link fs-base.removeDirectory}.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---remove"
+        },
+        "touch": {
+            "name": "touch",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 412,
+            "params": [
+                {
+                    "name": "path",
+                    "type": "String"
+                },
+                {
+                    "name": "mtime",
+                    "type": "Date",
+                    "doc": "optional"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "'touch' the path, setting the last modified date to\n`mtime` or now. If there is no file or directory at\n`path`, an empty file will be created.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---touch"
+        },
+        "makeDirectory": {
+            "name": "makeDirectory",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 445,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Creates a (single) directory. If parent directories do\nnot exist they will not be created by this method.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---make-directory"
+        },
+        "removeDirectory": {
+            "name": "removeDirectory",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 468,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Removes an empty directory. A symbolic link is itself\nremoved, rather than the directory it resolves to being\nremoved.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---remove-directory"
+        },
+        "canonical": {
+            "name": "canonical",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 518,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Resolve symlinks and canonicalize `path`. If it is a\ndirectory, the returned string will be guarenteed to have\na trailing '/'",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---canonical"
+        },
+        "workingDirectory": {
+            "name": "workingDirectory",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 572,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "String",
+                "doc": ""
+            },
+            "doc": "Get the process's current working directory.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---working-directory"
+        },
+        "changeWorkingDirectory": {
+            "name": "changeWorkingDirectory",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 596,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Change the process's current working directory.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---change-working-directory"
+        },
+        "group": {
+            "name": "group",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 632,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---group"
+        },
+        "changeGroup": {
+            "name": "changeGroup",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 686,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---change-group"
+        },
+        "permissions": {
+            "name": "permissions",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 701,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---permissions"
+        },
+        "changePermissions": {
+            "name": "changePermissions",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 720,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---change-permissions"
+        },
+        "symbolicLink": {
+            "name": "symbolicLink",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 747,
+            "params": [
+                {
+                    "name": "source"
+                },
+                {
+                    "name": "target"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---symbolic-link"
+        },
+        "hardLink": {
+            "name": "hardLink",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 768,
+            "params": [
+                {
+                    "name": "source"
+                },
+                {
+                    "name": "target"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---hard-link"
+        },
+        "readLink": {
+            "name": "readLink",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 789,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "path"
+            },
+            "doc": "See: http://www.opengroup.org/onlinepubs/000095399/functions/readlink.html\n\"POSIX readlink function\"",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---read-link"
+        },
+        "exists": {
+            "name": "exists",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 810,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Boolean",
+                "doc": "whether a file (of any kind, including directories) exists at the given path"
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---exists"
+        },
+        "isFile": {
+            "name": "isFile",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 846,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Boolean",
+                "doc": "whether a regular file exists at the given path."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---is-file"
+        },
+        "isDirectory": {
+            "name": "isDirectory",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 860,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Boolean",
+                "doc": "whether a directory exists at the given path."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---is-directory"
+        },
+        "isLink": {
+            "name": "isLink",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 876,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Boolean",
+                "doc": "whether a symbolic link exists at the given path."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---is-link"
+        },
+        "isBlockDevice": {
+            "name": "isBlockDevice",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 883,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "/!\\ Warning: beyond specification. Not necessarily\ninteroperable.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---is-block-device"
+        },
+        "isCharacterDevice": {
+            "name": "isCharacterDevice",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 889,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "/!\\ Warning: beyond specification. Not necessarily\ninteroperable.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---is-character-device"
+        },
+        "isFifo": {
+            "name": "isFifo",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 895,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "/!\\ Warning: beyond specification. Not necessarily\ninteroperable.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---is-fifo"
+        },
+        "isSocket": {
+            "name": "isSocket",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 901,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "/!\\ Warning: beyond specification. Not necessarily\ninteroperable.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---is-socket"
+        },
+        "isReadable": {
+            "name": "isReadable",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 915,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Boolean",
+                "doc": "whether `path` is readable."
+            },
+            "doc": "Warning: this function provides information about the\nprocess owner's rights for information and display\npurposes only. The only reliable way to detect whether\na file is writable or readable, without race coditions,\nis to attempt to open the file.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---is-readable"
+        },
+        "isWritable": {
+            "name": "isWritable",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 938,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Warning: this function provides information about the\nprocess owner's rights for information and display\npurposes only. The only reliable way to detect whether\na file is writable or readable, without race coditions,\nis to attempt to open the file.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---is-writable"
+        },
+        "same": {
+            "name": "same",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 960,
+            "params": [
+                {
+                    "name": "pathA"
+                },
+                {
+                    "name": "pathB"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "whether the paths refer to the same physical storage."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---same"
+        },
+        "sameFilesystem": {
+            "name": "sameFilesystem",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 983,
+            "params": [
+                {
+                    "name": "pathA"
+                },
+                {
+                    "name": "pathB"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Boolean",
+                "doc": "whether the paths are on the same file system."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---same-filesystem"
+        },
+        "size": {
+            "name": "size",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 1011,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Return the size of the file in bytes. Due to the way that\nECMAScript behaves, if the file is larger than 65,536,\nterabytes accuracy will be lost.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---size"
+        },
+        "lastModified": {
+            "name": "lastModified",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 1030,
+            "params": [
+                {
+                    "name": "path"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Get the last modification time of `path` as a JavaScript\n`Date` object.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---last-modified"
+        },
+        "list": {
+            "name": "list",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 1053,
+            "params": [
+                {
+                    "name": "path",
+                    "doc": "to a directory"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Array * String",
+                "doc": "an array of the names of the files in a given directory."
+            },
+            "doc": "The self ('.') and parent ('..') directory entries will\nnot be returned.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base"
+            ],
+            "href": "packages---narwhal-node---fs-base---list"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-node"
+    ],
+    "href": "packages---narwhal-node---fs-base"
+}

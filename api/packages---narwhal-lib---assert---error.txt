@@ -2,7 +2,7 @@
     "name": "error",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-    "lineNo": 137,
+    "lineNo": 172,
     "params": [
         {
             "name": "message",
@@ -12,7 +12,7 @@
     "errors": [],
     "throws": [],
     "see": [],
-    "doc": "Called by the test runner when a test errors out.\n\nThis method is inteded to be overridden by inheritors,\nparticularly loggers.  The base implementation is a\nno-op.\n\nWARNING: This method is not specified.",
+    "doc": "Called by the test runner when a test errors out, which\noccurs when a test throws an exception that is not an\n`AssertionError`.\n\nThis method is inteded to be overridden by inheritors,\nparticularly loggers.  The base implementation is a\nno-op.\n\nWARNING: This method is not specified.",
     "heritage": [
         "packages",
         "narwhal-lib",

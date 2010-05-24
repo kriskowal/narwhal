@@ -5,21 +5,25 @@
             "name": "narwhal-lib",
             "type": "package",
             "markup": "markdown",
-            "doc": "A general purpose JavaScript library",
+            "description": "Pure-JavaScript components of a general purpose JavaScript library",
             "contributors": [
                 {
                     "name": "Tom Robinson",
+                    "web": "http://tlrobinson.net/",
                     "email": "tom@280north.com"
                 },
                 {
                     "name": "Kris Kowal",
+                    "web": "http://askawizard.blogspot.com/",
                     "email": "kris@cixar.com"
                 },
                 {
-                    "name": "George Moschovitis"
+                    "name": "George Moschovitis",
+                    "web": "http://blog.gmosx.com"
                 },
                 {
-                    "name": "Kevin Dangoor"
+                    "name": "Kevin Dangoor",
+                    "web": "http://www.blueskyonmars.com"
                 },
                 {
                     "name": "Hannes Walln\u00f6fer"
@@ -28,10 +32,12 @@
                     "name": "S\u00e9bastien Pierre"
                 },
                 {
-                    "name": "Irakli Gozalishvili"
+                    "name": "Irakli Gozalishvili",
+                    "web": "http://rfobic.wordpress.com/"
                 },
                 {
-                    "name": "Christoph Dorn"
+                    "name": "Christoph Dorn",
+                    "web": "http://www.christophdorn.com/"
                 },
                 {
                     "name": "Zach Carter"
@@ -47,17 +53,21 @@
                 },
                 {
                     "name": "Isaac Z. Schlueter",
+                    "web": "http://blog.izs.me/",
                     "email": "i@izs.me"
                 },
                 {
-                    "name": "Kris Zyp"
+                    "name": "Kris Zyp",
+                    "web": "http://www.sitepen.com/blog/author/kzyp/"
                 },
                 {
                     "name": "Nathan Stott",
+                    "web": "http://nathan.whiteboard-it.com",
                     "email": "nathan.stott@whiteboard-it.com"
                 },
                 {
                     "name": "Toby Ho",
+                    "web": "http://tobyho.com",
                     "email": "airportyh@gmail.com"
                 }
             ],
@@ -77,7 +87,7 @@
                     "throws": [],
                     "see": [],
                     "module": true,
-                    "doc": "Methods for throwing or logging on failed assertions,\nuseful for unit testing.\n\nAn implementation of the CommonJS Unit Testing 1.0\nSpecification's `assert` module.\nhttp://wiki.commonjs.org/wiki/Unit_Testing/1.0",
+                    "doc": "Methods for throwing or logging on failed assertions,\nuseful for unit testing.\n\nAn implementation of the CommonJS Unit Testing 1.0\nSpecification's `assert` module.\n[http://wiki.commonjs.org/wiki/Unit_Testing/1.0](http://wiki.commonjs.org/wiki/Unit_Testing/1.0)",
                     "type": "module",
                     "id": "assert",
                     "children": [
@@ -92,21 +102,23 @@
                                     "type": "string || {message: String, ...}"
                                 }
                             ],
-                            "errors": [],
+                            "errors": [
+                                "Did not recognize \"instanceof\" tag."
+                            ],
                             "throws": [],
                             "see": [],
-                            "constructor": true,
                             "returns": {
-                                "type": "name: \"AssertionError\", message: String, \"actual\", \"expected\", \"operator\", ...",
+                                "type": "{name: \"AssertionError\", message: String, \"actual\", \"expected\", \"operator\", ...}",
                                 "doc": "an error, that may contain backtrace information on Rhino and V8."
                             },
+                            "constructor": true,
                             "doc": "",
                             "children": [
                                 {
                                     "name": "toString",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                                    "lineNo": 66,
+                                    "lineNo": 67,
                                     "params": [],
                                     "errors": [],
                                     "throws": [],
@@ -114,13 +126,13 @@
                                     "returns": {
                                         "doc": "a representation of the error."
                                     },
-                                    "doc": "WARNING: This method is not specified."
+                                    "doc": "Produces a representation like:\n\n* `name: message` or\n* `name: actual == expected`\n\nDepending on whether there is a message, or\nthe comparison operator.\n\nWARNING: This method is not specified."
                                 },
                                 {
                                     "name": "toSource",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                                    "lineNo": 88,
+                                    "lineNo": 98,
                                     "params": [],
                                     "errors": [],
                                     "throws": [],
@@ -128,7 +140,7 @@
                                     "returns": {
                                         "doc": "an evaluable representation of the error."
                                     },
-                                    "doc": "WARNING: This method is not specified."
+                                    "doc": "Produces an expression like:\n\n    new (require(\"assert\").AssertionError)({\n        \"message\": \"E.T., nach Hause telefonieren.\"\n    })\n\nWARNING: This method is not specified."
                                 }
                             ]
                         },
@@ -136,38 +148,31 @@
                             "name": "fail",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                            "lineNo": 111,
+                            "lineNo": 128,
                             "params": [
                                 {
                                     "name": "options",
                                     "doc": "properties for initializing the AssertionError."
                                 }
                             ],
-                            "errors": [],
+                            "errors": [
+                                "Did not recognize \"see\" tag.",
+                                "Did not recognize \"see\" tag."
+                            ],
                             "throws": [
                                 {
-                                    "doc": "an AssertionError."
+                                    "type": "AssertionError",
+                                    "doc": ""
                                 }
                             ],
                             "see": [],
-                            "doc": "WARNING: This method is not specified."
+                            "doc": "Called polymorphically by `assert` objects, particularly\nthis assert module, when a test fails.  The behavior of\nthis implementation of `fail` is to throw an `AssertionError`,\nbut by prototypically inheriting the `assert` module, using\n`Object.create` or its ilk, and overriding `fail`, it is possible\nto trivially create variations that log failures rather\nthan throwing.  The `test` module sends such an object to\neach `test*` method in a unit test tree so that tests have\nthe option of logging instead of throwing.  Because each\ntest receives a different `assert` object, the logs are\nassociable with the individual test.\n\nWARNING: This method is not specified."
                         },
                         {
                             "name": "pass",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                            "lineNo": 123,
-                            "params": [],
-                            "errors": [],
-                            "throws": [],
-                            "see": [],
-                            "doc": "Called by the test runner when a test passes.\n\nThis method is inteded to be overridden by inheritors,\nparticularly loggers.  The base implementation is a\nno-op.\n\nWARNING: This method is not specified."
-                        },
-                        {
-                            "name": "error",
-                            "markup": "markdown",
-                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                            "lineNo": 137,
+                            "lineNo": 156,
                             "params": [
                                 {
                                     "name": "message",
@@ -177,13 +182,29 @@
                             "errors": [],
                             "throws": [],
                             "see": [],
-                            "doc": "Called by the test runner when a test errors out.\n\nThis method is inteded to be overridden by inheritors,\nparticularly loggers.  The base implementation is a\nno-op.\n\nWARNING: This method is not specified."
+                            "doc": "Called by the test runner when a test passes.\n\nThis method is inteded to be overridden by inheritors,\nparticularly loggers.  The base implementation is a\nno-op.\n\nWARNING: This method is not specified."
+                        },
+                        {
+                            "name": "error",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
+                            "lineNo": 172,
+                            "params": [
+                                {
+                                    "name": "message",
+                                    "type": "String"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "Called by the test runner when a test errors out, which\noccurs when a test throws an exception that is not an\n`AssertionError`.\n\nThis method is inteded to be overridden by inheritors,\nparticularly loggers.  The base implementation is a\nno-op.\n\nWARNING: This method is not specified."
                         },
                         {
                             "name": "section",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                            "lineNo": 153,
+                            "lineNo": 190,
                             "params": [],
                             "errors": [],
                             "throws": [],
@@ -191,13 +212,13 @@
                             "returns": {
                                 "doc": "this"
                             },
-                            "doc": "Called by the test runner when a test errors begins\na new section of tests and is expected to return an\nobject suitable for sending log messages like \"pass\",\n\"error\", \"fail\", and \"section\".\n\nThis method is inteded to be overridden by inheritors,\nparticularly loggers.  The base implementation is a\nno-op.\n\nWARNING: This method is not specified."
+                            "doc": "Called by the test runner when a test errors begins\na new section of tests and is expected to return an\nobject suitable for sending log messages like `pass`,\n`error`, `fail`, and `section`.\n\nThis method is inteded to be overridden by inheritors,\nparticularly loggers.  The base implementation is a\nno-op.\n\nWARNING: This method is not specified."
                         },
                         {
                             "name": "ok",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                            "lineNo": 178,
+                            "lineNo": 215,
                             "params": [
                                 {
                                     "name": "value"
@@ -222,7 +243,7 @@
                             "name": "equal",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                            "lineNo": 200,
+                            "lineNo": 237,
                             "params": [
                                 {
                                     "name": "actual"
@@ -250,7 +271,7 @@
                             "name": "notEqual",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                            "lineNo": 224,
+                            "lineNo": 261,
                             "params": [
                                 {
                                     "name": "actual"
@@ -278,7 +299,7 @@
                             "name": "deepEqual",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                            "lineNo": 247,
+                            "lineNo": 284,
                             "params": [
                                 {
                                     "name": "actual"
@@ -306,7 +327,7 @@
                             "name": "notDeepEqual",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                            "lineNo": 322,
+                            "lineNo": 359,
                             "params": [
                                 {
                                     "name": "actual"
@@ -334,7 +355,7 @@
                             "name": "strictEqual",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                            "lineNo": 345,
+                            "lineNo": 382,
                             "params": [
                                 {
                                     "name": "actual"
@@ -362,7 +383,7 @@
                             "name": "notStrictEqual",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                            "lineNo": 368,
+                            "lineNo": 405,
                             "params": [
                                 {
                                     "name": "actual"
@@ -387,10 +408,10 @@
                             "doc": ""
                         },
                         {
-                            "name": "message",
+                            "name": "throws",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                            "lineNo": 391,
+                            "lineNo": 428,
                             "params": [
                                 {
                                     "name": "block",
@@ -416,7 +437,7 @@
                             "name": "Assert",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                            "lineNo": 438,
+                            "lineNo": 476,
                             "params": [
                                 {
                                     "name": "log",
@@ -432,7 +453,7 @@
                                 "type": "assert",
                                 "doc": "an object inheriting prototypically from the `assert` module itself, with `pass`, `fail`, `error`, and `section` overridden to forward messages to the given `Log` object."
                             },
-                            "doc": "Constructs a logging `assert` object.\nWARNING: This method is not specified."
+                            "doc": "Constructs a logging `assert` object.\n\nWARNING: This method is not specified."
                         }
                     ]
                 },
@@ -492,7 +513,7 @@
                             "name": "Log",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                            "lineNo": 184,
+                            "lineNo": 185,
                             "params": [
                                 {
                                     "name": "name",
@@ -525,7 +546,7 @@
                                     "name": "options",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 200,
+                                    "lineNo": 201,
                                     "params": [],
                                     "errors": [],
                                     "throws": [],
@@ -536,7 +557,7 @@
                                     "name": "stream",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 202,
+                                    "lineNo": 203,
                                     "params": [],
                                     "errors": [],
                                     "throws": [],
@@ -548,7 +569,7 @@
                                     "name": "name",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 205,
+                                    "lineNo": 206,
                                     "params": [],
                                     "errors": [
                                         "Did not recognize \"ownedproperty\" tag."
@@ -561,7 +582,7 @@
                                     "name": "parent",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 207,
+                                    "lineNo": 208,
                                     "params": [],
                                     "errors": [
                                         "Did not recognize \"ownedproperty\" tag."
@@ -574,7 +595,7 @@
                                     "name": "root",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 209,
+                                    "lineNo": 210,
                                     "params": [],
                                     "errors": [
                                         "Did not recognize \"ownedproperty\" tag."
@@ -587,7 +608,7 @@
                                     "name": "passes",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 211,
+                                    "lineNo": 212,
                                     "params": [],
                                     "errors": [
                                         "Did not recognize \"ownedproperty\" tag."
@@ -600,7 +621,7 @@
                                     "name": "fails",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 213,
+                                    "lineNo": 214,
                                     "params": [],
                                     "errors": [
                                         "Did not recognize \"ownedproperty\" tag."
@@ -613,7 +634,7 @@
                                     "name": "errors",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 215,
+                                    "lineNo": 216,
                                     "params": [],
                                     "errors": [
                                         "Did not recognize \"ownedproperty\" tag."
@@ -626,7 +647,7 @@
                                     "name": "flush",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 222,
+                                    "lineNo": 223,
                                     "params": [],
                                     "errors": [],
                                     "throws": [],
@@ -637,7 +658,7 @@
                                     "name": "pass",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 232,
+                                    "lineNo": 233,
                                     "params": [
                                         {
                                             "name": "message",
@@ -653,7 +674,7 @@
                                     "name": "fail",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 242,
+                                    "lineNo": 243,
                                     "params": [
                                         {
                                             "name": "exception",
@@ -669,7 +690,7 @@
                                     "name": "error",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 263,
+                                    "lineNo": 264,
                                     "params": [
                                         {
                                             "name": "exception",
@@ -689,7 +710,7 @@
                                     "name": "begin",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 280,
+                                    "lineNo": 281,
                                     "params": [],
                                     "errors": [],
                                     "throws": [],
@@ -700,7 +721,7 @@
                                     "name": "end",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 285,
+                                    "lineNo": 286,
                                     "params": [],
                                     "errors": [],
                                     "throws": [],
@@ -711,7 +732,7 @@
                                     "name": "report",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 290,
+                                    "lineNo": 291,
                                     "params": [],
                                     "errors": [],
                                     "throws": [],
@@ -722,7 +743,7 @@
                                     "name": "print",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 309,
+                                    "lineNo": 310,
                                     "params": [],
                                     "errors": [],
                                     "throws": [],
@@ -733,7 +754,7 @@
                                     "name": "section",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 318,
+                                    "lineNo": 319,
                                     "params": [],
                                     "errors": [],
                                     "throws": [],
@@ -748,7 +769,7 @@
                                     "name": "Assert",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 325,
+                                    "lineNo": 326,
                                     "params": [],
                                     "errors": [],
                                     "throws": [],
@@ -765,7 +786,7 @@
                             "name": "Section",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                            "lineNo": 336,
+                            "lineNo": 337,
                             "params": [
                                 {
                                     "name": "stream",
@@ -786,7 +807,7 @@
                                     "name": "print",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-                                    "lineNo": 349,
+                                    "lineNo": 350,
                                     "params": [
                                         {
                                             "name": "message"
@@ -5614,7 +5635,7 @@
                                     "doc": ""
                                 },
                                 {
-                                    "name": "url",
+                                    "name": "web",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
                                     "lineNo": 763,
@@ -6388,7 +6409,7 @@
                                     "name": "load",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                                    "lineNo": 224,
+                                    "lineNo": 235,
                                     "params": [
                                         {
                                             "name": "id"
@@ -6415,7 +6436,7 @@
                                     "name": "once",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                                    "lineNo": 241,
+                                    "lineNo": 252,
                                     "params": [
                                         {
                                             "name": "id"
@@ -6447,7 +6468,7 @@
                                     "name": "force",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                                    "lineNo": 257,
+                                    "lineNo": 268,
                                     "params": [
                                         {
                                             "name": "id"
@@ -6462,7 +6483,7 @@
                                     "name": "main",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                                    "lineNo": 265,
+                                    "lineNo": 276,
                                     "params": [
                                         {
                                             "name": "id"
@@ -6481,7 +6502,7 @@
                                     "name": "loader",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                                    "lineNo": 278,
+                                    "lineNo": 289,
                                     "params": [],
                                     "errors": [
                                         "Did not recognize \"property\" tag."
@@ -6494,7 +6515,7 @@
                                     "name": "system",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                                    "lineNo": 280,
+                                    "lineNo": 291,
                                     "params": [],
                                     "errors": [
                                         "Did not recognize \"property\" tag."
@@ -6507,7 +6528,7 @@
                                     "name": "paths",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                                    "lineNo": 282,
+                                    "lineNo": 293,
                                     "params": [],
                                     "errors": [
                                         "Did not recognize \"property\" tag."
@@ -6520,7 +6541,7 @@
                                     "name": "extensions",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                                    "lineNo": 284,
+                                    "lineNo": 295,
                                     "params": [],
                                     "errors": [
                                         "Did not recognize \"property\" tag."
@@ -6533,7 +6554,7 @@
                                     "name": "debug",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                                    "lineNo": 286,
+                                    "lineNo": 297,
                                     "params": [],
                                     "errors": [
                                         "Did not recognize \"property\" tag."
@@ -6548,7 +6569,7 @@
                             "name": "sandbox",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                            "lineNo": 347,
+                            "lineNo": 355,
                             "params": [
                                 {
                                     "name": "main",
@@ -6803,9 +6824,9 @@
                             "lineNo": 30,
                             "params": [
                                 {
-                                    "name": "the",
+                                    "name": "system",
                                     "type": "{stdout, stderr, env}",
-                                    "doc": "\"system\" module or a reasonable facimile."
+                                    "doc": "the \"system\" module or a reasonable facimile."
                                 }
                             ],
                             "errors": [],
@@ -6822,24 +6843,24 @@
                                     "errors": [],
                                     "throws": [],
                                     "see": [],
-                                    "doc": ""
+                                    "doc": "enables terminal coloring."
                                 },
                                 {
                                     "name": "disable",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 64,
+                                    "lineNo": 66,
                                     "params": [],
                                     "errors": [],
                                     "throws": [],
                                     "see": [],
-                                    "doc": ""
+                                    "doc": "disables terminal coloring.  All subsequent null prefix\ncodes will be stripped instead of translated."
                                 },
                                 {
                                     "name": "writeCode",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 69,
+                                    "lineNo": 74,
                                     "params": [
                                         {
                                             "name": "code",
@@ -6855,7 +6876,7 @@
                                     "name": "print",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 84,
+                                    "lineNo": 89,
                                     "params": [
                                         {
                                             "name": "fields",
@@ -6871,7 +6892,7 @@
                                     "name": "printError",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 97,
+                                    "lineNo": 102,
                                     "params": [],
                                     "errors": [],
                                     "throws": [],
@@ -6882,7 +6903,7 @@
                                     "name": "write",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 108,
+                                    "lineNo": 113,
                                     "params": [
                                         {
                                             "name": "string",
@@ -6903,57 +6924,33 @@
                                     "name": "update",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 162,
+                                    "lineNo": 167,
                                     "params": [
                                         {
                                             "name": "bold",
-                                            "type": "Boolean"
+                                            "type": "String"
                                         },
                                         {
                                             "name": "fore",
-                                            "type": "Number",
+                                            "type": "String",
                                             "doc": "a VT-100, single-digit color code for the foreground color."
                                         },
                                         {
                                             "name": "back",
-                                            "type": "Number",
+                                            "type": "String",
                                             "doc": "a VT-100, signle-digit color code for the background color."
                                         }
                                     ],
                                     "errors": [],
                                     "throws": [],
                                     "see": [],
-                                    "doc": ""
-                                }
-                            ]
-                        },
-                        {
-                            "name": "moveTo",
-                            "markup": "markdown",
-                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                            "lineNo": 181,
-                            "params": [
-                                {
-                                    "name": "y",
-                                    "type": "Number",
-                                    "doc": "column"
+                                    "doc": "Writes a VT-100 color code from the given terms,\nomitting any term that is a null string, `\"\"`."
                                 },
                                 {
-                                    "name": "x",
-                                    "type": "Number",
-                                    "doc": "row"
-                                }
-                            ],
-                            "errors": [],
-                            "throws": [],
-                            "see": [],
-                            "doc": "",
-                            "children": [
-                                {
-                                    "name": "moveBy",
+                                    "name": "moveTo",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 189,
+                                    "lineNo": 188,
                                     "params": [
                                         {
                                             "name": "y",
@@ -6969,32 +6966,32 @@
                                     "errors": [],
                                     "throws": [],
                                     "see": [],
-                                    "doc": ""
+                                    "doc": "Moves the cursor to a coordinate."
+                                },
+                                {
+                                    "name": "moveBy",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                                    "lineNo": 197,
+                                    "params": [
+                                        {
+                                            "name": "y",
+                                            "type": "Number",
+                                            "doc": "column"
+                                        },
+                                        {
+                                            "name": "x",
+                                            "type": "Number",
+                                            "doc": "row"
+                                        }
+                                    ],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "Moves the cursor by an offset coordinate."
                                 },
                                 {
                                     "name": "home",
-                                    "markup": "markdown",
-                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 210,
-                                    "params": [],
-                                    "errors": [],
-                                    "throws": [],
-                                    "see": [],
-                                    "doc": ""
-                                },
-                                {
-                                    "name": "clear",
-                                    "markup": "markdown",
-                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 215,
-                                    "params": [],
-                                    "errors": [],
-                                    "throws": [],
-                                    "see": [],
-                                    "doc": ""
-                                },
-                                {
-                                    "name": "clearUp",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
                                     "lineNo": 219,
@@ -7002,57 +6999,79 @@
                                     "errors": [],
                                     "throws": [],
                                     "see": [],
-                                    "doc": ""
+                                    "doc": "Moves the cursor to the home position"
+                                },
+                                {
+                                    "name": "clear",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                                    "lineNo": 224,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "Clears the screen"
+                                },
+                                {
+                                    "name": "clearUp",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                                    "lineNo": 228,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "Clears the screen above the cursor"
                                 },
                                 {
                                     "name": "cearDown",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 223,
+                                    "lineNo": 232,
                                     "params": [],
                                     "errors": [],
                                     "throws": [],
                                     "see": [],
-                                    "doc": ""
+                                    "doc": "Clears the screen below the cursor"
                                 },
                                 {
                                     "name": "clearLine",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 227,
+                                    "lineNo": 236,
                                     "params": [],
                                     "errors": [],
                                     "throws": [],
                                     "see": [],
-                                    "doc": ""
+                                    "doc": "Clears the current line"
                                 },
                                 {
                                     "name": "clearLeft",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 231,
+                                    "lineNo": 240,
                                     "params": [],
                                     "errors": [],
                                     "throws": [],
                                     "see": [],
-                                    "doc": ""
+                                    "doc": "Clears the line to the left of the cursor"
                                 },
                                 {
                                     "name": "clearRight",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 235,
+                                    "lineNo": 244,
                                     "params": [],
                                     "errors": [],
                                     "throws": [],
                                     "see": [],
-                                    "doc": ""
+                                    "doc": "Clears the line to the right of the cursor"
                                 },
                                 {
                                     "name": "error",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 242,
+                                    "lineNo": 251,
                                     "params": [],
                                     "errors": [],
                                     "throws": [],
@@ -7063,23 +7082,34 @@
                                             "name": "print",
                                             "markup": "markdown",
                                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                            "lineNo": 249,
-                                            "params": [],
+                                            "lineNo": 258,
+                                            "params": [
+                                                {
+                                                    "name": "field",
+                                                    "type": "String",
+                                                    "variadic": true
+                                                }
+                                            ],
                                             "errors": [],
                                             "throws": [],
                                             "see": [],
-                                            "doc": ""
+                                            "doc": "prints a line of space delimited fields to the error stream."
                                         },
                                         {
                                             "name": "write",
                                             "markup": "markdown",
                                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                            "lineNo": 254,
-                                            "params": [],
+                                            "lineNo": 266,
+                                            "params": [
+                                                {
+                                                    "name": "message",
+                                                    "type": "String"
+                                                }
+                                            ],
                                             "errors": [],
                                             "throws": [],
                                             "see": [],
-                                            "doc": ""
+                                            "doc": "writes a message to the error stream, translating\nnull-codes to VT-100 escape sequences on the same\nchannel."
                                         }
                                     ]
                                 }
@@ -7089,125 +7119,15 @@
                             "name": "colors",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                            "lineNo": 262,
+                            "lineNo": 279,
                             "params": [],
                             "errors": [],
                             "throws": [],
                             "see": [],
-                            "doc": "",
+                            "doc": "A references for the single-digit numbered strings used\nin VT-100 escape sequences corresponding to various color names.",
                             "children": [
                                 {
                                     "name": "black",
-                                    "markup": "markdown",
-                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 264,
-                                    "params": [],
-                                    "errors": [],
-                                    "throws": [],
-                                    "see": [],
-                                    "doc": ""
-                                },
-                                {
-                                    "name": "red",
-                                    "markup": "markdown",
-                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 266,
-                                    "params": [],
-                                    "errors": [],
-                                    "throws": [],
-                                    "see": [],
-                                    "doc": ""
-                                },
-                                {
-                                    "name": "green",
-                                    "markup": "markdown",
-                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 268,
-                                    "params": [],
-                                    "errors": [],
-                                    "throws": [],
-                                    "see": [],
-                                    "doc": ""
-                                },
-                                {
-                                    "name": "orange",
-                                    "markup": "markdown",
-                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 270,
-                                    "params": [],
-                                    "errors": [],
-                                    "throws": [],
-                                    "see": [],
-                                    "doc": ""
-                                },
-                                {
-                                    "name": "yellow",
-                                    "markup": "markdown",
-                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 272,
-                                    "params": [],
-                                    "errors": [],
-                                    "throws": [],
-                                    "see": [],
-                                    "doc": ""
-                                },
-                                {
-                                    "name": "blue",
-                                    "markup": "markdown",
-                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 274,
-                                    "params": [],
-                                    "errors": [],
-                                    "throws": [],
-                                    "see": [],
-                                    "doc": ""
-                                },
-                                {
-                                    "name": "violet",
-                                    "markup": "markdown",
-                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 276,
-                                    "params": [],
-                                    "errors": [],
-                                    "throws": [],
-                                    "see": [],
-                                    "doc": ""
-                                },
-                                {
-                                    "name": "magenta",
-                                    "markup": "markdown",
-                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 278,
-                                    "params": [],
-                                    "errors": [],
-                                    "throws": [],
-                                    "see": [],
-                                    "doc": ""
-                                },
-                                {
-                                    "name": "purple",
-                                    "markup": "markdown",
-                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 280,
-                                    "params": [],
-                                    "errors": [],
-                                    "throws": [],
-                                    "see": [],
-                                    "doc": ""
-                                },
-                                {
-                                    "name": "cyan",
-                                    "markup": "markdown",
-                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                                    "lineNo": 282,
-                                    "params": [],
-                                    "errors": [],
-                                    "throws": [],
-                                    "see": [],
-                                    "doc": ""
-                                },
-                                {
-                                    "name": "white",
                                     "markup": "markdown",
                                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
                                     "lineNo": 284,
@@ -7215,7 +7135,117 @@
                                     "errors": [],
                                     "throws": [],
                                     "see": [],
-                                    "doc": ""
+                                    "doc": "`\"0\"`"
+                                },
+                                {
+                                    "name": "red",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                                    "lineNo": 286,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "`\"1\"`"
+                                },
+                                {
+                                    "name": "green",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                                    "lineNo": 288,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "`\"2\"`"
+                                },
+                                {
+                                    "name": "orange",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                                    "lineNo": 290,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "`\"3\"`"
+                                },
+                                {
+                                    "name": "yellow",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                                    "lineNo": 292,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "`\"3\"`"
+                                },
+                                {
+                                    "name": "blue",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                                    "lineNo": 294,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "`\"4\"`"
+                                },
+                                {
+                                    "name": "violet",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                                    "lineNo": 296,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "`\"5\"`"
+                                },
+                                {
+                                    "name": "magenta",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                                    "lineNo": 298,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "`\"5\"`"
+                                },
+                                {
+                                    "name": "purple",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                                    "lineNo": 300,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "`\"5\"`"
+                                },
+                                {
+                                    "name": "cyan",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                                    "lineNo": 302,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "`\"6\"`"
+                                },
+                                {
+                                    "name": "white",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                                    "lineNo": 304,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "`\"7\"`"
                                 }
                             ]
                         },
@@ -7223,7 +7253,7 @@
                             "name": "stream",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-                            "lineNo": 288,
+                            "lineNo": 308,
                             "params": [],
                             "errors": [],
                             "throws": [],
@@ -9044,21 +9074,25 @@
             "name": "narwhal",
             "type": "package",
             "markup": "markdown",
-            "doc": "A general purpose JavaScript platform",
+            "description": "A general purpose JavaScript platform",
             "contributors": [
                 {
                     "name": "Tom Robinson",
+                    "web": "http://tlrobinson.net/",
                     "email": "tom@280north.com"
                 },
                 {
                     "name": "Kris Kowal",
+                    "web": "http://askawizard.blogspot.com/",
                     "email": "kris@cixar.com"
                 },
                 {
-                    "name": "George Moschovitis"
+                    "name": "George Moschovitis",
+                    "web": "http://blog.gmosx.com"
                 },
                 {
-                    "name": "Kevin Dangoor"
+                    "name": "Kevin Dangoor",
+                    "web": "http://www.blueskyonmars.com"
                 },
                 {
                     "name": "Hannes Walln\u00f6fer"
@@ -9067,10 +9101,12 @@
                     "name": "S\u00e9bastien Pierre"
                 },
                 {
-                    "name": "Irakli Gozalishvili"
+                    "name": "Irakli Gozalishvili",
+                    "web": "http://rfobic.wordpress.com/"
                 },
                 {
-                    "name": "Christoph Dorn"
+                    "name": "Christoph Dorn",
+                    "web": "http://www.christophdorn.com/"
                 },
                 {
                     "name": "Zach Carter"
@@ -9086,17 +9122,21 @@
                 },
                 {
                     "name": "Isaac Z. Schlueter",
+                    "web": "http://blog.izs.me/",
                     "email": "i@izs.me"
                 },
                 {
-                    "name": "Kris Zyp"
+                    "name": "Kris Zyp",
+                    "web": "http://www.sitepen.com/blog/author/kzyp/"
                 },
                 {
                     "name": "Nathan Stott",
+                    "web": "http://nathan.whiteboard-it.com",
                     "email": "nathan.stott@whiteboard-it.com"
                 },
                 {
                     "name": "Toby Ho",
+                    "web": "http://tobyho.com",
                     "email": "airportyh@gmail.com"
                 }
             ],
@@ -10583,6 +10623,2307 @@
                     "type": "module",
                     "id": "io",
                     "children": []
+                }
+            ]
+        },
+        "narwhal-node": {
+            "name": "narwhal-node",
+            "type": "package",
+            "markup": "markdown",
+            "description": "Adapters that bring CommonJS and Narwhal API's to Node, or Narwhal on Node",
+            "contributors": [],
+            "children": [
+                {
+                    "name": "fs-base",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                    "lineNo": 7,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "module": true,
+                    "doc": "Low-level file system API.\n\nAn implementation of the CommonJS specification,\n[http://wiki.commonjs.org/wiki/Filesystem/A/0](http://wiki.commonjs.org/wiki/Filesystem/A/0).",
+                    "type": "module",
+                    "id": "fs-base",
+                    "children": [
+                        {
+                            "name": "Permissions",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 88,
+                            "params": [],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": ""
+                        },
+                        {
+                            "name": "UNIX_BITS",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 96,
+                            "params": [],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": ""
+                        },
+                        {
+                            "name": "UNIX_BITS_REVERSED",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 107,
+                            "params": [],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "",
+                            "children": [
+                                {
+                                    "name": "update",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                                    "lineNo": 111,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": ""
+                                },
+                                {
+                                    "name": "grant",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                                    "lineNo": 137,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": ""
+                                },
+                                {
+                                    "name": "deny",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                                    "lineNo": 151,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": ""
+                                },
+                                {
+                                    "name": "can",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                                    "lineNo": 165,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": ""
+                                },
+                                {
+                                    "name": "toUnix",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                                    "lineNo": 176,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": ""
+                                },
+                                {
+                                    "name": "get",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                                    "lineNo": 189,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": ""
+                                }
+                            ]
+                        },
+                        {
+                            "name": "openRaw",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 239,
+                            "params": [
+                                {
+                                    "name": "path",
+                                    "type": "String"
+                                },
+                                {
+                                    "name": "mode",
+                                    "type": "Object",
+                                    "doc": "optional"
+                                },
+                                {
+                                    "name": "permissions",
+                                    "type": "Permissions || Object",
+                                    "doc": "optional"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "doc": "a raw byte stream"
+                            },
+                            "doc": "Open a file for reading.\n\nThe following combinations of true `read`, `write`, `update` *\nand `append` properties are supported:\n\n* `read`: read only\n* `write`: write only, truncates, creates if necessary\n* `append`: write only, append, creates if necessary\n* `read` and `update`: read and write, does not create, does not\n  truncate\n* `write` and `update`: read and write, trancates, creates if\n  necessary\n* `append` and `update`: read and write, does not truncate,\n  creates if necessary\n\nOn some varieties of UNIX, \"append\" causes all writes to be\nappended, regardless of the seek position.\n\nThe following additional properties can be set on the\noptions and are used when the underlying system supports\nthem:\n\n* `exclusive`: prevents the file from being opened if it\n  a file already exists. Atomicity of the `exclusive` open\n  can be used to coordinate processes like daemons.\n* `truncate`: explicitly requests truncation of the file\n  upon successful open.\n* `create`: explicitly requests creation if the file\n  does not exist.\n\nThe following properties can also be specified but are\nnot mentioned in the CommonJS standard:\n\n* `xSync`: requests that data be written to disk immediately.\n* `xNarwhalNoControlTty`: requests that, if the opened file is\n  a terminal device or pseudo terminal, that the calling\n  process does not become the controller for that terminal.\n* `xNarwhalNoFollow`: ensures that symbolic links are not followed,\n  which prevents certain kinds of attacks that take\n  advantage of race conditions in opening files where the\n  attacker subverts a write by injecting a symbolic link\n  at a path that is known to be opened by a process with\n  authority in excess of its own.\n* `xNarwhalDirectory`"
+                        },
+                        {
+                            "name": "move",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 362,
+                            "params": [
+                                {
+                                    "name": "source",
+                                    "type": "Source",
+                                    "doc": "file or directory path"
+                                },
+                                {
+                                    "name": "target",
+                                    "type": "String",
+                                    "doc": "file or directory path"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "Move the file or directory `source` to `target` using the\nunderlying OS semantics including atomicity and moving files into\na target directory if the target is a directory (as opposed to\nreplacing it)."
+                        },
+                        {
+                            "name": "remove",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 385,
+                            "params": [
+                                {
+                                    "name": "path",
+                                    "type": "String",
+                                    "doc": "path to a file (not a directory)."
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "Attempt to remove the `file` from disk. To remove\ndirectories use {@link fs-base.removeDirectory}."
+                        },
+                        {
+                            "name": "touch",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 412,
+                            "params": [
+                                {
+                                    "name": "path",
+                                    "type": "String"
+                                },
+                                {
+                                    "name": "mtime",
+                                    "type": "Date",
+                                    "doc": "optional"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "'touch' the path, setting the last modified date to\n`mtime` or now. If there is no file or directory at\n`path`, an empty file will be created."
+                        },
+                        {
+                            "name": "makeDirectory",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 445,
+                            "params": [
+                                {
+                                    "name": "path"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "Creates a (single) directory. If parent directories do\nnot exist they will not be created by this method."
+                        },
+                        {
+                            "name": "removeDirectory",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 468,
+                            "params": [
+                                {
+                                    "name": "path"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "Removes an empty directory. A symbolic link is itself\nremoved, rather than the directory it resolves to being\nremoved."
+                        },
+                        {
+                            "name": "canonical",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 518,
+                            "params": [
+                                {
+                                    "name": "path"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "Resolve symlinks and canonicalize `path`. If it is a\ndirectory, the returned string will be guarenteed to have\na trailing '/'"
+                        },
+                        {
+                            "name": "workingDirectory",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 572,
+                            "params": [],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "String",
+                                "doc": ""
+                            },
+                            "doc": "Get the process's current working directory."
+                        },
+                        {
+                            "name": "changeWorkingDirectory",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 596,
+                            "params": [
+                                {
+                                    "name": "path"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "Change the process's current working directory."
+                        },
+                        {
+                            "name": "group",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 632,
+                            "params": [],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": ""
+                        },
+                        {
+                            "name": "changeGroup",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 686,
+                            "params": [],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": ""
+                        },
+                        {
+                            "name": "permissions",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 701,
+                            "params": [],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": ""
+                        },
+                        {
+                            "name": "changePermissions",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 720,
+                            "params": [],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": ""
+                        },
+                        {
+                            "name": "symbolicLink",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 747,
+                            "params": [
+                                {
+                                    "name": "source"
+                                },
+                                {
+                                    "name": "target"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": ""
+                        },
+                        {
+                            "name": "hardLink",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 768,
+                            "params": [
+                                {
+                                    "name": "source"
+                                },
+                                {
+                                    "name": "target"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": ""
+                        },
+                        {
+                            "name": "readLink",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 789,
+                            "params": [
+                                {
+                                    "name": "path"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "doc": "path"
+                            },
+                            "doc": "See: http://www.opengroup.org/onlinepubs/000095399/functions/readlink.html\n\"POSIX readlink function\""
+                        },
+                        {
+                            "name": "exists",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 810,
+                            "params": [
+                                {
+                                    "name": "path"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Boolean",
+                                "doc": "whether a file (of any kind, including directories) exists at the given path"
+                            },
+                            "doc": ""
+                        },
+                        {
+                            "name": "isFile",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 846,
+                            "params": [
+                                {
+                                    "name": "path"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Boolean",
+                                "doc": "whether a regular file exists at the given path."
+                            },
+                            "doc": ""
+                        },
+                        {
+                            "name": "isDirectory",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 860,
+                            "params": [
+                                {
+                                    "name": "path"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Boolean",
+                                "doc": "whether a directory exists at the given path."
+                            },
+                            "doc": ""
+                        },
+                        {
+                            "name": "isLink",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 876,
+                            "params": [
+                                {
+                                    "name": "path"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Boolean",
+                                "doc": "whether a symbolic link exists at the given path."
+                            },
+                            "doc": ""
+                        },
+                        {
+                            "name": "isBlockDevice",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 883,
+                            "params": [],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "/!\\ Warning: beyond specification. Not necessarily\ninteroperable."
+                        },
+                        {
+                            "name": "isCharacterDevice",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 889,
+                            "params": [],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "/!\\ Warning: beyond specification. Not necessarily\ninteroperable."
+                        },
+                        {
+                            "name": "isFifo",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 895,
+                            "params": [],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "/!\\ Warning: beyond specification. Not necessarily\ninteroperable."
+                        },
+                        {
+                            "name": "isSocket",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 901,
+                            "params": [],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "/!\\ Warning: beyond specification. Not necessarily\ninteroperable."
+                        },
+                        {
+                            "name": "isReadable",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 915,
+                            "params": [],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Boolean",
+                                "doc": "whether `path` is readable."
+                            },
+                            "doc": "Warning: this function provides information about the\nprocess owner's rights for information and display\npurposes only. The only reliable way to detect whether\na file is writable or readable, without race coditions,\nis to attempt to open the file."
+                        },
+                        {
+                            "name": "isWritable",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 938,
+                            "params": [],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "Warning: this function provides information about the\nprocess owner's rights for information and display\npurposes only. The only reliable way to detect whether\na file is writable or readable, without race coditions,\nis to attempt to open the file."
+                        },
+                        {
+                            "name": "same",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 960,
+                            "params": [
+                                {
+                                    "name": "pathA"
+                                },
+                                {
+                                    "name": "pathB"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "doc": "whether the paths refer to the same physical storage."
+                            },
+                            "doc": ""
+                        },
+                        {
+                            "name": "sameFilesystem",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 983,
+                            "params": [
+                                {
+                                    "name": "pathA"
+                                },
+                                {
+                                    "name": "pathB"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Boolean",
+                                "doc": "whether the paths are on the same file system."
+                            },
+                            "doc": ""
+                        },
+                        {
+                            "name": "size",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 1011,
+                            "params": [
+                                {
+                                    "name": "path"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "Return the size of the file in bytes. Due to the way that\nECMAScript behaves, if the file is larger than 65,536,\nterabytes accuracy will be lost."
+                        },
+                        {
+                            "name": "lastModified",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 1030,
+                            "params": [
+                                {
+                                    "name": "path"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "Get the last modification time of `path` as a JavaScript\n`Date` object."
+                        },
+                        {
+                            "name": "list",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+                            "lineNo": 1053,
+                            "params": [
+                                {
+                                    "name": "path",
+                                    "doc": "to a directory"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Array * String",
+                                "doc": "an array of the names of the files in a given directory."
+                            },
+                            "doc": "The self ('.') and parent ('..') directory entries will\nnot be returned."
+                        }
+                    ]
+                },
+                {
+                    "name": "narwhal/binary-engine",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+                    "lineNo": 2,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "module": true,
+                    "doc": "An engine-specific compatibility layer on which\n[http://wiki.commonjs.org/wiki/Binary/B](CommonJS Binary/B)\n`ByteArray` and `ByteString` objects are built.",
+                    "type": "module",
+                    "id": "narwhal/binary-engine",
+                    "children": [
+                        {
+                            "name": "B_LENGTH",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+                            "lineNo": 13,
+                            "params": [
+                                {
+                                    "name": "bytes",
+                                    "type": "Buffer"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": ""
+                        },
+                        {
+                            "name": "B_ALLOC",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+                            "lineNo": 20,
+                            "params": [
+                                {
+                                    "name": "length",
+                                    "type": "Number"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Buffer",
+                                "doc": ""
+                            },
+                            "doc": ""
+                        },
+                        {
+                            "name": "B_FILL",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+                            "lineNo": 28,
+                            "params": [
+                                {
+                                    "name": "bytes",
+                                    "type": "Buffer"
+                                },
+                                {
+                                    "name": "length",
+                                    "type": "Number"
+                                },
+                                {
+                                    "name": "offset",
+                                    "type": "Number"
+                                },
+                                {
+                                    "name": "value",
+                                    "type": "Number"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": ""
+                        },
+                        {
+                            "name": "B_COPY",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+                            "lineNo": 38,
+                            "params": [
+                                {
+                                    "name": "source",
+                                    "type": "Buffer"
+                                },
+                                {
+                                    "name": "sourceStart",
+                                    "type": "Number"
+                                },
+                                {
+                                    "name": "target",
+                                    "type": "Buffer"
+                                },
+                                {
+                                    "name": "targetStart",
+                                    "type": "Number"
+                                },
+                                {
+                                    "name": "length",
+                                    "type": "NUmber"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": ""
+                        },
+                        {
+                            "name": "B_GET",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+                            "lineNo": 49,
+                            "params": [
+                                {
+                                    "name": "bytes",
+                                    "type": "Buffer"
+                                },
+                                {
+                                    "name": "index",
+                                    "type": "Number"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Number",
+                                "doc": "byte value"
+                            },
+                            "doc": ""
+                        },
+                        {
+                            "name": "B_SET",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+                            "lineNo": 58,
+                            "params": [
+                                {
+                                    "name": "bytes",
+                                    "type": "Buffer"
+                                },
+                                {
+                                    "name": "index",
+                                    "type": "Number"
+                                },
+                                {
+                                    "name": "value",
+                                    "type": "Number"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": ""
+                        },
+                        {
+                            "name": "B_DECODE",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+                            "lineNo": 67,
+                            "params": [
+                                {
+                                    "name": "bytes",
+                                    "type": "Buffer"
+                                },
+                                {
+                                    "name": "offset",
+                                    "type": "Number"
+                                },
+                                {
+                                    "name": "length",
+                                    "type": "Number"
+                                },
+                                {
+                                    "name": "charset",
+                                    "type": "String"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": ""
+                        },
+                        {
+                            "name": "B_DECODE_DEFAULT",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+                            "lineNo": 77,
+                            "params": [
+                                {
+                                    "name": "bytes",
+                                    "type": "Buffer"
+                                },
+                                {
+                                    "name": "offset",
+                                    "type": "Number"
+                                },
+                                {
+                                    "name": "length",
+                                    "type": "Number"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "String",
+                                "doc": ""
+                            },
+                            "doc": "`charset` is `UTF-8` by default."
+                        },
+                        {
+                            "name": "B_ENCODE",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+                            "lineNo": 88,
+                            "params": [
+                                {
+                                    "name": "string",
+                                    "type": "String"
+                                },
+                                {
+                                    "name": "charset",
+                                    "type": "String"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Buffer",
+                                "doc": ""
+                            },
+                            "doc": ""
+                        },
+                        {
+                            "name": "B_ENCODE_DEFAULT",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+                            "lineNo": 97,
+                            "params": [
+                                {
+                                    "name": "string",
+                                    "type": "String"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Buffer",
+                                "doc": ""
+                            },
+                            "doc": "`charset` is `UTF-8` by default."
+                        },
+                        {
+                            "name": "B_TRANSCODE",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+                            "lineNo": 106,
+                            "params": [
+                                {
+                                    "name": "source",
+                                    "type": "Buffer"
+                                },
+                                {
+                                    "name": "offset",
+                                    "type": "Number"
+                                },
+                                {
+                                    "name": "length",
+                                    "type": "Number"
+                                },
+                                {
+                                    "name": "sourceCharset",
+                                    "type": "String"
+                                },
+                                {
+                                    "name": "targetCharset",
+                                    "type": "String"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Buffer",
+                                "doc": "target"
+                            },
+                            "doc": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "narwhal/event-loop-engine",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/event-loop-engine.js",
+                    "lineNo": 2,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "module": true,
+                    "doc": "Provides the engine-specific components of the\n`event-loop` module.  On Node, `event-loop`\nis not reconfigurable with the `event-loop-setup` module.\n\nThese methods do not share the minimum delay of 10\nmiliseconds experienced by most browser implementations.",
+                    "type": "module",
+                    "id": "narwhal/event-loop-engine",
+                    "children": [
+                        {
+                            "name": "setTimeout",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/event-loop-engine.js",
+                            "lineNo": 31,
+                            "params": [
+                                {
+                                    "name": "block",
+                                    "type": "Function"
+                                },
+                                {
+                                    "name": "delay",
+                                    "type": "Number",
+                                    "doc": "in miliseconds"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "doc": "an opaque token, usable by `clearTimeout` to abort the timeout."
+                            },
+                            "doc": "Performs a task once, later."
+                        },
+                        {
+                            "name": "setInterval",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/event-loop-engine.js",
+                            "lineNo": 45,
+                            "params": [
+                                {
+                                    "name": "period",
+                                    "type": "Number",
+                                    "doc": "a delay and interval in miliseconds."
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "doc": "an opaque token, usable by `clearInterval` to abort further events."
+                            },
+                            "doc": "Performs a task repeatedly, after the given\ndelay and subsequently on the same period."
+                        },
+                        {
+                            "name": "clearTimeout",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/event-loop-engine.js",
+                            "lineNo": 60,
+                            "params": [
+                                {
+                                    "name": "token",
+                                    "doc": "an opaque token, as returned by `setTimeout`"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "Aborts a timeout."
+                        },
+                        {
+                            "name": "clearInterval",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/event-loop-engine.js",
+                            "lineNo": 71,
+                            "params": [
+                                {
+                                    "name": "token",
+                                    "doc": "an opaque token, as returned by `setInterval`"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "Aborts an interval timer."
+                        }
+                    ]
+                },
+                {
+                    "name": "narwhal/event-loop-setup",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/event-loop-setup.js",
+                    "lineNo": 2,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "module": true,
+                    "doc": "Node does not support event loop configuration.",
+                    "type": "module",
+                    "id": "narwhal/event-loop-setup",
+                    "children": [
+                        {
+                            "name": "setEventLoop",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/event-loop-setup.js",
+                            "lineNo": 9,
+                            "params": [],
+                            "errors": [],
+                            "throws": [
+                                {
+                                    "type": "Error",
+                                    "doc": "The event loop for Narwhal on NodeJS is not configurable."
+                                }
+                            ],
+                            "see": [],
+                            "doc": ""
+                        },
+                        {
+                            "name": "getEventLoop",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/event-loop-setup.js",
+                            "lineNo": 18,
+                            "params": [],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "doc": "the `event-loop-engine` module."
+                            },
+                            "doc": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "narwhal/event-loop",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/event-loop.js",
+                    "lineNo": 2,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "module": true,
+                    "doc": "Provides methods for executing methods in future\nturns of the event loop.",
+                    "type": "module",
+                    "id": "narwhal/event-loop",
+                    "children": [
+                        {
+                            "name": "enqueue",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/event-loop.js",
+                            "lineNo": 10,
+                            "params": [
+                                {
+                                    "name": "block",
+                                    "type": "Function"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "Executes a function in a future turn of the event\nloop.  Events are executed in the order in which\nthey were enqueued, but may be interleaved with\nother timer and IO events."
+                        },
+                        {
+                            "name": "setTimeout",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/event-loop.js",
+                            "lineNo": 19,
+                            "params": [
+                                {
+                                    "name": "block",
+                                    "type": "Function"
+                                },
+                                {
+                                    "name": "delay",
+                                    "type": "Number",
+                                    "doc": "in miliseconds"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "doc": "an opaque token, usable by `clearTimeout` to abort the timeout."
+                            },
+                            "doc": "Performs a task once, later."
+                        },
+                        {
+                            "name": "setInterval",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/event-loop.js",
+                            "lineNo": 28,
+                            "params": [
+                                {
+                                    "name": "period",
+                                    "type": "Number",
+                                    "doc": "a delay and interval in miliseconds."
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "doc": "an opaque token, usable by `clearInterval` to abort further events."
+                            },
+                            "doc": "Performs a task repeatedly, after the given\ndelay and subsequently on the same period."
+                        },
+                        {
+                            "name": "clearTimeout",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/event-loop.js",
+                            "lineNo": 38,
+                            "params": [
+                                {
+                                    "name": "token",
+                                    "doc": "an opaque token, as returned by `setTimeout`"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "Aborts a timeout."
+                        },
+                        {
+                            "name": "setInterval",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/event-loop.js",
+                            "lineNo": 45,
+                            "params": [
+                                {
+                                    "name": "token",
+                                    "doc": "an opaque token, as returned by `setInterval`"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "Aborts an interval timer."
+                        }
+                    ]
+                },
+                {
+                    "name": "narwhal/io",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/io.js",
+                    "lineNo": 5,
+                    "params": [],
+                    "errors": [
+                        "Did not recognize \"extends\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "module": true,
+                    "doc": "Provides Node-specific IO streams.",
+                    "type": "module",
+                    "id": "narwhal/io",
+                    "children": [
+                        {
+                            "name": "openFd",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/io.js",
+                            "lineNo": 23,
+                            "params": [
+                                {
+                                    "name": "fd",
+                                    "type": "Number",
+                                    "doc": "file descriptor"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "doc": "a raw byte stream, supporting both reading and writing APIs."
+                            },
+                            "constructor": true,
+                            "doc": "",
+                            "children": [
+                                {
+                                    "name": "fd",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/io.js",
+                                    "lineNo": 34,
+                                    "params": [],
+                                    "errors": [
+                                        "Did not recognize \"property\" tag."
+                                    ],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "file descriptor",
+                                    "jsType": "Number"
+                                },
+                                {
+                                    "name": "readMax",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/io.js",
+                                    "lineNo": 40,
+                                    "params": [
+                                        {
+                                            "name": "max",
+                                            "type": "Number"
+                                        }
+                                    ],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "ByteString",
+                                        "doc": ""
+                                    },
+                                    "doc": ""
+                                },
+                                {
+                                    "name": "readInto",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/io.js",
+                                    "lineNo": 53,
+                                    "params": [
+                                        {
+                                            "name": "buffer",
+                                            "type": "ByteArray || Buffer"
+                                        },
+                                        {
+                                            "name": "start",
+                                            "type": "Number"
+                                        },
+                                        {
+                                            "name": "stop",
+                                            "type": "Number"
+                                        }
+                                    ],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": ""
+                                },
+                                {
+                                    "name": "write",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/io.js",
+                                    "lineNo": 62,
+                                    "params": [
+                                        {
+                                            "name": "buffer",
+                                            "type": "ByteArray || Buffer"
+                                        },
+                                        {
+                                            "name": "start",
+                                            "type": "Number"
+                                        },
+                                        {
+                                            "name": "stop",
+                                            "type": "Number"
+                                        }
+                                    ],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": ""
+                                },
+                                {
+                                    "name": "isTty",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/io.js",
+                                    "lineNo": 80,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "Boolean",
+                                        "doc": "false because the underlying embedding does not yet support this feature."
+                                    },
+                                    "doc": ""
+                                },
+                                {
+                                    "name": "flush",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/io.js",
+                                    "lineNo": 90,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "Not yet supported, so a no-op."
+                                },
+                                {
+                                    "name": "close",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/io.js",
+                                    "lineNo": 97,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "Closes the underlying file descriptor."
+                                },
+                                {
+                                    "name": "read",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/io.js",
+                                    "lineNo": 107,
+                                    "params": [
+                                        {
+                                            "name": "max",
+                                            "type": "Number",
+                                            "doc": "(optional) defaults to `undefined`, which indicates that all bytes must be read until the end of the stream.  `null` indicates that the underlying system should choose the number of bytes to read based on the underlying device block size."
+                                        }
+                                    ],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "ByteString",
+                                        "doc": "bytes read"
+                                    },
+                                    "doc": ""
+                                },
+                                {
+                                    "name": "readAll",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/io.js",
+                                    "lineNo": 117,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "ByteString",
+                                        "doc": "bytes read"
+                                    },
+                                    "doc": "Reads all remaining bytes from the underlying stream."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "narwhal/q-fs",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-fs.js",
+                    "lineNo": 1,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "module": true,
+                    "doc": "An asynchronous local file system API, based on a subset\nof the `narwhal/fs` API and the `narwhal/promise` API,\nsuch that the method names are the same but some return\nvalues are promises instead of fully resolved values.",
+                    "type": "module",
+                    "id": "narwhal/q-fs",
+                    "children": [
+                        {
+                            "name": "open",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-fs.js",
+                            "lineNo": 19,
+                            "params": [
+                                {
+                                    "name": "path",
+                                    "type": "String"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Promise * Stream",
+                                "doc": "a stream from the `narwhal/q-io` module."
+                            },
+                            "doc": ""
+                        },
+                        {
+                            "name": "read",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-fs.js",
+                            "lineNo": 38,
+                            "params": [
+                                {
+                                    "name": "path",
+                                    "type": "String"
+                                },
+                                {
+                                    "name": "options",
+                                    "type": "Object"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Promise * (String || Buffer)",
+                                "doc": ""
+                            },
+                            "doc": ""
+                        },
+                        {
+                            "name": "write",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-fs.js",
+                            "lineNo": 49,
+                            "params": [
+                                {
+                                    "name": "path",
+                                    "type": "String"
+                                },
+                                {
+                                    "name": "content",
+                                    "type": "String || Buffer"
+                                },
+                                {
+                                    "name": "options",
+                                    "type": "Object"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Promise * Undefined",
+                                "doc": "a promise that resolves when the writing is complete."
+                            },
+                            "doc": ""
+                        },
+                        {
+                            "name": "stat",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-fs.js",
+                            "lineNo": 68,
+                            "params": [
+                                {
+                                    "name": "path",
+                                    "type": "String"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Promise * Stat",
+                                "doc": ""
+                            },
+                            "doc": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "narwhal/q-http",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                    "lineNo": 2,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "module": true,
+                    "doc": "A promise-based (Q) JSGI server API.",
+                    "type": "module",
+                    "id": "narwhal/q-http",
+                    "children": [
+                        {
+                            "name": "Server",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                            "lineNo": 14,
+                            "params": [
+                                {
+                                    "name": "respond",
+                                    "type": "respond(request Request)",
+                                    "doc": "a JSGI responder function that receives a Request object as its argument.  The JSGI responder promises to return an object of the form `{status, headers, body}`.  The status and headers must be fully resolved, but the body may be a promise for an object with a `forEach(write(chunk String))` method, albeit an array of strings. The `forEach` method may promise to resolve when all chunks have been written."
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "doc": "a Node Server object."
+                            },
+                            "doc": "",
+                            "children": [
+                                {
+                                    "name": "stop",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                                    "lineNo": 73,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "Promise * Undefined",
+                                        "doc": "a promise that will resolve when the server is stopped."
+                                    },
+                                    "doc": "Stops the server."
+                                },
+                                {
+                                    "name": "listen",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                                    "lineNo": 92,
+                                    "params": [
+                                        {
+                                            "name": "port",
+                                            "type": "Number"
+                                        }
+                                    ],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "Promise * Undefined",
+                                        "doc": "a promise that will resolve when the server is ready to receive connections"
+                                    },
+                                    "doc": "Starts the server, listening on the given port"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Request",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                            "lineNo": 110,
+                            "params": [],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "A wrapper for a Node HTTP Request, as received by\nthe Q HTTP Server, suitable for use by the Q HTTP Client.",
+                            "children": [
+                                {
+                                    "name": "method",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                                    "lineNo": 116,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "HTTP method, e.g., `\"GET\"`",
+                                    "jsType": "String"
+                                },
+                                {
+                                    "name": "path",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                                    "lineNo": 118,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "path, starting with `\"/\"`",
+                                    "jsType": "String"
+                                },
+                                {
+                                    "name": "body",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                                    "lineNo": 120,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "A Q IO asynchronous text reader"
+                                },
+                                {
+                                    "name": "headers",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                                    "lineNo": 122,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "HTTP headers",
+                                    "jsType": "Object"
+                                },
+                                {
+                                    "name": "connection",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                                    "lineNo": 124,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "The underlying Node TCP connection"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Client",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                            "lineNo": 129,
+                            "params": [
+                                {
+                                    "name": "port",
+                                    "type": "Number"
+                                },
+                                {
+                                    "name": "host",
+                                    "type": "String"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "Creates an HTTP client for issuing requests to\nthe given host on the given port.",
+                            "children": [
+                                {
+                                    "name": "request",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                                    "lineNo": 140,
+                                    "params": [],
+                                    "errors": [
+                                        "Could not recognize `@param` \"\""
+                                    ],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "Promise * Response",
+                                        "doc": ""
+                                    },
+                                    "doc": "Issues an HTTP request.  The request may be\nany object that has `method`, `path`, `headers`\nand `body` properties.\n\n* `method` `String` is optional, defaults to `\"GET\"`.\n* `path` `String` is optional, defaults to `\"/\"`.\n* `headers` `Object` is optional, defaults to `{}`.\n* `body` is optional, defaults to `[]`.  Body must\n  be an object with a `forEach` method that accepts a\n  `write` callback.  `forEach` may return a promise,\n  and may send promises to `write`.  `body` may be a\n  promise.\n\nThe Q HTTP `Server` responder receives a `Request`\nobject that is suitable for `request`, and `request`\nreturns a `Response` suitable for returning to the\n`Server`."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "request",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                            "lineNo": 191,
+                            "params": [
+                                {
+                                    "name": "request",
+                                    "type": "Request {host, port, method, path, headers, body}",
+                                    "doc": "(may be a promise)"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Promise * Response",
+                                "doc": "promise for a response"
+                            },
+                            "doc": "Issues an HTTP request."
+                        },
+                        {
+                            "name": "read",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                            "lineNo": 205,
+                            "params": [
+                                {
+                                    "name": "url",
+                                    "type": "String"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Promise * String",
+                                "doc": "or a rejection if the status code is not exactly 200.  The reason for the rejection is the full response object."
+                            },
+                            "doc": "Issues a GET request to the given URL and returns\na promise for a `String` containing the entirety\nof the response."
+                        },
+                        {
+                            "name": "Response",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                            "lineNo": 233,
+                            "params": [],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "A wrapper for the Node HTTP Response as provided\nby the Q HTTP Client API, suitable for use by the\nQ HTTP Server API.",
+                            "children": [
+                                {
+                                    "name": "status",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                                    "lineNo": 240,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "HTTP status code",
+                                    "jsType": "Number"
+                                },
+                                {
+                                    "name": "version",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                                    "lineNo": 242,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "HTTP version"
+                                },
+                                {
+                                    "name": "headers",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                                    "lineNo": 244,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "HTTP headers",
+                                    "jsType": "Object"
+                                },
+                                {
+                                    "name": "body",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+                                    "lineNo": 246,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "A Q IO asynchronous text reader."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "narwhal/q-io",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-io.js",
+                    "lineNo": 2,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "module": true,
+                    "doc": "A Node implementation for promise-based IO.",
+                    "type": "module",
+                    "id": "narwhal/q-io",
+                    "children": [
+                        {
+                            "name": "WrappedTextReader",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-io.js",
+                            "lineNo": 13,
+                            "params": [
+                                {
+                                    "name": "stream",
+                                    "doc": "any Node readable stream"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Promise * WrappedTextReader",
+                                "doc": "a promise for the text stream reader."
+                            },
+                            "constructor": true,
+                            "doc": "Wraps a Node readable stream, providing an API similar\nto a Narwhal synchronous `io` stream except returning\nQ promises for long latency operations.",
+                            "children": [
+                                {
+                                    "name": "read",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-io.js",
+                                    "lineNo": 60,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "Promise * String",
+                                        "doc": "a promise for a String containing the entirety the remaining stream."
+                                    },
+                                    "doc": "Reads all of the remaining data from the stream."
+                                },
+                                {
+                                    "name": "forEach",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-io.js",
+                                    "lineNo": 75,
+                                    "params": [
+                                        {
+                                            "name": "write",
+                                            "type": "Function(Promise * String)",
+                                            "doc": "a function to be called on each chunk of input from this stream."
+                                        }
+                                    ],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "Promise * Undefined",
+                                        "doc": "a promise that will be resolved when the input is depleted."
+                                    },
+                                    "doc": "Reads and writes all of the remaining data from the\nstream in chunks."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "WrappedTextWriter",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-io.js",
+                            "lineNo": 96,
+                            "params": [
+                                {
+                                    "name": "stream",
+                                    "doc": "any Node writable stream"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Promise * WrappedTextWriter",
+                                "doc": "a promise for the text writer."
+                            },
+                            "doc": "Wraps a Node writable stream, providing an API similar to\nNarwhal's synchronous `io` streams, except returning and\naccepting promises for long-latency operations.",
+                            "children": [
+                                {
+                                    "name": "write",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-io.js",
+                                    "lineNo": 130,
+                                    "params": [
+                                        {
+                                            "name": "content",
+                                            "type": "String"
+                                        }
+                                    ],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "Promise * Undefined",
+                                        "doc": "a promise that will  be resolved when the buffer is empty, meaning that all of the content has been sent."
+                                    },
+                                    "doc": "Writes content to the stream."
+                                },
+                                {
+                                    "name": "flush",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-io.js",
+                                    "lineNo": 145,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "Promise * Undefined",
+                                        "doc": "a promise that will  be resolved when the buffer is empty"
+                                    },
+                                    "doc": "Waits for all data to flush on the stream."
+                                },
+                                {
+                                    "name": "close",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-io.js",
+                                    "lineNo": 155,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "Promise * Undefined",
+                                        "doc": "a promise that will be resolved when the stream has finished writing, flushing, and closed."
+                                    },
+                                    "doc": "Closes the stream, waiting for the internal buffer\nto flush."
+                                },
+                                {
+                                    "name": "destroy",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-io.js",
+                                    "lineNo": 168,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "Promise * Undefined",
+                                        "doc": "a promise that will be resolved when the stream has finished closing."
+                                    },
+                                    "doc": "Terminates writing on a stream, closing before\nthe internal buffer drains."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "narwhal/q-os",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-os.js",
+                    "lineNo": 2,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "module": true,
+                    "doc": "A promise-based asynchronous version of the `narwhal/os`\nmodule, for interacting with processes.",
+                    "type": "module",
+                    "id": "narwhal/q-os",
+                    "children": [
+                        {
+                            "name": "popen",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-os.js",
+                            "lineNo": 15,
+                            "params": [
+                                {
+                                    "name": "command",
+                                    "type": "String"
+                                },
+                                {
+                                    "name": "args",
+                                    "type": "Array * String"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "{stdin, stdout, stderr, wait}",
+                                "doc": "A representation of the subprocess with streams and a function for waiting for the completion of the subprocess."
+                            },
+                            "doc": "Opens a subprocess.",
+                            "children": [
+                                {
+                                    "name": "stdin",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-os.js",
+                                    "lineNo": 30,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "Q IO writable stream"
+                                },
+                                {
+                                    "name": "stdout",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-os.js",
+                                    "lineNo": 34,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "Q IO readable stream"
+                                },
+                                {
+                                    "name": "stderr",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-os.js",
+                                    "lineNo": 38,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "Q IO readable stream"
+                                },
+                                {
+                                    "name": "wait",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-os.js",
+                                    "lineNo": 42,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "Promise * Number",
+                                        "doc": "a promise that will be resolved with the exit status code."
+                                    },
+                                    "doc": "Waits for the subprocess to exit."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "command",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-os.js",
+                            "lineNo": 53,
+                            "params": [
+                                {
+                                    "name": "command",
+                                    "type": "String"
+                                },
+                                {
+                                    "name": "args",
+                                    "type": "Array * String"
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "returns": {
+                                "type": "Promise * String",
+                                "doc": "a promise for the full standard output of the underlying process as a single string.  If the exit status is non-zero, rejects the promise with `{status, stderr}`."
+                            },
+                            "doc": "Executes a subprocess and gets its output."
+                        }
+                    ]
+                },
+                {
+                    "name": "narwhal/transcode",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+                    "lineNo": 2,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "module": true,
+                    "doc": "Provides stream decorators for translating bytes\nand characters.",
+                    "type": "module",
+                    "id": "narwhal/transcode",
+                    "children": [
+                        {
+                            "name": "DecoderReader",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+                            "lineNo": 15,
+                            "params": [
+                                {
+                                    "name": "raw",
+                                    "type": "ByteReader"
+                                },
+                                {
+                                    "name": "charset",
+                                    "type": "String"
+                                },
+                                {
+                                    "name": "length",
+                                    "type": "Number",
+                                    "doc": "(optional) internal buffer size, defaults to 1024."
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "A synchronous stream decorator that transforms byte\nreading into string reading along a given character\nset.",
+                            "children": [
+                                {
+                                    "name": "read",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+                                    "lineNo": 58,
+                                    "params": [
+                                        {
+                                            "name": "max",
+                                            "type": "Number || Undefined || Null",
+                                            "doc": "the maximum number of bytes to read.  Undefined implies all remaining bytes.  Null implies the default byte block size."
+                                        }
+                                    ],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "String",
+                                        "doc": "characters read"
+                                    },
+                                    "doc": "Reads a string, either all remaning characters,\nor a chunk."
+                                },
+                                {
+                                    "name": "readMax",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+                                    "lineNo": 74,
+                                    "params": [
+                                        {
+                                            "name": "max",
+                                            "type": "Number",
+                                            "doc": "the maximum number of bytes to read."
+                                        }
+                                    ],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "String",
+                                        "doc": "characters read"
+                                    },
+                                    "doc": "Reads a string, from the given maximum number of\nbytes."
+                                },
+                                {
+                                    "name": "readAll",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+                                    "lineNo": 96,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "String",
+                                        "doc": "all remaining data."
+                                    },
+                                    "doc": "Reads and transcodes all reamaning bytes to\ncharacters."
+                                },
+                                {
+                                    "name": "readLine",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+                                    "lineNo": 113,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "String",
+                                        "doc": "line"
+                                    },
+                                    "doc": "Reads a single line."
+                                },
+                                {
+                                    "name": "readLines",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+                                    "lineNo": 133,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "Array * String",
+                                        "doc": "lines, including their newline characters, if there are any, not including the last line if it is empty."
+                                    },
+                                    "doc": "Reads all reamaining lines."
+                                },
+                                {
+                                    "name": "next",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+                                    "lineNo": 149,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "Reads the next line or throws StopIteration"
+                                },
+                                {
+                                    "name": "iterator",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+                                    "lineNo": 159,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "returns": {
+                                        "type": "{next}",
+                                        "doc": "this"
+                                    },
+                                    "doc": "Provides an object conforming to the iterator\nprotocol for iterating the lines of the stream."
+                                },
+                                {
+                                    "name": "forEach",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+                                    "lineNo": 168,
+                                    "params": [
+                                        {
+                                            "name": "write",
+                                            "type": "Function"
+                                        },
+                                        {
+                                            "name": "thisPointer",
+                                            "type": "Object",
+                                            "doc": "the `this` value to provide the `write` function."
+                                        }
+                                    ],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "Calls a function with each remaining line of data\nfrom the stream."
+                                },
+                                {
+                                    "name": "copy",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+                                    "lineNo": 187,
+                                    "params": [
+                                        {
+                                            "name": "output",
+                                            "type": "WriteStream"
+                                        }
+                                    ],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "Copies all data from this stream to a given\noutput stream."
+                                },
+                                {
+                                    "name": "close",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+                                    "lineNo": 200,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "Closes the underlying raw byte stream."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "EncoderWriter",
+                            "markup": "markdown",
+                            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+                            "lineNo": 211,
+                            "params": [
+                                {
+                                    "name": "raw",
+                                    "type": "Buffer"
+                                },
+                                {
+                                    "name": "charset",
+                                    "type": "String"
+                                },
+                                {
+                                    "name": "length",
+                                    "type": "Number",
+                                    "doc": "(optional) internal buffer size, defaults to 1024."
+                                }
+                            ],
+                            "errors": [],
+                            "throws": [],
+                            "see": [],
+                            "doc": "A synchronous stream decorator that transforms string\nwriting into byte writing along a given character set.",
+                            "children": [
+                                {
+                                    "name": "write",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+                                    "lineNo": 228,
+                                    "params": [
+                                        {
+                                            "name": "text",
+                                            "type": "String"
+                                        }
+                                    ],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "Writes text to the stream."
+                                },
+                                {
+                                    "name": "flush",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+                                    "lineNo": 257,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "Flushes all written data through the underlying\nraw stream."
+                                },
+                                {
+                                    "name": "close",
+                                    "markup": "markdown",
+                                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+                                    "lineNo": 266,
+                                    "params": [],
+                                    "errors": [],
+                                    "throws": [],
+                                    "see": [],
+                                    "doc": "Closes the underlying raw stream."
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }

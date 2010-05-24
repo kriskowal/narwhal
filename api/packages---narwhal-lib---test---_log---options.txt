@@ -2,7 +2,7 @@
     "name": "options",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-    "lineNo": 200,
+    "lineNo": 201,
     "params": [],
     "errors": [],
     "throws": [],

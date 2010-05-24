@@ -30,7 +30,7 @@
             "href": "packages---narwhal-lib---narwhal-packages---_author---name"
         },
         {
-            "name": "url",
+            "name": "web",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
             "lineNo": 763,
@@ -47,7 +47,7 @@
                 "narwhal-packages",
                 "_author"
             ],
-            "href": "packages---narwhal-lib---narwhal-packages---_author---url"
+            "href": "packages---narwhal-lib---narwhal-packages---_author---web"
         },
         {
             "name": "email",
@@ -135,8 +135,8 @@
             ],
             "href": "packages---narwhal-lib---narwhal-packages---_author---name"
         },
-        "url": {
-            "name": "url",
+        "web": {
+            "name": "web",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
             "lineNo": 763,
@@ -153,7 +153,7 @@
                 "narwhal-packages",
                 "_author"
             ],
-            "href": "packages---narwhal-lib---narwhal-packages---_author---url"
+            "href": "packages---narwhal-lib---narwhal-packages---_author---web"
         },
         "email": {
             "name": "email",

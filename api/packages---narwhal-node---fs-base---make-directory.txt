@@ -1,0 +1,21 @@
+{
+    "name": "makeDirectory",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+    "lineNo": 445,
+    "params": [
+        {
+            "name": "path"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Creates a (single) directory. If parent directories do\nnot exist they will not be created by this method.",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "fs-base"
+    ],
+    "href": "packages---narwhal-node---fs-base---make-directory"
+}

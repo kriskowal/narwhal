@@ -1,0 +1,22 @@
+{
+    "name": "readAll",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/io.js",
+    "lineNo": 117,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "ByteString",
+        "doc": "bytes read"
+    },
+    "doc": "Reads all remaining bytes from the underlying stream.",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-io",
+        "open-fd"
+    ],
+    "href": "packages---narwhal-node---narwhal-io---open-fd---read-all"
+}

@@ -1,6 +1,7 @@
 <html>
     <head>
     
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title></title>
     
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -46,8 +47,6 @@ format so that it may be pipelined.</p>
     
         <li><a href="#Stream"><tt>Stream</tt></a></li>
     
-        <li><a href="#moveTo"><tt>moveTo</tt></a></li>
-    
         <li><a href="#colors"><tt>colors</tt></a></li>
     
         <li><a href="#stream"><tt>stream</tt></a></li>
@@ -79,10 +78,10 @@ to ensure that formatting is applied correctly.</p>
     <table class="form whatsupdoc-parameters">
         
         <tr>
-            <th class="A"><tt>the</tt></th>
+            <th class="A"><tt>system</tt></th>
             <td class="B"><tt>{stdout, stderr, env}</tt></th>
             
-            <td class="C"><p>"system" module or a reasonable facimile.</p></td>
+            <td class="C"><p>the "system" module or a reasonable facimile.</p></td>
             
         </tr>
         
@@ -100,12 +99,13 @@ to ensure that formatting is applied correctly.</p>
     
     <tr>
         <th><a href="packages---narwhal-lib---narwhal-term---_stream---enable.html"><tt>enable</tt></a></th> 
-        <td></td>
+        <td><p>enables terminal coloring.</p></td>
     </tr>
     
     <tr>
         <th><a href="packages---narwhal-lib---narwhal-term---_stream---disable.html"><tt>disable</tt></a></th> 
-        <td></td>
+        <td><p>disables terminal coloring.  All subsequent null prefix
+codes will be stripped instead of translated.</p></td>
     </tr>
     
     <tr>
@@ -137,94 +137,57 @@ codes.</p></td>
     
     <tr>
         <th><a href="packages---narwhal-lib---narwhal-term---_stream---update.html"><tt>update</tt></a></th> 
-        <td></td>
-    </tr>
-    
-    
-    </table>
-    
-    <a name="moveTo"></a>
-    <h2>
-        <a href="packages---narwhal-lib---narwhal-term---move-to.html"><tt>moveTo</tt></a>
-        
-        
-    </h2>
-
-    
-
-
-    <table class="form whatsupdoc-parameters">
-        
-        <tr>
-            <th class="A"><tt>y</tt></th>
-            <td class="B"><tt>Number</tt></th>
-            
-            <td class="C"><p>column</p></td>
-            
-        </tr>
-        
-        <tr>
-            <th class="A"><tt>x</tt></th>
-            <td class="B"><tt>Number</tt></th>
-            
-            <td class="C"><p>row</p></td>
-            
-        </tr>
-        
-        
-        
-    </table>
-
-    
-
-    
-
-    
-    <p>Properties:</p>
-    <table class="form">
-    
-    <tr>
-        <th><a href="packages---narwhal-lib---narwhal-term---move-to---move-by.html"><tt>moveBy</tt></a></th> 
-        <td></td>
+        <td><p>Writes a VT-100 color code from the given terms,
+omitting any term that is a null string, <code>""</code>.</p></td>
     </tr>
     
     <tr>
-        <th><a href="packages---narwhal-lib---narwhal-term---move-to---home.html"><tt>home</tt></a></th> 
-        <td></td>
+        <th><a href="packages---narwhal-lib---narwhal-term---_stream---move-to.html"><tt>moveTo</tt></a></th> 
+        <td><p>Moves the cursor to a coordinate.</p></td>
     </tr>
     
     <tr>
-        <th><a href="packages---narwhal-lib---narwhal-term---move-to---clear.html"><tt>clear</tt></a></th> 
-        <td></td>
+        <th><a href="packages---narwhal-lib---narwhal-term---_stream---move-by.html"><tt>moveBy</tt></a></th> 
+        <td><p>Moves the cursor by an offset coordinate.</p></td>
     </tr>
     
     <tr>
-        <th><a href="packages---narwhal-lib---narwhal-term---move-to---clear-up.html"><tt>clearUp</tt></a></th> 
-        <td></td>
+        <th><a href="packages---narwhal-lib---narwhal-term---_stream---home.html"><tt>home</tt></a></th> 
+        <td><p>Moves the cursor to the home position</p></td>
     </tr>
     
     <tr>
-        <th><a href="packages---narwhal-lib---narwhal-term---move-to---cear-down.html"><tt>cearDown</tt></a></th> 
-        <td></td>
+        <th><a href="packages---narwhal-lib---narwhal-term---_stream---clear.html"><tt>clear</tt></a></th> 
+        <td><p>Clears the screen</p></td>
     </tr>
     
     <tr>
-        <th><a href="packages---narwhal-lib---narwhal-term---move-to---clear-line.html"><tt>clearLine</tt></a></th> 
-        <td></td>
+        <th><a href="packages---narwhal-lib---narwhal-term---_stream---clear-up.html"><tt>clearUp</tt></a></th> 
+        <td><p>Clears the screen above the cursor</p></td>
     </tr>
     
     <tr>
-        <th><a href="packages---narwhal-lib---narwhal-term---move-to---clear-left.html"><tt>clearLeft</tt></a></th> 
-        <td></td>
+        <th><a href="packages---narwhal-lib---narwhal-term---_stream---cear-down.html"><tt>cearDown</tt></a></th> 
+        <td><p>Clears the screen below the cursor</p></td>
     </tr>
     
     <tr>
-        <th><a href="packages---narwhal-lib---narwhal-term---move-to---clear-right.html"><tt>clearRight</tt></a></th> 
-        <td></td>
+        <th><a href="packages---narwhal-lib---narwhal-term---_stream---clear-line.html"><tt>clearLine</tt></a></th> 
+        <td><p>Clears the current line</p></td>
     </tr>
     
     <tr>
-        <th><a href="packages---narwhal-lib---narwhal-term---move-to---error.html"><tt>error</tt></a></th> 
+        <th><a href="packages---narwhal-lib---narwhal-term---_stream---clear-left.html"><tt>clearLeft</tt></a></th> 
+        <td><p>Clears the line to the left of the cursor</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-term---_stream---clear-right.html"><tt>clearRight</tt></a></th> 
+        <td><p>Clears the line to the right of the cursor</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-term---_stream---error.html"><tt>error</tt></a></th> 
         <td><p>A subset of the output stream API that forwards
 <code>print</code> and <code>write</code> to the translator's underlying
 standard error.</p></td>
@@ -240,7 +203,8 @@ standard error.</p></td>
         
     </h2>
 
-    
+    <p>A references for the single-digit numbered strings used
+in VT-100 escape sequences corresponding to various color names.</p>
 
 
     <table class="form whatsupdoc-parameters">
@@ -259,57 +223,57 @@ standard error.</p></td>
     
     <tr>
         <th><a href="packages---narwhal-lib---narwhal-term---colors---black.html"><tt>black</tt></a></th> 
-        <td></td>
+        <td><p><code>"0"</code></p></td>
     </tr>
     
     <tr>
         <th><a href="packages---narwhal-lib---narwhal-term---colors---red.html"><tt>red</tt></a></th> 
-        <td></td>
+        <td><p><code>"1"</code></p></td>
     </tr>
     
     <tr>
         <th><a href="packages---narwhal-lib---narwhal-term---colors---green.html"><tt>green</tt></a></th> 
-        <td></td>
+        <td><p><code>"2"</code></p></td>
     </tr>
     
     <tr>
         <th><a href="packages---narwhal-lib---narwhal-term---colors---orange.html"><tt>orange</tt></a></th> 
-        <td></td>
+        <td><p><code>"3"</code></p></td>
     </tr>
     
     <tr>
         <th><a href="packages---narwhal-lib---narwhal-term---colors---yellow.html"><tt>yellow</tt></a></th> 
-        <td></td>
+        <td><p><code>"3"</code></p></td>
     </tr>
     
     <tr>
         <th><a href="packages---narwhal-lib---narwhal-term---colors---blue.html"><tt>blue</tt></a></th> 
-        <td></td>
+        <td><p><code>"4"</code></p></td>
     </tr>
     
     <tr>
         <th><a href="packages---narwhal-lib---narwhal-term---colors---violet.html"><tt>violet</tt></a></th> 
-        <td></td>
+        <td><p><code>"5"</code></p></td>
     </tr>
     
     <tr>
         <th><a href="packages---narwhal-lib---narwhal-term---colors---magenta.html"><tt>magenta</tt></a></th> 
-        <td></td>
+        <td><p><code>"5"</code></p></td>
     </tr>
     
     <tr>
         <th><a href="packages---narwhal-lib---narwhal-term---colors---purple.html"><tt>purple</tt></a></th> 
-        <td></td>
+        <td><p><code>"5"</code></p></td>
     </tr>
     
     <tr>
         <th><a href="packages---narwhal-lib---narwhal-term---colors---cyan.html"><tt>cyan</tt></a></th> 
-        <td></td>
+        <td><p><code>"6"</code></p></td>
     </tr>
     
     <tr>
         <th><a href="packages---narwhal-lib---narwhal-term---colors---white.html"><tt>white</tt></a></th> 
-        <td></td>
+        <td><p><code>"7"</code></p></td>
     </tr>
     
     

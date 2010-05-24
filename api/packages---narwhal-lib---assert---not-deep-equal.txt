@@ -2,7 +2,7 @@
     "name": "notDeepEqual",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-    "lineNo": 322,
+    "lineNo": 359,
     "params": [
         {
             "name": "actual"

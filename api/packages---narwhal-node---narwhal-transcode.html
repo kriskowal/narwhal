@@ -1,0 +1,247 @@
+<html>
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>narwhal/transcode</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Provides stream decorators for translating bytes
+and characters.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#DecoderReader"><tt>DecoderReader</tt></a></li>
+    
+        <li><a href="#EncoderWriter"><tt>EncoderWriter</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="DecoderReader"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-transcode---_decoder-reader.html"><tt>DecoderReader</tt></a>
+        
+        
+    </h2>
+
+    <p>A synchronous stream decorator that transforms byte
+reading into string reading along a given character
+set.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>raw</tt></th>
+            <td class="B"><tt>ByteReader</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>charset</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>length</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+            <td class="C"><p>(optional) internal buffer size, defaults to 1024.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---read.html"><tt>read</tt></a></th> 
+        <td><p>Reads a string, either all remaning characters,
+or a chunk.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---read-max.html"><tt>readMax</tt></a></th> 
+        <td><p>Reads a string, from the given maximum number of
+bytes.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---read-all.html"><tt>readAll</tt></a></th> 
+        <td><p>Reads and transcodes all reamaning bytes to
+characters.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---read-line.html"><tt>readLine</tt></a></th> 
+        <td><p>Reads a single line.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---read-lines.html"><tt>readLines</tt></a></th> 
+        <td><p>Reads all reamaining lines.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---next.html"><tt>next</tt></a></th> 
+        <td><p>Reads the next line or throws StopIteration</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---iterator.html"><tt>iterator</tt></a></th> 
+        <td><p>Provides an object conforming to the iterator
+protocol for iterating the lines of the stream.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---for-each.html"><tt>forEach</tt></a></th> 
+        <td><p>Calls a function with each remaining line of data
+from the stream.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---copy.html"><tt>copy</tt></a></th> 
+        <td><p>Copies all data from this stream to a given
+output stream.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---close.html"><tt>close</tt></a></th> 
+        <td><p>Closes the underlying raw byte stream.</p></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="EncoderWriter"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-transcode---_encoder-writer.html"><tt>EncoderWriter</tt></a>
+        
+        
+    </h2>
+
+    <p>A synchronous stream decorator that transforms string
+writing into byte writing along a given character set.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>raw</tt></th>
+            <td class="B"><tt>Buffer</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>charset</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>length</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+            <td class="C"><p>(optional) internal buffer size, defaults to 1024.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-transcode---_encoder-writer---write.html"><tt>write</tt></a></th> 
+        <td><p>Writes text to the stream.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-transcode---_encoder-writer---flush.html"><tt>flush</tt></a></th> 
+        <td><p>Flushes all written data through the underlying
+raw stream.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-transcode---_encoder-writer---close.html"><tt>close</tt></a></th> 
+        <td><p>Closes the underlying raw stream.</p></td>
+    </tr>
+    
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-node---narwhal-transcode.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

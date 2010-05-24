@@ -2,7 +2,7 @@
     "name": "write",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-    "lineNo": 108,
+    "lineNo": 113,
     "params": [
         {
             "name": "string",

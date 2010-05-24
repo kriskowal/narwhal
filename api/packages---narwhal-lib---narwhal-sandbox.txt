@@ -37,7 +37,7 @@
                     "name": "load",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 224,
+                    "lineNo": 235,
                     "params": [
                         {
                             "name": "id"
@@ -71,7 +71,7 @@
                     "name": "once",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 241,
+                    "lineNo": 252,
                     "params": [
                         {
                             "name": "id"
@@ -110,7 +110,7 @@
                     "name": "force",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 257,
+                    "lineNo": 268,
                     "params": [
                         {
                             "name": "id"
@@ -132,7 +132,7 @@
                     "name": "main",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 265,
+                    "lineNo": 276,
                     "params": [
                         {
                             "name": "id"
@@ -158,7 +158,7 @@
                     "name": "loader",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 278,
+                    "lineNo": 289,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -178,7 +178,7 @@
                     "name": "system",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 280,
+                    "lineNo": 291,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -198,7 +198,7 @@
                     "name": "paths",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 282,
+                    "lineNo": 293,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -218,7 +218,7 @@
                     "name": "extensions",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 284,
+                    "lineNo": 295,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -238,7 +238,7 @@
                     "name": "debug",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 286,
+                    "lineNo": 297,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -260,7 +260,7 @@
                     "name": "load",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 224,
+                    "lineNo": 235,
                     "params": [
                         {
                             "name": "id"
@@ -294,7 +294,7 @@
                     "name": "once",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 241,
+                    "lineNo": 252,
                     "params": [
                         {
                             "name": "id"
@@ -333,7 +333,7 @@
                     "name": "force",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 257,
+                    "lineNo": 268,
                     "params": [
                         {
                             "name": "id"
@@ -355,7 +355,7 @@
                     "name": "main",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 265,
+                    "lineNo": 276,
                     "params": [
                         {
                             "name": "id"
@@ -381,7 +381,7 @@
                     "name": "loader",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 278,
+                    "lineNo": 289,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -401,7 +401,7 @@
                     "name": "system",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 280,
+                    "lineNo": 291,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -421,7 +421,7 @@
                     "name": "paths",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 282,
+                    "lineNo": 293,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -441,7 +441,7 @@
                     "name": "extensions",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 284,
+                    "lineNo": 295,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -461,7 +461,7 @@
                     "name": "debug",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 286,
+                    "lineNo": 297,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -489,7 +489,7 @@
             "name": "sandbox",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-            "lineNo": 347,
+            "lineNo": 355,
             "params": [
                 {
                     "name": "main",
@@ -544,7 +544,7 @@
                     "name": "load",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 224,
+                    "lineNo": 235,
                     "params": [
                         {
                             "name": "id"
@@ -578,7 +578,7 @@
                     "name": "once",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 241,
+                    "lineNo": 252,
                     "params": [
                         {
                             "name": "id"
@@ -617,7 +617,7 @@
                     "name": "force",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 257,
+                    "lineNo": 268,
                     "params": [
                         {
                             "name": "id"
@@ -639,7 +639,7 @@
                     "name": "main",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 265,
+                    "lineNo": 276,
                     "params": [
                         {
                             "name": "id"
@@ -665,7 +665,7 @@
                     "name": "loader",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 278,
+                    "lineNo": 289,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -685,7 +685,7 @@
                     "name": "system",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 280,
+                    "lineNo": 291,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -705,7 +705,7 @@
                     "name": "paths",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 282,
+                    "lineNo": 293,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -725,7 +725,7 @@
                     "name": "extensions",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 284,
+                    "lineNo": 295,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -745,7 +745,7 @@
                     "name": "debug",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 286,
+                    "lineNo": 297,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -767,7 +767,7 @@
                     "name": "load",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 224,
+                    "lineNo": 235,
                     "params": [
                         {
                             "name": "id"
@@ -801,7 +801,7 @@
                     "name": "once",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 241,
+                    "lineNo": 252,
                     "params": [
                         {
                             "name": "id"
@@ -840,7 +840,7 @@
                     "name": "force",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 257,
+                    "lineNo": 268,
                     "params": [
                         {
                             "name": "id"
@@ -862,7 +862,7 @@
                     "name": "main",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 265,
+                    "lineNo": 276,
                     "params": [
                         {
                             "name": "id"
@@ -888,7 +888,7 @@
                     "name": "loader",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 278,
+                    "lineNo": 289,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -908,7 +908,7 @@
                     "name": "system",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 280,
+                    "lineNo": 291,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -928,7 +928,7 @@
                     "name": "paths",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 282,
+                    "lineNo": 293,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -948,7 +948,7 @@
                     "name": "extensions",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 284,
+                    "lineNo": 295,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -968,7 +968,7 @@
                     "name": "debug",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-                    "lineNo": 286,
+                    "lineNo": 297,
                     "params": [],
                     "errors": [
                         "Did not recognize \"property\" tag."
@@ -996,7 +996,7 @@
             "name": "sandbox",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-            "lineNo": 347,
+            "lineNo": 355,
             "params": [
                 {
                     "name": "main",

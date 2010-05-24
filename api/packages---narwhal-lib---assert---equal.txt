@@ -2,7 +2,7 @@
     "name": "equal",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-    "lineNo": 200,
+    "lineNo": 237,
     "params": [
         {
             "name": "actual"

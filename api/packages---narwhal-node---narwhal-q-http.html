@@ -1,0 +1,375 @@
+<html>
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>narwhal/q-http</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>A promise-based (Q) JSGI server API.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#Server"><tt>Server</tt></a></li>
+    
+        <li><a href="#Request"><tt>Request</tt></a></li>
+    
+        <li><a href="#Client"><tt>Client</tt></a></li>
+    
+        <li><a href="#request"><tt>request</tt></a></li>
+    
+        <li><a href="#read"><tt>read</tt></a></li>
+    
+        <li><a href="#Response"><tt>Response</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="Server"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-q-http---_server.html"><tt>Server</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>respond</tt></th>
+            <td class="B"><tt>respond(request Request)</tt></th>
+            
+            <td class="C"><p>a JSGI responder function that receives a Request object as its argument.  The JSGI responder promises to return an object of the form <code>{status, headers, body}</code>.  The status and headers must be fully resolved, but the body may be a promise for an object with a <code>forEach(write(chunk String))</code> method, albeit an array of strings. The <code>forEach</code> method may promise to resolve when all chunks have been written.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>a Node Server object.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-q-http---_server---stop.html"><tt>stop</tt></a></th> 
+        <td><p>Stops the server.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-q-http---_server---listen.html"><tt>listen</tt></a></th> 
+        <td><p>Starts the server, listening on the given port</p></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="Request"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-q-http---_request.html"><tt>Request</tt></a>
+        
+        
+    </h2>
+
+    <p>A wrapper for a Node HTTP Request, as received by
+the Q HTTP Server, suitable for use by the Q HTTP Client.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-q-http---_request---method.html"><tt>method</tt></a></th> 
+        <td><p>HTTP method, e.g., <code>"GET"</code></p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-q-http---_request---path.html"><tt>path</tt></a></th> 
+        <td><p>path, starting with <code>"/"</code></p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-q-http---_request---body.html"><tt>body</tt></a></th> 
+        <td><p>A Q IO asynchronous text reader</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-q-http---_request---headers.html"><tt>headers</tt></a></th> 
+        <td><p>HTTP headers</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-q-http---_request---connection.html"><tt>connection</tt></a></th> 
+        <td><p>The underlying Node TCP connection</p></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="Client"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-q-http---_client.html"><tt>Client</tt></a>
+        
+        
+    </h2>
+
+    <p>Creates an HTTP client for issuing requests to
+the given host on the given port.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>port</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>host</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-q-http---_client---request.html"><tt>request</tt></a></th> 
+        <td><p>Issues an HTTP request.  The request may be
+any object that has <code>method</code>, <code>path</code>, <code>headers</code>
+and <code>body</code> properties.</p>
+
+<ul>
+<li><code>method</code> <code>String</code> is optional, defaults to <code>"GET"</code>.</li>
+<li><code>path</code> <code>String</code> is optional, defaults to <code>"/"</code>.</li>
+<li><code>headers</code> <code>Object</code> is optional, defaults to <code>{}</code>.</li>
+<li><code>body</code> is optional, defaults to <code>[]</code>.  Body must
+be an object with a <code>forEach</code> method that accepts a
+<code>write</code> callback.  <code>forEach</code> may return a promise,
+and may send promises to <code>write</code>.  <code>body</code> may be a
+promise.</li>
+</ul>
+
+<p>The Q HTTP <code>Server</code> responder receives a <code>Request</code>
+object that is suitable for <code>request</code>, and <code>request</code>
+returns a <code>Response</code> suitable for returning to the
+<code>Server</code>.</p></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="request"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-q-http---request.html"><tt>request</tt></a>
+        
+        
+    </h2>
+
+    <p>Issues an HTTP request.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>request</tt></th>
+            <td class="B"><tt>Request {host, port, method, path, headers, body}</tt></th>
+            
+            <td class="C"><p>(may be a promise)</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Promise * Response</tt></td>
+            <td class="C"><p>promise for a response</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="read"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-q-http---read.html"><tt>read</tt></a>
+        
+        
+    </h2>
+
+    <p>Issues a GET request to the given URL and returns
+a promise for a <code>String</code> containing the entirety
+of the response.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>url</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Promise * String</tt></td>
+            <td class="C"><p>or a rejection if the status code is not exactly 200.  The reason for the rejection is the full response object.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Response"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-q-http---_response.html"><tt>Response</tt></a>
+        
+        
+    </h2>
+
+    <p>A wrapper for the Node HTTP Response as provided
+by the Q HTTP Client API, suitable for use by the
+Q HTTP Server API.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-q-http---_response---status.html"><tt>status</tt></a></th> 
+        <td><p>HTTP status code</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-q-http---_response---version.html"><tt>version</tt></a></th> 
+        <td><p>HTTP version</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-q-http---_response---headers.html"><tt>headers</tt></a></th> 
+        <td><p>HTTP headers</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---narwhal-q-http---_response---body.html"><tt>body</tt></a></th> 
+        <td><p>A Q IO asynchronous text reader.</p></td>
+    </tr>
+    
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-node---narwhal-q-http.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+    "name": "close",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+    "lineNo": 200,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Closes the underlying raw byte stream.",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-transcode",
+        "_decoder-reader"
+    ],
+    "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---close"
+}

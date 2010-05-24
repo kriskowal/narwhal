@@ -1,6 +1,7 @@
 <html>
     <head>
     
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title></title>
     
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -25,7 +26,9 @@
             
 
     
-    <p>Called by the test runner when a test errors out.</p>
+    <p>Called by the test runner when a test errors out, which
+occurs when a test throws an exception that is not an
+<code>AssertionError</code>.</p>
 
 <p>This method is inteded to be overridden by inheritors,
 particularly loggers.  The base implementation is a

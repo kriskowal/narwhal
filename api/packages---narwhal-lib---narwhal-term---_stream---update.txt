@@ -2,27 +2,27 @@
     "name": "update",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-    "lineNo": 162,
+    "lineNo": 167,
     "params": [
         {
             "name": "bold",
-            "type": "Boolean"
+            "type": "String"
         },
         {
             "name": "fore",
-            "type": "Number",
+            "type": "String",
             "doc": "a VT-100, single-digit color code for the foreground color."
         },
         {
             "name": "back",
-            "type": "Number",
+            "type": "String",
             "doc": "a VT-100, signle-digit color code for the background color."
         }
     ],
     "errors": [],
     "throws": [],
     "see": [],
-    "doc": "",
+    "doc": "Writes a VT-100 color code from the given terms,\nomitting any term that is a null string, `\"\"`.",
     "heritage": [
         "packages",
         "narwhal-lib",

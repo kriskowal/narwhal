@@ -1,0 +1,166 @@
+<html>
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>WrappedTextReader</tt>
+        
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Wraps a Node readable stream, providing an API similar
+to a Narwhal synchronous <code>io</code> stream except returning
+Q promises for long latency operations.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>stream</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>any Node readable stream</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Promise * WrappedTextReader</tt></td>
+            <td class="C"><p>a promise for the text stream reader.</p></td>
+        </tr> 
+        
+        
+    </table>
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#read"><tt>read</tt></a></li>
+    
+        <li><a href="#forEach"><tt>forEach</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="read"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-q-io---_wrapped-text-reader---read.html"><tt>read</tt></a>
+        
+        
+    </h2>
+
+    <p>Reads all of the remaining data from the stream.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Promise * String</tt></td>
+            <td class="C"><p>a promise for a String containing the entirety the remaining stream.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="forEach"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-q-io---_wrapped-text-reader---for-each.html"><tt>forEach</tt></a>
+        
+        
+    </h2>
+
+    <p>Reads and writes all of the remaining data from the
+stream in chunks.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>write</tt></th>
+            <td class="B"><tt>Function(Promise * String)</tt></th>
+            
+            <td class="C"><p>a function to be called on each chunk of input from this stream.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Promise * Undefined</tt></td>
+            <td class="C"><p>a promise that will be resolved when the input is depleted.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-node---narwhal-q-io---_wrapped-text-reader.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

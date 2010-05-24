@@ -1,0 +1,186 @@
+{
+    "name": "popen",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-os.js",
+    "lineNo": 15,
+    "params": [
+        {
+            "name": "command",
+            "type": "String"
+        },
+        {
+            "name": "args",
+            "type": "Array * String"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "{stdin, stdout, stderr, wait}",
+        "doc": "A representation of the subprocess with streams and a function for waiting for the completion of the subprocess."
+    },
+    "doc": "Opens a subprocess.",
+    "children": [
+        {
+            "name": "stdin",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-os.js",
+            "lineNo": 30,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Q IO writable stream",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-q-os",
+                "popen"
+            ],
+            "href": "packages---narwhal-node---narwhal-q-os---popen---stdin"
+        },
+        {
+            "name": "stdout",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-os.js",
+            "lineNo": 34,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Q IO readable stream",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-q-os",
+                "popen"
+            ],
+            "href": "packages---narwhal-node---narwhal-q-os---popen---stdout"
+        },
+        {
+            "name": "stderr",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-os.js",
+            "lineNo": 38,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Q IO readable stream",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-q-os",
+                "popen"
+            ],
+            "href": "packages---narwhal-node---narwhal-q-os---popen---stderr"
+        },
+        {
+            "name": "wait",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-os.js",
+            "lineNo": 42,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Promise * Number",
+                "doc": "a promise that will be resolved with the exit status code."
+            },
+            "doc": "Waits for the subprocess to exit.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-q-os",
+                "popen"
+            ],
+            "href": "packages---narwhal-node---narwhal-q-os---popen---wait"
+        }
+    ],
+    "index": {
+        "stdin": {
+            "name": "stdin",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-os.js",
+            "lineNo": 30,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Q IO writable stream",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-q-os",
+                "popen"
+            ],
+            "href": "packages---narwhal-node---narwhal-q-os---popen---stdin"
+        },
+        "stdout": {
+            "name": "stdout",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-os.js",
+            "lineNo": 34,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Q IO readable stream",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-q-os",
+                "popen"
+            ],
+            "href": "packages---narwhal-node---narwhal-q-os---popen---stdout"
+        },
+        "stderr": {
+            "name": "stderr",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-os.js",
+            "lineNo": 38,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Q IO readable stream",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-q-os",
+                "popen"
+            ],
+            "href": "packages---narwhal-node---narwhal-q-os---popen---stderr"
+        },
+        "wait": {
+            "name": "wait",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-os.js",
+            "lineNo": 42,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Promise * Number",
+                "doc": "a promise that will be resolved with the exit status code."
+            },
+            "doc": "Waits for the subprocess to exit.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-q-os",
+                "popen"
+            ],
+            "href": "packages---narwhal-node---narwhal-q-os---popen---wait"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-q-os"
+    ],
+    "href": "packages---narwhal-node---narwhal-q-os---popen"
+}

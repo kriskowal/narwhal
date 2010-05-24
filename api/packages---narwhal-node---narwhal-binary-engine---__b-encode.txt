@@ -1,0 +1,30 @@
+{
+    "name": "B_ENCODE",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+    "lineNo": 88,
+    "params": [
+        {
+            "name": "string",
+            "type": "String"
+        },
+        {
+            "name": "charset",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Buffer",
+        "doc": ""
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-binary-engine"
+    ],
+    "href": "packages---narwhal-node---narwhal-binary-engine---__b-encode"
+}

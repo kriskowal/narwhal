@@ -2,21 +2,25 @@
     "name": "narwhal",
     "type": "package",
     "markup": "markdown",
-    "doc": "A general purpose JavaScript platform",
+    "description": "A general purpose JavaScript platform",
     "contributors": [
         {
             "name": "Tom Robinson",
+            "web": "http://tlrobinson.net/",
             "email": "tom@280north.com"
         },
         {
             "name": "Kris Kowal",
+            "web": "http://askawizard.blogspot.com/",
             "email": "kris@cixar.com"
         },
         {
-            "name": "George Moschovitis"
+            "name": "George Moschovitis",
+            "web": "http://blog.gmosx.com"
         },
         {
-            "name": "Kevin Dangoor"
+            "name": "Kevin Dangoor",
+            "web": "http://www.blueskyonmars.com"
         },
         {
             "name": "Hannes Walln\u00f6fer"
@@ -25,10 +29,12 @@
             "name": "S\u00e9bastien Pierre"
         },
         {
-            "name": "Irakli Gozalishvili"
+            "name": "Irakli Gozalishvili",
+            "web": "http://rfobic.wordpress.com/"
         },
         {
-            "name": "Christoph Dorn"
+            "name": "Christoph Dorn",
+            "web": "http://www.christophdorn.com/"
         },
         {
             "name": "Zach Carter"
@@ -44,17 +50,21 @@
         },
         {
             "name": "Isaac Z. Schlueter",
+            "web": "http://blog.izs.me/",
             "email": "i@izs.me"
         },
         {
-            "name": "Kris Zyp"
+            "name": "Kris Zyp",
+            "web": "http://www.sitepen.com/blog/author/kzyp/"
         },
         {
             "name": "Nathan Stott",
+            "web": "http://nathan.whiteboard-it.com",
             "email": "nathan.stott@whiteboard-it.com"
         },
         {
             "name": "Toby Ho",
+            "web": "http://tobyho.com",
             "email": "airportyh@gmail.com"
         }
     ],

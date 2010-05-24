@@ -1,0 +1,159 @@
+<html>
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>Server</tt>
+        
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+
+    <!-- TODO params or throws or returns -->
+    
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>respond</tt></th>
+            <td class="B"><tt>respond(request Request)</tt></th>
+            
+            <td class="C"><p>a JSGI responder function that receives a Request object as its argument.  The JSGI responder promises to return an object of the form <code>{status, headers, body}</code>.  The status and headers must be fully resolved, but the body may be a promise for an object with a <code>forEach(write(chunk String))</code> method, albeit an array of strings. The <code>forEach</code> method may promise to resolve when all chunks have been written.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>a Node Server object.</p></td>
+        </tr> 
+        
+        
+    </table>
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#stop"><tt>stop</tt></a></li>
+    
+        <li><a href="#listen"><tt>listen</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="stop"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-q-http---_server---stop.html"><tt>stop</tt></a>
+        
+        
+    </h2>
+
+    <p>Stops the server.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Promise * Undefined</tt></td>
+            <td class="C"><p>a promise that will resolve when the server is stopped.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="listen"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-q-http---_server---listen.html"><tt>listen</tt></a>
+        
+        
+    </h2>
+
+    <p>Starts the server, listening on the given port</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>port</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Promise * Undefined</tt></td>
+            <td class="C"><p>a promise that will resolve when the server is ready to receive connections</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-node---narwhal-q-http---_server.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

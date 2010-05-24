@@ -1,6 +1,7 @@
 <html>
     <head>
     
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title></title>
     
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -30,7 +31,7 @@ useful for unit testing.</p>
 
 <p>An implementation of the CommonJS Unit Testing 1.0
 Specification's <code>assert</code> module.
-http://wiki.commonjs.org/wiki/Unit_Testing/1.0</p>
+<a href="http://wiki.commonjs.org/wiki/Unit_Testing/1.0">http://wiki.commonjs.org/wiki/Unit_Testing/1.0</a></p>
     
 
     <!-- TODO params or throws or returns -->
@@ -67,7 +68,7 @@ http://wiki.commonjs.org/wiki/Unit_Testing/1.0</p>
     
         <li><a href="#notStrictEqual"><tt>notStrictEqual</tt></a></li>
     
-        <li><a href="#message"><tt>message</tt></a></li>
+        <li><a href="#throws"><tt>throws</tt></a></li>
     
         <li><a href="#Assert"><tt>Assert</tt></a></li>
     
@@ -96,7 +97,7 @@ http://wiki.commonjs.org/wiki/Unit_Testing/1.0</p>
         
         <tr>
             <th class="A"><em>returns</em></th>
-            <td class="B"><tt>name: "AssertionError", message: String, "actual", "expected", "operator", ...</tt></td>
+            <td class="B"><tt>{name: "AssertionError", message: String, "actual", "expected", "operator", ...}</tt></td>
             <td class="C"><p>an error, that may contain backtrace information on Rhino and V8.</p></td>
         </tr> 
         
@@ -113,12 +114,29 @@ http://wiki.commonjs.org/wiki/Unit_Testing/1.0</p>
     
     <tr>
         <th><a href="packages---narwhal-lib---assert---_assertion-error---to-string.html"><tt>toString</tt></a></th> 
-        <td><p>WARNING: This method is not specified.</p></td>
+        <td><p>Produces a representation like:</p>
+
+<ul>
+<li><code>name: message</code> or</li>
+<li><code>name: actual == expected</code></li>
+</ul>
+
+<p>Depending on whether there is a message, or
+the comparison operator.</p>
+
+<p>WARNING: This method is not specified.</p></td>
     </tr>
     
     <tr>
         <th><a href="packages---narwhal-lib---assert---_assertion-error---to-source.html"><tt>toSource</tt></a></th> 
-        <td><p>WARNING: This method is not specified.</p></td>
+        <td><p>Produces an expression like:</p>
+
+<pre><code>new (require("assert").AssertionError)({
+    "message": "E.T., nach Hause telefonieren."
+})
+</code></pre>
+
+<p>WARNING: This method is not specified.</p></td>
     </tr>
     
     
@@ -131,7 +149,19 @@ http://wiki.commonjs.org/wiki/Unit_Testing/1.0</p>
         
     </h2>
 
-    <p>WARNING: This method is not specified.</p>
+    <p>Called polymorphically by <code>assert</code> objects, particularly
+this assert module, when a test fails.  The behavior of
+this implementation of <code>fail</code> is to throw an <code>AssertionError</code>,
+but by prototypically inheriting the <code>assert</code> module, using
+<code>Object.create</code> or its ilk, and overriding <code>fail</code>, it is possible
+to trivially create variations that log failures rather
+than throwing.  The <code>test</code> module sends such an object to
+each <code>test*</code> method in a unit test tree so that tests have
+the option of logging instead of throwing.  Because each
+test receives a different <code>assert</code> object, the logs are
+associable with the individual test.</p>
+
+<p>WARNING: This method is not specified.</p>
 
 
     <table class="form whatsupdoc-parameters">
@@ -148,9 +178,7 @@ http://wiki.commonjs.org/wiki/Unit_Testing/1.0</p>
         
         <tr>
             <th class="A"><em>throws</em></th>
-            <td class="B"></th>
-            
-            <td class="C"><p>an AssertionError.</p></td>
+            <td class="B"><tt>AssertionError</tt></th>
             
         </tr>
         
@@ -181,6 +209,12 @@ no-op.</p>
 
     <table class="form whatsupdoc-parameters">
         
+        <tr>
+            <th class="A"><tt>message</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
         
         
     </table>
@@ -199,7 +233,9 @@ no-op.</p>
         
     </h2>
 
-    <p>Called by the test runner when a test errors out.</p>
+    <p>Called by the test runner when a test errors out, which
+occurs when a test throws an exception that is not an
+<code>AssertionError</code>.</p>
 
 <p>This method is inteded to be overridden by inheritors,
 particularly loggers.  The base implementation is a
@@ -236,8 +272,8 @@ no-op.</p>
 
     <p>Called by the test runner when a test errors begins
 a new section of tests and is expected to return an
-object suitable for sending log messages like "pass",
-"error", "fail", and "section".</p>
+object suitable for sending log messages like <code>pass</code>,
+<code>error</code>, <code>fail</code>, and <code>section</code>.</p>
 
 <p>This method is inteded to be overridden by inheritors,
 particularly loggers.  The base implementation is a
@@ -616,9 +652,9 @@ no-op.</p>
     
     </table>
     
-    <a name="message"></a>
+    <a name="throws"></a>
     <h2>
-        <a href="packages---narwhal-lib---assert---message.html"><tt>message</tt></a>
+        <a href="packages---narwhal-lib---assert---throws.html"><tt>throws</tt></a>
         
         
     </h2>
@@ -668,8 +704,9 @@ no-op.</p>
         
     </h2>
 
-    <p>Constructs a logging <code>assert</code> object.
-WARNING: This method is not specified.</p>
+    <p>Constructs a logging <code>assert</code> object.</p>
+
+<p>WARNING: This method is not specified.</p>
 
 
     <table class="form whatsupdoc-parameters">

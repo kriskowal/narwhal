@@ -1,0 +1,38 @@
+{
+    "name": "B_COPY",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+    "lineNo": 38,
+    "params": [
+        {
+            "name": "source",
+            "type": "Buffer"
+        },
+        {
+            "name": "sourceStart",
+            "type": "Number"
+        },
+        {
+            "name": "target",
+            "type": "Buffer"
+        },
+        {
+            "name": "targetStart",
+            "type": "Number"
+        },
+        {
+            "name": "length",
+            "type": "NUmber"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-binary-engine"
+    ],
+    "href": "packages---narwhal-node---narwhal-binary-engine---__b-copy"
+}

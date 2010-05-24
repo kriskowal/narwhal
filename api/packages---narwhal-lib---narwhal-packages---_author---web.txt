@@ -1,0 +1,20 @@
+{
+    "name": "web",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
+    "lineNo": 763,
+    "params": [],
+    "errors": [
+        "Did not recognize \"property\" tag."
+    ],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-packages",
+        "_author"
+    ],
+    "href": "packages---narwhal-lib---narwhal-packages---_author---web"
+}

@@ -2,7 +2,7 @@
     "name": "toString",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-    "lineNo": 66,
+    "lineNo": 67,
     "params": [],
     "errors": [],
     "throws": [],
@@ -10,7 +10,7 @@
     "returns": {
         "doc": "a representation of the error."
     },
-    "doc": "WARNING: This method is not specified.",
+    "doc": "Produces a representation like:\n\n* `name: message` or\n* `name: actual == expected`\n\nDepending on whether there is a message, or\nthe comparison operator.\n\nWARNING: This method is not specified.",
     "heritage": [
         "packages",
         "narwhal-lib",

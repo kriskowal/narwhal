@@ -1,0 +1,21 @@
+{
+    "name": "fd",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/io.js",
+    "lineNo": 34,
+    "params": [],
+    "errors": [
+        "Did not recognize \"property\" tag."
+    ],
+    "throws": [],
+    "see": [],
+    "doc": "file descriptor",
+    "jsType": "Number",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-io",
+        "open-fd"
+    ],
+    "href": "packages---narwhal-node---narwhal-io---open-fd---fd"
+}

@@ -1,0 +1,27 @@
+{
+    "name": "write",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-io.js",
+    "lineNo": 130,
+    "params": [
+        {
+            "name": "content",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Promise * Undefined",
+        "doc": "a promise that will  be resolved when the buffer is empty, meaning that all of the content has been sent."
+    },
+    "doc": "Writes content to the stream.",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-q-io",
+        "_wrapped-text-writer"
+    ],
+    "href": "packages---narwhal-node---narwhal-q-io---_wrapped-text-writer---write"
+}

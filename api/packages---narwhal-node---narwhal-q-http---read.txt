@@ -1,0 +1,26 @@
+{
+    "name": "read",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+    "lineNo": 205,
+    "params": [
+        {
+            "name": "url",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Promise * String",
+        "doc": "or a rejection if the status code is not exactly 200.  The reason for the rejection is the full response object."
+    },
+    "doc": "Issues a GET request to the given URL and returns\na promise for a `String` containing the entirety\nof the response.",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-q-http"
+    ],
+    "href": "packages---narwhal-node---narwhal-q-http---read"
+}

@@ -2,7 +2,7 @@
     "name": "debug",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/sandbox.js",
-    "lineNo": 286,
+    "lineNo": 297,
     "params": [],
     "errors": [
         "Did not recognize \"property\" tag."

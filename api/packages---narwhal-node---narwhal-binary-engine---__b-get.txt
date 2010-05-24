@@ -1,0 +1,30 @@
+{
+    "name": "B_GET",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+    "lineNo": 49,
+    "params": [
+        {
+            "name": "bytes",
+            "type": "Buffer"
+        },
+        {
+            "name": "index",
+            "type": "Number"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Number",
+        "doc": "byte value"
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-binary-engine"
+    ],
+    "href": "packages---narwhal-node---narwhal-binary-engine---__b-get"
+}

@@ -1,0 +1,18 @@
+{
+    "name": "flush",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/io.js",
+    "lineNo": 90,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Not yet supported, so a no-op.",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-io",
+        "open-fd"
+    ],
+    "href": "packages---narwhal-node---narwhal-io---open-fd---flush"
+}

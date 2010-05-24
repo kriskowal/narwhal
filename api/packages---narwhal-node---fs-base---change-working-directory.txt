@@ -1,0 +1,21 @@
+{
+    "name": "changeWorkingDirectory",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+    "lineNo": 596,
+    "params": [
+        {
+            "name": "path"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Change the process's current working directory.",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "fs-base"
+    ],
+    "href": "packages---narwhal-node---fs-base---change-working-directory"
+}

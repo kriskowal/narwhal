@@ -2,8 +2,13 @@
     "name": "pass",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-    "lineNo": 123,
-    "params": [],
+    "lineNo": 156,
+    "params": [
+        {
+            "name": "message",
+            "type": "String"
+        }
+    ],
     "errors": [],
     "throws": [],
     "see": [],

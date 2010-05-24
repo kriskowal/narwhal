@@ -2,21 +2,25 @@
     "name": "fail",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-    "lineNo": 111,
+    "lineNo": 128,
     "params": [
         {
             "name": "options",
             "doc": "properties for initializing the AssertionError."
         }
     ],
-    "errors": [],
+    "errors": [
+        "Did not recognize \"see\" tag.",
+        "Did not recognize \"see\" tag."
+    ],
     "throws": [
         {
-            "doc": "an AssertionError."
+            "type": "AssertionError",
+            "doc": ""
         }
     ],
     "see": [],
-    "doc": "WARNING: This method is not specified.",
+    "doc": "Called polymorphically by `assert` objects, particularly\nthis assert module, when a test fails.  The behavior of\nthis implementation of `fail` is to throw an `AssertionError`,\nbut by prototypically inheriting the `assert` module, using\n`Object.create` or its ilk, and overriding `fail`, it is possible\nto trivially create variations that log failures rather\nthan throwing.  The `test` module sends such an object to\neach `test*` method in a unit test tree so that tests have\nthe option of logging instead of throwing.  Because each\ntest receives a different `assert` object, the logs are\nassociable with the individual test.\n\nWARNING: This method is not specified.",
     "heritage": [
         "packages",
         "narwhal-lib",

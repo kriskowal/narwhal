@@ -5,9 +5,9 @@
     "lineNo": 30,
     "params": [
         {
-            "name": "the",
+            "name": "system",
             "type": "{stdout, stderr, env}",
-            "doc": "\"system\" module or a reasonable facimile."
+            "doc": "the \"system\" module or a reasonable facimile."
         }
     ],
     "errors": [],
@@ -24,7 +24,7 @@
             "errors": [],
             "throws": [],
             "see": [],
-            "doc": "",
+            "doc": "enables terminal coloring.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -37,12 +37,12 @@
             "name": "disable",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-            "lineNo": 64,
+            "lineNo": 66,
             "params": [],
             "errors": [],
             "throws": [],
             "see": [],
-            "doc": "",
+            "doc": "disables terminal coloring.  All subsequent null prefix\ncodes will be stripped instead of translated.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -55,7 +55,7 @@
             "name": "writeCode",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-            "lineNo": 69,
+            "lineNo": 74,
             "params": [
                 {
                     "name": "code",
@@ -78,7 +78,7 @@
             "name": "print",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-            "lineNo": 84,
+            "lineNo": 89,
             "params": [
                 {
                     "name": "fields",
@@ -101,7 +101,7 @@
             "name": "printError",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-            "lineNo": 97,
+            "lineNo": 102,
             "params": [],
             "errors": [],
             "throws": [],
@@ -119,7 +119,7 @@
             "name": "write",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-            "lineNo": 108,
+            "lineNo": 113,
             "params": [
                 {
                     "name": "string",
@@ -147,27 +147,27 @@
             "name": "update",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-            "lineNo": 162,
+            "lineNo": 167,
             "params": [
                 {
                     "name": "bold",
-                    "type": "Boolean"
+                    "type": "String"
                 },
                 {
                     "name": "fore",
-                    "type": "Number",
+                    "type": "String",
                     "doc": "a VT-100, single-digit color code for the foreground color."
                 },
                 {
                     "name": "back",
-                    "type": "Number",
+                    "type": "String",
                     "doc": "a VT-100, signle-digit color code for the background color."
                 }
             ],
             "errors": [],
             "throws": [],
             "see": [],
-            "doc": "",
+            "doc": "Writes a VT-100 color code from the given terms,\nomitting any term that is a null string, `\"\"`.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -175,6 +175,310 @@
                 "_stream"
             ],
             "href": "packages---narwhal-lib---narwhal-term---_stream---update"
+        },
+        {
+            "name": "moveTo",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 188,
+            "params": [
+                {
+                    "name": "y",
+                    "type": "Number",
+                    "doc": "column"
+                },
+                {
+                    "name": "x",
+                    "type": "Number",
+                    "doc": "row"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Moves the cursor to a coordinate.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---move-to"
+        },
+        {
+            "name": "moveBy",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 197,
+            "params": [
+                {
+                    "name": "y",
+                    "type": "Number",
+                    "doc": "column"
+                },
+                {
+                    "name": "x",
+                    "type": "Number",
+                    "doc": "row"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Moves the cursor by an offset coordinate.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---move-by"
+        },
+        {
+            "name": "home",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 219,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Moves the cursor to the home position",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---home"
+        },
+        {
+            "name": "clear",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 224,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Clears the screen",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---clear"
+        },
+        {
+            "name": "clearUp",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 228,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Clears the screen above the cursor",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---clear-up"
+        },
+        {
+            "name": "cearDown",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 232,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Clears the screen below the cursor",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---cear-down"
+        },
+        {
+            "name": "clearLine",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 236,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Clears the current line",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---clear-line"
+        },
+        {
+            "name": "clearLeft",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 240,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Clears the line to the left of the cursor",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---clear-left"
+        },
+        {
+            "name": "clearRight",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 244,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Clears the line to the right of the cursor",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---clear-right"
+        },
+        {
+            "name": "error",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 251,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "A subset of the output stream API that forwards\n`print` and `write` to the translator's underlying\nstandard error.",
+            "children": [
+                {
+                    "name": "print",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                    "lineNo": 258,
+                    "params": [
+                        {
+                            "name": "field",
+                            "type": "String",
+                            "variadic": true
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "prints a line of space delimited fields to the error stream.",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-term",
+                        "_stream",
+                        "error"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-term---_stream---error---print"
+                },
+                {
+                    "name": "write",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                    "lineNo": 266,
+                    "params": [
+                        {
+                            "name": "message",
+                            "type": "String"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "writes a message to the error stream, translating\nnull-codes to VT-100 escape sequences on the same\nchannel.",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-term",
+                        "_stream",
+                        "error"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-term---_stream---error---write"
+                }
+            ],
+            "index": {
+                "print": {
+                    "name": "print",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                    "lineNo": 258,
+                    "params": [
+                        {
+                            "name": "field",
+                            "type": "String",
+                            "variadic": true
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "prints a line of space delimited fields to the error stream.",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-term",
+                        "_stream",
+                        "error"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-term---_stream---error---print"
+                },
+                "write": {
+                    "name": "write",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                    "lineNo": 266,
+                    "params": [
+                        {
+                            "name": "message",
+                            "type": "String"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "writes a message to the error stream, translating\nnull-codes to VT-100 escape sequences on the same\nchannel.",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-term",
+                        "_stream",
+                        "error"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-term---_stream---error---write"
+                }
+            },
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---error"
         }
     ],
     "index": {
@@ -187,7 +491,7 @@
             "errors": [],
             "throws": [],
             "see": [],
-            "doc": "",
+            "doc": "enables terminal coloring.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -200,12 +504,12 @@
             "name": "disable",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-            "lineNo": 64,
+            "lineNo": 66,
             "params": [],
             "errors": [],
             "throws": [],
             "see": [],
-            "doc": "",
+            "doc": "disables terminal coloring.  All subsequent null prefix\ncodes will be stripped instead of translated.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -218,7 +522,7 @@
             "name": "writeCode",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-            "lineNo": 69,
+            "lineNo": 74,
             "params": [
                 {
                     "name": "code",
@@ -241,7 +545,7 @@
             "name": "print",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-            "lineNo": 84,
+            "lineNo": 89,
             "params": [
                 {
                     "name": "fields",
@@ -264,7 +568,7 @@
             "name": "printError",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-            "lineNo": 97,
+            "lineNo": 102,
             "params": [],
             "errors": [],
             "throws": [],
@@ -282,7 +586,7 @@
             "name": "write",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-            "lineNo": 108,
+            "lineNo": 113,
             "params": [
                 {
                     "name": "string",
@@ -310,27 +614,27 @@
             "name": "update",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
-            "lineNo": 162,
+            "lineNo": 167,
             "params": [
                 {
                     "name": "bold",
-                    "type": "Boolean"
+                    "type": "String"
                 },
                 {
                     "name": "fore",
-                    "type": "Number",
+                    "type": "String",
                     "doc": "a VT-100, single-digit color code for the foreground color."
                 },
                 {
                     "name": "back",
-                    "type": "Number",
+                    "type": "String",
                     "doc": "a VT-100, signle-digit color code for the background color."
                 }
             ],
             "errors": [],
             "throws": [],
             "see": [],
-            "doc": "",
+            "doc": "Writes a VT-100 color code from the given terms,\nomitting any term that is a null string, `\"\"`.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -338,6 +642,310 @@
                 "_stream"
             ],
             "href": "packages---narwhal-lib---narwhal-term---_stream---update"
+        },
+        "moveTo": {
+            "name": "moveTo",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 188,
+            "params": [
+                {
+                    "name": "y",
+                    "type": "Number",
+                    "doc": "column"
+                },
+                {
+                    "name": "x",
+                    "type": "Number",
+                    "doc": "row"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Moves the cursor to a coordinate.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---move-to"
+        },
+        "moveBy": {
+            "name": "moveBy",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 197,
+            "params": [
+                {
+                    "name": "y",
+                    "type": "Number",
+                    "doc": "column"
+                },
+                {
+                    "name": "x",
+                    "type": "Number",
+                    "doc": "row"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Moves the cursor by an offset coordinate.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---move-by"
+        },
+        "home": {
+            "name": "home",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 219,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Moves the cursor to the home position",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---home"
+        },
+        "clear": {
+            "name": "clear",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 224,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Clears the screen",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---clear"
+        },
+        "clearUp": {
+            "name": "clearUp",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 228,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Clears the screen above the cursor",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---clear-up"
+        },
+        "cearDown": {
+            "name": "cearDown",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 232,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Clears the screen below the cursor",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---cear-down"
+        },
+        "clearLine": {
+            "name": "clearLine",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 236,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Clears the current line",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---clear-line"
+        },
+        "clearLeft": {
+            "name": "clearLeft",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 240,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Clears the line to the left of the cursor",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---clear-left"
+        },
+        "clearRight": {
+            "name": "clearRight",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 244,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Clears the line to the right of the cursor",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---clear-right"
+        },
+        "error": {
+            "name": "error",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+            "lineNo": 251,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "A subset of the output stream API that forwards\n`print` and `write` to the translator's underlying\nstandard error.",
+            "children": [
+                {
+                    "name": "print",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                    "lineNo": 258,
+                    "params": [
+                        {
+                            "name": "field",
+                            "type": "String",
+                            "variadic": true
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "prints a line of space delimited fields to the error stream.",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-term",
+                        "_stream",
+                        "error"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-term---_stream---error---print"
+                },
+                {
+                    "name": "write",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                    "lineNo": 266,
+                    "params": [
+                        {
+                            "name": "message",
+                            "type": "String"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "writes a message to the error stream, translating\nnull-codes to VT-100 escape sequences on the same\nchannel.",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-term",
+                        "_stream",
+                        "error"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-term---_stream---error---write"
+                }
+            ],
+            "index": {
+                "print": {
+                    "name": "print",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                    "lineNo": 258,
+                    "params": [
+                        {
+                            "name": "field",
+                            "type": "String",
+                            "variadic": true
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "prints a line of space delimited fields to the error stream.",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-term",
+                        "_stream",
+                        "error"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-term---_stream---error---print"
+                },
+                "write": {
+                    "name": "write",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/term.js",
+                    "lineNo": 266,
+                    "params": [
+                        {
+                            "name": "message",
+                            "type": "String"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "writes a message to the error stream, translating\nnull-codes to VT-100 escape sequences on the same\nchannel.",
+                    "heritage": [
+                        "packages",
+                        "narwhal-lib",
+                        "narwhal-term",
+                        "_stream",
+                        "error"
+                    ],
+                    "href": "packages---narwhal-lib---narwhal-term---_stream---error---write"
+                }
+            },
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-term",
+                "_stream"
+            ],
+            "href": "packages---narwhal-lib---narwhal-term---_stream---error"
         }
     },
     "heritage": [

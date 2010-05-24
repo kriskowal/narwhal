@@ -1,0 +1,25 @@
+{
+    "name": "exists",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+    "lineNo": 810,
+    "params": [
+        {
+            "name": "path"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Boolean",
+        "doc": "whether a file (of any kind, including directories) exists at the given path"
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "fs-base"
+    ],
+    "href": "packages---narwhal-node---fs-base---exists"
+}

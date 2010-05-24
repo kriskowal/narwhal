@@ -2,7 +2,7 @@
     "name": "error",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-    "lineNo": 263,
+    "lineNo": 264,
     "params": [
         {
             "name": "exception",

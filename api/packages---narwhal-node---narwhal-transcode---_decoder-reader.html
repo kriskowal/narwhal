@@ -1,0 +1,429 @@
+<html>
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>DecoderReader</tt>
+        
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>A synchronous stream decorator that transforms byte
+reading into string reading along a given character
+set.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>raw</tt></th>
+            <td class="B"><tt>ByteReader</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>charset</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>length</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+            <td class="C"><p>(optional) internal buffer size, defaults to 1024.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#read"><tt>read</tt></a></li>
+    
+        <li><a href="#readMax"><tt>readMax</tt></a></li>
+    
+        <li><a href="#readAll"><tt>readAll</tt></a></li>
+    
+        <li><a href="#readLine"><tt>readLine</tt></a></li>
+    
+        <li><a href="#readLines"><tt>readLines</tt></a></li>
+    
+        <li><a href="#next"><tt>next</tt></a></li>
+    
+        <li><a href="#iterator"><tt>iterator</tt></a></li>
+    
+        <li><a href="#forEach"><tt>forEach</tt></a></li>
+    
+        <li><a href="#copy"><tt>copy</tt></a></li>
+    
+        <li><a href="#close"><tt>close</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="read"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---read.html"><tt>read</tt></a>
+        
+        
+    </h2>
+
+    <p>Reads a string, either all remaning characters,
+or a chunk.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>max</tt></th>
+            <td class="B"><tt>Number || Undefined || Null</tt></th>
+            
+            <td class="C"><p>the maximum number of bytes to read.  Undefined implies all remaining bytes.  Null implies the default byte block size.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>characters read</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="readMax"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---read-max.html"><tt>readMax</tt></a>
+        
+        
+    </h2>
+
+    <p>Reads a string, from the given maximum number of
+bytes.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>max</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+            <td class="C"><p>the maximum number of bytes to read.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>characters read</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="readAll"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---read-all.html"><tt>readAll</tt></a>
+        
+        
+    </h2>
+
+    <p>Reads and transcodes all reamaning bytes to
+characters.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>all remaining data.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="readLine"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---read-line.html"><tt>readLine</tt></a>
+        
+        
+    </h2>
+
+    <p>Reads a single line.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>line</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="readLines"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---read-lines.html"><tt>readLines</tt></a>
+        
+        
+    </h2>
+
+    <p>Reads all reamaining lines.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * String</tt></td>
+            <td class="C"><p>lines, including their newline characters, if there are any, not including the last line if it is empty.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="next"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---next.html"><tt>next</tt></a>
+        
+        
+    </h2>
+
+    <p>Reads the next line or throws StopIteration</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="iterator"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---iterator.html"><tt>iterator</tt></a>
+        
+        
+    </h2>
+
+    <p>Provides an object conforming to the iterator
+protocol for iterating the lines of the stream.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>{next}</tt></td>
+            <td class="C"><p>this</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="forEach"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---for-each.html"><tt>forEach</tt></a>
+        
+        
+    </h2>
+
+    <p>Calls a function with each remaining line of data
+from the stream.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>write</tt></th>
+            <td class="B"><tt>Function</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>thisPointer</tt></th>
+            <td class="B"><tt>Object</tt></th>
+            
+            <td class="C"><p>the <code>this</code> value to provide the <code>write</code> function.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="copy"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---copy.html"><tt>copy</tt></a>
+        
+        
+    </h2>
+
+    <p>Copies all data from this stream to a given
+output stream.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>output</tt></th>
+            <td class="B"><tt>WriteStream</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="close"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-transcode---_decoder-reader---close.html"><tt>close</tt></a>
+        
+        
+    </h2>
+
+    <p>Closes the underlying raw byte stream.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-node---narwhal-transcode---_decoder-reader.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

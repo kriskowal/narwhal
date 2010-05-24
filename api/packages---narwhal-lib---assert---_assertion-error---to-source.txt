@@ -2,7 +2,7 @@
     "name": "toSource",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-    "lineNo": 88,
+    "lineNo": 98,
     "params": [],
     "errors": [],
     "throws": [],
@@ -10,7 +10,7 @@
     "returns": {
         "doc": "an evaluable representation of the error."
     },
-    "doc": "WARNING: This method is not specified.",
+    "doc": "Produces an expression like:\n\n    new (require(\"assert\").AssertionError)({\n        \"message\": \"E.T., nach Hause telefonieren.\"\n    })\n\nWARNING: This method is not specified.",
     "heritage": [
         "packages",
         "narwhal-lib",

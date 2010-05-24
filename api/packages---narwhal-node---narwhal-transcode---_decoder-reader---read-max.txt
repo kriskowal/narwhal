@@ -1,0 +1,28 @@
+{
+    "name": "readMax",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/transcode.js",
+    "lineNo": 74,
+    "params": [
+        {
+            "name": "max",
+            "type": "Number",
+            "doc": "the maximum number of bytes to read."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "String",
+        "doc": "characters read"
+    },
+    "doc": "Reads a string, from the given maximum number of\nbytes.",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-transcode",
+        "_decoder-reader"
+    ],
+    "href": "packages---narwhal-node---narwhal-transcode---_decoder-reader---read-max"
+}

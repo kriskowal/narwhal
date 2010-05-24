@@ -1,0 +1,22 @@
+{
+    "name": "setInterval",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/event-loop.js",
+    "lineNo": 45,
+    "params": [
+        {
+            "name": "token",
+            "doc": "an opaque token, as returned by `setInterval`"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Aborts an interval timer.",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-event-loop"
+    ],
+    "href": "packages---narwhal-node---narwhal-event-loop---set-interval"
+}

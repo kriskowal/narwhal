@@ -1,0 +1,34 @@
+{
+    "name": "B_FILL",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+    "lineNo": 28,
+    "params": [
+        {
+            "name": "bytes",
+            "type": "Buffer"
+        },
+        {
+            "name": "length",
+            "type": "Number"
+        },
+        {
+            "name": "offset",
+            "type": "Number"
+        },
+        {
+            "name": "value",
+            "type": "Number"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-binary-engine"
+    ],
+    "href": "packages---narwhal-node---narwhal-binary-engine---__b-fill"
+}

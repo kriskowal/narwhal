@@ -1,0 +1,26 @@
+{
+    "name": "setInterval",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/event-loop-engine.js",
+    "lineNo": 45,
+    "params": [
+        {
+            "name": "period",
+            "type": "Number",
+            "doc": "a delay and interval in miliseconds."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "doc": "an opaque token, usable by `clearInterval` to abort further events."
+    },
+    "doc": "Performs a task repeatedly, after the given\ndelay and subsequently on the same period.",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-event-loop-engine"
+    ],
+    "href": "packages---narwhal-node---narwhal-event-loop-engine---set-interval"
+}

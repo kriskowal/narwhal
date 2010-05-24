@@ -2,7 +2,7 @@
     "name": "flush",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-    "lineNo": 222,
+    "lineNo": 223,
     "params": [],
     "errors": [],
     "throws": [],

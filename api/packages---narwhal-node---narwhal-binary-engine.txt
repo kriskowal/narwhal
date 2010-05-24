@@ -1,0 +1,715 @@
+{
+    "name": "narwhal/binary-engine",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+    "lineNo": 2,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "module": true,
+    "doc": "An engine-specific compatibility layer on which\n[http://wiki.commonjs.org/wiki/Binary/B](CommonJS Binary/B)\n`ByteArray` and `ByteString` objects are built.",
+    "type": "module",
+    "id": "narwhal/binary-engine",
+    "children": [
+        {
+            "name": "B_LENGTH",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 13,
+            "params": [
+                {
+                    "name": "bytes",
+                    "type": "Buffer"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-length"
+        },
+        {
+            "name": "B_ALLOC",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 20,
+            "params": [
+                {
+                    "name": "length",
+                    "type": "Number"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Buffer",
+                "doc": ""
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-alloc"
+        },
+        {
+            "name": "B_FILL",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 28,
+            "params": [
+                {
+                    "name": "bytes",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "length",
+                    "type": "Number"
+                },
+                {
+                    "name": "offset",
+                    "type": "Number"
+                },
+                {
+                    "name": "value",
+                    "type": "Number"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-fill"
+        },
+        {
+            "name": "B_COPY",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 38,
+            "params": [
+                {
+                    "name": "source",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "sourceStart",
+                    "type": "Number"
+                },
+                {
+                    "name": "target",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "targetStart",
+                    "type": "Number"
+                },
+                {
+                    "name": "length",
+                    "type": "NUmber"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-copy"
+        },
+        {
+            "name": "B_GET",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 49,
+            "params": [
+                {
+                    "name": "bytes",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "index",
+                    "type": "Number"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Number",
+                "doc": "byte value"
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-get"
+        },
+        {
+            "name": "B_SET",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 58,
+            "params": [
+                {
+                    "name": "bytes",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "index",
+                    "type": "Number"
+                },
+                {
+                    "name": "value",
+                    "type": "Number"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-set"
+        },
+        {
+            "name": "B_DECODE",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 67,
+            "params": [
+                {
+                    "name": "bytes",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "offset",
+                    "type": "Number"
+                },
+                {
+                    "name": "length",
+                    "type": "Number"
+                },
+                {
+                    "name": "charset",
+                    "type": "String"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-decode"
+        },
+        {
+            "name": "B_DECODE_DEFAULT",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 77,
+            "params": [
+                {
+                    "name": "bytes",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "offset",
+                    "type": "Number"
+                },
+                {
+                    "name": "length",
+                    "type": "Number"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "String",
+                "doc": ""
+            },
+            "doc": "`charset` is `UTF-8` by default.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-decode-default"
+        },
+        {
+            "name": "B_ENCODE",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 88,
+            "params": [
+                {
+                    "name": "string",
+                    "type": "String"
+                },
+                {
+                    "name": "charset",
+                    "type": "String"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Buffer",
+                "doc": ""
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-encode"
+        },
+        {
+            "name": "B_ENCODE_DEFAULT",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 97,
+            "params": [
+                {
+                    "name": "string",
+                    "type": "String"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Buffer",
+                "doc": ""
+            },
+            "doc": "`charset` is `UTF-8` by default.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-encode-default"
+        },
+        {
+            "name": "B_TRANSCODE",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 106,
+            "params": [
+                {
+                    "name": "source",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "offset",
+                    "type": "Number"
+                },
+                {
+                    "name": "length",
+                    "type": "Number"
+                },
+                {
+                    "name": "sourceCharset",
+                    "type": "String"
+                },
+                {
+                    "name": "targetCharset",
+                    "type": "String"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Buffer",
+                "doc": "target"
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-transcode"
+        }
+    ],
+    "index": {
+        "B_LENGTH": {
+            "name": "B_LENGTH",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 13,
+            "params": [
+                {
+                    "name": "bytes",
+                    "type": "Buffer"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-length"
+        },
+        "B_ALLOC": {
+            "name": "B_ALLOC",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 20,
+            "params": [
+                {
+                    "name": "length",
+                    "type": "Number"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Buffer",
+                "doc": ""
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-alloc"
+        },
+        "B_FILL": {
+            "name": "B_FILL",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 28,
+            "params": [
+                {
+                    "name": "bytes",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "length",
+                    "type": "Number"
+                },
+                {
+                    "name": "offset",
+                    "type": "Number"
+                },
+                {
+                    "name": "value",
+                    "type": "Number"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-fill"
+        },
+        "B_COPY": {
+            "name": "B_COPY",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 38,
+            "params": [
+                {
+                    "name": "source",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "sourceStart",
+                    "type": "Number"
+                },
+                {
+                    "name": "target",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "targetStart",
+                    "type": "Number"
+                },
+                {
+                    "name": "length",
+                    "type": "NUmber"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-copy"
+        },
+        "B_GET": {
+            "name": "B_GET",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 49,
+            "params": [
+                {
+                    "name": "bytes",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "index",
+                    "type": "Number"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Number",
+                "doc": "byte value"
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-get"
+        },
+        "B_SET": {
+            "name": "B_SET",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 58,
+            "params": [
+                {
+                    "name": "bytes",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "index",
+                    "type": "Number"
+                },
+                {
+                    "name": "value",
+                    "type": "Number"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-set"
+        },
+        "B_DECODE": {
+            "name": "B_DECODE",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 67,
+            "params": [
+                {
+                    "name": "bytes",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "offset",
+                    "type": "Number"
+                },
+                {
+                    "name": "length",
+                    "type": "Number"
+                },
+                {
+                    "name": "charset",
+                    "type": "String"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-decode"
+        },
+        "B_DECODE_DEFAULT": {
+            "name": "B_DECODE_DEFAULT",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 77,
+            "params": [
+                {
+                    "name": "bytes",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "offset",
+                    "type": "Number"
+                },
+                {
+                    "name": "length",
+                    "type": "Number"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "String",
+                "doc": ""
+            },
+            "doc": "`charset` is `UTF-8` by default.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-decode-default"
+        },
+        "B_ENCODE": {
+            "name": "B_ENCODE",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 88,
+            "params": [
+                {
+                    "name": "string",
+                    "type": "String"
+                },
+                {
+                    "name": "charset",
+                    "type": "String"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Buffer",
+                "doc": ""
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-encode"
+        },
+        "B_ENCODE_DEFAULT": {
+            "name": "B_ENCODE_DEFAULT",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 97,
+            "params": [
+                {
+                    "name": "string",
+                    "type": "String"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Buffer",
+                "doc": ""
+            },
+            "doc": "`charset` is `UTF-8` by default.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-encode-default"
+        },
+        "B_TRANSCODE": {
+            "name": "B_TRANSCODE",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+            "lineNo": 106,
+            "params": [
+                {
+                    "name": "source",
+                    "type": "Buffer"
+                },
+                {
+                    "name": "offset",
+                    "type": "Number"
+                },
+                {
+                    "name": "length",
+                    "type": "Number"
+                },
+                {
+                    "name": "sourceCharset",
+                    "type": "String"
+                },
+                {
+                    "name": "targetCharset",
+                    "type": "String"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Buffer",
+                "doc": "target"
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-binary-engine"
+            ],
+            "href": "packages---narwhal-node---narwhal-binary-engine---__b-transcode"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-node"
+    ],
+    "href": "packages---narwhal-node---narwhal-binary-engine"
+}

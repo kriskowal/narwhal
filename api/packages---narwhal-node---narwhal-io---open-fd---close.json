@@ -1,0 +1,1 @@
+{"name":"close","markup":"markdown","fileName":"/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/io.js","lineNo":97,"params":[],"errors":[],"throws":[],"see":[],"doc":"Closes the underlying file descriptor.","heritage":["packages","narwhal-node","narwhal-io","open-fd"],"href":"packages---narwhal-node---narwhal-io---open-fd---close"}

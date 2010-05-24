@@ -1,0 +1,22 @@
+{
+    "name": "B_LENGTH",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/binary-engine.js",
+    "lineNo": 13,
+    "params": [
+        {
+            "name": "bytes",
+            "type": "Buffer"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-binary-engine"
+    ],
+    "href": "packages---narwhal-node---narwhal-binary-engine---__b-length"
+}

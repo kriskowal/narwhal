@@ -1,0 +1,572 @@
+<html>
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>narwhal/binary-engine</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>An engine-specific compatibility layer on which
+<a href="CommonJS Binary/B">http://wiki.commonjs.org/wiki/Binary/B</a>
+<code>ByteArray</code> and <code>ByteString</code> objects are built.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#B_LENGTH"><tt>B_LENGTH</tt></a></li>
+    
+        <li><a href="#B_ALLOC"><tt>B_ALLOC</tt></a></li>
+    
+        <li><a href="#B_FILL"><tt>B_FILL</tt></a></li>
+    
+        <li><a href="#B_COPY"><tt>B_COPY</tt></a></li>
+    
+        <li><a href="#B_GET"><tt>B_GET</tt></a></li>
+    
+        <li><a href="#B_SET"><tt>B_SET</tt></a></li>
+    
+        <li><a href="#B_DECODE"><tt>B_DECODE</tt></a></li>
+    
+        <li><a href="#B_DECODE_DEFAULT"><tt>B_DECODE_DEFAULT</tt></a></li>
+    
+        <li><a href="#B_ENCODE"><tt>B_ENCODE</tt></a></li>
+    
+        <li><a href="#B_ENCODE_DEFAULT"><tt>B_ENCODE_DEFAULT</tt></a></li>
+    
+        <li><a href="#B_TRANSCODE"><tt>B_TRANSCODE</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="B_LENGTH"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-binary-engine---__b-length.html"><tt>B_LENGTH</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>bytes</tt></th>
+            <td class="B"><tt>Buffer</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="B_ALLOC"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-binary-engine---__b-alloc.html"><tt>B_ALLOC</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>length</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Buffer</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="B_FILL"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-binary-engine---__b-fill.html"><tt>B_FILL</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>bytes</tt></th>
+            <td class="B"><tt>Buffer</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>length</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>offset</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>value</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="B_COPY"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-binary-engine---__b-copy.html"><tt>B_COPY</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>source</tt></th>
+            <td class="B"><tt>Buffer</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>sourceStart</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>target</tt></th>
+            <td class="B"><tt>Buffer</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>targetStart</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>length</tt></th>
+            <td class="B"><tt>NUmber</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="B_GET"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-binary-engine---__b-get.html"><tt>B_GET</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>bytes</tt></th>
+            <td class="B"><tt>Buffer</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>index</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Number</tt></td>
+            <td class="C"><p>byte value</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="B_SET"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-binary-engine---__b-set.html"><tt>B_SET</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>bytes</tt></th>
+            <td class="B"><tt>Buffer</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>index</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>value</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="B_DECODE"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-binary-engine---__b-decode.html"><tt>B_DECODE</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>bytes</tt></th>
+            <td class="B"><tt>Buffer</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>offset</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>length</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>charset</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="B_DECODE_DEFAULT"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-binary-engine---__b-decode-default.html"><tt>B_DECODE_DEFAULT</tt></a>
+        
+        
+    </h2>
+
+    <p><code>charset</code> is <code>UTF-8</code> by default.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>bytes</tt></th>
+            <td class="B"><tt>Buffer</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>offset</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>length</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="B_ENCODE"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-binary-engine---__b-encode.html"><tt>B_ENCODE</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>string</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>charset</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Buffer</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="B_ENCODE_DEFAULT"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-binary-engine---__b-encode-default.html"><tt>B_ENCODE_DEFAULT</tt></a>
+        
+        
+    </h2>
+
+    <p><code>charset</code> is <code>UTF-8</code> by default.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>string</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Buffer</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="B_TRANSCODE"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-binary-engine---__b-transcode.html"><tt>B_TRANSCODE</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>source</tt></th>
+            <td class="B"><tt>Buffer</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>offset</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>length</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>sourceCharset</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>targetCharset</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Buffer</tt></td>
+            <td class="C"><p>target</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-node---narwhal-binary-engine.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

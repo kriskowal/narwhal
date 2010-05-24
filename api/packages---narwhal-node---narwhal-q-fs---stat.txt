@@ -1,0 +1,26 @@
+{
+    "name": "stat",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-fs.js",
+    "lineNo": 68,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Promise * Stat",
+        "doc": ""
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-q-fs"
+    ],
+    "href": "packages---narwhal-node---narwhal-q-fs---stat"
+}

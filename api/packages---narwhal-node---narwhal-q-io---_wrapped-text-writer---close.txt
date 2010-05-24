@@ -1,0 +1,22 @@
+{
+    "name": "close",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-io.js",
+    "lineNo": 155,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Promise * Undefined",
+        "doc": "a promise that will be resolved when the stream has finished writing, flushing, and closed."
+    },
+    "doc": "Closes the stream, waiting for the internal buffer\nto flush.",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-q-io",
+        "_wrapped-text-writer"
+    ],
+    "href": "packages---narwhal-node---narwhal-q-io---_wrapped-text-writer---close"
+}

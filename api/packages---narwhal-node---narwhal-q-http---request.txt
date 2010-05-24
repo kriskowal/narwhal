@@ -1,0 +1,27 @@
+{
+    "name": "request",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-http.js",
+    "lineNo": 191,
+    "params": [
+        {
+            "name": "request",
+            "type": "Request {host, port, method, path, headers, body}",
+            "doc": "(may be a promise)"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Promise * Response",
+        "doc": "promise for a response"
+    },
+    "doc": "Issues an HTTP request.",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-q-http"
+    ],
+    "href": "packages---narwhal-node---narwhal-q-http---request"
+}

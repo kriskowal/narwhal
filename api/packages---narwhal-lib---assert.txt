@@ -8,7 +8,7 @@
     "throws": [],
     "see": [],
     "module": true,
-    "doc": "Methods for throwing or logging on failed assertions,\nuseful for unit testing.\n\nAn implementation of the CommonJS Unit Testing 1.0\nSpecification's `assert` module.\nhttp://wiki.commonjs.org/wiki/Unit_Testing/1.0",
+    "doc": "Methods for throwing or logging on failed assertions,\nuseful for unit testing.\n\nAn implementation of the CommonJS Unit Testing 1.0\nSpecification's `assert` module.\n[http://wiki.commonjs.org/wiki/Unit_Testing/1.0](http://wiki.commonjs.org/wiki/Unit_Testing/1.0)",
     "type": "module",
     "id": "assert",
     "children": [
@@ -23,21 +23,23 @@
                     "type": "string || {message: String, ...}"
                 }
             ],
-            "errors": [],
+            "errors": [
+                "Did not recognize \"instanceof\" tag."
+            ],
             "throws": [],
             "see": [],
-            "constructor": true,
             "returns": {
-                "type": "name: \"AssertionError\", message: String, \"actual\", \"expected\", \"operator\", ...",
+                "type": "{name: \"AssertionError\", message: String, \"actual\", \"expected\", \"operator\", ...}",
                 "doc": "an error, that may contain backtrace information on Rhino and V8."
             },
+            "constructor": true,
             "doc": "",
             "children": [
                 {
                     "name": "toString",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                    "lineNo": 66,
+                    "lineNo": 67,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -45,7 +47,7 @@
                     "returns": {
                         "doc": "a representation of the error."
                     },
-                    "doc": "WARNING: This method is not specified.",
+                    "doc": "Produces a representation like:\n\n* `name: message` or\n* `name: actual == expected`\n\nDepending on whether there is a message, or\nthe comparison operator.\n\nWARNING: This method is not specified.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -58,7 +60,7 @@
                     "name": "toSource",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                    "lineNo": 88,
+                    "lineNo": 98,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -66,7 +68,7 @@
                     "returns": {
                         "doc": "an evaluable representation of the error."
                     },
-                    "doc": "WARNING: This method is not specified.",
+                    "doc": "Produces an expression like:\n\n    new (require(\"assert\").AssertionError)({\n        \"message\": \"E.T., nach Hause telefonieren.\"\n    })\n\nWARNING: This method is not specified.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -81,7 +83,7 @@
                     "name": "toString",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                    "lineNo": 66,
+                    "lineNo": 67,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -89,7 +91,7 @@
                     "returns": {
                         "doc": "a representation of the error."
                     },
-                    "doc": "WARNING: This method is not specified.",
+                    "doc": "Produces a representation like:\n\n* `name: message` or\n* `name: actual == expected`\n\nDepending on whether there is a message, or\nthe comparison operator.\n\nWARNING: This method is not specified.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -102,7 +104,7 @@
                     "name": "toSource",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                    "lineNo": 88,
+                    "lineNo": 98,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -110,7 +112,7 @@
                     "returns": {
                         "doc": "an evaluable representation of the error."
                     },
-                    "doc": "WARNING: This method is not specified.",
+                    "doc": "Produces an expression like:\n\n    new (require(\"assert\").AssertionError)({\n        \"message\": \"E.T., nach Hause telefonieren.\"\n    })\n\nWARNING: This method is not specified.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -131,21 +133,25 @@
             "name": "fail",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 111,
+            "lineNo": 128,
             "params": [
                 {
                     "name": "options",
                     "doc": "properties for initializing the AssertionError."
                 }
             ],
-            "errors": [],
+            "errors": [
+                "Did not recognize \"see\" tag.",
+                "Did not recognize \"see\" tag."
+            ],
             "throws": [
                 {
-                    "doc": "an AssertionError."
+                    "type": "AssertionError",
+                    "doc": ""
                 }
             ],
             "see": [],
-            "doc": "WARNING: This method is not specified.",
+            "doc": "Called polymorphically by `assert` objects, particularly\nthis assert module, when a test fails.  The behavior of\nthis implementation of `fail` is to throw an `AssertionError`,\nbut by prototypically inheriting the `assert` module, using\n`Object.create` or its ilk, and overriding `fail`, it is possible\nto trivially create variations that log failures rather\nthan throwing.  The `test` module sends such an object to\neach `test*` method in a unit test tree so that tests have\nthe option of logging instead of throwing.  Because each\ntest receives a different `assert` object, the logs are\nassociable with the individual test.\n\nWARNING: This method is not specified.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -157,8 +163,13 @@
             "name": "pass",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 123,
-            "params": [],
+            "lineNo": 156,
+            "params": [
+                {
+                    "name": "message",
+                    "type": "String"
+                }
+            ],
             "errors": [],
             "throws": [],
             "see": [],
@@ -174,7 +185,7 @@
             "name": "error",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 137,
+            "lineNo": 172,
             "params": [
                 {
                     "name": "message",
@@ -184,7 +195,7 @@
             "errors": [],
             "throws": [],
             "see": [],
-            "doc": "Called by the test runner when a test errors out.\n\nThis method is inteded to be overridden by inheritors,\nparticularly loggers.  The base implementation is a\nno-op.\n\nWARNING: This method is not specified.",
+            "doc": "Called by the test runner when a test errors out, which\noccurs when a test throws an exception that is not an\n`AssertionError`.\n\nThis method is inteded to be overridden by inheritors,\nparticularly loggers.  The base implementation is a\nno-op.\n\nWARNING: This method is not specified.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -196,7 +207,7 @@
             "name": "section",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 153,
+            "lineNo": 190,
             "params": [],
             "errors": [],
             "throws": [],
@@ -204,7 +215,7 @@
             "returns": {
                 "doc": "this"
             },
-            "doc": "Called by the test runner when a test errors begins\na new section of tests and is expected to return an\nobject suitable for sending log messages like \"pass\",\n\"error\", \"fail\", and \"section\".\n\nThis method is inteded to be overridden by inheritors,\nparticularly loggers.  The base implementation is a\nno-op.\n\nWARNING: This method is not specified.",
+            "doc": "Called by the test runner when a test errors begins\na new section of tests and is expected to return an\nobject suitable for sending log messages like `pass`,\n`error`, `fail`, and `section`.\n\nThis method is inteded to be overridden by inheritors,\nparticularly loggers.  The base implementation is a\nno-op.\n\nWARNING: This method is not specified.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -216,7 +227,7 @@
             "name": "ok",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 178,
+            "lineNo": 215,
             "params": [
                 {
                     "name": "value"
@@ -247,7 +258,7 @@
             "name": "equal",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 200,
+            "lineNo": 237,
             "params": [
                 {
                     "name": "actual"
@@ -281,7 +292,7 @@
             "name": "notEqual",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 224,
+            "lineNo": 261,
             "params": [
                 {
                     "name": "actual"
@@ -315,7 +326,7 @@
             "name": "deepEqual",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 247,
+            "lineNo": 284,
             "params": [
                 {
                     "name": "actual"
@@ -349,7 +360,7 @@
             "name": "notDeepEqual",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 322,
+            "lineNo": 359,
             "params": [
                 {
                     "name": "actual"
@@ -383,7 +394,7 @@
             "name": "strictEqual",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 345,
+            "lineNo": 382,
             "params": [
                 {
                     "name": "actual"
@@ -417,7 +428,7 @@
             "name": "notStrictEqual",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 368,
+            "lineNo": 405,
             "params": [
                 {
                     "name": "actual"
@@ -448,10 +459,10 @@
             "href": "packages---narwhal-lib---assert---not-strict-equal"
         },
         {
-            "name": "message",
+            "name": "throws",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 391,
+            "lineNo": 428,
             "params": [
                 {
                     "name": "block",
@@ -477,13 +488,13 @@
                 "narwhal-lib",
                 "assert"
             ],
-            "href": "packages---narwhal-lib---assert---message"
+            "href": "packages---narwhal-lib---assert---throws"
         },
         {
             "name": "Assert",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 438,
+            "lineNo": 476,
             "params": [
                 {
                     "name": "log",
@@ -499,7 +510,7 @@
                 "type": "assert",
                 "doc": "an object inheriting prototypically from the `assert` module itself, with `pass`, `fail`, `error`, and `section` overridden to forward messages to the given `Log` object."
             },
-            "doc": "Constructs a logging `assert` object.\nWARNING: This method is not specified.",
+            "doc": "Constructs a logging `assert` object.\n\nWARNING: This method is not specified.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -520,21 +531,23 @@
                     "type": "string || {message: String, ...}"
                 }
             ],
-            "errors": [],
+            "errors": [
+                "Did not recognize \"instanceof\" tag."
+            ],
             "throws": [],
             "see": [],
-            "constructor": true,
             "returns": {
-                "type": "name: \"AssertionError\", message: String, \"actual\", \"expected\", \"operator\", ...",
+                "type": "{name: \"AssertionError\", message: String, \"actual\", \"expected\", \"operator\", ...}",
                 "doc": "an error, that may contain backtrace information on Rhino and V8."
             },
+            "constructor": true,
             "doc": "",
             "children": [
                 {
                     "name": "toString",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                    "lineNo": 66,
+                    "lineNo": 67,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -542,7 +555,7 @@
                     "returns": {
                         "doc": "a representation of the error."
                     },
-                    "doc": "WARNING: This method is not specified.",
+                    "doc": "Produces a representation like:\n\n* `name: message` or\n* `name: actual == expected`\n\nDepending on whether there is a message, or\nthe comparison operator.\n\nWARNING: This method is not specified.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -555,7 +568,7 @@
                     "name": "toSource",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                    "lineNo": 88,
+                    "lineNo": 98,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -563,7 +576,7 @@
                     "returns": {
                         "doc": "an evaluable representation of the error."
                     },
-                    "doc": "WARNING: This method is not specified.",
+                    "doc": "Produces an expression like:\n\n    new (require(\"assert\").AssertionError)({\n        \"message\": \"E.T., nach Hause telefonieren.\"\n    })\n\nWARNING: This method is not specified.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -578,7 +591,7 @@
                     "name": "toString",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                    "lineNo": 66,
+                    "lineNo": 67,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -586,7 +599,7 @@
                     "returns": {
                         "doc": "a representation of the error."
                     },
-                    "doc": "WARNING: This method is not specified.",
+                    "doc": "Produces a representation like:\n\n* `name: message` or\n* `name: actual == expected`\n\nDepending on whether there is a message, or\nthe comparison operator.\n\nWARNING: This method is not specified.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -599,7 +612,7 @@
                     "name": "toSource",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-                    "lineNo": 88,
+                    "lineNo": 98,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -607,7 +620,7 @@
                     "returns": {
                         "doc": "an evaluable representation of the error."
                     },
-                    "doc": "WARNING: This method is not specified.",
+                    "doc": "Produces an expression like:\n\n    new (require(\"assert\").AssertionError)({\n        \"message\": \"E.T., nach Hause telefonieren.\"\n    })\n\nWARNING: This method is not specified.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -628,21 +641,25 @@
             "name": "fail",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 111,
+            "lineNo": 128,
             "params": [
                 {
                     "name": "options",
                     "doc": "properties for initializing the AssertionError."
                 }
             ],
-            "errors": [],
+            "errors": [
+                "Did not recognize \"see\" tag.",
+                "Did not recognize \"see\" tag."
+            ],
             "throws": [
                 {
-                    "doc": "an AssertionError."
+                    "type": "AssertionError",
+                    "doc": ""
                 }
             ],
             "see": [],
-            "doc": "WARNING: This method is not specified.",
+            "doc": "Called polymorphically by `assert` objects, particularly\nthis assert module, when a test fails.  The behavior of\nthis implementation of `fail` is to throw an `AssertionError`,\nbut by prototypically inheriting the `assert` module, using\n`Object.create` or its ilk, and overriding `fail`, it is possible\nto trivially create variations that log failures rather\nthan throwing.  The `test` module sends such an object to\neach `test*` method in a unit test tree so that tests have\nthe option of logging instead of throwing.  Because each\ntest receives a different `assert` object, the logs are\nassociable with the individual test.\n\nWARNING: This method is not specified.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -654,8 +671,13 @@
             "name": "pass",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 123,
-            "params": [],
+            "lineNo": 156,
+            "params": [
+                {
+                    "name": "message",
+                    "type": "String"
+                }
+            ],
             "errors": [],
             "throws": [],
             "see": [],
@@ -671,7 +693,7 @@
             "name": "error",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 137,
+            "lineNo": 172,
             "params": [
                 {
                     "name": "message",
@@ -681,7 +703,7 @@
             "errors": [],
             "throws": [],
             "see": [],
-            "doc": "Called by the test runner when a test errors out.\n\nThis method is inteded to be overridden by inheritors,\nparticularly loggers.  The base implementation is a\nno-op.\n\nWARNING: This method is not specified.",
+            "doc": "Called by the test runner when a test errors out, which\noccurs when a test throws an exception that is not an\n`AssertionError`.\n\nThis method is inteded to be overridden by inheritors,\nparticularly loggers.  The base implementation is a\nno-op.\n\nWARNING: This method is not specified.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -693,7 +715,7 @@
             "name": "section",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 153,
+            "lineNo": 190,
             "params": [],
             "errors": [],
             "throws": [],
@@ -701,7 +723,7 @@
             "returns": {
                 "doc": "this"
             },
-            "doc": "Called by the test runner when a test errors begins\na new section of tests and is expected to return an\nobject suitable for sending log messages like \"pass\",\n\"error\", \"fail\", and \"section\".\n\nThis method is inteded to be overridden by inheritors,\nparticularly loggers.  The base implementation is a\nno-op.\n\nWARNING: This method is not specified.",
+            "doc": "Called by the test runner when a test errors begins\na new section of tests and is expected to return an\nobject suitable for sending log messages like `pass`,\n`error`, `fail`, and `section`.\n\nThis method is inteded to be overridden by inheritors,\nparticularly loggers.  The base implementation is a\nno-op.\n\nWARNING: This method is not specified.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -713,7 +735,7 @@
             "name": "ok",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 178,
+            "lineNo": 215,
             "params": [
                 {
                     "name": "value"
@@ -744,7 +766,7 @@
             "name": "equal",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 200,
+            "lineNo": 237,
             "params": [
                 {
                     "name": "actual"
@@ -778,7 +800,7 @@
             "name": "notEqual",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 224,
+            "lineNo": 261,
             "params": [
                 {
                     "name": "actual"
@@ -812,7 +834,7 @@
             "name": "deepEqual",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 247,
+            "lineNo": 284,
             "params": [
                 {
                     "name": "actual"
@@ -846,7 +868,7 @@
             "name": "notDeepEqual",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 322,
+            "lineNo": 359,
             "params": [
                 {
                     "name": "actual"
@@ -880,7 +902,7 @@
             "name": "strictEqual",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 345,
+            "lineNo": 382,
             "params": [
                 {
                     "name": "actual"
@@ -914,7 +936,7 @@
             "name": "notStrictEqual",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 368,
+            "lineNo": 405,
             "params": [
                 {
                     "name": "actual"
@@ -944,11 +966,11 @@
             ],
             "href": "packages---narwhal-lib---assert---not-strict-equal"
         },
-        "message": {
-            "name": "message",
+        "throws": {
+            "name": "throws",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 391,
+            "lineNo": 428,
             "params": [
                 {
                     "name": "block",
@@ -974,13 +996,13 @@
                 "narwhal-lib",
                 "assert"
             ],
-            "href": "packages---narwhal-lib---assert---message"
+            "href": "packages---narwhal-lib---assert---throws"
         },
         "Assert": {
             "name": "Assert",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-            "lineNo": 438,
+            "lineNo": 476,
             "params": [
                 {
                     "name": "log",
@@ -996,7 +1018,7 @@
                 "type": "assert",
                 "doc": "an object inheriting prototypically from the `assert` module itself, with `pass`, `fail`, `error`, and `section` overridden to forward messages to the given `Log` object."
             },
-            "doc": "Constructs a logging `assert` object.\nWARNING: This method is not specified.",
+            "doc": "Constructs a logging `assert` object.\n\nWARNING: This method is not specified.",
             "heritage": [
                 "packages",
                 "narwhal-lib",

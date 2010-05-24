@@ -1,0 +1,131 @@
+{
+    "name": "WrappedTextReader",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-io.js",
+    "lineNo": 13,
+    "params": [
+        {
+            "name": "stream",
+            "doc": "any Node readable stream"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Promise * WrappedTextReader",
+        "doc": "a promise for the text stream reader."
+    },
+    "constructor": true,
+    "doc": "Wraps a Node readable stream, providing an API similar\nto a Narwhal synchronous `io` stream except returning\nQ promises for long latency operations.",
+    "children": [
+        {
+            "name": "read",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-io.js",
+            "lineNo": 60,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Promise * String",
+                "doc": "a promise for a String containing the entirety the remaining stream."
+            },
+            "doc": "Reads all of the remaining data from the stream.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-q-io",
+                "_wrapped-text-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-q-io---_wrapped-text-reader---read"
+        },
+        {
+            "name": "forEach",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-io.js",
+            "lineNo": 75,
+            "params": [
+                {
+                    "name": "write",
+                    "type": "Function(Promise * String)",
+                    "doc": "a function to be called on each chunk of input from this stream."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Promise * Undefined",
+                "doc": "a promise that will be resolved when the input is depleted."
+            },
+            "doc": "Reads and writes all of the remaining data from the\nstream in chunks.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-q-io",
+                "_wrapped-text-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-q-io---_wrapped-text-reader---for-each"
+        }
+    ],
+    "index": {
+        "read": {
+            "name": "read",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-io.js",
+            "lineNo": 60,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Promise * String",
+                "doc": "a promise for a String containing the entirety the remaining stream."
+            },
+            "doc": "Reads all of the remaining data from the stream.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-q-io",
+                "_wrapped-text-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-q-io---_wrapped-text-reader---read"
+        },
+        "forEach": {
+            "name": "forEach",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-io.js",
+            "lineNo": 75,
+            "params": [
+                {
+                    "name": "write",
+                    "type": "Function(Promise * String)",
+                    "doc": "a function to be called on each chunk of input from this stream."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Promise * Undefined",
+                "doc": "a promise that will be resolved when the input is depleted."
+            },
+            "doc": "Reads and writes all of the remaining data from the\nstream in chunks.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "narwhal-q-io",
+                "_wrapped-text-reader"
+            ],
+            "href": "packages---narwhal-node---narwhal-q-io---_wrapped-text-reader---for-each"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-q-io"
+    ],
+    "href": "packages---narwhal-node---narwhal-q-io---_wrapped-text-reader"
+}

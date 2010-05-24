@@ -1,6 +1,7 @@
 <html>
     <head>
     
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title></title>
     
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -43,10 +44,10 @@ to ensure that formatting is applied correctly.</p>
     <table class="form whatsupdoc-parameters">
         
         <tr>
-            <th class="A"><tt>the</tt></th>
+            <th class="A"><tt>system</tt></th>
             <td class="B"><tt>{stdout, stderr, env}</tt></th>
             
-            <td class="C"><p>"system" module or a reasonable facimile.</p></td>
+            <td class="C"><p>the "system" module or a reasonable facimile.</p></td>
             
         </tr>
         
@@ -76,6 +77,26 @@ to ensure that formatting is applied correctly.</p>
     
         <li><a href="#update"><tt>update</tt></a></li>
     
+        <li><a href="#moveTo"><tt>moveTo</tt></a></li>
+    
+        <li><a href="#moveBy"><tt>moveBy</tt></a></li>
+    
+        <li><a href="#home"><tt>home</tt></a></li>
+    
+        <li><a href="#clear"><tt>clear</tt></a></li>
+    
+        <li><a href="#clearUp"><tt>clearUp</tt></a></li>
+    
+        <li><a href="#cearDown"><tt>cearDown</tt></a></li>
+    
+        <li><a href="#clearLine"><tt>clearLine</tt></a></li>
+    
+        <li><a href="#clearLeft"><tt>clearLeft</tt></a></li>
+    
+        <li><a href="#clearRight"><tt>clearRight</tt></a></li>
+    
+        <li><a href="#error"><tt>error</tt></a></li>
+    
     </ul>
     
 
@@ -87,7 +108,7 @@ to ensure that formatting is applied correctly.</p>
         
     </h2>
 
-    
+    <p>enables terminal coloring.</p>
 
 
     <table class="form whatsupdoc-parameters">
@@ -110,7 +131,8 @@ to ensure that formatting is applied correctly.</p>
         
     </h2>
 
-    
+    <p>disables terminal coloring.  All subsequent null prefix
+codes will be stripped instead of translated.</p>
 
 
     <table class="form whatsupdoc-parameters">
@@ -258,20 +280,21 @@ codes.</p>
         
     </h2>
 
-    
+    <p>Writes a VT-100 color code from the given terms,
+omitting any term that is a null string, <code>""</code>.</p>
 
 
     <table class="form whatsupdoc-parameters">
         
         <tr>
             <th class="A"><tt>bold</tt></th>
-            <td class="B"><tt>Boolean</tt></th>
+            <td class="B"><tt>String</tt></th>
             
         </tr>
         
         <tr>
             <th class="A"><tt>fore</tt></th>
-            <td class="B"><tt>Number</tt></th>
+            <td class="B"><tt>String</tt></th>
             
             <td class="C"><p>a VT-100, single-digit color code for the foreground color.</p></td>
             
@@ -279,7 +302,7 @@ codes.</p>
         
         <tr>
             <th class="A"><tt>back</tt></th>
-            <td class="B"><tt>Number</tt></th>
+            <td class="B"><tt>String</tt></th>
             
             <td class="C"><p>a VT-100, signle-digit color code for the background color.</p></td>
             
@@ -293,6 +316,286 @@ codes.</p>
 
     
 
+    
+    </table>
+    
+    <a name="moveTo"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-term---_stream---move-to.html"><tt>moveTo</tt></a>
+        
+        
+    </h2>
+
+    <p>Moves the cursor to a coordinate.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>y</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+            <td class="C"><p>column</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>x</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+            <td class="C"><p>row</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="moveBy"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-term---_stream---move-by.html"><tt>moveBy</tt></a>
+        
+        
+    </h2>
+
+    <p>Moves the cursor by an offset coordinate.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>y</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+            <td class="C"><p>column</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>x</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+            <td class="C"><p>row</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="home"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-term---_stream---home.html"><tt>home</tt></a>
+        
+        
+    </h2>
+
+    <p>Moves the cursor to the home position</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="clear"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-term---_stream---clear.html"><tt>clear</tt></a>
+        
+        
+    </h2>
+
+    <p>Clears the screen</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="clearUp"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-term---_stream---clear-up.html"><tt>clearUp</tt></a>
+        
+        
+    </h2>
+
+    <p>Clears the screen above the cursor</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="cearDown"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-term---_stream---cear-down.html"><tt>cearDown</tt></a>
+        
+        
+    </h2>
+
+    <p>Clears the screen below the cursor</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="clearLine"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-term---_stream---clear-line.html"><tt>clearLine</tt></a>
+        
+        
+    </h2>
+
+    <p>Clears the current line</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="clearLeft"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-term---_stream---clear-left.html"><tt>clearLeft</tt></a>
+        
+        
+    </h2>
+
+    <p>Clears the line to the left of the cursor</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="clearRight"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-term---_stream---clear-right.html"><tt>clearRight</tt></a>
+        
+        
+    </h2>
+
+    <p>Clears the line to the right of the cursor</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="error"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-term---_stream---error.html"><tt>error</tt></a>
+        
+        
+    </h2>
+
+    <p>A subset of the output stream API that forwards
+<code>print</code> and <code>write</code> to the translator's underlying
+standard error.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-term---_stream---error---print.html"><tt>print</tt></a></th> 
+        <td><p>prints a line of space delimited fields to the error stream.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-term---_stream---error---write.html"><tt>write</tt></a></th> 
+        <td><p>writes a message to the error stream, translating
+null-codes to VT-100 escape sequences on the same
+channel.</p></td>
+    </tr>
+    
     
     </table>
     

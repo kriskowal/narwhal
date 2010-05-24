@@ -1,0 +1,227 @@
+<html>
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>WrappedTextWriter</tt>
+        
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Wraps a Node writable stream, providing an API similar to
+Narwhal's synchronous <code>io</code> streams, except returning and
+accepting promises for long-latency operations.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>stream</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>any Node writable stream</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Promise * WrappedTextWriter</tt></td>
+            <td class="C"><p>a promise for the text writer.</p></td>
+        </tr> 
+        
+        
+    </table>
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#write"><tt>write</tt></a></li>
+    
+        <li><a href="#flush"><tt>flush</tt></a></li>
+    
+        <li><a href="#close"><tt>close</tt></a></li>
+    
+        <li><a href="#destroy"><tt>destroy</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="write"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-q-io---_wrapped-text-writer---write.html"><tt>write</tt></a>
+        
+        
+    </h2>
+
+    <p>Writes content to the stream.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>content</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Promise * Undefined</tt></td>
+            <td class="C"><p>a promise that will  be resolved when the buffer is empty, meaning that all of the content has been sent.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="flush"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-q-io---_wrapped-text-writer---flush.html"><tt>flush</tt></a>
+        
+        
+    </h2>
+
+    <p>Waits for all data to flush on the stream.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Promise * Undefined</tt></td>
+            <td class="C"><p>a promise that will  be resolved when the buffer is empty</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="close"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-q-io---_wrapped-text-writer---close.html"><tt>close</tt></a>
+        
+        
+    </h2>
+
+    <p>Closes the stream, waiting for the internal buffer
+to flush.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Promise * Undefined</tt></td>
+            <td class="C"><p>a promise that will be resolved when the stream has finished writing, flushing, and closed.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="destroy"></a>
+    <h2>
+        <a href="packages---narwhal-node---narwhal-q-io---_wrapped-text-writer---destroy.html"><tt>destroy</tt></a>
+        
+        
+    </h2>
+
+    <p>Terminates writing on a stream, closing before
+the internal buffer drains.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Promise * Undefined</tt></td>
+            <td class="C"><p>a promise that will be resolved when the stream has finished closing.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-node---narwhal-q-io---_wrapped-text-writer.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+    "name": "remove",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+    "lineNo": 385,
+    "params": [
+        {
+            "name": "path",
+            "type": "String",
+            "doc": "path to a file (not a directory)."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Attempt to remove the `file` from disk. To remove\ndirectories use {@link fs-base.removeDirectory}.",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "fs-base"
+    ],
+    "href": "packages---narwhal-node---fs-base---remove"
+}

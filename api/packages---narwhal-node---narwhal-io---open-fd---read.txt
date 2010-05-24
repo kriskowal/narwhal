@@ -1,0 +1,28 @@
+{
+    "name": "read",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/io.js",
+    "lineNo": 107,
+    "params": [
+        {
+            "name": "max",
+            "type": "Number",
+            "doc": "(optional) defaults to `undefined`, which indicates that all bytes must be read until the end of the stream.  `null` indicates that the underlying system should choose the number of bytes to read based on the underlying device block size."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "ByteString",
+        "doc": "bytes read"
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-io",
+        "open-fd"
+    ],
+    "href": "packages---narwhal-node---narwhal-io---open-fd---read"
+}

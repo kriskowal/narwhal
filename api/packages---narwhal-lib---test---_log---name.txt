@@ -2,7 +2,7 @@
     "name": "name",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-    "lineNo": 205,
+    "lineNo": 206,
     "params": [],
     "errors": [
         "Did not recognize \"ownedproperty\" tag."

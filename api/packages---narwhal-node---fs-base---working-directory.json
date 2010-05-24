@@ -1,0 +1,1 @@
+{"name":"workingDirectory","markup":"markdown","fileName":"/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js","lineNo":572,"params":[],"errors":[],"throws":[],"see":[],"returns":{"type":"String","doc":""},"doc":"Get the process's current working directory.","heritage":["packages","narwhal-node","fs-base"],"href":"packages---narwhal-node---fs-base---working-directory"}

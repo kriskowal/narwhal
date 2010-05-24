@@ -2,7 +2,7 @@
     "name": "Log",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-    "lineNo": 184,
+    "lineNo": 185,
     "params": [
         {
             "name": "name",
@@ -35,7 +35,7 @@
             "name": "options",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 200,
+            "lineNo": 201,
             "params": [],
             "errors": [],
             "throws": [],
@@ -53,7 +53,7 @@
             "name": "stream",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 202,
+            "lineNo": 203,
             "params": [],
             "errors": [],
             "throws": [],
@@ -72,7 +72,7 @@
             "name": "name",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 205,
+            "lineNo": 206,
             "params": [],
             "errors": [
                 "Did not recognize \"ownedproperty\" tag."
@@ -92,7 +92,7 @@
             "name": "parent",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 207,
+            "lineNo": 208,
             "params": [],
             "errors": [
                 "Did not recognize \"ownedproperty\" tag."
@@ -112,7 +112,7 @@
             "name": "root",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 209,
+            "lineNo": 210,
             "params": [],
             "errors": [
                 "Did not recognize \"ownedproperty\" tag."
@@ -132,7 +132,7 @@
             "name": "passes",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 211,
+            "lineNo": 212,
             "params": [],
             "errors": [
                 "Did not recognize \"ownedproperty\" tag."
@@ -152,7 +152,7 @@
             "name": "fails",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 213,
+            "lineNo": 214,
             "params": [],
             "errors": [
                 "Did not recognize \"ownedproperty\" tag."
@@ -172,7 +172,7 @@
             "name": "errors",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 215,
+            "lineNo": 216,
             "params": [],
             "errors": [
                 "Did not recognize \"ownedproperty\" tag."
@@ -192,7 +192,7 @@
             "name": "flush",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 222,
+            "lineNo": 223,
             "params": [],
             "errors": [],
             "throws": [],
@@ -210,7 +210,7 @@
             "name": "pass",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 232,
+            "lineNo": 233,
             "params": [
                 {
                     "name": "message",
@@ -233,7 +233,7 @@
             "name": "fail",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 242,
+            "lineNo": 243,
             "params": [
                 {
                     "name": "exception",
@@ -256,7 +256,7 @@
             "name": "error",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 263,
+            "lineNo": 264,
             "params": [
                 {
                     "name": "exception",
@@ -283,7 +283,7 @@
             "name": "begin",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 280,
+            "lineNo": 281,
             "params": [],
             "errors": [],
             "throws": [],
@@ -301,7 +301,7 @@
             "name": "end",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 285,
+            "lineNo": 286,
             "params": [],
             "errors": [],
             "throws": [],
@@ -319,7 +319,7 @@
             "name": "report",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 290,
+            "lineNo": 291,
             "params": [],
             "errors": [],
             "throws": [],
@@ -337,7 +337,7 @@
             "name": "print",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 309,
+            "lineNo": 310,
             "params": [],
             "errors": [],
             "throws": [],
@@ -355,7 +355,7 @@
             "name": "section",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 318,
+            "lineNo": 319,
             "params": [],
             "errors": [],
             "throws": [],
@@ -377,7 +377,7 @@
             "name": "Assert",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 325,
+            "lineNo": 326,
             "params": [],
             "errors": [],
             "throws": [],
@@ -401,7 +401,7 @@
             "name": "options",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 200,
+            "lineNo": 201,
             "params": [],
             "errors": [],
             "throws": [],
@@ -419,7 +419,7 @@
             "name": "stream",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 202,
+            "lineNo": 203,
             "params": [],
             "errors": [],
             "throws": [],
@@ -438,7 +438,7 @@
             "name": "name",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 205,
+            "lineNo": 206,
             "params": [],
             "errors": [
                 "Did not recognize \"ownedproperty\" tag."
@@ -458,7 +458,7 @@
             "name": "parent",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 207,
+            "lineNo": 208,
             "params": [],
             "errors": [
                 "Did not recognize \"ownedproperty\" tag."
@@ -478,7 +478,7 @@
             "name": "root",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 209,
+            "lineNo": 210,
             "params": [],
             "errors": [
                 "Did not recognize \"ownedproperty\" tag."
@@ -498,7 +498,7 @@
             "name": "passes",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 211,
+            "lineNo": 212,
             "params": [],
             "errors": [
                 "Did not recognize \"ownedproperty\" tag."
@@ -518,7 +518,7 @@
             "name": "fails",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 213,
+            "lineNo": 214,
             "params": [],
             "errors": [
                 "Did not recognize \"ownedproperty\" tag."
@@ -538,7 +538,7 @@
             "name": "errors",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 215,
+            "lineNo": 216,
             "params": [],
             "errors": [
                 "Did not recognize \"ownedproperty\" tag."
@@ -558,7 +558,7 @@
             "name": "flush",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 222,
+            "lineNo": 223,
             "params": [],
             "errors": [],
             "throws": [],
@@ -576,7 +576,7 @@
             "name": "pass",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 232,
+            "lineNo": 233,
             "params": [
                 {
                     "name": "message",
@@ -599,7 +599,7 @@
             "name": "fail",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 242,
+            "lineNo": 243,
             "params": [
                 {
                     "name": "exception",
@@ -622,7 +622,7 @@
             "name": "error",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 263,
+            "lineNo": 264,
             "params": [
                 {
                     "name": "exception",
@@ -649,7 +649,7 @@
             "name": "begin",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 280,
+            "lineNo": 281,
             "params": [],
             "errors": [],
             "throws": [],
@@ -667,7 +667,7 @@
             "name": "end",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 285,
+            "lineNo": 286,
             "params": [],
             "errors": [],
             "throws": [],
@@ -685,7 +685,7 @@
             "name": "report",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 290,
+            "lineNo": 291,
             "params": [],
             "errors": [],
             "throws": [],
@@ -703,7 +703,7 @@
             "name": "print",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 309,
+            "lineNo": 310,
             "params": [],
             "errors": [],
             "throws": [],
@@ -721,7 +721,7 @@
             "name": "section",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 318,
+            "lineNo": 319,
             "params": [],
             "errors": [],
             "throws": [],
@@ -743,7 +743,7 @@
             "name": "Assert",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-            "lineNo": 325,
+            "lineNo": 326,
             "params": [],
             "errors": [],
             "throws": [],

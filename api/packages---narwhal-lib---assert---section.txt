@@ -2,7 +2,7 @@
     "name": "section",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/assert.js",
-    "lineNo": 153,
+    "lineNo": 190,
     "params": [],
     "errors": [],
     "throws": [],
@@ -10,7 +10,7 @@
     "returns": {
         "doc": "this"
     },
-    "doc": "Called by the test runner when a test errors begins\na new section of tests and is expected to return an\nobject suitable for sending log messages like \"pass\",\n\"error\", \"fail\", and \"section\".\n\nThis method is inteded to be overridden by inheritors,\nparticularly loggers.  The base implementation is a\nno-op.\n\nWARNING: This method is not specified.",
+    "doc": "Called by the test runner when a test errors begins\na new section of tests and is expected to return an\nobject suitable for sending log messages like `pass`,\n`error`, `fail`, and `section`.\n\nThis method is inteded to be overridden by inheritors,\nparticularly loggers.  The base implementation is a\nno-op.\n\nWARNING: This method is not specified.",
     "heritage": [
         "packages",
         "narwhal-lib",

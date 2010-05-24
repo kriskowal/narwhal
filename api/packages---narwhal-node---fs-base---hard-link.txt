@@ -1,0 +1,24 @@
+{
+    "name": "hardLink",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+    "lineNo": 768,
+    "params": [
+        {
+            "name": "source"
+        },
+        {
+            "name": "target"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "fs-base"
+    ],
+    "href": "packages---narwhal-node---fs-base---hard-link"
+}

@@ -2,7 +2,7 @@
     "name": "Assert",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-    "lineNo": 325,
+    "lineNo": 326,
     "params": [],
     "errors": [],
     "throws": [],

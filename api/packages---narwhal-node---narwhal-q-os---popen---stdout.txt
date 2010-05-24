@@ -1,0 +1,18 @@
+{
+    "name": "stdout",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/narwhal/q-os.js",
+    "lineNo": 34,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Q IO readable stream",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "narwhal-q-os",
+        "popen"
+    ],
+    "href": "packages---narwhal-node---narwhal-q-os---popen---stdout"
+}

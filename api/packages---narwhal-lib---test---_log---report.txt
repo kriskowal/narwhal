@@ -2,7 +2,7 @@
     "name": "report",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/test.js",
-    "lineNo": 290,
+    "lineNo": 291,
     "params": [],
     "errors": [],
     "throws": [],
