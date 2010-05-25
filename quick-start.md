@@ -16,8 +16,6 @@ Put Narwhal on your PATH environment variable.
 * `export PATH=$PATH:~/narwhal/bin`, or
 * `source narwhal/bin/activate`
 
-_Note_: If you add this `export` statement to something that is executed every time a shell is started (e.g. `~/.bashrc`) it is important that you append to your existing path instead of prepending to it so `narwhal/bin` is not at the head of your path for every newly activated sea.
-
 Run `narwhal` or `js` (they are equivalent).
 
 * `js narwhal/examples/hello`

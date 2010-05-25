@@ -1,0 +1,32 @@
+{
+    "name": "Branch",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/jaque/lib/jaque/route.js",
+    "lineNo": 119,
+    "params": [
+        {
+            "name": "paths",
+            "type": "Object * App",
+            "doc": "a mapping from path components (single file or directory names) to Q-JSGI applications for subsequent routing.  The mapping may be a plain JavaScript `Object` record, which must own the mapping properties, or an object that has `has(key)` and `get(key)` methods in its prototype chain."
+        },
+        {
+            "name": "notFound",
+            "type": "App",
+            "doc": "a Q-JSGI application that handles requests for which the next file name does not exist in paths."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "App",
+        "doc": ""
+    },
+    "doc": "Makes a Q-JSGI app that branches requests based on the next\nunprocessed path component.",
+    "heritage": [
+        "packages",
+        "jaque",
+        "jaque-route"
+    ],
+    "href": "packages---jaque---jaque-route---_branch"
+}

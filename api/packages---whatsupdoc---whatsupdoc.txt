@@ -1,0 +1,1930 @@
+{
+    "name": "whatsupdoc",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+    "lineNo": 2,
+    "params": [],
+    "errors": [
+        "Did not recognize \"license\" tag."
+    ],
+    "throws": [],
+    "see": [],
+    "author": {
+        "name": "Kris Kowal",
+        "web": "http://askawizard.blogspot.com",
+        "email": "kris@cixar.com"
+    },
+    "module": true,
+    "doc": "An API for parsing inline JavaScript documentation.",
+    "type": "module",
+    "id": "whatsupdoc",
+    "children": [
+        {
+            "name": "parseModules",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 20,
+            "params": [
+                {
+                    "name": "finds",
+                    "type": "Array * {id String, path Path, pkg String}",
+                    "doc": "a list of module descriptions including their `id`, a `Path` object to their program file, and the name of the package each came from."
+                },
+                {
+                    "name": "force",
+                    "type": "Boolean",
+                    "doc": "whether to parse a module that does not have a `/*whatsupdoc` annotation."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "{\"type\": \"packages\", \"packages\": Object, \"children\": Array * ...}",
+                "doc": "the root of a package documentation tree."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---parse-modules"
+        },
+        {
+            "name": "parseModule",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 83,
+            "params": [
+                {
+                    "name": "text",
+                    "type": "String",
+                    "doc": "the text of a JavaScript program"
+                },
+                {
+                    "name": "id",
+                    "type": "String",
+                    "doc": "optional module identifier"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "{name, doc, children}",
+                "doc": "a tree of code point documentation descriptors of the form `{name, type, params, returns, throws, doc, errors, children, fileName, lineNo}`"
+            },
+            "doc": "Creates a documentation tree for a module.",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---parse-module"
+        },
+        {
+            "name": "comments",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 103,
+            "params": [
+                {
+                    "name": "text",
+                    "type": "String",
+                    "doc": "the text of a JavaScript program."
+                },
+                {
+                    "name": "fileName",
+                    "type": "String",
+                    "doc": "optional"
+                },
+                {
+                    "name": "lineNo",
+                    "type": "Number",
+                    "doc": "line number starting with 1, optional"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Array * {comment, code, prefix, fileName, lineNo}",
+                "doc": ""
+            },
+            "doc": "takes the text of a JavaScript file and returns an array\nof each of the block comments, the prefix on the initial\nline (for measuring indentation), and the subsequent code\nup to the next comment.\n\nIt's a good idea to expand the tabs in the program text\nbefore running them through this function.  The `util`\nmodule in the `narwhal-lib` package provides an `expand`\nfunction that serves this purpose.",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---comments"
+        },
+        {
+            "name": "docs",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 193,
+            "params": [
+                {
+                    "name": "nodes",
+                    "type": "Array * {comment, prefix, code, fileName, lineNo}",
+                    "doc": "nodes in the format produced by `comments`"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Array * {doc, code, name, level, fileName, lineNo}",
+                "doc": "nodes"
+            },
+            "doc": "Extracts documentation nodes from comment nodes.\n\nTakes the output of the `comments` method and returns an\narray of objects with `doc`, `code`, and `level`\nproperties, consumable by `parseDocs`.\n\n* `doc` is a string containing each line of\n   the original `comment` with the leading cruft on each\n   line trimmed off.\n* `code` is the subsequent code up\n   to the next comment.\n* `level` is the number of extra stars on the beginning\n  of the comment.  These can be used to provide an\n  indication of hierarchical depth.",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---docs"
+        },
+        {
+            "name": "guessMarkup",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 257,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Scans an array of comment descriptors as provided by the\n`comments` method and returns a markup language module\nname.  The default is `\"markdown\"`.",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---guess-markup"
+        },
+        {
+            "name": "checkWhatsupdoc",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 272,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Scans an array of comment descriptors as provided by the\n{@link comments} method and returns whether there is a\n`whatsupdoc` comment/annotation indicating that the\nmodule opts in for this style of documentation parsing.",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---check-whatsupdoc"
+        },
+        {
+            "name": "parseDocs",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 284,
+            "params": [
+                {
+                    "name": "nodes",
+                    "type": "Array * {level, doc, code, fileName, lineNo}"
+                },
+                {
+                    "name": "markup",
+                    "type": "String",
+                    "doc": "the name of a markup module, a module that exports a `to` method for whatever format the documentation must be rendered in, for example `toHtml`. The `to` method may accept a second argument, a function for resolving custom references if they are supported by the language."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Array",
+                "doc": "with `name`, `level`, `markup`, and the properties added by {@link parseDoc}."
+            },
+            "doc": "Takes an array of nodes produced by `docs` and returns an\narray of nodes consumable by `tree`.  Uses `parseDoc` to\nextract `@` meta-data like `param` and `returns`.  Uses\n`guessName` to guess the name of the object.  `@name`\noverrides the guess.",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---parse-docs"
+        },
+        {
+            "name": "tree",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 321,
+            "params": [
+                {
+                    "name": "nodes",
+                    "type": "Array * {level, ...}"
+                },
+                {
+                    "name": "id",
+                    "type": "String",
+                    "doc": "optional module identifier"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "{\"type\": \"module\", \"id\": id, \"children\": Array * ...}",
+                "doc": ""
+            },
+            "doc": "takes a linear list of documentation nodes from a single\nmodule, such as those returned by `parseDocs`, and\nreturns the root of a tree of nodes, where the `level`\nnumbers are translated into `children` arrays.",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---tree"
+        },
+        {
+            "name": "guessName",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 366,
+            "params": [
+                {
+                    "name": "code",
+                    "type": "String",
+                    "doc": "a block of code to search for an applicable name."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "String | Undefined",
+                "doc": "a name or undefined if no name can be found."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---guess-name"
+        },
+        {
+            "name": "parseDoc",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 379,
+            "params": [
+                {
+                    "name": "text",
+                    "type": "String",
+                    "doc": "a documentation string"
+                },
+                {
+                    "name": "node",
+                    "type": "Object",
+                    "doc": "a documentation node, as provided by `parseDocs`"
+                },
+                {
+                    "name": "tagParsers",
+                    "type": "Object * [name String, handler Function(text, node)]",
+                    "doc": "an optional mapping of `@` tag names to corresponding handlers.  Defaults to `tagParsers` as exported by the same module."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "node"
+            },
+            "doc": "Accepts a documentation string and a documentation node,\nstrips out and applies the `@` metadata blocks to the\ndocumentation node.",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---parse-doc"
+        },
+        {
+            "name": "tagParsers",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 430,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "an `Object` mapping tag names to parser functions, in the\nform accepted by the `tagParsers` argument of `parseDoc`.\nThe parser functions accept the tag text and the node\nthey are augmenting, in the form of one of the objects\nreturned by `parseDoc`.",
+            "children": [
+                {
+                    "name": "param",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 439,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "parses an `@param` tag, pushing an `Object` of the\nform `{name, type, description}` onto the `params`\n`Array` of the given `node`.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---param"
+                },
+                {
+                    "name": "params",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 467,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "parses an `@params` tag for variadic parameters, pushing an\n`Object` of the form `{name, type, description, variadic: true}`\nonto the `params` `Array` of the given `node`.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---params"
+                },
+                {
+                    "name": "returns",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 495,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "parses an `@returns` tag, setting the `returns`\nproperty of the given `node` to an `Object` of the form,\n`{name, type, description}`.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---returns"
+                },
+                {
+                    "name": "return",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 516,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [
+                        "Did not recognize \"see\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---return"
+                },
+                {
+                    "name": "name",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 524,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Specifies or overrides the documentation parser's guess\nfor the name of the object being documented.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---name"
+                },
+                {
+                    "name": "author",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 535,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Notes the author.  Uses the `Author` type from the\n`packages` module of the `narwhal-lib` package to\nnormalize a string representation of an author of the\nform:\n\n    Author Name (http://example.com) <author@example.com>\n\nWhere each component is optional and gets composed into\nan `Object` with `name`, `url` and `email` properties.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---author"
+                },
+                {
+                    "name": "contributor",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 553,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [
+                        "Did not recognize \"see\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Notes a contributor.  More than one can be credited.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---contributor"
+                },
+                {
+                    "name": "constructor",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 565,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Tags a node as a constructor function.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---constructor"
+                },
+                {
+                    "name": "deprecated",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 577,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Tags a documentation node as deprecated.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---deprecated"
+                },
+                {
+                    "name": "module",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 589,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---module"
+                },
+                {
+                    "name": "fileoverview",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 599,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [
+                        "Did not recognize \"see\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---fileoverview"
+                },
+                {
+                    "name": "type",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 606,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---type"
+                }
+            ],
+            "index": {
+                "param": {
+                    "name": "param",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 439,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "parses an `@param` tag, pushing an `Object` of the\nform `{name, type, description}` onto the `params`\n`Array` of the given `node`.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---param"
+                },
+                "params": {
+                    "name": "params",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 467,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "parses an `@params` tag for variadic parameters, pushing an\n`Object` of the form `{name, type, description, variadic: true}`\nonto the `params` `Array` of the given `node`.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---params"
+                },
+                "returns": {
+                    "name": "returns",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 495,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "parses an `@returns` tag, setting the `returns`\nproperty of the given `node` to an `Object` of the form,\n`{name, type, description}`.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---returns"
+                },
+                "return": {
+                    "name": "return",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 516,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [
+                        "Did not recognize \"see\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---return"
+                },
+                "name": {
+                    "name": "name",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 524,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Specifies or overrides the documentation parser's guess\nfor the name of the object being documented.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---name"
+                },
+                "author": {
+                    "name": "author",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 535,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Notes the author.  Uses the `Author` type from the\n`packages` module of the `narwhal-lib` package to\nnormalize a string representation of an author of the\nform:\n\n    Author Name (http://example.com) <author@example.com>\n\nWhere each component is optional and gets composed into\nan `Object` with `name`, `url` and `email` properties.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---author"
+                },
+                "contributor": {
+                    "name": "contributor",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 553,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [
+                        "Did not recognize \"see\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Notes a contributor.  More than one can be credited.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---contributor"
+                },
+                "constructor": {
+                    "name": "constructor",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 565,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Tags a node as a constructor function.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---constructor"
+                },
+                "deprecated": {
+                    "name": "deprecated",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 577,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Tags a documentation node as deprecated.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---deprecated"
+                },
+                "module": {
+                    "name": "module",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 589,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---module"
+                },
+                "fileoverview": {
+                    "name": "fileoverview",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 599,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [
+                        "Did not recognize \"see\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---fileoverview"
+                },
+                "type": {
+                    "name": "type",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 606,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---type"
+                }
+            },
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---tag-parsers"
+        }
+    ],
+    "index": {
+        "parseModules": {
+            "name": "parseModules",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 20,
+            "params": [
+                {
+                    "name": "finds",
+                    "type": "Array * {id String, path Path, pkg String}",
+                    "doc": "a list of module descriptions including their `id`, a `Path` object to their program file, and the name of the package each came from."
+                },
+                {
+                    "name": "force",
+                    "type": "Boolean",
+                    "doc": "whether to parse a module that does not have a `/*whatsupdoc` annotation."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "{\"type\": \"packages\", \"packages\": Object, \"children\": Array * ...}",
+                "doc": "the root of a package documentation tree."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---parse-modules"
+        },
+        "parseModule": {
+            "name": "parseModule",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 83,
+            "params": [
+                {
+                    "name": "text",
+                    "type": "String",
+                    "doc": "the text of a JavaScript program"
+                },
+                {
+                    "name": "id",
+                    "type": "String",
+                    "doc": "optional module identifier"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "{name, doc, children}",
+                "doc": "a tree of code point documentation descriptors of the form `{name, type, params, returns, throws, doc, errors, children, fileName, lineNo}`"
+            },
+            "doc": "Creates a documentation tree for a module.",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---parse-module"
+        },
+        "comments": {
+            "name": "comments",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 103,
+            "params": [
+                {
+                    "name": "text",
+                    "type": "String",
+                    "doc": "the text of a JavaScript program."
+                },
+                {
+                    "name": "fileName",
+                    "type": "String",
+                    "doc": "optional"
+                },
+                {
+                    "name": "lineNo",
+                    "type": "Number",
+                    "doc": "line number starting with 1, optional"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Array * {comment, code, prefix, fileName, lineNo}",
+                "doc": ""
+            },
+            "doc": "takes the text of a JavaScript file and returns an array\nof each of the block comments, the prefix on the initial\nline (for measuring indentation), and the subsequent code\nup to the next comment.\n\nIt's a good idea to expand the tabs in the program text\nbefore running them through this function.  The `util`\nmodule in the `narwhal-lib` package provides an `expand`\nfunction that serves this purpose.",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---comments"
+        },
+        "docs": {
+            "name": "docs",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 193,
+            "params": [
+                {
+                    "name": "nodes",
+                    "type": "Array * {comment, prefix, code, fileName, lineNo}",
+                    "doc": "nodes in the format produced by `comments`"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Array * {doc, code, name, level, fileName, lineNo}",
+                "doc": "nodes"
+            },
+            "doc": "Extracts documentation nodes from comment nodes.\n\nTakes the output of the `comments` method and returns an\narray of objects with `doc`, `code`, and `level`\nproperties, consumable by `parseDocs`.\n\n* `doc` is a string containing each line of\n   the original `comment` with the leading cruft on each\n   line trimmed off.\n* `code` is the subsequent code up\n   to the next comment.\n* `level` is the number of extra stars on the beginning\n  of the comment.  These can be used to provide an\n  indication of hierarchical depth.",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---docs"
+        },
+        "guessMarkup": {
+            "name": "guessMarkup",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 257,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Scans an array of comment descriptors as provided by the\n`comments` method and returns a markup language module\nname.  The default is `\"markdown\"`.",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---guess-markup"
+        },
+        "checkWhatsupdoc": {
+            "name": "checkWhatsupdoc",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 272,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Scans an array of comment descriptors as provided by the\n{@link comments} method and returns whether there is a\n`whatsupdoc` comment/annotation indicating that the\nmodule opts in for this style of documentation parsing.",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---check-whatsupdoc"
+        },
+        "parseDocs": {
+            "name": "parseDocs",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 284,
+            "params": [
+                {
+                    "name": "nodes",
+                    "type": "Array * {level, doc, code, fileName, lineNo}"
+                },
+                {
+                    "name": "markup",
+                    "type": "String",
+                    "doc": "the name of a markup module, a module that exports a `to` method for whatever format the documentation must be rendered in, for example `toHtml`. The `to` method may accept a second argument, a function for resolving custom references if they are supported by the language."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Array",
+                "doc": "with `name`, `level`, `markup`, and the properties added by {@link parseDoc}."
+            },
+            "doc": "Takes an array of nodes produced by `docs` and returns an\narray of nodes consumable by `tree`.  Uses `parseDoc` to\nextract `@` meta-data like `param` and `returns`.  Uses\n`guessName` to guess the name of the object.  `@name`\noverrides the guess.",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---parse-docs"
+        },
+        "tree": {
+            "name": "tree",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 321,
+            "params": [
+                {
+                    "name": "nodes",
+                    "type": "Array * {level, ...}"
+                },
+                {
+                    "name": "id",
+                    "type": "String",
+                    "doc": "optional module identifier"
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "{\"type\": \"module\", \"id\": id, \"children\": Array * ...}",
+                "doc": ""
+            },
+            "doc": "takes a linear list of documentation nodes from a single\nmodule, such as those returned by `parseDocs`, and\nreturns the root of a tree of nodes, where the `level`\nnumbers are translated into `children` arrays.",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---tree"
+        },
+        "guessName": {
+            "name": "guessName",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 366,
+            "params": [
+                {
+                    "name": "code",
+                    "type": "String",
+                    "doc": "a block of code to search for an applicable name."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "String | Undefined",
+                "doc": "a name or undefined if no name can be found."
+            },
+            "doc": "",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---guess-name"
+        },
+        "parseDoc": {
+            "name": "parseDoc",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 379,
+            "params": [
+                {
+                    "name": "text",
+                    "type": "String",
+                    "doc": "a documentation string"
+                },
+                {
+                    "name": "node",
+                    "type": "Object",
+                    "doc": "a documentation node, as provided by `parseDocs`"
+                },
+                {
+                    "name": "tagParsers",
+                    "type": "Object * [name String, handler Function(text, node)]",
+                    "doc": "an optional mapping of `@` tag names to corresponding handlers.  Defaults to `tagParsers` as exported by the same module."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "node"
+            },
+            "doc": "Accepts a documentation string and a documentation node,\nstrips out and applies the `@` metadata blocks to the\ndocumentation node.",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---parse-doc"
+        },
+        "tagParsers": {
+            "name": "tagParsers",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+            "lineNo": 430,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "an `Object` mapping tag names to parser functions, in the\nform accepted by the `tagParsers` argument of `parseDoc`.\nThe parser functions accept the tag text and the node\nthey are augmenting, in the form of one of the objects\nreturned by `parseDoc`.",
+            "children": [
+                {
+                    "name": "param",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 439,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "parses an `@param` tag, pushing an `Object` of the\nform `{name, type, description}` onto the `params`\n`Array` of the given `node`.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---param"
+                },
+                {
+                    "name": "params",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 467,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "parses an `@params` tag for variadic parameters, pushing an\n`Object` of the form `{name, type, description, variadic: true}`\nonto the `params` `Array` of the given `node`.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---params"
+                },
+                {
+                    "name": "returns",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 495,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "parses an `@returns` tag, setting the `returns`\nproperty of the given `node` to an `Object` of the form,\n`{name, type, description}`.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---returns"
+                },
+                {
+                    "name": "return",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 516,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [
+                        "Did not recognize \"see\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---return"
+                },
+                {
+                    "name": "name",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 524,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Specifies or overrides the documentation parser's guess\nfor the name of the object being documented.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---name"
+                },
+                {
+                    "name": "author",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 535,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Notes the author.  Uses the `Author` type from the\n`packages` module of the `narwhal-lib` package to\nnormalize a string representation of an author of the\nform:\n\n    Author Name (http://example.com) <author@example.com>\n\nWhere each component is optional and gets composed into\nan `Object` with `name`, `url` and `email` properties.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---author"
+                },
+                {
+                    "name": "contributor",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 553,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [
+                        "Did not recognize \"see\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Notes a contributor.  More than one can be credited.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---contributor"
+                },
+                {
+                    "name": "constructor",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 565,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Tags a node as a constructor function.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---constructor"
+                },
+                {
+                    "name": "deprecated",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 577,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Tags a documentation node as deprecated.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---deprecated"
+                },
+                {
+                    "name": "module",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 589,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---module"
+                },
+                {
+                    "name": "fileoverview",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 599,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [
+                        "Did not recognize \"see\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---fileoverview"
+                },
+                {
+                    "name": "type",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 606,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---type"
+                }
+            ],
+            "index": {
+                "param": {
+                    "name": "param",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 439,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "parses an `@param` tag, pushing an `Object` of the\nform `{name, type, description}` onto the `params`\n`Array` of the given `node`.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---param"
+                },
+                "params": {
+                    "name": "params",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 467,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "parses an `@params` tag for variadic parameters, pushing an\n`Object` of the form `{name, type, description, variadic: true}`\nonto the `params` `Array` of the given `node`.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---params"
+                },
+                "returns": {
+                    "name": "returns",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 495,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "parses an `@returns` tag, setting the `returns`\nproperty of the given `node` to an `Object` of the form,\n`{name, type, description}`.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---returns"
+                },
+                "return": {
+                    "name": "return",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 516,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [
+                        "Did not recognize \"see\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---return"
+                },
+                "name": {
+                    "name": "name",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 524,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Specifies or overrides the documentation parser's guess\nfor the name of the object being documented.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---name"
+                },
+                "author": {
+                    "name": "author",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 535,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Notes the author.  Uses the `Author` type from the\n`packages` module of the `narwhal-lib` package to\nnormalize a string representation of an author of the\nform:\n\n    Author Name (http://example.com) <author@example.com>\n\nWhere each component is optional and gets composed into\nan `Object` with `name`, `url` and `email` properties.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---author"
+                },
+                "contributor": {
+                    "name": "contributor",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 553,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [
+                        "Did not recognize \"see\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Notes a contributor.  More than one can be credited.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---contributor"
+                },
+                "constructor": {
+                    "name": "constructor",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 565,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Tags a node as a constructor function.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---constructor"
+                },
+                "deprecated": {
+                    "name": "deprecated",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 577,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "Tags a documentation node as deprecated.",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---deprecated"
+                },
+                "module": {
+                    "name": "module",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 589,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---module"
+                },
+                "fileoverview": {
+                    "name": "fileoverview",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 599,
+                    "params": [
+                        {
+                            "name": "text",
+                            "type": "String"
+                        },
+                        {
+                            "name": "node",
+                            "type": "{errors Array}"
+                        }
+                    ],
+                    "errors": [
+                        "Did not recognize \"see\" tag."
+                    ],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---fileoverview"
+                },
+                "type": {
+                    "name": "type",
+                    "markup": "markdown",
+                    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+                    "lineNo": 606,
+                    "params": [],
+                    "errors": [],
+                    "throws": [],
+                    "see": [],
+                    "doc": "",
+                    "heritage": [
+                        "packages",
+                        "whatsupdoc",
+                        "whatsupdoc",
+                        "tag-parsers"
+                    ],
+                    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---type"
+                }
+            },
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc---tag-parsers"
+        }
+    },
+    "heritage": [
+        "packages",
+        "whatsupdoc"
+    ],
+    "href": "packages---whatsupdoc---whatsupdoc"
+}

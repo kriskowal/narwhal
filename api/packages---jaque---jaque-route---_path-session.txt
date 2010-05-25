@@ -1,0 +1,27 @@
+{
+    "name": "PathSession",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/jaque/lib/jaque/route.js",
+    "lineNo": 638,
+    "params": [
+        {
+            "name": "a",
+            "type": "Function(session):App",
+            "doc": "function that creates a new Q-JSGI application for each new session.  It receives an object with the session's `id` and `lastAccess` `Date`."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "App",
+        "doc": ""
+    },
+    "doc": "A Q-JSGI application that creates a session associated with a\nunique path.  These sessions are intended to persist for the\nduration that a user remains in a single browser window.",
+    "heritage": [
+        "packages",
+        "jaque",
+        "jaque-route"
+    ],
+    "href": "packages---jaque---jaque-route---_path-session"
+}

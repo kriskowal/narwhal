@@ -1,0 +1,30 @@
+{
+    "name": "FileTree",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/jaque/lib/jaque/route.js",
+    "lineNo": 259,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        },
+        {
+            "name": "options",
+            "type": "{notFound, file, directory, contentType}"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "App",
+        "doc": ""
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "jaque",
+        "jaque-route"
+    ],
+    "href": "packages---jaque---jaque-route---_file-tree"
+}

@@ -1,0 +1,18 @@
+{
+    "name": "type",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+    "lineNo": 606,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "whatsupdoc",
+        "whatsupdoc",
+        "tag-parsers"
+    ],
+    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---type"
+}

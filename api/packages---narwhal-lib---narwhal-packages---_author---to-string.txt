@@ -2,7 +2,7 @@
     "name": "toString",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-    "lineNo": 774,
+    "lineNo": 781,
     "params": [],
     "errors": [
         "Did not recognize \"method\" tag."

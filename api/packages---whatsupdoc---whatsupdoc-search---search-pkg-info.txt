@@ -1,0 +1,27 @@
+{
+    "name": "searchPkgInfo",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc/search.js",
+    "lineNo": 90,
+    "params": [
+        {
+            "name": "pkg",
+            "type": "String",
+            "doc": "package info object, as provided by the objects in the `packages` module `catalog` or precedence `order` objects."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Array * {id String, path Path, pkg String}",
+        "doc": "an array of the path, library path, and package name for every module in the given package.  Use {@link dub} to reconstruct module identifiers from each find."
+    },
+    "doc": "Finds all of the modules and their library paths for the\ngiven package info object, including their identifiers.",
+    "heritage": [
+        "packages",
+        "whatsupdoc",
+        "whatsupdoc-search"
+    ],
+    "href": "packages---whatsupdoc---whatsupdoc-search---search-pkg-info"
+}

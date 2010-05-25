@@ -1,0 +1,32 @@
+{
+    "name": "Node",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/jaque/lib/jaque/route.js",
+    "lineNo": 103,
+    "params": [
+        {
+            "name": "app",
+            "type": "App",
+            "doc": "a Q-JSGI application to respond to this end of the routing chain."
+        },
+        {
+            "name": "notFound",
+            "type": "App",
+            "doc": "(optional) defaults to the `notFound` app."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "App",
+        "doc": ""
+    },
+    "doc": "Makes a  Q-JSGI app that only responds when there is nothing left\non the path to route.  If the there is unprocessed data on the\npath, the returned app either forwards to the `notFound` app or\nreturns a `404 Not Found` response.",
+    "heritage": [
+        "packages",
+        "jaque",
+        "jaque-route"
+    ],
+    "href": "packages---jaque---jaque-route---_node"
+}

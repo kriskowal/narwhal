@@ -1,0 +1,27 @@
+{
+    "name": "ids",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc/search.js",
+    "lineNo": 190,
+    "params": [
+        {
+            "name": "finds",
+            "type": "Array * {id String, ...}",
+            "doc": "as returned by the {@link dub} method, by way of any search method."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Array * String",
+        "doc": "the unique set of all identifiers in a set of finds."
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "whatsupdoc",
+        "whatsupdoc-search"
+    ],
+    "href": "packages---whatsupdoc---whatsupdoc-search---ids"
+}

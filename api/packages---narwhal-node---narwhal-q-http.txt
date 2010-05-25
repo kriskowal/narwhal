@@ -8,7 +8,7 @@
     "throws": [],
     "see": [],
     "module": true,
-    "doc": "A promise-based (Q) JSGI server API.",
+    "doc": "A promise-based Q-JSGI server and client API.",
     "type": "module",
     "id": "narwhal/q-http",
     "children": [

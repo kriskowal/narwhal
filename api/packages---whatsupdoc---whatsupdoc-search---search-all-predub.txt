@@ -1,0 +1,32 @@
+{
+    "name": "searchAllPredub",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc/search.js",
+    "lineNo": 37,
+    "params": [
+        {
+            "name": "engine",
+            "doc": "an optional override for the engine module object"
+        },
+        {
+            "name": "packages",
+            "doc": "an optional override for the packages module object, which should have `order` and `catalog` properties for the precedence order and name to package info object properties."
+        }
+    ],
+    "errors": [
+        "Did not recognize \"see\" tag."
+    ],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Array * {path Path, lib Path, pkg String}",
+        "doc": "an array of the identifier, path, and package name for every module in every package.  There may be duplicates for a given identifier."
+    },
+    "doc": "Searches for all modules in all packages, providing an\nincomplete picture of the module identifier.",
+    "heritage": [
+        "packages",
+        "whatsupdoc",
+        "whatsupdoc-search"
+    ],
+    "href": "packages---whatsupdoc---whatsupdoc-search---search-all-predub"
+}

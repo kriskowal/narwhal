@@ -2,7 +2,7 @@
     "name": "addJsPaths",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-    "lineNo": 578,
+    "lineNo": 585,
     "params": [],
     "errors": [],
     "throws": [],

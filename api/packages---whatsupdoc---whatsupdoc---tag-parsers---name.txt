@@ -1,0 +1,27 @@
+{
+    "name": "name",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+    "lineNo": 524,
+    "params": [
+        {
+            "name": "text",
+            "type": "String"
+        },
+        {
+            "name": "node",
+            "type": "{errors Array}"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Specifies or overrides the documentation parser's guess\nfor the name of the object being documented.",
+    "heritage": [
+        "packages",
+        "whatsupdoc",
+        "whatsupdoc",
+        "tag-parsers"
+    ],
+    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---name"
+}

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!–[if IE 6]><![endif]–>
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>whatsupdoc</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>An API for parsing inline JavaScript documentation.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#parseModules"><tt>parseModules</tt></a></li>
+    
+        <li><a href="#parseModule"><tt>parseModule</tt></a></li>
+    
+        <li><a href="#comments"><tt>comments</tt></a></li>
+    
+        <li><a href="#docs"><tt>docs</tt></a></li>
+    
+        <li><a href="#guessMarkup"><tt>guessMarkup</tt></a></li>
+    
+        <li><a href="#checkWhatsupdoc"><tt>checkWhatsupdoc</tt></a></li>
+    
+        <li><a href="#parseDocs"><tt>parseDocs</tt></a></li>
+    
+        <li><a href="#tree"><tt>tree</tt></a></li>
+    
+        <li><a href="#guessName"><tt>guessName</tt></a></li>
+    
+        <li><a href="#parseDoc"><tt>parseDoc</tt></a></li>
+    
+        <li><a href="#tagParsers"><tt>tagParsers</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="parseModules"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc---parse-modules.html"><tt>parseModules</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>finds</tt></th>
+            <td class="B"><tt>Array * {id String, path Path, pkg String}</tt></th>
+            
+            <td class="C"><p>a list of module descriptions including their <code>id</code>, a <code>Path</code> object to their program file, and the name of the package each came from.</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>force</tt></th>
+            <td class="B"><tt>Boolean</tt></th>
+            
+            <td class="C"><p>whether to parse a module that does not have a <code>/*whatsupdoc</code> annotation.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>{"type": "packages", "packages": Object, "children": Array * ...}</tt></td>
+            <td class="C"><p>the root of a package documentation tree.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="parseModule"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc---parse-module.html"><tt>parseModule</tt></a>
+        
+        
+    </h2>
+
+    <p>Creates a documentation tree for a module.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>text</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>the text of a JavaScript program</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>id</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>optional module identifier</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>{name, doc, children}</tt></td>
+            <td class="C"><p>a tree of code point documentation descriptors of the form <code>{name, type, params, returns, throws, doc, errors, children, fileName, lineNo}</code></p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="comments"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc---comments.html"><tt>comments</tt></a>
+        
+        
+    </h2>
+
+    <p>takes the text of a JavaScript file and returns an array
+of each of the block comments, the prefix on the initial
+line (for measuring indentation), and the subsequent code
+up to the next comment.</p>
+
+<p>It's a good idea to expand the tabs in the program text
+before running them through this function.  The <code>util</code>
+module in the <code>narwhal-lib</code> package provides an <code>expand</code>
+function that serves this purpose.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>text</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>the text of a JavaScript program.</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>fileName</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>optional</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>lineNo</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+            <td class="C"><p>line number starting with 1, optional</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * {comment, code, prefix, fileName, lineNo}</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="docs"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc---docs.html"><tt>docs</tt></a>
+        
+        
+    </h2>
+
+    <p>Extracts documentation nodes from comment nodes.</p>
+
+<p>Takes the output of the <code>comments</code> method and returns an
+array of objects with <code>doc</code>, <code>code</code>, and <code>level</code>
+properties, consumable by <code>parseDocs</code>.</p>
+
+<ul>
+<li><code>doc</code> is a string containing each line of
+the original <code>comment</code> with the leading cruft on each
+line trimmed off.</li>
+<li><code>code</code> is the subsequent code up
+to the next comment.</li>
+<li><code>level</code> is the number of extra stars on the beginning
+of the comment.  These can be used to provide an
+indication of hierarchical depth.</li>
+</ul>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>nodes</tt></th>
+            <td class="B"><tt>Array * {comment, prefix, code, fileName, lineNo}</tt></th>
+            
+            <td class="C"><p>nodes in the format produced by <code>comments</code></p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * {doc, code, name, level, fileName, lineNo}</tt></td>
+            <td class="C"><p>nodes</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="guessMarkup"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc---guess-markup.html"><tt>guessMarkup</tt></a>
+        
+        
+    </h2>
+
+    <p>Scans an array of comment descriptors as provided by the
+<code>comments</code> method and returns a markup language module
+name.  The default is <code>"markdown"</code>.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="checkWhatsupdoc"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc---check-whatsupdoc.html"><tt>checkWhatsupdoc</tt></a>
+        
+        
+    </h2>
+
+    <p>Scans an array of comment descriptors as provided by the
+{@link comments} method and returns whether there is a
+<code>whatsupdoc</code> comment/annotation indicating that the
+module opts in for this style of documentation parsing.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="parseDocs"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc---parse-docs.html"><tt>parseDocs</tt></a>
+        
+        
+    </h2>
+
+    <p>Takes an array of nodes produced by <code>docs</code> and returns an
+array of nodes consumable by <code>tree</code>.  Uses <code>parseDoc</code> to
+extract <code>@</code> meta-data like <code>param</code> and <code>returns</code>.  Uses
+<code>guessName</code> to guess the name of the object.  <code>@name</code>
+overrides the guess.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>nodes</tt></th>
+            <td class="B"><tt>Array * {level, doc, code, fileName, lineNo}</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>markup</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>the name of a markup module, a module that exports a <code>to</code> method for whatever format the documentation must be rendered in, for example <code>toHtml</code>. The <code>to</code> method may accept a second argument, a function for resolving custom references if they are supported by the language.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array</tt></td>
+            <td class="C"><p>with <code>name</code>, <code>level</code>, <code>markup</code>, and the properties added by {@link parseDoc}.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="tree"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc---tree.html"><tt>tree</tt></a>
+        
+        
+    </h2>
+
+    <p>takes a linear list of documentation nodes from a single
+module, such as those returned by <code>parseDocs</code>, and
+returns the root of a tree of nodes, where the <code>level</code>
+numbers are translated into <code>children</code> arrays.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>nodes</tt></th>
+            <td class="B"><tt>Array * {level, ...}</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>id</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>optional module identifier</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>{"type": "module", "id": id, "children": Array * ...}</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="guessName"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc---guess-name.html"><tt>guessName</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>code</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>a block of code to search for an applicable name.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String | Undefined</tt></td>
+            <td class="C"><p>a name or undefined if no name can be found.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="parseDoc"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc---parse-doc.html"><tt>parseDoc</tt></a>
+        
+        
+    </h2>
+
+    <p>Accepts a documentation string and a documentation node,
+strips out and applies the <code>@</code> metadata blocks to the
+documentation node.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>text</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>a documentation string</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>node</tt></th>
+            <td class="B"><tt>Object</tt></th>
+            
+            <td class="C"><p>a documentation node, as provided by <code>parseDocs</code></p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>tagParsers</tt></th>
+            <td class="B"><tt>Object * [name String, handler Function(text, node)]</tt></th>
+            
+            <td class="C"><p>an optional mapping of <code>@</code> tag names to corresponding handlers.  Defaults to <code>tagParsers</code> as exported by the same module.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>node</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="tagParsers"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc---tag-parsers.html"><tt>tagParsers</tt></a>
+        
+        
+    </h2>
+
+    <p>an <code>Object</code> mapping tag names to parser functions, in the
+form accepted by the <code>tagParsers</code> argument of <code>parseDoc</code>.
+The parser functions accept the tag text and the node
+they are augmenting, in the form of one of the objects
+returned by <code>parseDoc</code>.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---whatsupdoc---whatsupdoc---tag-parsers---param.html"><tt>param</tt></a></th> 
+        <td><p>parses an <code>@param</code> tag, pushing an <code>Object</code> of the
+form <code>{name, type, description}</code> onto the <code>params</code>
+<code>Array</code> of the given <code>node</code>.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---whatsupdoc---whatsupdoc---tag-parsers---params.html"><tt>params</tt></a></th> 
+        <td><p>parses an <code>@params</code> tag for variadic parameters, pushing an
+<code>Object</code> of the form <code>{name, type, description, variadic: true}</code>
+onto the <code>params</code> <code>Array</code> of the given <code>node</code>.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---whatsupdoc---whatsupdoc---tag-parsers---returns.html"><tt>returns</tt></a></th> 
+        <td><p>parses an <code>@returns</code> tag, setting the <code>returns</code>
+property of the given <code>node</code> to an <code>Object</code> of the form,
+<code>{name, type, description}</code>.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---whatsupdoc---whatsupdoc---tag-parsers---return.html"><tt>return</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---whatsupdoc---whatsupdoc---tag-parsers---name.html"><tt>name</tt></a></th> 
+        <td><p>Specifies or overrides the documentation parser's guess
+for the name of the object being documented.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---whatsupdoc---whatsupdoc---tag-parsers---author.html"><tt>author</tt></a></th> 
+        <td><p>Notes the author.  Uses the <code>Author</code> type from the
+<code>packages</code> module of the <code>narwhal-lib</code> package to
+normalize a string representation of an author of the
+form:</p>
+
+<pre><code>Author Name (http://example.com) &lt;author@example.com&gt;
+</code></pre>
+
+<p>Where each component is optional and gets composed into
+an <code>Object</code> with <code>name</code>, <code>url</code> and <code>email</code> properties.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---whatsupdoc---whatsupdoc---tag-parsers---contributor.html"><tt>contributor</tt></a></th> 
+        <td><p>Notes a contributor.  More than one can be credited.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---whatsupdoc---whatsupdoc---tag-parsers---constructor.html"><tt>constructor</tt></a></th> 
+        <td><p>Tags a node as a constructor function.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---whatsupdoc---whatsupdoc---tag-parsers---deprecated.html"><tt>deprecated</tt></a></th> 
+        <td><p>Tags a documentation node as deprecated.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---whatsupdoc---whatsupdoc---tag-parsers---module.html"><tt>module</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---whatsupdoc---whatsupdoc---tag-parsers---fileoverview.html"><tt>fileoverview</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---whatsupdoc---whatsupdoc---tag-parsers---type.html"><tt>type</tt></a></th> 
+        <td></td>
+    </tr>
+    
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---whatsupdoc---whatsupdoc.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</ht

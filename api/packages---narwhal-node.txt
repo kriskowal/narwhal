@@ -2,6 +2,11 @@
     "name": "narwhal-node",
     "type": "package",
     "markup": "markdown",
+    "version": [
+        "0",
+        "0",
+        "2"
+    ],
     "description": "Adapters that bring CommonJS and Narwhal API's to Node, or Narwhal on Node",
     "contributors": [],
     "children": [
@@ -4454,7 +4459,7 @@
             "throws": [],
             "see": [],
             "module": true,
-            "doc": "A promise-based (Q) JSGI server API.",
+            "doc": "A promise-based Q-JSGI server and client API.",
             "type": "module",
             "id": "narwhal/q-http",
             "children": [
@@ -12683,7 +12688,7 @@
             "throws": [],
             "see": [],
             "module": true,
-            "doc": "A promise-based (Q) JSGI server API.",
+            "doc": "A promise-based Q-JSGI server and client API.",
             "type": "module",
             "id": "narwhal/q-http",
             "children": [

@@ -2,6 +2,11 @@
     "name": "narwhal-lib",
     "type": "package",
     "markup": "markdown",
+    "version": [
+        "0",
+        "0",
+        "3"
+    ],
     "description": "Pure-JavaScript components of a general purpose JavaScript library",
     "contributors": [
         {
@@ -25284,7 +25289,7 @@
                     "name": "verify",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 385,
+                    "lineNo": 392,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -25301,7 +25306,7 @@
                     "name": "sortedPackages",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 428,
+                    "lineNo": 435,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -25318,7 +25323,7 @@
                     "name": "analyze",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 498,
+                    "lineNo": 505,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -25335,7 +25340,7 @@
                     "name": "synthesize",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 570,
+                    "lineNo": 577,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -25352,7 +25357,7 @@
                     "name": "addJsPaths",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 578,
+                    "lineNo": 585,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -25369,7 +25374,7 @@
                     "name": "normalizePackageDescriptor",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 589,
+                    "lineNo": 596,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -25386,7 +25391,7 @@
                     "name": "readUsing",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 621,
+                    "lineNo": 628,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -25403,7 +25408,7 @@
                     "name": "updateUsingCatalog",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 658,
+                    "lineNo": 665,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -25420,7 +25425,7 @@
                     "name": "normalize",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 684,
+                    "lineNo": 691,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -25437,7 +25442,7 @@
                     "name": "normalizePackage",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 695,
+                    "lineNo": 702,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -25454,7 +25459,7 @@
                     "name": "Package",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 724,
+                    "lineNo": 731,
                     "params": [
                         {
                             "name": "initial",
@@ -25472,7 +25477,7 @@
                             "name": "resource",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 735,
+                            "lineNo": 742,
                             "params": [
                                 {
                                     "name": "path",
@@ -25503,7 +25508,7 @@
                             "name": "resource",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 735,
+                            "lineNo": 742,
                             "params": [
                                 {
                                     "name": "path",
@@ -25540,7 +25545,7 @@
                     "name": "Author",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 754,
+                    "lineNo": 761,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -25551,7 +25556,7 @@
                             "name": "name",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 761,
+                            "lineNo": 768,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -25571,7 +25576,7 @@
                             "name": "web",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 763,
+                            "lineNo": 770,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -25591,7 +25596,7 @@
                             "name": "email",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 765,
+                            "lineNo": 772,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -25611,7 +25616,7 @@
                             "name": "toString",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 774,
+                            "lineNo": 781,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"method\" tag."
@@ -25635,7 +25640,7 @@
                             "name": "regexp",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 790,
+                            "lineNo": 797,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"classproperty\" tag."
@@ -25657,7 +25662,7 @@
                             "name": "name",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 761,
+                            "lineNo": 768,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -25677,7 +25682,7 @@
                             "name": "web",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 763,
+                            "lineNo": 770,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -25697,7 +25702,7 @@
                             "name": "email",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 765,
+                            "lineNo": 772,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -25717,7 +25722,7 @@
                             "name": "toString",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 774,
+                            "lineNo": 781,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"method\" tag."
@@ -25741,7 +25746,7 @@
                             "name": "regexp",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 790,
+                            "lineNo": 797,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"classproperty\" tag."
@@ -25769,7 +25774,7 @@
                     "name": "Version",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 810,
+                    "lineNo": 817,
                     "params": [
                         {
                             "name": "version",
@@ -26095,7 +26100,7 @@
                     "name": "verify",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 385,
+                    "lineNo": 392,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -26112,7 +26117,7 @@
                     "name": "sortedPackages",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 428,
+                    "lineNo": 435,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -26129,7 +26134,7 @@
                     "name": "analyze",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 498,
+                    "lineNo": 505,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -26146,7 +26151,7 @@
                     "name": "synthesize",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 570,
+                    "lineNo": 577,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -26163,7 +26168,7 @@
                     "name": "addJsPaths",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 578,
+                    "lineNo": 585,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -26180,7 +26185,7 @@
                     "name": "normalizePackageDescriptor",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 589,
+                    "lineNo": 596,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -26197,7 +26202,7 @@
                     "name": "readUsing",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 621,
+                    "lineNo": 628,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -26214,7 +26219,7 @@
                     "name": "updateUsingCatalog",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 658,
+                    "lineNo": 665,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -26231,7 +26236,7 @@
                     "name": "normalize",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 684,
+                    "lineNo": 691,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -26248,7 +26253,7 @@
                     "name": "normalizePackage",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 695,
+                    "lineNo": 702,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -26265,7 +26270,7 @@
                     "name": "Package",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 724,
+                    "lineNo": 731,
                     "params": [
                         {
                             "name": "initial",
@@ -26283,7 +26288,7 @@
                             "name": "resource",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 735,
+                            "lineNo": 742,
                             "params": [
                                 {
                                     "name": "path",
@@ -26314,7 +26319,7 @@
                             "name": "resource",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 735,
+                            "lineNo": 742,
                             "params": [
                                 {
                                     "name": "path",
@@ -26351,7 +26356,7 @@
                     "name": "Author",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 754,
+                    "lineNo": 761,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -26362,7 +26367,7 @@
                             "name": "name",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 761,
+                            "lineNo": 768,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -26382,7 +26387,7 @@
                             "name": "web",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 763,
+                            "lineNo": 770,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -26402,7 +26407,7 @@
                             "name": "email",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 765,
+                            "lineNo": 772,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -26422,7 +26427,7 @@
                             "name": "toString",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 774,
+                            "lineNo": 781,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"method\" tag."
@@ -26446,7 +26451,7 @@
                             "name": "regexp",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 790,
+                            "lineNo": 797,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"classproperty\" tag."
@@ -26468,7 +26473,7 @@
                             "name": "name",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 761,
+                            "lineNo": 768,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -26488,7 +26493,7 @@
                             "name": "web",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 763,
+                            "lineNo": 770,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -26508,7 +26513,7 @@
                             "name": "email",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 765,
+                            "lineNo": 772,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -26528,7 +26533,7 @@
                             "name": "toString",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 774,
+                            "lineNo": 781,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"method\" tag."
@@ -26552,7 +26557,7 @@
                             "name": "regexp",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 790,
+                            "lineNo": 797,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"classproperty\" tag."
@@ -26580,7 +26585,7 @@
                     "name": "Version",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 810,
+                    "lineNo": 817,
                     "params": [
                         {
                             "name": "version",
@@ -64870,7 +64875,7 @@
                     "name": "verify",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 385,
+                    "lineNo": 392,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -64887,7 +64892,7 @@
                     "name": "sortedPackages",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 428,
+                    "lineNo": 435,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -64904,7 +64909,7 @@
                     "name": "analyze",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 498,
+                    "lineNo": 505,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -64921,7 +64926,7 @@
                     "name": "synthesize",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 570,
+                    "lineNo": 577,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -64938,7 +64943,7 @@
                     "name": "addJsPaths",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 578,
+                    "lineNo": 585,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -64955,7 +64960,7 @@
                     "name": "normalizePackageDescriptor",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 589,
+                    "lineNo": 596,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -64972,7 +64977,7 @@
                     "name": "readUsing",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 621,
+                    "lineNo": 628,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -64989,7 +64994,7 @@
                     "name": "updateUsingCatalog",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 658,
+                    "lineNo": 665,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -65006,7 +65011,7 @@
                     "name": "normalize",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 684,
+                    "lineNo": 691,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -65023,7 +65028,7 @@
                     "name": "normalizePackage",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 695,
+                    "lineNo": 702,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -65040,7 +65045,7 @@
                     "name": "Package",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 724,
+                    "lineNo": 731,
                     "params": [
                         {
                             "name": "initial",
@@ -65058,7 +65063,7 @@
                             "name": "resource",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 735,
+                            "lineNo": 742,
                             "params": [
                                 {
                                     "name": "path",
@@ -65089,7 +65094,7 @@
                             "name": "resource",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 735,
+                            "lineNo": 742,
                             "params": [
                                 {
                                     "name": "path",
@@ -65126,7 +65131,7 @@
                     "name": "Author",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 754,
+                    "lineNo": 761,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -65137,7 +65142,7 @@
                             "name": "name",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 761,
+                            "lineNo": 768,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -65157,7 +65162,7 @@
                             "name": "web",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 763,
+                            "lineNo": 770,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -65177,7 +65182,7 @@
                             "name": "email",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 765,
+                            "lineNo": 772,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -65197,7 +65202,7 @@
                             "name": "toString",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 774,
+                            "lineNo": 781,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"method\" tag."
@@ -65221,7 +65226,7 @@
                             "name": "regexp",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 790,
+                            "lineNo": 797,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"classproperty\" tag."
@@ -65243,7 +65248,7 @@
                             "name": "name",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 761,
+                            "lineNo": 768,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -65263,7 +65268,7 @@
                             "name": "web",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 763,
+                            "lineNo": 770,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -65283,7 +65288,7 @@
                             "name": "email",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 765,
+                            "lineNo": 772,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -65303,7 +65308,7 @@
                             "name": "toString",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 774,
+                            "lineNo": 781,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"method\" tag."
@@ -65327,7 +65332,7 @@
                             "name": "regexp",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 790,
+                            "lineNo": 797,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"classproperty\" tag."
@@ -65355,7 +65360,7 @@
                     "name": "Version",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 810,
+                    "lineNo": 817,
                     "params": [
                         {
                             "name": "version",
@@ -65681,7 +65686,7 @@
                     "name": "verify",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 385,
+                    "lineNo": 392,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -65698,7 +65703,7 @@
                     "name": "sortedPackages",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 428,
+                    "lineNo": 435,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -65715,7 +65720,7 @@
                     "name": "analyze",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 498,
+                    "lineNo": 505,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -65732,7 +65737,7 @@
                     "name": "synthesize",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 570,
+                    "lineNo": 577,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -65749,7 +65754,7 @@
                     "name": "addJsPaths",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 578,
+                    "lineNo": 585,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -65766,7 +65771,7 @@
                     "name": "normalizePackageDescriptor",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 589,
+                    "lineNo": 596,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -65783,7 +65788,7 @@
                     "name": "readUsing",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 621,
+                    "lineNo": 628,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -65800,7 +65805,7 @@
                     "name": "updateUsingCatalog",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 658,
+                    "lineNo": 665,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -65817,7 +65822,7 @@
                     "name": "normalize",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 684,
+                    "lineNo": 691,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -65834,7 +65839,7 @@
                     "name": "normalizePackage",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 695,
+                    "lineNo": 702,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -65851,7 +65856,7 @@
                     "name": "Package",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 724,
+                    "lineNo": 731,
                     "params": [
                         {
                             "name": "initial",
@@ -65869,7 +65874,7 @@
                             "name": "resource",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 735,
+                            "lineNo": 742,
                             "params": [
                                 {
                                     "name": "path",
@@ -65900,7 +65905,7 @@
                             "name": "resource",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 735,
+                            "lineNo": 742,
                             "params": [
                                 {
                                     "name": "path",
@@ -65937,7 +65942,7 @@
                     "name": "Author",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 754,
+                    "lineNo": 761,
                     "params": [],
                     "errors": [],
                     "throws": [],
@@ -65948,7 +65953,7 @@
                             "name": "name",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 761,
+                            "lineNo": 768,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -65968,7 +65973,7 @@
                             "name": "web",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 763,
+                            "lineNo": 770,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -65988,7 +65993,7 @@
                             "name": "email",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 765,
+                            "lineNo": 772,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -66008,7 +66013,7 @@
                             "name": "toString",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 774,
+                            "lineNo": 781,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"method\" tag."
@@ -66032,7 +66037,7 @@
                             "name": "regexp",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 790,
+                            "lineNo": 797,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"classproperty\" tag."
@@ -66054,7 +66059,7 @@
                             "name": "name",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 761,
+                            "lineNo": 768,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -66074,7 +66079,7 @@
                             "name": "web",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 763,
+                            "lineNo": 770,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -66094,7 +66099,7 @@
                             "name": "email",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 765,
+                            "lineNo": 772,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"property\" tag."
@@ -66114,7 +66119,7 @@
                             "name": "toString",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 774,
+                            "lineNo": 781,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"method\" tag."
@@ -66138,7 +66143,7 @@
                             "name": "regexp",
                             "markup": "markdown",
                             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                            "lineNo": 790,
+                            "lineNo": 797,
                             "params": [],
                             "errors": [
                                 "Did not recognize \"classproperty\" tag."
@@ -66166,7 +66171,7 @@
                     "name": "Version",
                     "markup": "markdown",
                     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-                    "lineNo": 810,
+                    "lineNo": 817,
                     "params": [
                         {
                             "name": "version",

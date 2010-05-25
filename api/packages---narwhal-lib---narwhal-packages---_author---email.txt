@@ -2,7 +2,7 @@
     "name": "email",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-    "lineNo": 765,
+    "lineNo": 772,
     "params": [],
     "errors": [
         "Did not recognize \"property\" tag."

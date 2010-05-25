@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!–[if IE 6]><![endif]–>
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>parseDocs</tt>
+        
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Takes an array of nodes produced by <code>docs</code> and returns an
+array of nodes consumable by <code>tree</code>.  Uses <code>parseDoc</code> to
+extract <code>@</code> meta-data like <code>param</code> and <code>returns</code>.  Uses
+<code>guessName</code> to guess the name of the object.  <code>@name</code>
+overrides the guess.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>nodes</tt></th>
+            <td class="B"><tt>Array * {level, doc, code, fileName, lineNo}</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>markup</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>the name of a markup module, a module that exports a <code>to</code> method for whatever format the documentation must be rendered in, for example <code>toHtml</code>. The <code>to</code> method may accept a second argument, a function for resolving custom references if they are supported by the language.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array</tt></td>
+            <td class="C"><p>with <code>name</code>, <code>level</code>, <code>markup</code>, and the properties added by {@link parseDoc}.</p></td>
+        </tr> 
+        
+        
+    </table>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---whatsupdoc---whatsupdoc---parse-docs.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</ht

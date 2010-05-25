@@ -1,0 +1,32 @@
+{
+    "name": "parseModule",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+    "lineNo": 83,
+    "params": [
+        {
+            "name": "text",
+            "type": "String",
+            "doc": "the text of a JavaScript program"
+        },
+        {
+            "name": "id",
+            "type": "String",
+            "doc": "optional module identifier"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "{name, doc, children}",
+        "doc": "a tree of code point documentation descriptors of the form `{name, type, params, returns, throws, doc, errors, children, fileName, lineNo}`"
+    },
+    "doc": "Creates a documentation tree for a module.",
+    "heritage": [
+        "packages",
+        "whatsupdoc",
+        "whatsupdoc"
+    ],
+    "href": "packages---whatsupdoc---whatsupdoc---parse-module"
+}

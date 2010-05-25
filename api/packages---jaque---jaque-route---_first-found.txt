@@ -1,0 +1,27 @@
+{
+    "name": "FirstFound",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/jaque/lib/jaque/route.js",
+    "lineNo": 678,
+    "params": [
+        {
+            "name": "apps",
+            "type": "Array * App",
+            "doc": "a cascade of applications to try successively until one of them returns a non-404 status."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "App",
+        "doc": ""
+    },
+    "doc": "Returns the response of the first application that returns a\nnon-404 resposne status.",
+    "heritage": [
+        "packages",
+        "jaque",
+        "jaque-route"
+    ],
+    "href": "packages---jaque---jaque-route---_first-found"
+}

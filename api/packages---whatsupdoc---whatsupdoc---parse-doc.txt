@@ -1,0 +1,36 @@
+{
+    "name": "parseDoc",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+    "lineNo": 379,
+    "params": [
+        {
+            "name": "text",
+            "type": "String",
+            "doc": "a documentation string"
+        },
+        {
+            "name": "node",
+            "type": "Object",
+            "doc": "a documentation node, as provided by `parseDocs`"
+        },
+        {
+            "name": "tagParsers",
+            "type": "Object * [name String, handler Function(text, node)]",
+            "doc": "an optional mapping of `@` tag names to corresponding handlers.  Defaults to `tagParsers` as exported by the same module."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "doc": "node"
+    },
+    "doc": "Accepts a documentation string and a documentation node,\nstrips out and applies the `@` metadata blocks to the\ndocumentation node.",
+    "heritage": [
+        "packages",
+        "whatsupdoc",
+        "whatsupdoc"
+    ],
+    "href": "packages---whatsupdoc---whatsupdoc---parse-doc"
+}

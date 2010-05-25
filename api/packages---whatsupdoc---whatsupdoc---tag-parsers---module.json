@@ -1,0 +1,1 @@
+{"name":"module","markup":"markdown","fileName":"/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js","lineNo":589,"params":[{"name":"text","type":"String"},{"name":"node","type":"{errors Array}"}],"errors":[],"throws":[],"see":[],"doc":"","heritage":["packages","whatsupdoc","whatsupdoc","tag-parsers"],"href":"packages---whatsupdoc---whatsupdoc---tag-parsers---module"}

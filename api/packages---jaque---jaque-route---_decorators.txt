@@ -1,0 +1,30 @@
+{
+    "name": "Decorators",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/jaque/lib/jaque/route.js",
+    "lineNo": 485,
+    "params": [
+        {
+            "name": "decorators",
+            "type": "Array * Decorator"
+        },
+        {
+            "name": "app",
+            "type": "App"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "App",
+        "doc": ""
+    },
+    "doc": "Wraps a Q-JSGI application in a sequence of decorators.",
+    "heritage": [
+        "packages",
+        "jaque",
+        "jaque-route"
+    ],
+    "href": "packages---jaque---jaque-route---_decorators"
+}

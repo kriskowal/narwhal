@@ -1,0 +1,1 @@
+{"name":"mimeTypes","markup":"markdown","fileName":"/Users/kris/narwhal+node/packages/jaque/lib/jaque/mime-types.js","lineNo":26,"params":[],"errors":[],"throws":[],"see":[],"doc":"an object mapping file extensions to MIME types.","jsType":"Object * String","heritage":["packages","jaque","jaque-mime-types"],"href":"packages---jaque---jaque-mime-types---mime-types"}

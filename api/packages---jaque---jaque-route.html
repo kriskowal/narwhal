@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!–[if IE 6]><![endif]–>
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>jaque/route</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Provides tools for making, routing, adapting, and decorating
+Q-JSGI web applications.</p>
+
+<h2>Duck Types</h2>
+
+<p>A Q-JSGI <em>app</em> is a function that accepts a request and returns a
+response.  The response may be promised.</p>
+
+<p>A Q-JSGI <em>request</em> is an object or a promise for an object that has
+the following properties:</p>
+
+<ul>
+<li><code>method</code> is the HTTP request method as a string.</li>
+<li><code>path</code> is a string, guaranteed to start with <code>"/"</code>.</li>
+<li><code>headers</code> is an object mapping lower-case HTTP headers to
+their corresponding values as strings.</li>
+<li><code>body</code> is a Q-JSGI content body.</li>
+</ul>
+
+<p>A Q-JSGI <em>response</em> is an object or a promise for an object that
+has the following properties:</p>
+
+<ul>
+<li><code>status</code> is the HTTP response status code as a number.</li>
+<li><code>headers</code> is an object mapping lower-case HTTP headers to their
+corresponding values as strings.</li>
+<li><code>body</code> is a Q-JSGI content body.</li>
+</ul>
+
+<p>A Q-JSGI response and request content <em>body</em> can be as simple as an
+array of strings.  It can be a promise.  In general, it must be an
+object that has a <code>forEach</code> method.  The <code>forEach</code> method accepts a
+<code>write</code> function.  It goes without saying that <code>forEach</code> returns
+<code>undefined</code>, but it can return a promise for <code>undefined</code> that will
+resolve when it has made all of its <code>write</code> calls and the request
+or response can be closed, re-used, or kept alive..  The <code>forEach</code>
+function may call <code>write</code> with a <code>String</code> any number of times.  The
+<code>String</code> may be promised.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#Node"><tt>Node</tt></a></li>
+    
+        <li><a href="#Branch"><tt>Branch</tt></a></li>
+    
+        <li><a href="#Content"><tt>Content</tt></a></li>
+    
+        <li><a href="#ok"><tt>ok</tt></a></li>
+    
+        <li><a href="#ContentLength"><tt>ContentLength</tt></a></li>
+    
+        <li><a href="#File"><tt>File</tt></a></li>
+    
+        <li><a href="#FileTree"><tt>FileTree</tt></a></li>
+    
+        <li><a href="#file"><tt>file</tt></a></li>
+    
+        <li><a href="#etag"><tt>etag</tt></a></li>
+    
+        <li><a href="#directory"><tt>directory</tt></a></li>
+    
+        <li><a href="#PermanentRedirect"><tt>PermanentRedirect</tt></a></li>
+    
+        <li><a href="#TemporaryRedirect"><tt>TemporaryRedirect</tt></a></li>
+    
+        <li><a href="#redirect"><tt>redirect</tt></a></li>
+    
+        <li><a href="#Method"><tt>Method</tt></a></li>
+    
+        <li><a href="#Accept"><tt>Accept</tt></a></li>
+    
+        <li><a href="#Error"><tt>Error</tt></a></li>
+    
+        <li><a href="#Log"><tt>Log</tt></a></li>
+    
+        <li><a href="#Decorators"><tt>Decorators</tt></a></li>
+    
+        <li><a href="#Json"><tt>Json</tt></a></li>
+    
+        <li><a href="#json"><tt>json</tt></a></li>
+    
+        <li><a href="#PostJson"><tt>PostJson</tt></a></li>
+    
+        <li><a href="#Inspect"><tt>Inspect</tt></a></li>
+    
+        <li><a href="#CookieSession"><tt>CookieSession</tt></a></li>
+    
+        <li><a href="#PathSession"><tt>PathSession</tt></a></li>
+    
+        <li><a href="#FirstFound"><tt>FirstFound</tt></a></li>
+    
+        <li><a href="#badRequest"><tt>badRequest</tt></a></li>
+    
+        <li><a href="#notFound"><tt>notFound</tt></a></li>
+    
+        <li><a href="#methodNotAllowed"><tt>methodNotAllowed</tt></a></li>
+    
+        <li><a href="#notAcceptable"><tt>notAcceptable</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="Node"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_node.html"><tt>Node</tt></a>
+        
+        
+    </h2>
+
+    <p>Makes a  Q-JSGI app that only responds when there is nothing left
+on the path to route.  If the there is unprocessed data on the
+path, the returned app either forwards to the <code>notFound</code> app or
+returns a <code>404 Not Found</code> response.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>app</tt></th>
+            <td class="B"><tt>App</tt></th>
+            
+            <td class="C"><p>a Q-JSGI application to respond to this end of the routing chain.</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>notFound</tt></th>
+            <td class="B"><tt>App</tt></th>
+            
+            <td class="C"><p>(optional) defaults to the <code>notFound</code> app.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Branch"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_branch.html"><tt>Branch</tt></a>
+        
+        
+    </h2>
+
+    <p>Makes a Q-JSGI app that branches requests based on the next
+unprocessed path component.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>paths</tt></th>
+            <td class="B"><tt>Object * App</tt></th>
+            
+            <td class="C"><p>a mapping from path components (single file or directory names) to Q-JSGI applications for subsequent routing.  The mapping may be a plain JavaScript <code>Object</code> record, which must own the mapping properties, or an object that has <code>has(key)</code> and <code>get(key)</code> methods in its prototype chain.</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>notFound</tt></th>
+            <td class="B"><tt>App</tt></th>
+            
+            <td class="C"><p>a Q-JSGI application that handles requests for which the next file name does not exist in paths.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Content"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_content.html"><tt>Content</tt></a>
+        
+        
+    </h2>
+
+    <p>Makes an app that returns a response with static content
+from memory.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>body</tt></th>
+            <td class="B"><tt>Body</tt></th>
+            
+            <td class="C"><p>a Q-JSGI response body</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>contentType</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>status</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"><p>a Q-JSGI app</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="ok"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---ok.html"><tt>ok</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns a Q-JSGI response with the given content.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>content</tt></th>
+            <td class="B"><tt>Body</tt></th>
+            
+            <td class="C"><p>(optional) defaults to <code>[""]</code></p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>contentType</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>(optional) defaults to <code>"text/plain"</code></p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>status</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+            <td class="C"><p>(optional) defaults to <code>200</code></p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Response</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="ContentLength"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_content-length.html"><tt>ContentLength</tt></a>
+        
+        
+    </h2>
+
+    <p>Decorates a Q-JSGI application, such that responses have a
+<code>"content-length"</code> header.  This causes the response content to be
+accumulated instead of streamed.  If a response already has a
+<code>"content-length"</code> or <code>"transfer-encoding"</code> header, it is passed
+through unaltered.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>app</tt></th>
+            <td class="B"><tt>App</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="File"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_file.html"><tt>File</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>contentType</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="FileTree"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_file-tree.html"><tt>FileTree</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>options</tt></th>
+            <td class="B"><tt>{notFound, file, directory, contentType}</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="file"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---file.html"><tt>file</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>request</tt></th>
+            <td class="B"><tt>Request</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>contentType</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Response</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="etag"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---etag.html"><tt>etag</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="directory"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---directory.html"><tt>directory</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>request</tt></th>
+            <td class="B"><tt>Request</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="PermanentRedirect"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_permanent-redirect.html"><tt>PermanentRedirect</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>status</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="TemporaryRedirect"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_temporary-redirect.html"><tt>TemporaryRedirect</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>status</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+            <td class="C"><p>(optional) default is <code>307</code></p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="redirect"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---redirect.html"><tt>redirect</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>location</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>status</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+            <td class="C"><p>(optional) default is <code>301</code></p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Response</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Method"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_method.html"><tt>Method</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>methods</tt></th>
+            <td class="B"><tt>Object * App</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>notAllowed</tt></th>
+            <td class="B"><tt>App</tt></th>
+            
+            <td class="C"><p>(optional)</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Accept"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_accept.html"><tt>Accept</tt></a>
+        
+        
+    </h2>
+
+    <p>Routes based on content negotiation, between the request's <code>accept</code>
+header and the application's list of possible content types.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>types</tt></th>
+            <td class="B"><tt>Object * App</tt></th>
+            
+            <td class="C"><p>mapping content types to apps that can handle them.</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>notAcceptable</tt></th>
+            <td class="B"><tt>App</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Error"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_error.html"><tt>Error</tt></a>
+        
+        
+    </h2>
+
+    <p>Decorates a JSGI application such that rejected response promises
+get translated into <code>500</code> server error responses with no content.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>app</tt></th>
+            <td class="B"><tt>App</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Log"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_log.html"><tt>Log</tt></a>
+        
+        
+    </h2>
+
+    <p>Decorates a Q-JSGI application such that all requests and responses
+are logged.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>app</tt></th>
+            <td class="B"><tt>App</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Decorators"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_decorators.html"><tt>Decorators</tt></a>
+        
+        
+    </h2>
+
+    <p>Wraps a Q-JSGI application in a sequence of decorators.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>decorators</tt></th>
+            <td class="B"><tt>Array * Decorator</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>app</tt></th>
+            <td class="B"><tt>App</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Json"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_json.html"><tt>Json</tt></a>
+        
+        
+    </h2>
+
+    <p>Wraps a Q-JSGI application such that the child application may
+simply return an object, which will in turn be serialized into a
+Q-JSGI response.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>app</tt></th>
+            <td class="B"><tt>Function(Request):Object</tt></th>
+            
+            <td class="C"><p>an application that accepts a request and returns a JSON serializable object.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="json"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---json.html"><tt>json</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>content</tt></th>
+            <td class="B"><tt>Object</tt></th>
+            
+            <td class="C"><p>data to serialize as JSON</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>options</tt></th>
+            <td class="B"><tt>{tabs}</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Response</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="PostJson"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_post-json.html"><tt>PostJson</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>app</tt></th>
+            <td class="B"><tt>Function(Request, Object):Response</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>badRequest</tt></th>
+            <td class="B"><tt>App</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Inspect"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_inspect.html"><tt>Inspect</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="CookieSession"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_cookie-session.html"><tt>CookieSession</tt></a>
+        
+        
+    </h2>
+
+    <p>Creates a persistent session associated with the HTTP client's
+cookie.  These sessions are intended to persist for the duration
+that a user visits your site in the same browser.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>Session</tt></th>
+            <td class="B"><tt>Function(session):App</tt></th>
+            
+            <td class="C"><p>a function that creates a new Q-JSGI application for each new session.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="PathSession"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_path-session.html"><tt>PathSession</tt></a>
+        
+        
+    </h2>
+
+    <p>A Q-JSGI application that creates a session associated with a
+unique path.  These sessions are intended to persist for the
+duration that a user remains in a single browser window.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>a</tt></th>
+            <td class="B"><tt>Function(session):App</tt></th>
+            
+            <td class="C"><p>function that creates a new Q-JSGI application for each new session.  It receives an object with the session's <code>id</code> and <code>lastAccess</code> <code>Date</code>.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="FirstFound"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---_first-found.html"><tt>FirstFound</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns the response of the first application that returns a
+non-404 resposne status.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>apps</tt></th>
+            <td class="B"><tt>Array * App</tt></th>
+            
+            <td class="C"><p>a cascade of applications to try successively until one of them returns a non-404 status.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>App</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="badRequest"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---bad-request.html"><tt>badRequest</tt></a>
+        
+        
+    </h2>
+
+    <p>an application that returns a 400 response.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="notFound"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---not-found.html"><tt>notFound</tt></a>
+        
+        
+    </h2>
+
+    <p>an application that returns a 404 response.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="methodNotAllowed"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---method-not-allowed.html"><tt>methodNotAllowed</tt></a>
+        
+        
+    </h2>
+
+    <p>an application that returns a 405 response.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="notAcceptable"></a>
+    <h2>
+        <a href="packages---jaque---jaque-route---not-acceptable.html"><tt>notAcceptable</tt></a>
+        
+        
+    </h2>
+
+    <p>an application that returns a 405 response.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---jaque---jaque-route.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</ht

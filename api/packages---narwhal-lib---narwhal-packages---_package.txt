@@ -2,7 +2,7 @@
     "name": "Package",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-    "lineNo": 724,
+    "lineNo": 731,
     "params": [
         {
             "name": "initial",
@@ -20,7 +20,7 @@
             "name": "resource",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-            "lineNo": 735,
+            "lineNo": 742,
             "params": [
                 {
                     "name": "path",
@@ -51,7 +51,7 @@
             "name": "resource",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-            "lineNo": 735,
+            "lineNo": 742,
             "params": [
                 {
                     "name": "path",

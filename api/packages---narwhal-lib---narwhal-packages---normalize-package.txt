@@ -2,7 +2,7 @@
     "name": "normalizePackage",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-    "lineNo": 695,
+    "lineNo": 702,
     "params": [],
     "errors": [],
     "throws": [],

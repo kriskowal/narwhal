@@ -2,7 +2,7 @@
     "name": "analyze",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-    "lineNo": 498,
+    "lineNo": 505,
     "params": [],
     "errors": [],
     "throws": [],

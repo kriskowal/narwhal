@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!–[if IE 6]><![endif]–>
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>docs</tt>
+        
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Extracts documentation nodes from comment nodes.</p>
+
+<p>Takes the output of the <code>comments</code> method and returns an
+array of objects with <code>doc</code>, <code>code</code>, and <code>level</code>
+properties, consumable by <code>parseDocs</code>.</p>
+
+<ul>
+<li><code>doc</code> is a string containing each line of
+the original <code>comment</code> with the leading cruft on each
+line trimmed off.</li>
+<li><code>code</code> is the subsequent code up
+to the next comment.</li>
+<li><code>level</code> is the number of extra stars on the beginning
+of the comment.  These can be used to provide an
+indication of hierarchical depth.</li>
+</ul>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>nodes</tt></th>
+            <td class="B"><tt>Array * {comment, prefix, code, fileName, lineNo}</tt></th>
+            
+            <td class="C"><p>nodes in the format produced by <code>comments</code></p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * {doc, code, name, level, fileName, lineNo}</tt></td>
+            <td class="C"><p>nodes</p></td>
+        </tr> 
+        
+        
+    </table>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---whatsupdoc---whatsupdoc---docs.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</ht

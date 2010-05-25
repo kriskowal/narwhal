@@ -1,0 +1,18 @@
+{
+    "name": "methodNotAllowed",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/jaque/lib/jaque/route.js",
+    "lineNo": 715,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "an application that returns a 405 response.",
+    "jsType": "App",
+    "heritage": [
+        "packages",
+        "jaque",
+        "jaque-route"
+    ],
+    "href": "packages---jaque---jaque-route---method-not-allowed"
+}

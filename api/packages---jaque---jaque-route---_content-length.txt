@@ -1,0 +1,26 @@
+{
+    "name": "ContentLength",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/jaque/lib/jaque/route.js",
+    "lineNo": 202,
+    "params": [
+        {
+            "name": "app",
+            "type": "App"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "App",
+        "doc": ""
+    },
+    "doc": "Decorates a Q-JSGI application, such that responses have a\n`\"content-length\"` header.  This causes the response content to be\naccumulated instead of streamed.  If a response already has a\n`\"content-length\"` or `\"transfer-encoding\"` header, it is passed\nthrough unaltered.",
+    "heritage": [
+        "packages",
+        "jaque",
+        "jaque-route"
+    ],
+    "href": "packages---jaque---jaque-route---_content-length"
+}

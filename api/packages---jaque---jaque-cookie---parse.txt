@@ -1,0 +1,26 @@
+{
+    "name": "parse",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/jaque/lib/jaque/cookie.js",
+    "lineNo": 11,
+    "params": [
+        {
+            "name": "cookie",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Object",
+        "doc": ""
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "jaque",
+        "jaque-cookie"
+    ],
+    "href": "packages---jaque---jaque-cookie---parse"
+}

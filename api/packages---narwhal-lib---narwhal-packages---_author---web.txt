@@ -2,7 +2,7 @@
     "name": "web",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-    "lineNo": 763,
+    "lineNo": 770,
     "params": [],
     "errors": [
         "Did not recognize \"property\" tag."

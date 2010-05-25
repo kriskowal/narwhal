@@ -2,7 +2,7 @@
     "name": "updateUsingCatalog",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/packages.js",
-    "lineNo": 658,
+    "lineNo": 665,
     "params": [],
     "errors": [],
     "throws": [],

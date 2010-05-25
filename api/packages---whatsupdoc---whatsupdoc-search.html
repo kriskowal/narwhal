@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!–[if IE 6]><![endif]–>
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>whatsupdoc/search</tt>
+        <em>module</em>
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Provides methods for finding modules in packages, and
+detecting which modules are actually available in the
+current sea, accounting for path masking, the active
+JavaScript engines, and the package directory name
+overrides in <code>package.json</code> if applicable.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#searchAll"><tt>searchAll</tt></a></li>
+    
+        <li><a href="#searchAllPredub"><tt>searchAllPredub</tt></a></li>
+    
+        <li><a href="#searchPkg"><tt>searchPkg</tt></a></li>
+    
+        <li><a href="#searchPkgPredub"><tt>searchPkgPredub</tt></a></li>
+    
+        <li><a href="#searchPkgInfo"><tt>searchPkgInfo</tt></a></li>
+    
+        <li><a href="#searchPkgInfoPredub"><tt>searchPkgInfoPredub</tt></a></li>
+    
+        <li><a href="#dub"><tt>dub</tt></a></li>
+    
+        <li><a href="#ids"><tt>ids</tt></a></li>
+    
+        <li><a href="#paths"><tt>paths</tt></a></li>
+    
+        <li><a href="#options"><tt>options</tt></a></li>
+    
+        <li><a href="#actuals"><tt>actuals</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="searchAll"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc-search---search-all.html"><tt>searchAll</tt></a>
+        
+        
+    </h2>
+
+    <p>Searches for all modules in all packages.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>system</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>an optional override for the system module object</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>packages</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>an optional override for the packages module object, which should have <code>order</code> and <code>catalog</code> properties for the precedence order and name to package info object properties.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * {id String, path Path, pkg String}</tt></td>
+            <td class="C"><p>an array of the identifier, path, and package name for every module in every package.  There may be duplicates for a given identifier.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="searchAllPredub"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc-search---search-all-predub.html"><tt>searchAllPredub</tt></a>
+        
+        
+    </h2>
+
+    <p>Searches for all modules in all packages, providing an
+incomplete picture of the module identifier.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>engine</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>an optional override for the engine module object</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>packages</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>an optional override for the packages module object, which should have <code>order</code> and <code>catalog</code> properties for the precedence order and name to package info object properties.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * {path Path, lib Path, pkg String}</tt></td>
+            <td class="C"><p>an array of the identifier, path, and package name for every module in every package.  There may be duplicates for a given identifier.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="searchPkg"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc-search---search-pkg.html"><tt>searchPkg</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>pkg</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>package name.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * {id String, path Path, pkg String}</tt></td>
+            <td class="C"><p>an array of the identifier, path, and package name for every module in the given package.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="searchPkgPredub"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc-search---search-pkg-predub.html"><tt>searchPkgPredub</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>pkg</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>package name.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * {path Path, lib Path, pkg String}</tt></td>
+            <td class="C"><p>an array of the identifier, path, and package name for every module in the given package.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="searchPkgInfo"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc-search---search-pkg-info.html"><tt>searchPkgInfo</tt></a>
+        
+        
+    </h2>
+
+    <p>Finds all of the modules and their library paths for the
+given package info object, including their identifiers.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>pkg</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>package info object, as provided by the objects in the <code>packages</code> module <code>catalog</code> or precedence <code>order</code> objects.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * {id String, path Path, pkg String}</tt></td>
+            <td class="C"><p>an array of the path, library path, and package name for every module in the given package.  Use {@link dub} to reconstruct module identifiers from each find.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="searchPkgInfoPredub"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc-search---search-pkg-info-predub.html"><tt>searchPkgInfoPredub</tt></a>
+        
+        
+    </h2>
+
+    <p>Finds all of the modules and their library paths for the
+given package info object.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>pkg</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>package info object, as provided by the objects in the <code>packages</code> module <code>catalog</code> or precedence <code>order</code> objects.</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>engine</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>an optional override for the <code>narwhal/engine</code> module for its <code>engines</code> <code>Array</code>.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * {path Path, lib Path, pkg String}</tt></td>
+            <td class="C"><p>an array of the path, library path, and package name for every module in the given package.  Use {@link dub} to reconstruct module identifiers from each find.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="dub"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc-search---dub.html"><tt>dub</tt></a>
+        
+        
+    </h2>
+
+    <p>Reconstructs the module id of each module found, based
+on its path and parent library path.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>finds</tt></th>
+            <td class="B"><tt>Array * {path Path, lib Path, ...}</tt></th>
+            
+            <td class="C"><p>provided by any of the search "predub" functions, particularly depending on the <code>path</code> and <code>lib</code> properties.  @returns {Array * {id String, ...}} an array of shallow copies of the given finds with an additional <code>id</code> property.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="ids"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc-search---ids.html"><tt>ids</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>finds</tt></th>
+            <td class="B"><tt>Array * {id String, ...}</tt></th>
+            
+            <td class="C"><p>as returned by the {@link dub} method, by way of any search method.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * String</tt></td>
+            <td class="C"><p>the unique set of all identifiers in a set of finds.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="paths"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc-search---paths.html"><tt>paths</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>a</tt></th>
+            <td class="B"><tt>Array * {path Path, ...}</tt></th>
+            
+            <td class="C"><p>collection of module finds as returned by any of the search methods, or {@link dub}</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Object * [path, {...}]</tt></td>
+            <td class="C"><p>a mapping from module path to its find information.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="options"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc-search---options.html"><tt>options</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>a</tt></th>
+            <td class="B"><tt>Array * {id String, ...}</tt></th>
+            
+            <td class="C"><p>collection of module finds as returned by {@link dub} by way of any of the search methods.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Object * [id, Array * {...}]</tt></td>
+            <td class="C"><p>a mapping from module identifiers to the list of all implementations that have that identifier.  There can be more than one if a module exists on multiple paths, and which one gets loaded depends on the path order.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="actuals"></a>
+    <h2>
+        <a href="packages---whatsupdoc---whatsupdoc-search---actuals.html"><tt>actuals</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>a</tt></th>
+            <td class="B"><tt>Object * [id, Array * Object]</tt></th>
+            
+            <td class="C"><p>mapping from module identifiers to the list of all implementations of that module.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Object * [id, Object]</tt></td>
+            <td class="C"><p>a mapping from module identifiers to the find information for the module that would actually be loaded if that identifier were required.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---whatsupdoc---whatsupdoc-search.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</ht

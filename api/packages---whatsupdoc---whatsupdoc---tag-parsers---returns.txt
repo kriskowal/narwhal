@@ -1,0 +1,27 @@
+{
+    "name": "returns",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
+    "lineNo": 495,
+    "params": [
+        {
+            "name": "text",
+            "type": "String"
+        },
+        {
+            "name": "node",
+            "type": "{errors Array}"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "parses an `@returns` tag, setting the `returns`\nproperty of the given `node` to an `Object` of the form,\n`{name, type, description}`.",
+    "heritage": [
+        "packages",
+        "whatsupdoc",
+        "whatsupdoc",
+        "tag-parsers"
+    ],
+    "href": "packages---whatsupdoc---whatsupdoc---tag-parsers---returns"
+}

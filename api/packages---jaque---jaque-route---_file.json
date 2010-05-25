@@ -1,0 +1,1 @@
+{"name":"File","markup":"markdown","fileName":"/Users/kris/narwhal+node/packages/jaque/lib/jaque/route.js","lineNo":248,"params":[{"name":"path","type":"String"},{"name":"contentType","type":"String"}],"errors":[],"throws":[],"see":[],"returns":{"type":"App","doc":""},"doc":"","heritage":["packages","jaque","jaque-route"],"href":"packages---jaque---jaque-route---_file"}

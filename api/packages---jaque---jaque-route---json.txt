@@ -1,0 +1,31 @@
+{
+    "name": "json",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/jaque/lib/jaque/route.js",
+    "lineNo": 515,
+    "params": [
+        {
+            "name": "content",
+            "type": "Object",
+            "doc": "data to serialize as JSON"
+        },
+        {
+            "name": "options",
+            "type": "{tabs}"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Response",
+        "doc": ""
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "jaque",
+        "jaque-route"
+    ],
+    "href": "packages---jaque---jaque-route---json"
+}

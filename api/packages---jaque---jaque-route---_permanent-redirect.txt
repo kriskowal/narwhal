@@ -1,0 +1,30 @@
+{
+    "name": "PermanentRedirect",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/jaque/lib/jaque/route.js",
+    "lineNo": 344,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        },
+        {
+            "name": "status",
+            "type": "Number"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "App",
+        "doc": ""
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "jaque",
+        "jaque-route"
+    ],
+    "href": "packages---jaque---jaque-route---_permanent-redirect"
+}

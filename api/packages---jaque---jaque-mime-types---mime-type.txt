@@ -1,0 +1,32 @@
+{
+    "name": "mimeType",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/jaque/lib/jaque/mime-types.js",
+    "lineNo": 11,
+    "params": [
+        {
+            "name": "extension",
+            "type": "String",
+            "doc": "a file extension, including the prefix `\".\"`."
+        },
+        {
+            "name": "fallback",
+            "type": "String",
+            "doc": "a MIME type to use if no MIME type corresponds to the prefix.  Defaults to `\"application/octet-stream\"`."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "String",
+        "doc": "a MIME type"
+    },
+    "doc": "",
+    "heritage": [
+        "packages",
+        "jaque",
+        "jaque-mime-types"
+    ],
+    "href": "packages---jaque---jaque-mime-types---mime-type"
+}
