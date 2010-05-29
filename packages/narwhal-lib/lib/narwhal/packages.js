@@ -239,6 +239,9 @@ exports.read = function read(prefixes, catalog, usingCatalog, options) {
                 packageDirectory = item;
                 name = packageDirectory.base();
             }
+
+            if (ENGINE.verbose)
+                print("PACKAGE: " + item + ", " + name);
             
             // check for cyclic symbolic linkage
             var canonicalPackageDirectory = packageDirectory.canonical();
@@ -248,10 +251,14 @@ exports.read = function read(prefixes, catalog, usingCatalog, options) {
 
             // check for duplicate package names
             if (Object.prototype.hasOwnProperty.call(catalog, name)) {
+                if (ENGINE.verbose)
+                    print("PACKAGE: redundant: " + name);
                 continue;
             }
 
             if (!packageDirectory.join('package.json').isFile()) {
+                if (ENGINE.verbose)
+                    print("PACKAGE: no package.json file: " + name);
                 //SYSTEM.log.warn('No package.json in ' + packageDirectory);
                 continue;
             }
@@ -371,7 +378,7 @@ exports.read = function read(prefixes, catalog, usingCatalog, options) {
                     root = descriptor;
 
             } catch (exception) {
-                SYSTEM.log.error("Could not load package '" + name + "'. " + exception);
+                SYSTEM.log.error("PACKAGE: Could not load package '" + name + "'. " + exception);
                 if (ENGINE.strict)
                     throw exception;
             }
@@ -761,12 +768,12 @@ exports.Author = function (author) {
         /*** @property */
         this.name = UTIL.trim(match[1]);
         /*** @property */
-        this.url = match[2];
+        this.web = match[2];
         /*** @property */
         this.email = match[3];
     } else {
         this.name = author.name;
-        this.url = author.url;
+        this.web = author.web || author.url; // url is deprecated
         this.email = author.email;
     }
 };
@@ -780,7 +787,7 @@ exports.Author = function (author) {
 exports.Author.prototype.toString = function () {
     return [
         this.name,
-        this.url ? "(" + this.url + ")" : undefined,
+        this.web ? "(" + this.web + ")" : undefined,
         this.email ? "<" + this.email + ">" : undefined
     ].filter(function (part) {
         return !!part;
