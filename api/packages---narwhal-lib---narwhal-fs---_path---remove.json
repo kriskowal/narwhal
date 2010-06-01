@@ -1,0 +1,1 @@
+{"name":"remove","markup":"markdown","fileName":"/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js","lineNo":1637,"params":[],"errors":[],"throws":[],"see":[],"doc":"Removes the file at this path.","heritage":["packages","narwhal-lib","narwhal-fs","_path"],"href":"packages---narwhal-lib---narwhal-fs---_path---remove"}

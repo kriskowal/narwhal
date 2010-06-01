@@ -2,21 +2,21 @@
     "name": "read",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
-    "lineNo": 143,
+    "lineNo": 223,
     "params": [
         {
             "name": "path"
         },
         {
-            "name": "mode",
+            "name": "options",
             "variadic": true,
-            "doc": "as String, options as Object, permissions as Number"
+            "doc": "each as described by `open`"
         }
     ],
     "errors": [],
     "throws": [],
     "see": [],
-    "doc": "",
+    "doc": "Reads all of the content of a file.",
     "heritage": [
         "packages",
         "narwhal-lib",

@@ -2,7 +2,7 @@
     "name": "append",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
-    "lineNo": 175,
+    "lineNo": 257,
     "params": [
         {
             "name": "path"
@@ -19,7 +19,7 @@
     "errors": [],
     "throws": [],
     "see": [],
-    "doc": "",
+    "doc": "Appends content to a file.",
     "heritage": [
         "packages",
         "narwhal-lib",

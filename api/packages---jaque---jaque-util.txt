@@ -91,7 +91,7 @@
                 "type": "Function(Request) :Response",
                 "doc": "a JSGI app that returns a plain text response with the given status code."
             },
-            "doc": "",
+            "doc": "Returns a JSGI app that returns a plain text response with the given status code.",
             "heritage": [
                 "packages",
                 "jaque",
@@ -122,7 +122,7 @@
             "returns": {
                 "doc": "a JSGI HTTP response object with the given status code and message as its body, if the status supports a body."
             },
-            "doc": "",
+            "doc": "Returns a JSGI HTTP response object with the given status code and message as its body, if the status supports a body.",
             "heritage": [
                 "packages",
                 "jaque",
@@ -211,7 +211,7 @@
                 "type": "Function(Request) :Response",
                 "doc": "a JSGI app that returns a plain text response with the given status code."
             },
-            "doc": "",
+            "doc": "Returns a JSGI app that returns a plain text response with the given status code.",
             "heritage": [
                 "packages",
                 "jaque",
@@ -242,7 +242,7 @@
             "returns": {
                 "doc": "a JSGI HTTP response object with the given status code and message as its body, if the status supports a body."
             },
-            "doc": "",
+            "doc": "Returns a JSGI HTTP response object with the given status code and message as its body, if the status supports a body.",
             "heritage": [
                 "packages",
                 "jaque",

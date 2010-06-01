@@ -1,0 +1,24 @@
+{
+    "name": "update",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+    "lineNo": 133,
+    "params": [
+        {
+            "name": "permissions",
+            "type": "Number || Permissions",
+            "doc": "bitwise UNIX permissions as a number, or a permissions object.  The permissions will be deeply updated into this permissions object."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Updates this permissions object with the permissions\nfrom another permissions object.\n\nWARNING: beyond specification",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "fs-base",
+        "_permissions"
+    ],
+    "href": "packages---narwhal-node---fs-base---_permissions---update"
+}

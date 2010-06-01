@@ -2,7 +2,7 @@
     "name": "copy",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
-    "lineNo": 192,
+    "lineNo": 295,
     "params": [
         {
             "name": "source",
@@ -16,7 +16,7 @@
     "errors": [],
     "throws": [],
     "see": [],
-    "doc": "",
+    "doc": "Copies a file.",
     "heritage": [
         "packages",
         "narwhal-lib",

@@ -2,7 +2,7 @@
     "name": "move",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
-    "lineNo": 362,
+    "lineNo": 425,
     "params": [
         {
             "name": "source",

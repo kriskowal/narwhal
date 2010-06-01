@@ -2,19 +2,21 @@
     "name": "hardLink",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
-    "lineNo": 768,
+    "lineNo": 870,
     "params": [
         {
-            "name": "source"
+            "name": "source",
+            "type": "String"
         },
         {
-            "name": "target"
+            "name": "target",
+            "type": "String"
         }
     ],
     "errors": [],
     "throws": [],
     "see": [],
-    "doc": "",
+    "doc": "Creates a hard link at the source location that shares\nthe underlying storage at the target location, effectively\nfunctioning as a copy of the target file, although changes\nto one file are immediately reflected in the other.",
     "heritage": [
         "packages",
         "narwhal-node",

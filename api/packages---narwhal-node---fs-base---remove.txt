@@ -2,7 +2,7 @@
     "name": "remove",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
-    "lineNo": 385,
+    "lineNo": 447,
     "params": [
         {
             "name": "path",

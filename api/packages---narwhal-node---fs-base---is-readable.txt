@@ -2,8 +2,13 @@
     "name": "isReadable",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
-    "lineNo": 915,
-    "params": [],
+    "lineNo": 1036,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        }
+    ],
     "errors": [],
     "throws": [],
     "see": [],

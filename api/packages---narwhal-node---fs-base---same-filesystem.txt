@@ -2,13 +2,15 @@
     "name": "sameFilesystem",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
-    "lineNo": 983,
+    "lineNo": 1108,
     "params": [
         {
-            "name": "pathA"
+            "name": "pathA",
+            "type": "String"
         },
         {
-            "name": "pathB"
+            "name": "pathB",
+            "type": "String"
         }
     ],
     "errors": [],
@@ -18,7 +20,7 @@
         "type": "Boolean",
         "doc": "whether the paths are on the same file system."
     },
-    "doc": "",
+    "doc": "Returns whether the paths are on the same file system.",
     "heritage": [
         "packages",
         "narwhal-node",

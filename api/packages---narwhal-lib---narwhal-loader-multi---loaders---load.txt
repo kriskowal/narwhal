@@ -21,7 +21,7 @@
         "type": "Function(scope: Object)",
         "doc": "the memoized module factory function corresponding to the given top-level identifier."
     },
-    "doc": "",
+    "doc": "Returns the memoized module factory function corresponding to the given top-level identifier.",
     "heritage": [
         "packages",
         "narwhal-lib",

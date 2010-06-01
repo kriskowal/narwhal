@@ -1,0 +1,26 @@
+{
+    "name": "isBlockDevice",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 1017,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Boolean",
+        "doc": "whether a block device exists at the given path."
+    },
+    "doc": "/!\\ Warning: beyond specification. Not necessarily\ninteroperable.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---is-block-device"
+}

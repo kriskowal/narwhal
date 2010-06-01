@@ -17,7 +17,7 @@
         "type": "Array * String",
         "doc": "the unique set of all identifiers in a set of finds."
     },
-    "doc": "",
+    "doc": "Returns the unique set of all identifiers in a set of finds.",
     "heritage": [
         "packages",
         "whatsupdoc",

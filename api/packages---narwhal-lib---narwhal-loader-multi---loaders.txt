@@ -110,7 +110,7 @@
                 "type": "Function(lexicalScope Object)",
                 "doc": "factory a module factory (\"maker\") function."
             },
-            "doc": "",
+            "doc": "Returns factory a module factory (\"maker\") function.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -142,7 +142,7 @@
                 "type": "Function(scope: Object)",
                 "doc": "the memoized module factory function corresponding to the given top-level identifier."
             },
-            "doc": "",
+            "doc": "Returns the memoized module factory function corresponding to the given top-level identifier.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -190,7 +190,7 @@
                 "type": "Boolean",
                 "doc": "whether a module factory function has already been loaded for the given identifier."
             },
-            "doc": "",
+            "doc": "Returns whether a module factory function has already been loaded for the given identifier.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -300,7 +300,7 @@
                 "type": "Function(lexicalScope Object)",
                 "doc": "factory a module factory (\"maker\") function."
             },
-            "doc": "",
+            "doc": "Returns factory a module factory (\"maker\") function.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -332,7 +332,7 @@
                 "type": "Function(scope: Object)",
                 "doc": "the memoized module factory function corresponding to the given top-level identifier."
             },
-            "doc": "",
+            "doc": "Returns the memoized module factory function corresponding to the given top-level identifier.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -380,7 +380,7 @@
                 "type": "Boolean",
                 "doc": "whether a module factory function has already been loaded for the given identifier."
             },
-            "doc": "",
+            "doc": "Returns whether a module factory function has already been loaded for the given identifier.",
             "heritage": [
                 "packages",
                 "narwhal-lib",

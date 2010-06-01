@@ -2,7 +2,7 @@
     "name": "canonical",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
-    "lineNo": 518,
+    "lineNo": 580,
     "params": [
         {
             "name": "path"

@@ -10,7 +10,7 @@
     "returns": {
         "doc": "a URL resovled to a relative URL from a source URL."
     },
-    "doc": "",
+    "doc": "Returns a URL resovled to a relative URL from a source URL.",
     "heritage": [
         "packages",
         "narwhal-lib",

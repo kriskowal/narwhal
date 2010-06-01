@@ -21,7 +21,7 @@
             "returns": {
                 "doc": "a promise"
             },
-            "doc": "",
+            "doc": "Returns a promise",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -67,7 +67,7 @@
             "returns": {
                 "doc": "a promise"
             },
-            "doc": "",
+            "doc": "Returns a promise",
             "heritage": [
                 "packages",
                 "narwhal-lib",

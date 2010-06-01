@@ -2,10 +2,11 @@
     "name": "list",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
-    "lineNo": 1053,
+    "lineNo": 1177,
     "params": [
         {
             "name": "path",
+            "type": "String",
             "doc": "to a directory"
         }
     ],
@@ -16,7 +17,7 @@
         "type": "Array * String",
         "doc": "an array of the names of the files in a given directory."
     },
-    "doc": "The self ('.') and parent ('..') directory entries will\nnot be returned.",
+    "doc": "Returns a list of the entries in a directory.  These are\nnot fully qualified paths, but single directory entry\nnames.  The self (`'.'`) and parent (`'..'`) directory\nentries will not be returned.",
     "heritage": [
         "packages",
         "narwhal-node",

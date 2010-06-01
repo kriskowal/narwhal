@@ -11,7 +11,7 @@
         "type": "Log",
         "doc": "section a new section."
     },
-    "doc": "",
+    "doc": "Returns section a new section.",
     "heritage": [
         "packages",
         "narwhal-lib",

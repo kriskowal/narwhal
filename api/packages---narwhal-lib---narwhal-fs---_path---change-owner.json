@@ -1,0 +1,1 @@
+{"name":"changeOwner","markup":"markdown","fileName":"/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js","lineNo":1513,"params":[{"name":"owner"}],"errors":[],"throws":[],"see":[],"doc":"Changes the owner of the path.","heritage":["packages","narwhal-lib","narwhal-fs","_path"],"href":"packages---narwhal-lib---narwhal-fs---_path---change-owner"}

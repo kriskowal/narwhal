@@ -46,7 +46,7 @@
                 "type": "Boolean",
                 "doc": "whether the value is null or undefined"
             },
-            "doc": "",
+            "doc": "Returns whether the value is null or undefined",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -91,7 +91,7 @@
                     "returns": {
                         "doc": "a shallow copy on all owned properties"
                     },
-                    "doc": "",
+                    "doc": "Returns a shallow copy on all owned properties",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -116,7 +116,7 @@
                     "returns": {
                         "doc": "a deep copy on all owned properties"
                     },
-                    "doc": "",
+                    "doc": "Returns a deep copy on all owned properties",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -351,7 +351,7 @@
                     "returns": {
                         "doc": "a shallow copy on all owned properties"
                     },
-                    "doc": "",
+                    "doc": "Returns a shallow copy on all owned properties",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -376,7 +376,7 @@
                     "returns": {
                         "doc": "a deep copy on all owned properties"
                     },
-                    "doc": "",
+                    "doc": "Returns a deep copy on all owned properties",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -2201,7 +2201,7 @@
                 "type": "String",
                 "doc": "the value padded up to at least the minimum length.  adds the padding to the begining side of the `String`."
             },
-            "doc": "",
+            "doc": "Returns the value padded up to at least the minimum length.  adds the padding to the begining side of the `String`.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -2237,7 +2237,7 @@
                 "type": "String",
                 "doc": "the value padded up to at least the minimum length.  adds the padding to the end side of the `String`."
             },
-            "doc": "",
+            "doc": "Returns the value padded up to at least the minimum length.  adds the padding to the end side of the `String`.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -2457,7 +2457,7 @@
                 "type": "Boolean",
                 "doc": "whether the value is null or undefined"
             },
-            "doc": "",
+            "doc": "Returns whether the value is null or undefined",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -2502,7 +2502,7 @@
                     "returns": {
                         "doc": "a shallow copy on all owned properties"
                     },
-                    "doc": "",
+                    "doc": "Returns a shallow copy on all owned properties",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -2527,7 +2527,7 @@
                     "returns": {
                         "doc": "a deep copy on all owned properties"
                     },
-                    "doc": "",
+                    "doc": "Returns a deep copy on all owned properties",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -2762,7 +2762,7 @@
                     "returns": {
                         "doc": "a shallow copy on all owned properties"
                     },
-                    "doc": "",
+                    "doc": "Returns a shallow copy on all owned properties",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -2787,7 +2787,7 @@
                     "returns": {
                         "doc": "a deep copy on all owned properties"
                     },
-                    "doc": "",
+                    "doc": "Returns a deep copy on all owned properties",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -4612,7 +4612,7 @@
                 "type": "String",
                 "doc": "the value padded up to at least the minimum length.  adds the padding to the begining side of the `String`."
             },
-            "doc": "",
+            "doc": "Returns the value padded up to at least the minimum length.  adds the padding to the begining side of the `String`.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -4648,7 +4648,7 @@
                 "type": "String",
                 "doc": "the value padded up to at least the minimum length.  adds the padding to the end side of the `String`."
             },
-            "doc": "",
+            "doc": "Returns the value padded up to at least the minimum length.  adds the padding to the end side of the `String`.",
             "heritage": [
                 "packages",
                 "narwhal-lib",

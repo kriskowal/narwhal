@@ -1,0 +1,21 @@
+{
+    "name": "resolve",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 1186,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "String",
+        "doc": "path"
+    },
+    "doc": "Takes file system paths as variadic arguments and treats\neach path as a location, in the URL sense, resolving each\nnew location based on the previous.  For example, if the\nfirst argument is the absolute path of a JSON file, and\nthe second argument is a path mentioned in that JSON\nfile, `resolve` returns the absolute path of the\nmentioned file.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---resolve"
+}

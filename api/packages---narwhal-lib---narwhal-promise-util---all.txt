@@ -17,7 +17,7 @@
         "type": "Promise * Array",
         "doc": "a promise for an array of each resolved value respectively."
     },
-    "doc": "",
+    "doc": "Returns a promise for an array of each resolved value respectively.",
     "heritage": [
         "packages",
         "narwhal-lib",

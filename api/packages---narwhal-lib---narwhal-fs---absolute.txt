@@ -1,0 +1,26 @@
+{
+    "name": "absolute",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 1249,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "String",
+        "doc": "a fully-qualified path from the root of a file system to the given path, by normalizing the path as joined on the current working directory. Absolute paths are not necessarily canonical."
+    },
+    "doc": "Returns a fully-qualified path from the root of a file system to the given path, by normalizing the path as joined on the current working directory. Absolute paths are not necessarily canonical.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---absolute"
+}

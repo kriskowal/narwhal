@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!–[if IE 6]><![endif]–>
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>openRaw</tt>
+        
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Open a file as a raw byte stream.</p>
+
+<p>The following combinations of true <code>read</code>, <code>write</code>, <code>update</code> *
+and <code>append</code> properties are supported:</p>
+
+<ul>
+<li><code>read</code>: read only</li>
+<li><code>write</code>: write only, truncates, creates if necessary</li>
+<li><code>append</code>: write only, append, creates if necessary</li>
+<li><code>read</code> and <code>update</code>: read and write, does not create, does not
+truncate</li>
+<li><code>write</code> and <code>update</code>: read and write, trancates, creates if
+necessary</li>
+<li><code>append</code> and <code>update</code>: read and write, does not truncate,
+creates if necessary</li>
+</ul>
+
+<p>On some varieties of UNIX, "append" causes all writes to be
+appended, regardless of the seek position.</p>
+
+<p>The following additional properties can be set on the
+options and are used when the underlying system supports
+them:</p>
+
+<ul>
+<li><code>exclusive</code>: prevents the file from being opened if it
+a file already exists. Atomicity of the <code>exclusive</code> open
+can be used to coordinate processes like daemons.</li>
+<li><code>truncate</code>: explicitly requests truncation of the file
+upon successful open.</li>
+<li><code>create</code>: explicitly requests creation if the file
+does not exist.</li>
+</ul>
+
+<p>The following properties can also be specified but are
+not mentioned in the CommonJS standard, and may not be
+supported by all Narwhal engines:</p>
+
+<ul>
+<li><code>xSync</code>: requests that data be written to disk immediately.</li>
+<li><code>xNarwhalNoControlTty</code>: requests that, if the opened file is
+a terminal device or pseudo terminal, that the calling
+process does not become the controller for that terminal.</li>
+<li><code>xNarwhalNoFollow</code>: ensures that symbolic links are not followed,
+which prevents certain kinds of attacks that take
+advantage of race conditions in opening files where the
+attacker subverts a write by injecting a symbolic link
+at a path that is known to be opened by a process with
+authority in excess of its own.</li>
+<li><code>xNarwhalDirectory</code></li>
+</ul>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>mode</tt></th>
+            <td class="B"><tt>Object</tt></th>
+            
+            <td class="C"><p>optional</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>permissions</tt></th>
+            <td class="B"><tt>Permissions || Object</tt></th>
+            
+            <td class="C"><p>optional</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>a raw byte stream</p></td>
+        </tr> 
+        
+        
+    </table>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-fs---open-raw.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</ht

@@ -24,7 +24,7 @@
         "type": "Promise * Undefined",
         "doc": "a promise that resolves when the writing is complete."
     },
-    "doc": "",
+    "doc": "Returns a promise that resolves when the writing is complete.",
     "heritage": [
         "packages",
         "narwhal-node",

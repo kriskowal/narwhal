@@ -96,7 +96,7 @@
                 "type": "Boolean",
                 "doc": "whether this event instructs the emitting signal to continue propagating to further observers."
             },
-            "doc": "",
+            "doc": "Returns whether this event instructs the emitting signal to continue propagating to further observers.",
             "heritage": [
                 "packages",
                 "narwhal",
@@ -118,7 +118,7 @@
                 "type": "Boolean",
                 "doc": "whether this event instructs the emitting signal to apply its default action."
             },
-            "doc": "",
+            "doc": "Returns whether this event instructs the emitting signal to apply its default action.",
             "heritage": [
                 "packages",
                 "narwhal",
@@ -216,7 +216,7 @@
                 "type": "Boolean",
                 "doc": "whether this event instructs the emitting signal to continue propagating to further observers."
             },
-            "doc": "",
+            "doc": "Returns whether this event instructs the emitting signal to continue propagating to further observers.",
             "heritage": [
                 "packages",
                 "narwhal",
@@ -238,7 +238,7 @@
                 "type": "Boolean",
                 "doc": "whether this event instructs the emitting signal to apply its default action."
             },
-            "doc": "",
+            "doc": "Returns whether this event instructs the emitting signal to apply its default action.",
             "heritage": [
                 "packages",
                 "narwhal",

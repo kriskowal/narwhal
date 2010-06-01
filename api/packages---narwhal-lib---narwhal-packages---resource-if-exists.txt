@@ -17,7 +17,7 @@
         "type": "Path || Undefined",
         "doc": "a path object from `narwhal/fs` in the `narwhal-lib` package for the file in the first package that contains a corresponding path, or `undefined` if no matching file exists.  If the paths correspond to an absolute path, returns that as a path object.  @throws {Error} an error if no corresponding path exists."
     },
-    "doc": "",
+    "doc": "Returns a path object from `narwhal/fs` in the `narwhal-lib` package for the file in the first package that contains a corresponding path, or `undefined` if no matching file exists.  If the paths correspond to an absolute path, returns that as a path object.  @throws {Error} an error if no corresponding path exists.",
     "heritage": [
         "packages",
         "narwhal-lib",

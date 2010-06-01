@@ -1,0 +1,34 @@
+{
+    "name": "join",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 1340,
+    "params": [
+        {
+            "name": "path",
+            "type": "String",
+            "variadic": true,
+            "doc": "directory names"
+        },
+        {
+            "name": "a",
+            "type": "String",
+            "doc": "directory or file name"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Path",
+        "doc": "the path arrived at by following the given directories and file name."
+    },
+    "doc": "Joins paths onto this one.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs",
+        "_path"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---_path---join"
+}

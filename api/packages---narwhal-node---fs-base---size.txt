@@ -2,7 +2,7 @@
     "name": "size",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
-    "lineNo": 1011,
+    "lineNo": 1136,
     "params": [
         {
             "name": "path"

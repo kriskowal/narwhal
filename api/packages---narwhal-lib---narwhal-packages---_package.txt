@@ -36,7 +36,7 @@
                 "type": "Path",
                 "doc": "a path in the package, regardless of whether a corresponding file exists."
             },
-            "doc": "",
+            "doc": "Returns a path in the package, regardless of whether a corresponding file exists.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -67,7 +67,7 @@
                 "type": "Path",
                 "doc": "a path in the package, regardless of whether a corresponding file exists."
             },
-            "doc": "",
+            "doc": "Returns a path in the package, regardless of whether a corresponding file exists.",
             "heritage": [
                 "packages",
                 "narwhal-lib",

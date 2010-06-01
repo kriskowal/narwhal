@@ -33,7 +33,7 @@
                 "doc": "an error, that may contain backtrace information on Rhino and V8."
             },
             "constructor": true,
-            "doc": "",
+            "doc": "Returns an error, that may contain backtrace information on Rhino and V8.",
             "children": [
                 {
                     "name": "toString",
@@ -541,7 +541,7 @@
                 "doc": "an error, that may contain backtrace information on Rhino and V8."
             },
             "constructor": true,
-            "doc": "",
+            "doc": "Returns an error, that may contain backtrace information on Rhino and V8.",
             "children": [
                 {
                     "name": "toString",

@@ -17,7 +17,7 @@
         "type": "ByteString",
         "doc": "bytes read"
     },
-    "doc": "",
+    "doc": "Returns bytes read",
     "heritage": [
         "packages",
         "narwhal-node",

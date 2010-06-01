@@ -1,0 +1,23 @@
+{
+    "name": "move",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 1614,
+    "params": [
+        {
+            "name": "target",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Moves the file at this path to the target path.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs",
+        "_path"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---_path---move"
+}

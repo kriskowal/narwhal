@@ -2,12 +2,24 @@
     "name": "group",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
-    "lineNo": 632,
-    "params": [],
+    "lineNo": 703,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        }
+    ],
     "errors": [],
-    "throws": [],
+    "throws": [
+        {
+            "doc": "if the file does not exist."
+        }
+    ],
     "see": [],
-    "doc": "",
+    "returns": {
+        "doc": "group the identifier of the group that owns the file."
+    },
+    "doc": "Returns the group identifier for the group that owns\nthe referenced file.",
     "heritage": [
         "packages",
         "narwhal-node",

@@ -113,7 +113,7 @@
                 "type": "Buffer",
                 "doc": "that views a part of this buffer's allocated bytes, such that changes to either are reflected in the other.."
             },
-            "doc": "",
+            "doc": "Returns that views a part of this buffer's allocated bytes, such that changes to either are reflected in the other..",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -144,7 +144,7 @@
                 "type": "Buffer",
                 "doc": "that contains a copy of a part of this buffer's allocated bytes, such that changes to this buffer and the new buffer are isolated."
             },
-            "doc": "",
+            "doc": "Returns that contains a copy of a part of this buffer's allocated bytes, such that changes to this buffer and the new buffer are isolated.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -529,7 +529,7 @@
                 "type": "Buffer",
                 "doc": "that views a part of this buffer's allocated bytes, such that changes to either are reflected in the other.."
             },
-            "doc": "",
+            "doc": "Returns that views a part of this buffer's allocated bytes, such that changes to either are reflected in the other..",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -560,7 +560,7 @@
                 "type": "Buffer",
                 "doc": "that contains a copy of a part of this buffer's allocated bytes, such that changes to this buffer and the new buffer are isolated."
             },
-            "doc": "",
+            "doc": "Returns that contains a copy of a part of this buffer's allocated bytes, such that changes to this buffer and the new buffer are isolated.",
             "heritage": [
                 "packages",
                 "narwhal-lib",

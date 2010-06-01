@@ -16,7 +16,7 @@
         "type": "Promise * Stream",
         "doc": "a stream from the `narwhal/q-io` module."
     },
-    "doc": "",
+    "doc": "Returns a stream from the `narwhal/q-io` module.",
     "heritage": [
         "packages",
         "narwhal-node",

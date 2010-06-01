@@ -2,7 +2,7 @@
     "name": "makeDirectory",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
-    "lineNo": 445,
+    "lineNo": 507,
     "params": [
         {
             "name": "path"

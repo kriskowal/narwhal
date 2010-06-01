@@ -1,0 +1,30 @@
+{
+    "name": "grant",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+    "lineNo": 166,
+    "params": [
+        {
+            "name": "who",
+            "type": "\"owner\" | \"group\" | \"other\" | \"setUid\" | \"setGid\" | \"sticky\""
+        },
+        {
+            "name": "ability",
+            "type": "\"read\" | \"write\" | \"execute\" | undefined",
+            "doc": "or `undefined` for `setUid`, `setGid`, and `sticky`."
+        }
+    ],
+    "errors": [
+        "Did not recognize \"this\" tag."
+    ],
+    "throws": [],
+    "see": [],
+    "doc": "Adds a permission this permissions object.\n\nWARNING: beyond specification",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "fs-base",
+        "_permissions"
+    ],
+    "href": "packages---narwhal-node---fs-base---_permissions---grant"
+}

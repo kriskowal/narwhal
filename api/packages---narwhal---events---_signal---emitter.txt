@@ -11,7 +11,7 @@
         "type": "Function",
         "doc": "a function that emits this signal when it is called."
     },
-    "doc": "",
+    "doc": "Returns a function that emits this signal when it is called.",
     "heritage": [
         "packages",
         "narwhal",

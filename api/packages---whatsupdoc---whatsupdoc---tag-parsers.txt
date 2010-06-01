@@ -2,7 +2,7 @@
     "name": "tagParsers",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-    "lineNo": 430,
+    "lineNo": 432,
     "params": [],
     "errors": [],
     "throws": [],
@@ -13,7 +13,7 @@
             "name": "param",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 439,
+            "lineNo": 441,
             "params": [
                 {
                     "name": "text",
@@ -40,7 +40,7 @@
             "name": "params",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 467,
+            "lineNo": 469,
             "params": [
                 {
                     "name": "text",
@@ -67,7 +67,7 @@
             "name": "returns",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 495,
+            "lineNo": 497,
             "params": [
                 {
                     "name": "text",
@@ -94,7 +94,7 @@
             "name": "return",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 516,
+            "lineNo": 518,
             "params": [
                 {
                     "name": "text",
@@ -123,7 +123,7 @@
             "name": "name",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 524,
+            "lineNo": 526,
             "params": [
                 {
                     "name": "text",
@@ -150,7 +150,7 @@
             "name": "author",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 535,
+            "lineNo": 537,
             "params": [
                 {
                     "name": "text",
@@ -177,7 +177,7 @@
             "name": "contributor",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 553,
+            "lineNo": 555,
             "params": [
                 {
                     "name": "text",
@@ -206,7 +206,7 @@
             "name": "constructor",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 565,
+            "lineNo": 567,
             "params": [
                 {
                     "name": "text",
@@ -233,7 +233,7 @@
             "name": "deprecated",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 577,
+            "lineNo": 579,
             "params": [
                 {
                     "name": "text",
@@ -260,7 +260,7 @@
             "name": "module",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 589,
+            "lineNo": 591,
             "params": [
                 {
                     "name": "text",
@@ -287,7 +287,7 @@
             "name": "fileoverview",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 599,
+            "lineNo": 601,
             "params": [
                 {
                     "name": "text",
@@ -316,7 +316,7 @@
             "name": "type",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 606,
+            "lineNo": 608,
             "params": [],
             "errors": [],
             "throws": [],
@@ -336,7 +336,7 @@
             "name": "param",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 439,
+            "lineNo": 441,
             "params": [
                 {
                     "name": "text",
@@ -363,7 +363,7 @@
             "name": "params",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 467,
+            "lineNo": 469,
             "params": [
                 {
                     "name": "text",
@@ -390,7 +390,7 @@
             "name": "returns",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 495,
+            "lineNo": 497,
             "params": [
                 {
                     "name": "text",
@@ -417,7 +417,7 @@
             "name": "return",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 516,
+            "lineNo": 518,
             "params": [
                 {
                     "name": "text",
@@ -446,7 +446,7 @@
             "name": "name",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 524,
+            "lineNo": 526,
             "params": [
                 {
                     "name": "text",
@@ -473,7 +473,7 @@
             "name": "author",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 535,
+            "lineNo": 537,
             "params": [
                 {
                     "name": "text",
@@ -500,7 +500,7 @@
             "name": "contributor",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 553,
+            "lineNo": 555,
             "params": [
                 {
                     "name": "text",
@@ -529,7 +529,7 @@
             "name": "constructor",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 565,
+            "lineNo": 567,
             "params": [
                 {
                     "name": "text",
@@ -556,7 +556,7 @@
             "name": "deprecated",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 577,
+            "lineNo": 579,
             "params": [
                 {
                     "name": "text",
@@ -583,7 +583,7 @@
             "name": "module",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 589,
+            "lineNo": 591,
             "params": [
                 {
                     "name": "text",
@@ -610,7 +610,7 @@
             "name": "fileoverview",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 599,
+            "lineNo": 601,
             "params": [
                 {
                     "name": "text",
@@ -639,7 +639,7 @@
             "name": "type",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-            "lineNo": 606,
+            "lineNo": 608,
             "params": [],
             "errors": [],
             "throws": [],

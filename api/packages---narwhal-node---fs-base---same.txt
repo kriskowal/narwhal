@@ -2,13 +2,15 @@
     "name": "same",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
-    "lineNo": 960,
+    "lineNo": 1085,
     "params": [
         {
-            "name": "pathA"
+            "name": "pathA",
+            "type": "String"
         },
         {
-            "name": "pathB"
+            "name": "pathB",
+            "type": "String"
         }
     ],
     "errors": [],
@@ -17,7 +19,7 @@
     "returns": {
         "doc": "whether the paths refer to the same physical storage."
     },
-    "doc": "",
+    "doc": "Returns whether the paths refer to the same physical storage.",
     "heritage": [
         "packages",
         "narwhal-node",

@@ -1,0 +1,29 @@
+{
+    "name": "group",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 925,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [
+        {
+            "doc": "if the file does not exist."
+        }
+    ],
+    "see": [],
+    "returns": {
+        "doc": "group the identifier of the group that owns the file."
+    },
+    "doc": "Returns the group identifier for the group that owns\nthe referenced file.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---group"
+}

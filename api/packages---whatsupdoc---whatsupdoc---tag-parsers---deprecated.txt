@@ -2,7 +2,7 @@
     "name": "deprecated",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-    "lineNo": 577,
+    "lineNo": 579,
     "params": [
         {
             "name": "text",

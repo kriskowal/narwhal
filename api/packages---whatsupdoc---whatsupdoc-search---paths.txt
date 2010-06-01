@@ -17,7 +17,7 @@
         "type": "Object * [path, {...}]",
         "doc": "a mapping from module path to its find information."
     },
-    "doc": "",
+    "doc": "Returns a mapping from module path to its find information.",
     "heritage": [
         "packages",
         "whatsupdoc",

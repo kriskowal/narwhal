@@ -1,0 +1,30 @@
+{
+    "name": "open",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
+    "lineNo": 385,
+    "params": [
+        {
+            "name": "raw",
+            "type": "ByteStream"
+        },
+        {
+            "name": "mode",
+            "type": "{read, write, update, append}"
+        },
+        {
+            "name": "charset",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Wraps a raw byte stream with the appropriate text stream\nfor the given mode.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-io-boot"
+    ],
+    "href": "packages---narwhal-lib---narwhal-io-boot---open"
+}

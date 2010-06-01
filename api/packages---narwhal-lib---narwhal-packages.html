@@ -88,7 +88,7 @@
         
     </h2>
 
-    
+    <p>Returns an array of all files that match the given paths in every package.  Each of the variadic path terms may be replaced with their configured equivalents in their respective package, as described by the <code>directories</code> property in the given package's <code>package.json</code> file.</p>
 
 
     <table class="form whatsupdoc-parameters">
@@ -125,7 +125,7 @@
         
     </h2>
 
-    
+    <p>Returns a path object from <code>narwhal/fs</code> in the <code>narwhal-lib</code> package for the file in the first package that contains a corresponding path, or <code>undefined</code> if no matching file exists.  If the paths correspond to an absolute path, returns that as a path object.  @throws {Error} an error if no corresponding path exists.</p>
 
 
     <table class="form whatsupdoc-parameters">
@@ -162,7 +162,7 @@
         
     </h2>
 
-    
+    <p>Returns a path object from <code>narwhal/fs</code> in the <code>narwhal-lib</code> package for the file in the first package that contains a corresponding path.  If the paths correspond to an absolute path, returns that as a path object.</p>
 
 
     <table class="form whatsupdoc-parameters">
@@ -588,7 +588,7 @@ normalizes all of the packages in a catalog</p>
     
     <tr>
         <th><a href="packages---narwhal-lib---narwhal-packages---_package---resource.html"><tt>resource</tt></a></th> 
-        <td></td>
+        <td><p>Returns a path in the package, regardless of whether a corresponding file exists.</p></td>
     </tr>
     
     
@@ -635,7 +635,7 @@ normalizes all of the packages in a catalog</p>
     
     <tr>
         <th><a href="packages---narwhal-lib---narwhal-packages---_author---to-string.html"><tt>toString</tt></a></th> 
-        <td></td>
+        <td><p>Returns a string like <code>Author Name (http://example.com/) &lt;author@example.com&gt;</code>, where each component is optional.</p></td>
     </tr>
     
     <tr>

@@ -2,7 +2,7 @@
     "name": "changeWorkingDirectory",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
-    "lineNo": 596,
+    "lineNo": 658,
     "params": [
         {
             "name": "path"

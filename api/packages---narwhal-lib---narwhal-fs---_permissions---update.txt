@@ -1,0 +1,24 @@
+{
+    "name": "update",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 836,
+    "params": [
+        {
+            "name": "permissions",
+            "type": "Number || Permissions",
+            "doc": "bitwise UNIX permissions as a number, or a permissions object.  The permissions will be deeply updated into this permissions object."
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Updates this permissions object with the permissions\nfrom another permissions object.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs",
+        "_permissions"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---_permissions---update"
+}

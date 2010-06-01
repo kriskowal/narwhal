@@ -10,7 +10,7 @@
     "returns": {
         "doc": "the `event-loop-engine` module."
     },
-    "doc": "",
+    "doc": "Returns the `event-loop-engine` module.",
     "heritage": [
         "packages",
         "narwhal-node",

@@ -93,7 +93,7 @@
                 "type": "Array * {id String, path Path, pkg String}",
                 "doc": "an array of the identifier, path, and package name for every module in the given package."
             },
-            "doc": "",
+            "doc": "Returns an array of the identifier, path, and package name for every module in the given package.",
             "heritage": [
                 "packages",
                 "whatsupdoc",
@@ -120,7 +120,7 @@
                 "type": "Array * {path Path, lib Path, pkg String}",
                 "doc": "an array of the identifier, path, and package name for every module in the given package."
             },
-            "doc": "",
+            "doc": "Returns an array of the identifier, path, and package name for every module in the given package.",
             "heritage": [
                 "packages",
                 "whatsupdoc",
@@ -228,7 +228,7 @@
                 "type": "Array * String",
                 "doc": "the unique set of all identifiers in a set of finds."
             },
-            "doc": "",
+            "doc": "Returns the unique set of all identifiers in a set of finds.",
             "heritage": [
                 "packages",
                 "whatsupdoc",
@@ -255,7 +255,7 @@
                 "type": "Object * [path, {...}]",
                 "doc": "a mapping from module path to its find information."
             },
-            "doc": "",
+            "doc": "Returns a mapping from module path to its find information.",
             "heritage": [
                 "packages",
                 "whatsupdoc",
@@ -282,7 +282,7 @@
                 "type": "Object * [id, Array * {...}]",
                 "doc": "a mapping from module identifiers to the list of all implementations that have that identifier.  There can be more than one if a module exists on multiple paths, and which one gets loaded depends on the path order."
             },
-            "doc": "",
+            "doc": "Returns a mapping from module identifiers to the list of all implementations that have that identifier.  There can be more than one if a module exists on multiple paths, and which one gets loaded depends on the path order.",
             "heritage": [
                 "packages",
                 "whatsupdoc",
@@ -309,7 +309,7 @@
                 "type": "Object * [id, Object]",
                 "doc": "a mapping from module identifiers to the find information for the module that would actually be loaded if that identifier were required."
             },
-            "doc": "",
+            "doc": "Returns a mapping from module identifiers to the find information for the module that would actually be loaded if that identifier were required.",
             "heritage": [
                 "packages",
                 "whatsupdoc",
@@ -400,7 +400,7 @@
                 "type": "Array * {id String, path Path, pkg String}",
                 "doc": "an array of the identifier, path, and package name for every module in the given package."
             },
-            "doc": "",
+            "doc": "Returns an array of the identifier, path, and package name for every module in the given package.",
             "heritage": [
                 "packages",
                 "whatsupdoc",
@@ -427,7 +427,7 @@
                 "type": "Array * {path Path, lib Path, pkg String}",
                 "doc": "an array of the identifier, path, and package name for every module in the given package."
             },
-            "doc": "",
+            "doc": "Returns an array of the identifier, path, and package name for every module in the given package.",
             "heritage": [
                 "packages",
                 "whatsupdoc",
@@ -535,7 +535,7 @@
                 "type": "Array * String",
                 "doc": "the unique set of all identifiers in a set of finds."
             },
-            "doc": "",
+            "doc": "Returns the unique set of all identifiers in a set of finds.",
             "heritage": [
                 "packages",
                 "whatsupdoc",
@@ -562,7 +562,7 @@
                 "type": "Object * [path, {...}]",
                 "doc": "a mapping from module path to its find information."
             },
-            "doc": "",
+            "doc": "Returns a mapping from module path to its find information.",
             "heritage": [
                 "packages",
                 "whatsupdoc",
@@ -589,7 +589,7 @@
                 "type": "Object * [id, Array * {...}]",
                 "doc": "a mapping from module identifiers to the list of all implementations that have that identifier.  There can be more than one if a module exists on multiple paths, and which one gets loaded depends on the path order."
             },
-            "doc": "",
+            "doc": "Returns a mapping from module identifiers to the list of all implementations that have that identifier.  There can be more than one if a module exists on multiple paths, and which one gets loaded depends on the path order.",
             "heritage": [
                 "packages",
                 "whatsupdoc",
@@ -616,7 +616,7 @@
                 "type": "Object * [id, Object]",
                 "doc": "a mapping from module identifiers to the find information for the module that would actually be loaded if that identifier were required."
             },
-            "doc": "",
+            "doc": "Returns a mapping from module identifiers to the find information for the module that would actually be loaded if that identifier were required.",
             "heritage": [
                 "packages",
                 "whatsupdoc",

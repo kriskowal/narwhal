@@ -13,7 +13,7 @@
         "type": "Number",
         "doc": "the crc32 hash for a string as an integer."
     },
-    "doc": "",
+    "doc": "Returns the crc32 hash for a string as an integer.",
     "heritage": [
         "packages",
         "narwhal-lib",

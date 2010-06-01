@@ -2,7 +2,7 @@
     "name": "param",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-    "lineNo": 439,
+    "lineNo": 441,
     "params": [
         {
             "name": "text",

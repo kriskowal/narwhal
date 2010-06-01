@@ -2,12 +2,21 @@
     "name": "changeGroup",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
-    "lineNo": 686,
-    "params": [],
+    "lineNo": 770,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        },
+        {
+            "name": "group",
+            "doc": "a group identifier"
+        }
+    ],
     "errors": [],
     "throws": [],
     "see": [],
-    "doc": "",
+    "doc": "Sets the group ownership of the given file or directory.",
     "heritage": [
         "packages",
         "narwhal-node",

@@ -17,7 +17,7 @@
         "type": "Array * Object",
         "doc": "decoded where the section key, `\"-\"` signifies the default sections."
     },
-    "doc": "",
+    "doc": "Returns decoded where the section key, `\"-\"` signifies the default sections.",
     "heritage": [
         "packages",
         "narwhal-lib",

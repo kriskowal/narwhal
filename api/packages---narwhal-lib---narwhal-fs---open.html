@@ -28,8 +28,80 @@
             
 
     
+    <p>Creates an IO stream for a file, in either text in a parcticular
+character set or in bytes.</p>
+
+<p>Mode includes:</p>
+
+<ul>
+<li><code>"r"</code> for reading (<code>read</code> option)</li>
+<li><code>"w"</code> for writing (<code>write</code> option)</li>
+<li><code>"a"</code> for appending (<code>append</code> option)</li>
+<li><code>"+"</code> for updating (<code>update</code> option)</li>
+<li><code>"b"</code> for a byte stream (<code>binary</code> option)</li>
+<li><code>"x"</code> for exclusive creation: open will fail if the file already
+exists. (<code>exclusive</code> option)</li>
+</ul>
+
+<p>Options include:</p>
+
+<ul>
+<li><code>charset</code> an IANA character set, case insensitive.</li>
+<li><code>buffering</code> <code>Number</code> of bytes to buffer, presently only
+used by the charset transcoder for its internal buffer.</li>
+<li><code>lineBuffering</code> <code>Boolean</code> whether to buffer lines, not
+presently supported.</li>
+<li>all options mentioned above, in the mode string as <code>Boolean</code>
+values.</li>
+<li>all options mentioned below, in the <code>openRaw</code> method.</li>
+</ul>
+    
 
     <!-- TODO params or throws or returns -->
+    
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>mode</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>(optional, further arguments shift) as specified by <code>openRaw</code></p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>charset</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>(options, further arguments shift) a character set name, as defined by IANA, in all upper-case to distinguish it from a mode string.  The default if none is specified and the stream is not binary, is <code>UTF-8</code>.</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>permissions</tt></th>
+            <td class="B"><tt>Permissions | Number</tt></th>
+            
+            <td class="C"><p>(optional, further arguments shift)</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>options</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>(optional)</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
     
 
     

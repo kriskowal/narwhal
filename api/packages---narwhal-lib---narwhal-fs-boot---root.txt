@@ -11,7 +11,7 @@
         "type": "String",
         "doc": "the Unix root path or corresponding Windows drive for a given path."
     },
-    "doc": "",
+    "doc": "Returns the Unix root path or corresponding Windows drive for a given path.",
     "heritage": [
         "packages",
         "narwhal-lib",

@@ -17,7 +17,7 @@
         "type": "Promise * Array",
         "doc": "a promise for the sum of the resolved."
     },
-    "doc": "",
+    "doc": "Returns a promise for the sum of the resolved.",
     "heritage": [
         "packages",
         "narwhal-lib",

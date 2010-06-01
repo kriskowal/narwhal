@@ -1,0 +1,21 @@
+{
+    "name": "remove",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 327,
+    "params": [
+        {
+            "name": "path"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Removes an empty directory. A symbolic link is itself\nremoved, rather than the directory it resolves to being\nremoved.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---remove"
+}

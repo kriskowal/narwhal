@@ -1,0 +1,17 @@
+{
+    "name": "ALT_SEPARATOR",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 1158,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "* undefined on Unix\n* `/` on Windows",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---__alt-separator"
+}

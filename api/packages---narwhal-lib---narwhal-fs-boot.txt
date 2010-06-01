@@ -159,60 +159,33 @@
                 "doc": "path"
             },
             "doc": "Takes paths as any number of arguments and reduces them\ninto a single path in normal form, removing all \".\" path\ncomponents, and reducing \"..\" path components by removing\nthe previous path component if possible.",
-            "children": [
-                {
-                    "name": "isAbsolute",
-                    "markup": "markdown",
-                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs-boot.js",
-                    "lineNo": 210,
-                    "params": [],
-                    "errors": [],
-                    "throws": [],
-                    "see": [],
-                    "returns": {
-                        "type": "Boolean",
-                        "doc": "whether the given path begins at the root of the file system or a drive letter."
-                    },
-                    "doc": "",
-                    "heritage": [
-                        "packages",
-                        "narwhal-lib",
-                        "narwhal-fs-boot",
-                        "normal"
-                    ],
-                    "href": "packages---narwhal-lib---narwhal-fs-boot---normal---is-absolute"
-                }
-            ],
-            "index": {
-                "isAbsolute": {
-                    "name": "isAbsolute",
-                    "markup": "markdown",
-                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs-boot.js",
-                    "lineNo": 210,
-                    "params": [],
-                    "errors": [],
-                    "throws": [],
-                    "see": [],
-                    "returns": {
-                        "type": "Boolean",
-                        "doc": "whether the given path begins at the root of the file system or a drive letter."
-                    },
-                    "doc": "",
-                    "heritage": [
-                        "packages",
-                        "narwhal-lib",
-                        "narwhal-fs-boot",
-                        "normal"
-                    ],
-                    "href": "packages---narwhal-lib---narwhal-fs-boot---normal---is-absolute"
-                }
-            },
             "heritage": [
                 "packages",
                 "narwhal-lib",
                 "narwhal-fs-boot"
             ],
             "href": "packages---narwhal-lib---narwhal-fs-boot---normal"
+        },
+        {
+            "name": "isAbsolute",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs-boot.js",
+            "lineNo": 210,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Boolean",
+                "doc": "whether the given path begins at the root of the file system or a drive letter."
+            },
+            "doc": "Returns whether the given path begins at the root of the file system or a drive letter.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-fs-boot"
+            ],
+            "href": "packages---narwhal-lib---narwhal-fs-boot---is-absolute"
         },
         {
             "name": "isRelative",
@@ -227,7 +200,7 @@
                 "type": "Boolean",
                 "doc": "whether the given path does not begin at the root of the file system or a drive letter."
             },
-            "doc": "",
+            "doc": "Returns whether the given path does not begin at the root of the file system or a drive letter.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -248,7 +221,7 @@
                 "type": "Boolean",
                 "doc": "whether the given path component corresponds to the root of the file system or a drive letter, as applicable."
             },
-            "doc": "",
+            "doc": "Returns whether the given path component corresponds to the root of the file system or a drive letter, as applicable.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -269,7 +242,7 @@
                 "type": "String",
                 "doc": "the Unix root path or corresponding Windows drive for a given path."
             },
-            "doc": "",
+            "doc": "Returns the Unix root path or corresponding Windows drive for a given path.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -290,7 +263,7 @@
                 "type": "String",
                 "doc": "the parent directory of the given path."
             },
-            "doc": "",
+            "doc": "Returns the parent directory of the given path.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -321,7 +294,7 @@
                 "type": "String",
                 "doc": "the last component of a path, without the given extension if the extension is provided and matches the given file."
             },
-            "doc": "",
+            "doc": "Returns the last component of a path, without the given extension if the extension is provided and matches the given file.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -342,7 +315,7 @@
                 "type": "String",
                 "doc": "the extension (e.g., `txt`) of the file at the given path."
             },
-            "doc": "",
+            "doc": "Returns the extension (e.g., `txt`) of the file at the given path.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -499,60 +472,33 @@
                 "doc": "path"
             },
             "doc": "Takes paths as any number of arguments and reduces them\ninto a single path in normal form, removing all \".\" path\ncomponents, and reducing \"..\" path components by removing\nthe previous path component if possible.",
-            "children": [
-                {
-                    "name": "isAbsolute",
-                    "markup": "markdown",
-                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs-boot.js",
-                    "lineNo": 210,
-                    "params": [],
-                    "errors": [],
-                    "throws": [],
-                    "see": [],
-                    "returns": {
-                        "type": "Boolean",
-                        "doc": "whether the given path begins at the root of the file system or a drive letter."
-                    },
-                    "doc": "",
-                    "heritage": [
-                        "packages",
-                        "narwhal-lib",
-                        "narwhal-fs-boot",
-                        "normal"
-                    ],
-                    "href": "packages---narwhal-lib---narwhal-fs-boot---normal---is-absolute"
-                }
-            ],
-            "index": {
-                "isAbsolute": {
-                    "name": "isAbsolute",
-                    "markup": "markdown",
-                    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs-boot.js",
-                    "lineNo": 210,
-                    "params": [],
-                    "errors": [],
-                    "throws": [],
-                    "see": [],
-                    "returns": {
-                        "type": "Boolean",
-                        "doc": "whether the given path begins at the root of the file system or a drive letter."
-                    },
-                    "doc": "",
-                    "heritage": [
-                        "packages",
-                        "narwhal-lib",
-                        "narwhal-fs-boot",
-                        "normal"
-                    ],
-                    "href": "packages---narwhal-lib---narwhal-fs-boot---normal---is-absolute"
-                }
-            },
             "heritage": [
                 "packages",
                 "narwhal-lib",
                 "narwhal-fs-boot"
             ],
             "href": "packages---narwhal-lib---narwhal-fs-boot---normal"
+        },
+        "isAbsolute": {
+            "name": "isAbsolute",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs-boot.js",
+            "lineNo": 210,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Boolean",
+                "doc": "whether the given path begins at the root of the file system or a drive letter."
+            },
+            "doc": "Returns whether the given path begins at the root of the file system or a drive letter.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-fs-boot"
+            ],
+            "href": "packages---narwhal-lib---narwhal-fs-boot---is-absolute"
         },
         "isRelative": {
             "name": "isRelative",
@@ -567,7 +513,7 @@
                 "type": "Boolean",
                 "doc": "whether the given path does not begin at the root of the file system or a drive letter."
             },
-            "doc": "",
+            "doc": "Returns whether the given path does not begin at the root of the file system or a drive letter.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -588,7 +534,7 @@
                 "type": "Boolean",
                 "doc": "whether the given path component corresponds to the root of the file system or a drive letter, as applicable."
             },
-            "doc": "",
+            "doc": "Returns whether the given path component corresponds to the root of the file system or a drive letter, as applicable.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -609,7 +555,7 @@
                 "type": "String",
                 "doc": "the Unix root path or corresponding Windows drive for a given path."
             },
-            "doc": "",
+            "doc": "Returns the Unix root path or corresponding Windows drive for a given path.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -630,7 +576,7 @@
                 "type": "String",
                 "doc": "the parent directory of the given path."
             },
-            "doc": "",
+            "doc": "Returns the parent directory of the given path.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -661,7 +607,7 @@
                 "type": "String",
                 "doc": "the last component of a path, without the given extension if the extension is provided and matches the given file."
             },
-            "doc": "",
+            "doc": "Returns the last component of a path, without the given extension if the extension is provided and matches the given file.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -682,7 +628,7 @@
                 "type": "String",
                 "doc": "the extension (e.g., `txt`) of the file at the given path."
             },
-            "doc": "",
+            "doc": "Returns the extension (e.g., `txt`) of the file at the given path.",
             "heritage": [
                 "packages",
                 "narwhal-lib",

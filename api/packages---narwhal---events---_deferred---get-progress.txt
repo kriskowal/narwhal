@@ -10,7 +10,7 @@
     "returns": {
         "doc": "the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress."
     },
-    "doc": "",
+    "doc": "Returns the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress.",
     "heritage": [
         "packages",
         "narwhal",

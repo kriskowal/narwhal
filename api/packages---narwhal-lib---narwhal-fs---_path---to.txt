@@ -1,0 +1,27 @@
+{
+    "name": "to",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 1372,
+    "params": [
+        {
+            "name": "target",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Path",
+        "doc": "the relative path from here to the given path."
+    },
+    "doc": "Returns the relative path from here to the given path.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs",
+        "_path"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---_path---to"
+}

@@ -25,7 +25,7 @@
         "type": "Array * Promise",
         "doc": "an array of promises for the returned results of the callback on each respective resolved value."
     },
-    "doc": "",
+    "doc": "Returns an array of promises for the returned results of the callback on each respective resolved value.",
     "heritage": [
         "packages",
         "narwhal-lib",

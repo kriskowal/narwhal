@@ -21,7 +21,7 @@
         "type": "Function(lexicalScope Object)",
         "doc": "factory a module factory (\"maker\") function."
     },
-    "doc": "",
+    "doc": "Returns factory a module factory (\"maker\") function.",
     "heritage": [
         "packages",
         "narwhal-lib",

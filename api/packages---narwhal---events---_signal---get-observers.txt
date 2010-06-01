@@ -11,7 +11,7 @@
         "type": "Array",
         "doc": "all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal."
     },
-    "doc": "",
+    "doc": "Returns all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal.",
     "heritage": [
         "packages",
         "narwhal",

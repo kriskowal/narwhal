@@ -1,0 +1,18 @@
+{
+    "name": "close",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 1137,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Closes the iteration.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs",
+        "iterator"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---iterator---close"
+}

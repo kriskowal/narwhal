@@ -17,7 +17,7 @@
         "type": "Array * {path Path, lib Path, pkg String}",
         "doc": "an array of the identifier, path, and package name for every module in the given package."
     },
-    "doc": "",
+    "doc": "Returns an array of the identifier, path, and package name for every module in the given package.",
     "heritage": [
         "packages",
         "whatsupdoc",

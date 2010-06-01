@@ -228,7 +228,7 @@
                 "type": "boolean",
                 "doc": "whether a Signal has been registered for the given name."
             },
-            "doc": "",
+            "doc": "Returns whether a Signal has been registered for the given name.",
             "heritage": [
                 "packages",
                 "narwhal",
@@ -458,7 +458,7 @@
                 "type": "boolean",
                 "doc": "whether a Signal has been registered for the given name."
             },
-            "doc": "",
+            "doc": "Returns whether a Signal has been registered for the given name.",
             "heritage": [
                 "packages",
                 "narwhal",

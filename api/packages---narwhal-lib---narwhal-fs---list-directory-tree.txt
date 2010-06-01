@@ -2,12 +2,21 @@
     "name": "listDirectoryTree",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
-    "lineNo": 224,
-    "params": [],
+    "lineNo": 509,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        }
+    ],
     "errors": [],
     "throws": [],
     "see": [],
-    "doc": "",
+    "returns": {
+        "type": "Array * String",
+        "doc": "paths"
+    },
+    "doc": "Constructs an array of paths including the given directory\nand its recursively contained directories.  Does not follow\nsymbolic links.",
     "heritage": [
         "packages",
         "narwhal-lib",

@@ -20,7 +20,7 @@
         "type": "Number",
         "doc": "byte value"
     },
-    "doc": "",
+    "doc": "Returns byte value",
     "heritage": [
         "packages",
         "narwhal-node",

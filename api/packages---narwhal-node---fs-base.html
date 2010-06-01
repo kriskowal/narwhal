@@ -44,11 +44,11 @@
     
     <ul>
     
-        <li><a href="#Permissions"><tt>Permissions</tt></a></li>
-    
         <li><a href="#UNIX_BITS"><tt>UNIX_BITS</tt></a></li>
     
         <li><a href="#UNIX_BITS_REVERSED"><tt>UNIX_BITS_REVERSED</tt></a></li>
+    
+        <li><a href="#Permissions"><tt>Permissions</tt></a></li>
     
         <li><a href="#openRaw"><tt>openRaw</tt></a></li>
     
@@ -68,7 +68,11 @@
     
         <li><a href="#changeWorkingDirectory"><tt>changeWorkingDirectory</tt></a></li>
     
+        <li><a href="#owner"><tt>owner</tt></a></li>
+    
         <li><a href="#group"><tt>group</tt></a></li>
+    
+        <li><a href="#changeOwner"><tt>changeOwner</tt></a></li>
     
         <li><a href="#changeGroup"><tt>changeGroup</tt></a></li>
     
@@ -112,32 +116,11 @@
     
         <li><a href="#list"><tt>list</tt></a></li>
     
+        <li><a href="#iterate"><tt>iterate</tt></a></li>
+    
     </ul>
     
 
-    
-    <a name="Permissions"></a>
-    <h2>
-        <a href="packages---narwhal-node---fs-base---_permissions.html"><tt>Permissions</tt></a>
-        
-        
-    </h2>
-
-    
-
-
-    <table class="form whatsupdoc-parameters">
-        
-        
-        
-    </table>
-
-    
-
-    
-
-    
-    </table>
     
     <a name="UNIX_BITS"></a>
     <h2>
@@ -146,7 +129,22 @@
         
     </h2>
 
-    
+    <p>[
+        ['owner', 'read'],
+        ['owner', 'write'],
+        ['owner', 'execute'],
+        ['group', 'read'],
+        ['group', 'write'],
+        ['group', 'execute'],
+        ['other', 'read'],
+        ['other', 'write'],
+        ['other', 'execute'],
+        ['setUid', undefined],
+        ['setGid', undefined],
+        ['sticky', undefined],
+    ]</p>
+
+<p>WARNING: beyond specification</p>
 
 
     <table class="form whatsupdoc-parameters">
@@ -169,10 +167,44 @@
         
     </h2>
 
-    
+    <p><code>UNIX_BITS</code> in reverse order, from most significant to
+least significant.</p>
+
+<p>WARNING: beyond specification</p>
 
 
     <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Permissions"></a>
+    <h2>
+        <a href="packages---narwhal-node---fs-base---_permissions.html"><tt>Permissions</tt></a>
+        
+        
+    </h2>
+
+    <p>Constructs a permissions object.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>permissions</tt></th>
+            <td class="B"><tt>Permissions</tt></th>
+            
+            <td class="C"><p>override the <code>Permissions.default</code> values.</p></td>
+            
+        </tr>
         
         
         
@@ -187,33 +219,43 @@
     <table class="form">
     
     <tr>
-        <th><a href="packages---narwhal-node---fs-base---__unix-bits-reversed---update.html"><tt>update</tt></a></th> 
-        <td></td>
+        <th><a href="packages---narwhal-node---fs-base---_permissions---update.html"><tt>update</tt></a></th> 
+        <td><p>Updates this permissions object with the permissions
+from another permissions object.</p>
+
+<p>WARNING: beyond specification</p></td>
     </tr>
     
     <tr>
-        <th><a href="packages---narwhal-node---fs-base---__unix-bits-reversed---grant.html"><tt>grant</tt></a></th> 
-        <td></td>
+        <th><a href="packages---narwhal-node---fs-base---_permissions---grant.html"><tt>grant</tt></a></th> 
+        <td><p>Adds a permission this permissions object.</p>
+
+<p>WARNING: beyond specification</p></td>
     </tr>
     
     <tr>
-        <th><a href="packages---narwhal-node---fs-base---__unix-bits-reversed---deny.html"><tt>deny</tt></a></th> 
-        <td></td>
+        <th><a href="packages---narwhal-node---fs-base---_permissions---deny.html"><tt>deny</tt></a></th> 
+        <td><p>Removes a permission form this permissions object.</p>
+
+<p>WARNING: beyond specification</p></td>
     </tr>
     
     <tr>
-        <th><a href="packages---narwhal-node---fs-base---__unix-bits-reversed---can.html"><tt>can</tt></a></th> 
-        <td></td>
+        <th><a href="packages---narwhal-node---fs-base---_permissions---can.html"><tt>can</tt></a></th> 
+        <td><p>WARNING: beyond specification</p></td>
     </tr>
     
     <tr>
-        <th><a href="packages---narwhal-node---fs-base---__unix-bits-reversed---to-unix.html"><tt>toUnix</tt></a></th> 
-        <td></td>
+        <th><a href="packages---narwhal-node---fs-base---_permissions---to-unix.html"><tt>toUnix</tt></a></th> 
+        <td><p>WARNING: beyond specification</p></td>
     </tr>
     
     <tr>
-        <th><a href="packages---narwhal-node---fs-base---__unix-bits-reversed---get.html"><tt>get</tt></a></th> 
-        <td></td>
+        <th><a href="packages---narwhal-node---fs-base---_permissions---default.html"><tt>default</tt></a></th> 
+        <td><p>The default permissions, as constructed on Unix from the
+inverse of <code>umask</code>.  This is a property of the the <code>Permissions</code>
+object proper and can be both gotten as a <code>Permissions</code> object
+or set with either a <code>Number</code> or a <code>Permissions</code> object.</p></td>
     </tr>
     
     
@@ -226,7 +268,7 @@
         
     </h2>
 
-    <p>Open a file for reading.</p>
+    <p>Open a file as a raw byte stream.</p>
 
 <p>The following combinations of true <code>read</code>, <code>write</code>, <code>update</code> *
 and <code>append</code> properties are supported:</p>
@@ -582,6 +624,50 @@ a trailing '/'</p>
     
     </table>
     
+    <a name="owner"></a>
+    <h2>
+        <a href="packages---narwhal-node---fs-base---owner.html"><tt>owner</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns the user identifier of the owner of 
+the referenced file.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>owner the identifier of the owner of a file.</p></td>
+        </tr> 
+        
+        
+        <tr>
+            <th class="A"><em>throws</em></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>if the file does not exist</p></td>
+            
+        </tr>
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
     <a name="group"></a>
     <h2>
         <a href="packages---narwhal-node---fs-base---group.html"><tt>group</tt></a>
@@ -589,10 +675,70 @@ a trailing '/'</p>
         
     </h2>
 
-    
+    <p>Returns the group identifier for the group that owns
+the referenced file.</p>
 
 
     <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>group the identifier of the group that owns the file.</p></td>
+        </tr> 
+        
+        
+        <tr>
+            <th class="A"><em>throws</em></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>if the file does not exist.</p></td>
+            
+        </tr>
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="changeOwner"></a>
+    <h2>
+        <a href="packages---narwhal-node---fs-base---change-owner.html"><tt>changeOwner</tt></a>
+        
+        
+    </h2>
+
+    <p>Changes the owner for a referenced file.</p>
+
+<p>WARNING: beyond specification</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>owner</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>an identifier for the owner of a file</p></td>
+            
+        </tr>
         
         
         
@@ -612,10 +758,24 @@ a trailing '/'</p>
         
     </h2>
 
-    
+    <p>Sets the group ownership of the given file or directory.</p>
 
 
     <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>group</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>a group identifier</p></td>
+            
+        </tr>
         
         
         
@@ -635,11 +795,24 @@ a trailing '/'</p>
         
     </h2>
 
-    
+    <p>Returns a representation of the permissions granted to
+various users for the given file.</p>
 
 
     <table class="form whatsupdoc-parameters">
         
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Permissions</tt></td>
+            <td class="C"><p>a representation of the permissions granted to various users for the given file.</p></td>
+        </tr> 
         
         
     </table>
@@ -658,10 +831,22 @@ a trailing '/'</p>
         
     </h2>
 
-    
+    <p>Sets the permissions for the given file.</p>
 
 
     <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>permissions</tt></th>
+            <td class="B"><tt>Permissions | Number</tt></th>
+            
+        </tr>
         
         
         
@@ -681,20 +866,21 @@ a trailing '/'</p>
         
     </h2>
 
-    
+    <p>Creates a symbolic link at the source path that references
+the target path, resolved from the source.</p>
 
 
     <table class="form whatsupdoc-parameters">
         
         <tr>
             <th class="A"><tt>source</tt></th>
-            <td class="B"></th>
+            <td class="B"><tt>String</tt></th>
             
         </tr>
         
         <tr>
             <th class="A"><tt>target</tt></th>
-            <td class="B"></th>
+            <td class="B"><tt>String</tt></th>
             
         </tr>
         
@@ -716,20 +902,23 @@ a trailing '/'</p>
         
     </h2>
 
-    
+    <p>Creates a hard link at the source location that shares
+the underlying storage at the target location, effectively
+functioning as a copy of the target file, although changes
+to one file are immediately reflected in the other.</p>
 
 
     <table class="form whatsupdoc-parameters">
         
         <tr>
             <th class="A"><tt>source</tt></th>
-            <td class="B"></th>
+            <td class="B"><tt>String</tt></th>
             
         </tr>
         
         <tr>
             <th class="A"><tt>target</tt></th>
-            <td class="B"></th>
+            <td class="B"><tt>String</tt></th>
             
         </tr>
         
@@ -751,22 +940,23 @@ a trailing '/'</p>
         
     </h2>
 
-    <p>See: http://www.opengroup.org/onlinepubs/000095399/functions/readlink.html
-"POSIX readlink function"</p>
+    <p>Reads the content of a symbolic link at the given path.</p>
+
+<p>See: <a href="POSIX readlink function">http://www.opengroup.org/onlinepubs/000095399/functions/readlink.html</a></p>
 
 
     <table class="form whatsupdoc-parameters">
         
         <tr>
             <th class="A"><tt>path</tt></th>
-            <td class="B"></th>
+            <td class="B"><tt>String</tt></th>
             
         </tr>
         
         
         <tr>
             <th class="A"><em>returns</em></th>
-            <td class="B"><tt>undefined</tt></td>
+            <td class="B"><tt>String</tt></td>
             <td class="C"><p>path</p></td>
         </tr> 
         
@@ -787,14 +977,14 @@ a trailing '/'</p>
         
     </h2>
 
-    
+    <p>Returns whether a file exists at the given path.</p>
 
 
     <table class="form whatsupdoc-parameters">
         
         <tr>
             <th class="A"><tt>path</tt></th>
-            <td class="B"></th>
+            <td class="B"><tt>String</tt></th>
             
         </tr>
         
@@ -822,14 +1012,14 @@ a trailing '/'</p>
         
     </h2>
 
-    
+    <p>Returns whether a regular file exists at the given path.</p>
 
 
     <table class="form whatsupdoc-parameters">
         
         <tr>
             <th class="A"><tt>path</tt></th>
-            <td class="B"></th>
+            <td class="B"><tt>String</tt></th>
             
         </tr>
         
@@ -857,14 +1047,14 @@ a trailing '/'</p>
         
     </h2>
 
-    
+    <p>Returns whether a directory exists at the given path.</p>
 
 
     <table class="form whatsupdoc-parameters">
         
         <tr>
             <th class="A"><tt>path</tt></th>
-            <td class="B"></th>
+            <td class="B"><tt>String</tt></th>
             
         </tr>
         
@@ -892,14 +1082,14 @@ a trailing '/'</p>
         
     </h2>
 
-    
+    <p>Returns whether a symbolic link exists at the given path.</p>
 
 
     <table class="form whatsupdoc-parameters">
         
         <tr>
             <th class="A"><tt>path</tt></th>
-            <td class="B"></th>
+            <td class="B"><tt>String</tt></th>
             
         </tr>
         
@@ -933,6 +1123,18 @@ interoperable.</p>
 
     <table class="form whatsupdoc-parameters">
         
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether a block device exists at the given path.</p></td>
+        </tr> 
         
         
     </table>
@@ -957,6 +1159,18 @@ interoperable.</p>
 
     <table class="form whatsupdoc-parameters">
         
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether a character streaming device exists at the given path.</p></td>
+        </tr> 
         
         
     </table>
@@ -981,6 +1195,18 @@ interoperable.</p>
 
     <table class="form whatsupdoc-parameters">
         
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether a named pipe device exists at the given path.</p></td>
+        </tr> 
         
         
     </table>
@@ -1005,6 +1231,18 @@ interoperable.</p>
 
     <table class="form whatsupdoc-parameters">
         
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether a UNIX domain socket exists at the given path.</p></td>
+        </tr> 
         
         
     </table>
@@ -1032,6 +1270,12 @@ is to attempt to open the file.</p>
 
     <table class="form whatsupdoc-parameters">
         
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
         
         <tr>
             <th class="A"><em>returns</em></th>
@@ -1056,15 +1300,27 @@ is to attempt to open the file.</p>
         
     </h2>
 
-    <p>Warning: this function provides information about the
+    <p>/!\ Warning: this function provides information about the
 process owner's rights for information and display
-purposes only. The only reliable way to detect whether
-a file is writable or readable, without race coditions,
-is to attempt to open the file.</p>
+purposes only. The only reliable way to detect whether a
+file is writable or readable, without race coditions, is
+to attempt to open the file.</p>
 
 
     <table class="form whatsupdoc-parameters">
         
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether <code>path</code> is writable.</p></td>
+        </tr> 
         
         
     </table>
@@ -1083,20 +1339,20 @@ is to attempt to open the file.</p>
         
     </h2>
 
-    
+    <p>Returns whether the paths refer to the same physical storage.</p>
 
 
     <table class="form whatsupdoc-parameters">
         
         <tr>
             <th class="A"><tt>pathA</tt></th>
-            <td class="B"></th>
+            <td class="B"><tt>String</tt></th>
             
         </tr>
         
         <tr>
             <th class="A"><tt>pathB</tt></th>
-            <td class="B"></th>
+            <td class="B"><tt>String</tt></th>
             
         </tr>
         
@@ -1124,20 +1380,20 @@ is to attempt to open the file.</p>
         
     </h2>
 
-    
+    <p>Returns whether the paths are on the same file system.</p>
 
 
     <table class="form whatsupdoc-parameters">
         
         <tr>
             <th class="A"><tt>pathA</tt></th>
-            <td class="B"></th>
+            <td class="B"><tt>String</tt></th>
             
         </tr>
         
         <tr>
             <th class="A"><tt>pathB</tt></th>
-            <td class="B"></th>
+            <td class="B"><tt>String</tt></th>
             
         </tr>
         
@@ -1196,18 +1452,23 @@ terabytes accuracy will be lost.</p>
         
     </h2>
 
-    <p>Get the last modification time of <code>path</code> as a JavaScript
-<code>Date</code> object.</p>
+    <p>Returns the last modification time of the <code>path</code></p>
 
 
     <table class="form whatsupdoc-parameters">
         
         <tr>
             <th class="A"><tt>path</tt></th>
-            <td class="B"></th>
+            <td class="B"><tt>String</tt></th>
             
         </tr>
         
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Date</tt></td>
+            <td class="C"><p>the last modification time of the <code>path</code></p></td>
+        </tr> 
         
         
     </table>
@@ -1226,15 +1487,17 @@ terabytes accuracy will be lost.</p>
         
     </h2>
 
-    <p>The self ('.') and parent ('..') directory entries will
-not be returned.</p>
+    <p>Returns a list of the entries in a directory.  These are
+not fully qualified paths, but single directory entry
+names.  The self (<code>'.'</code>) and parent (<code>'..'</code>) directory
+entries will not be returned.</p>
 
 
     <table class="form whatsupdoc-parameters">
         
         <tr>
             <th class="A"><tt>path</tt></th>
-            <td class="B"></th>
+            <td class="B"><tt>String</tt></th>
             
             <td class="C"><p>to a directory</p></td>
             
@@ -1254,6 +1517,61 @@ not be returned.</p>
 
     
 
+    
+    </table>
+    
+    <a name="iterate"></a>
+    <h2>
+        <a href="packages---narwhal-node---fs-base---iterate.html"><tt>iterate</tt></a>
+        
+        
+    </h2>
+
+    <p>Creates a directory iterator.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Iterator</tt></td>
+            <td class="C"><p>a directory entry name iterator.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-node---fs-base---iterate---next.html"><tt>next</tt></a></th> 
+        <td><p>Returns the next entry name in the directory</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---fs-base---iterate---iterate.html"><tt>iterate</tt></a></th> 
+        <td><p>Returns an iterator, itself, so caling iterate
+is idempotent.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-node---fs-base---iterate---close.html"><tt>close</tt></a></th> 
+        <td><p>Closes the iteration.</p></td>
+    </tr>
+    
     
     </table>
     

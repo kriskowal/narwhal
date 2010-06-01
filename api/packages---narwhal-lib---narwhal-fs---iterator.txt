@@ -1,0 +1,162 @@
+{
+    "name": "iterator",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 1113,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Iterator",
+        "doc": "a directory entry name iterator."
+    },
+    "doc": "Creates a directory iterator.",
+    "children": [
+        {
+            "name": "next",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+            "lineNo": 1122,
+            "params": [],
+            "errors": [],
+            "throws": [
+                {
+                    "type": "StopIteration",
+                    "doc": "if there are no further entries."
+                }
+            ],
+            "see": [],
+            "returns": {
+                "type": "String",
+                "doc": "the next entry name in the directory"
+            },
+            "doc": "Returns the next entry name in the directory",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-fs",
+                "iterator"
+            ],
+            "href": "packages---narwhal-lib---narwhal-fs---iterator---next"
+        },
+        {
+            "name": "iterate",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+            "lineNo": 1129,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "this iterator"
+            },
+            "doc": "Returns an iterator, itself, so caling iterate\nis idempotent.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-fs",
+                "iterator"
+            ],
+            "href": "packages---narwhal-lib---narwhal-fs---iterator---iterate"
+        },
+        {
+            "name": "close",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+            "lineNo": 1137,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Closes the iteration.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-fs",
+                "iterator"
+            ],
+            "href": "packages---narwhal-lib---narwhal-fs---iterator---close"
+        }
+    ],
+    "index": {
+        "next": {
+            "name": "next",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+            "lineNo": 1122,
+            "params": [],
+            "errors": [],
+            "throws": [
+                {
+                    "type": "StopIteration",
+                    "doc": "if there are no further entries."
+                }
+            ],
+            "see": [],
+            "returns": {
+                "type": "String",
+                "doc": "the next entry name in the directory"
+            },
+            "doc": "Returns the next entry name in the directory",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-fs",
+                "iterator"
+            ],
+            "href": "packages---narwhal-lib---narwhal-fs---iterator---next"
+        },
+        "iterate": {
+            "name": "iterate",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+            "lineNo": 1129,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "this iterator"
+            },
+            "doc": "Returns an iterator, itself, so caling iterate\nis idempotent.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-fs",
+                "iterator"
+            ],
+            "href": "packages---narwhal-lib---narwhal-fs---iterator---iterate"
+        },
+        "close": {
+            "name": "close",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+            "lineNo": 1137,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Closes the iteration.",
+            "heritage": [
+                "packages",
+                "narwhal-lib",
+                "narwhal-fs",
+                "iterator"
+            ],
+            "href": "packages---narwhal-lib---narwhal-fs---iterator---close"
+        }
+    },
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---iterator"
+}

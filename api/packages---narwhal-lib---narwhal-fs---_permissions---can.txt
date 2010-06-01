@@ -1,0 +1,33 @@
+{
+    "name": "can",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 883,
+    "params": [
+        {
+            "name": "who",
+            "type": "\"owner\" | \"group\" | \"other\" | \"setUid\" | \"setGid\" | \"sticky\""
+        },
+        {
+            "name": "ability",
+            "type": "\"read\" | \"write\" | \"execute\" | undefined",
+            "doc": "or `undefined` for `setUid`, `setGid`, and `sticky`."
+        }
+    ],
+    "errors": [
+        "Did not recognize \"this\" tag."
+    ],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "doc": "whether this permissions object has the given permission."
+    },
+    "doc": "Returns whether this permissions object has the given permission.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs",
+        "_permissions"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---_permissions---can"
+}

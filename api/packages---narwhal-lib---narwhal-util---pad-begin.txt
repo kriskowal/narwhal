@@ -26,7 +26,7 @@
         "type": "String",
         "doc": "the value padded up to at least the minimum length.  adds the padding to the begining side of the `String`."
     },
-    "doc": "",
+    "doc": "Returns the value padded up to at least the minimum length.  adds the padding to the begining side of the `String`.",
     "heritage": [
         "packages",
         "narwhal-lib",

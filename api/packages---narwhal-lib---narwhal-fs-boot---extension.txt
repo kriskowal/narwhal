@@ -11,7 +11,7 @@
         "type": "String",
         "doc": "the extension (e.g., `txt`) of the file at the given path."
     },
-    "doc": "",
+    "doc": "Returns the extension (e.g., `txt`) of the file at the given path.",
     "heritage": [
         "packages",
         "narwhal-lib",

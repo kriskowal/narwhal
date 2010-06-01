@@ -17,7 +17,7 @@
         "doc": "a raw byte stream, supporting both reading and writing APIs."
     },
     "constructor": true,
-    "doc": "",
+    "doc": "Returns a raw byte stream, supporting both reading and writing APIs.",
     "children": [
         {
             "name": "fd",
@@ -142,7 +142,7 @@
                 "type": "Boolean",
                 "doc": "false because the underlying embedding does not yet support this feature."
             },
-            "doc": "",
+            "doc": "Returns false because the underlying embedding does not yet support this feature.",
             "heritage": [
                 "packages",
                 "narwhal-node",
@@ -206,7 +206,7 @@
                 "type": "ByteString",
                 "doc": "bytes read"
             },
-            "doc": "",
+            "doc": "Returns bytes read",
             "heritage": [
                 "packages",
                 "narwhal-node",
@@ -362,7 +362,7 @@
                 "type": "Boolean",
                 "doc": "false because the underlying embedding does not yet support this feature."
             },
-            "doc": "",
+            "doc": "Returns false because the underlying embedding does not yet support this feature.",
             "heritage": [
                 "packages",
                 "narwhal-node",
@@ -426,7 +426,7 @@
                 "type": "ByteString",
                 "doc": "bytes read"
             },
-            "doc": "",
+            "doc": "Returns bytes read",
             "heritage": [
                 "packages",
                 "narwhal-node",

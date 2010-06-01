@@ -2,10 +2,11 @@
     "name": "isDirectory",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
-    "lineNo": 860,
+    "lineNo": 969,
     "params": [
         {
-            "name": "path"
+            "name": "path",
+            "type": "String"
         }
     ],
     "errors": [],
@@ -15,7 +16,7 @@
         "type": "Boolean",
         "doc": "whether a directory exists at the given path."
     },
-    "doc": "",
+    "doc": "Returns whether a directory exists at the given path.",
     "heritage": [
         "packages",
         "narwhal-node",

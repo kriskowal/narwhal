@@ -2,7 +2,7 @@
     "name": "return",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc.js",
-    "lineNo": 516,
+    "lineNo": 518,
     "params": [
         {
             "name": "text",

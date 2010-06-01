@@ -22,7 +22,7 @@
         "type": "{\"type\": \"packages\", \"packages\": Object, \"children\": Array * ...}",
         "doc": "the root of a package documentation tree."
     },
-    "doc": "",
+    "doc": "Returns the root of a package documentation tree.",
     "heritage": [
         "packages",
         "whatsupdoc",

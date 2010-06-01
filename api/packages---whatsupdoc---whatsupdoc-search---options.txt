@@ -17,7 +17,7 @@
         "type": "Object * [id, Array * {...}]",
         "doc": "a mapping from module identifiers to the list of all implementations that have that identifier.  There can be more than one if a module exists on multiple paths, and which one gets loaded depends on the path order."
     },
-    "doc": "",
+    "doc": "Returns a mapping from module identifiers to the list of all implementations that have that identifier.  There can be more than one if a module exists on multiple paths, and which one gets loaded depends on the path order.",
     "heritage": [
         "packages",
         "whatsupdoc",

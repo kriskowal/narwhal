@@ -1,0 +1,29 @@
+{
+    "name": "owner",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+    "lineNo": 679,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [
+        {
+            "doc": "if the file does not exist"
+        }
+    ],
+    "see": [],
+    "returns": {
+        "doc": "owner the identifier of the owner of a file."
+    },
+    "doc": "Returns the user identifier of the owner of \nthe referenced file.",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "fs-base"
+    ],
+    "href": "packages---narwhal-node---fs-base---owner"
+}

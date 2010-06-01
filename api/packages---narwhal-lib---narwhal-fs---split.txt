@@ -1,0 +1,21 @@
+{
+    "name": "split",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 1165,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Array * String",
+        "doc": ""
+    },
+    "doc": "separates a path into components.  If the path is\nabsolute, the first path component is the root of the\nfile system, indicated by an empty string on Unix, and a\ndrive letter followed by a colon on Windows.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---split"
+}

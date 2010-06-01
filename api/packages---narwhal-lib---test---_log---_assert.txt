@@ -11,7 +11,7 @@
     "returns": {
         "doc": "a new assertion logger that reports to this log."
     },
-    "doc": "",
+    "doc": "Returns a new assertion logger that reports to this log.",
     "heritage": [
         "packages",
         "narwhal-lib",

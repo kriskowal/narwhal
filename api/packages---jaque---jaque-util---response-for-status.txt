@@ -21,7 +21,7 @@
     "returns": {
         "doc": "a JSGI HTTP response object with the given status code and message as its body, if the status supports a body."
     },
-    "doc": "",
+    "doc": "Returns a JSGI HTTP response object with the given status code and message as its body, if the status supports a body.",
     "heritage": [
         "packages",
         "jaque",

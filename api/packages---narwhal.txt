@@ -191,7 +191,7 @@
                                 "type": "Boolean",
                                 "doc": "whether this event instructs the emitting signal to continue propagating to further observers."
                             },
-                            "doc": "",
+                            "doc": "Returns whether this event instructs the emitting signal to continue propagating to further observers.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -213,7 +213,7 @@
                                 "type": "Boolean",
                                 "doc": "whether this event instructs the emitting signal to apply its default action."
                             },
-                            "doc": "",
+                            "doc": "Returns whether this event instructs the emitting signal to apply its default action.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -311,7 +311,7 @@
                                 "type": "Boolean",
                                 "doc": "whether this event instructs the emitting signal to continue propagating to further observers."
                             },
-                            "doc": "",
+                            "doc": "Returns whether this event instructs the emitting signal to continue propagating to further observers.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -333,7 +333,7 @@
                                 "type": "Boolean",
                                 "doc": "whether this event instructs the emitting signal to apply its default action."
                             },
-                            "doc": "",
+                            "doc": "Returns whether this event instructs the emitting signal to apply its default action.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -479,7 +479,7 @@
                                 "type": "Function",
                                 "doc": "a function that emits this signal when it is called."
                             },
-                            "doc": "",
+                            "doc": "Returns a function that emits this signal when it is called.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -501,7 +501,7 @@
                                 "type": "Array",
                                 "doc": "all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal."
                             },
-                            "doc": "",
+                            "doc": "Returns all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -630,7 +630,7 @@
                                 "type": "Function",
                                 "doc": "a function that emits this signal when it is called."
                             },
-                            "doc": "",
+                            "doc": "Returns a function that emits this signal when it is called.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -652,7 +652,7 @@
                                 "type": "Array",
                                 "doc": "all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal."
                             },
-                            "doc": "",
+                            "doc": "Returns all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -899,7 +899,7 @@
                                 "type": "boolean",
                                 "doc": "whether a Signal has been registered for the given name."
                             },
-                            "doc": "",
+                            "doc": "Returns whether a Signal has been registered for the given name.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -1129,7 +1129,7 @@
                                 "type": "boolean",
                                 "doc": "whether a Signal has been registered for the given name."
                             },
-                            "doc": "",
+                            "doc": "Returns whether a Signal has been registered for the given name.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -1368,7 +1368,7 @@
                                     "returns": {
                                         "doc": "either a promise or the resolved value for the promise."
                                     },
-                                    "doc": "",
+                                    "doc": "Returns either a promise or the resolved value for the promise.",
                                     "heritage": [
                                         "packages",
                                         "narwhal",
@@ -1449,7 +1449,7 @@
                                     "returns": {
                                         "doc": "either a promise or the resolved value for the promise."
                                     },
-                                    "doc": "",
+                                    "doc": "Returns either a promise or the resolved value for the promise.",
                                     "heritage": [
                                         "packages",
                                         "narwhal",
@@ -1600,7 +1600,7 @@
                             "returns": {
                                 "doc": "the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress."
                             },
-                            "doc": "",
+                            "doc": "Returns the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -1874,7 +1874,7 @@
                                     "returns": {
                                         "doc": "either a promise or the resolved value for the promise."
                                     },
-                                    "doc": "",
+                                    "doc": "Returns either a promise or the resolved value for the promise.",
                                     "heritage": [
                                         "packages",
                                         "narwhal",
@@ -1955,7 +1955,7 @@
                                     "returns": {
                                         "doc": "either a promise or the resolved value for the promise."
                                     },
-                                    "doc": "",
+                                    "doc": "Returns either a promise or the resolved value for the promise.",
                                     "heritage": [
                                         "packages",
                                         "narwhal",
@@ -2106,7 +2106,7 @@
                             "returns": {
                                 "doc": "the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress."
                             },
-                            "doc": "",
+                            "doc": "Returns the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -3700,7 +3700,7 @@
                                 "type": "Boolean",
                                 "doc": "whether this event instructs the emitting signal to continue propagating to further observers."
                             },
-                            "doc": "",
+                            "doc": "Returns whether this event instructs the emitting signal to continue propagating to further observers.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -3722,7 +3722,7 @@
                                 "type": "Boolean",
                                 "doc": "whether this event instructs the emitting signal to apply its default action."
                             },
-                            "doc": "",
+                            "doc": "Returns whether this event instructs the emitting signal to apply its default action.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -3820,7 +3820,7 @@
                                 "type": "Boolean",
                                 "doc": "whether this event instructs the emitting signal to continue propagating to further observers."
                             },
-                            "doc": "",
+                            "doc": "Returns whether this event instructs the emitting signal to continue propagating to further observers.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -3842,7 +3842,7 @@
                                 "type": "Boolean",
                                 "doc": "whether this event instructs the emitting signal to apply its default action."
                             },
-                            "doc": "",
+                            "doc": "Returns whether this event instructs the emitting signal to apply its default action.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -3988,7 +3988,7 @@
                                 "type": "Function",
                                 "doc": "a function that emits this signal when it is called."
                             },
-                            "doc": "",
+                            "doc": "Returns a function that emits this signal when it is called.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -4010,7 +4010,7 @@
                                 "type": "Array",
                                 "doc": "all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal."
                             },
-                            "doc": "",
+                            "doc": "Returns all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -4139,7 +4139,7 @@
                                 "type": "Function",
                                 "doc": "a function that emits this signal when it is called."
                             },
-                            "doc": "",
+                            "doc": "Returns a function that emits this signal when it is called.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -4161,7 +4161,7 @@
                                 "type": "Array",
                                 "doc": "all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal."
                             },
-                            "doc": "",
+                            "doc": "Returns all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -4408,7 +4408,7 @@
                                 "type": "boolean",
                                 "doc": "whether a Signal has been registered for the given name."
                             },
-                            "doc": "",
+                            "doc": "Returns whether a Signal has been registered for the given name.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -4638,7 +4638,7 @@
                                 "type": "boolean",
                                 "doc": "whether a Signal has been registered for the given name."
                             },
-                            "doc": "",
+                            "doc": "Returns whether a Signal has been registered for the given name.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -4877,7 +4877,7 @@
                                     "returns": {
                                         "doc": "either a promise or the resolved value for the promise."
                                     },
-                                    "doc": "",
+                                    "doc": "Returns either a promise or the resolved value for the promise.",
                                     "heritage": [
                                         "packages",
                                         "narwhal",
@@ -4958,7 +4958,7 @@
                                     "returns": {
                                         "doc": "either a promise or the resolved value for the promise."
                                     },
-                                    "doc": "",
+                                    "doc": "Returns either a promise or the resolved value for the promise.",
                                     "heritage": [
                                         "packages",
                                         "narwhal",
@@ -5109,7 +5109,7 @@
                             "returns": {
                                 "doc": "the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress."
                             },
-                            "doc": "",
+                            "doc": "Returns the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -5383,7 +5383,7 @@
                                     "returns": {
                                         "doc": "either a promise or the resolved value for the promise."
                                     },
-                                    "doc": "",
+                                    "doc": "Returns either a promise or the resolved value for the promise.",
                                     "heritage": [
                                         "packages",
                                         "narwhal",
@@ -5464,7 +5464,7 @@
                                     "returns": {
                                         "doc": "either a promise or the resolved value for the promise."
                                     },
-                                    "doc": "",
+                                    "doc": "Returns either a promise or the resolved value for the promise.",
                                     "heritage": [
                                         "packages",
                                         "narwhal",
@@ -5615,7 +5615,7 @@
                             "returns": {
                                 "doc": "the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress."
                             },
-                            "doc": "",
+                            "doc": "Returns the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -8238,7 +8238,7 @@
                                 "type": "Boolean",
                                 "doc": "whether this event instructs the emitting signal to continue propagating to further observers."
                             },
-                            "doc": "",
+                            "doc": "Returns whether this event instructs the emitting signal to continue propagating to further observers.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -8260,7 +8260,7 @@
                                 "type": "Boolean",
                                 "doc": "whether this event instructs the emitting signal to apply its default action."
                             },
-                            "doc": "",
+                            "doc": "Returns whether this event instructs the emitting signal to apply its default action.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -8358,7 +8358,7 @@
                                 "type": "Boolean",
                                 "doc": "whether this event instructs the emitting signal to continue propagating to further observers."
                             },
-                            "doc": "",
+                            "doc": "Returns whether this event instructs the emitting signal to continue propagating to further observers.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -8380,7 +8380,7 @@
                                 "type": "Boolean",
                                 "doc": "whether this event instructs the emitting signal to apply its default action."
                             },
-                            "doc": "",
+                            "doc": "Returns whether this event instructs the emitting signal to apply its default action.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -8526,7 +8526,7 @@
                                 "type": "Function",
                                 "doc": "a function that emits this signal when it is called."
                             },
-                            "doc": "",
+                            "doc": "Returns a function that emits this signal when it is called.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -8548,7 +8548,7 @@
                                 "type": "Array",
                                 "doc": "all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal."
                             },
-                            "doc": "",
+                            "doc": "Returns all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -8677,7 +8677,7 @@
                                 "type": "Function",
                                 "doc": "a function that emits this signal when it is called."
                             },
-                            "doc": "",
+                            "doc": "Returns a function that emits this signal when it is called.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -8699,7 +8699,7 @@
                                 "type": "Array",
                                 "doc": "all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal."
                             },
-                            "doc": "",
+                            "doc": "Returns all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -8946,7 +8946,7 @@
                                 "type": "boolean",
                                 "doc": "whether a Signal has been registered for the given name."
                             },
-                            "doc": "",
+                            "doc": "Returns whether a Signal has been registered for the given name.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -9176,7 +9176,7 @@
                                 "type": "boolean",
                                 "doc": "whether a Signal has been registered for the given name."
                             },
-                            "doc": "",
+                            "doc": "Returns whether a Signal has been registered for the given name.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -9415,7 +9415,7 @@
                                     "returns": {
                                         "doc": "either a promise or the resolved value for the promise."
                                     },
-                                    "doc": "",
+                                    "doc": "Returns either a promise or the resolved value for the promise.",
                                     "heritage": [
                                         "packages",
                                         "narwhal",
@@ -9496,7 +9496,7 @@
                                     "returns": {
                                         "doc": "either a promise or the resolved value for the promise."
                                     },
-                                    "doc": "",
+                                    "doc": "Returns either a promise or the resolved value for the promise.",
                                     "heritage": [
                                         "packages",
                                         "narwhal",
@@ -9647,7 +9647,7 @@
                             "returns": {
                                 "doc": "the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress."
                             },
-                            "doc": "",
+                            "doc": "Returns the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -9921,7 +9921,7 @@
                                     "returns": {
                                         "doc": "either a promise or the resolved value for the promise."
                                     },
-                                    "doc": "",
+                                    "doc": "Returns either a promise or the resolved value for the promise.",
                                     "heritage": [
                                         "packages",
                                         "narwhal",
@@ -10002,7 +10002,7 @@
                                     "returns": {
                                         "doc": "either a promise or the resolved value for the promise."
                                     },
-                                    "doc": "",
+                                    "doc": "Returns either a promise or the resolved value for the promise.",
                                     "heritage": [
                                         "packages",
                                         "narwhal",
@@ -10153,7 +10153,7 @@
                             "returns": {
                                 "doc": "the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress."
                             },
-                            "doc": "",
+                            "doc": "Returns the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -11747,7 +11747,7 @@
                                 "type": "Boolean",
                                 "doc": "whether this event instructs the emitting signal to continue propagating to further observers."
                             },
-                            "doc": "",
+                            "doc": "Returns whether this event instructs the emitting signal to continue propagating to further observers.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -11769,7 +11769,7 @@
                                 "type": "Boolean",
                                 "doc": "whether this event instructs the emitting signal to apply its default action."
                             },
-                            "doc": "",
+                            "doc": "Returns whether this event instructs the emitting signal to apply its default action.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -11867,7 +11867,7 @@
                                 "type": "Boolean",
                                 "doc": "whether this event instructs the emitting signal to continue propagating to further observers."
                             },
-                            "doc": "",
+                            "doc": "Returns whether this event instructs the emitting signal to continue propagating to further observers.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -11889,7 +11889,7 @@
                                 "type": "Boolean",
                                 "doc": "whether this event instructs the emitting signal to apply its default action."
                             },
-                            "doc": "",
+                            "doc": "Returns whether this event instructs the emitting signal to apply its default action.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -12035,7 +12035,7 @@
                                 "type": "Function",
                                 "doc": "a function that emits this signal when it is called."
                             },
-                            "doc": "",
+                            "doc": "Returns a function that emits this signal when it is called.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -12057,7 +12057,7 @@
                                 "type": "Array",
                                 "doc": "all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal."
                             },
-                            "doc": "",
+                            "doc": "Returns all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -12186,7 +12186,7 @@
                                 "type": "Function",
                                 "doc": "a function that emits this signal when it is called."
                             },
-                            "doc": "",
+                            "doc": "Returns a function that emits this signal when it is called.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -12208,7 +12208,7 @@
                                 "type": "Array",
                                 "doc": "all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal."
                             },
-                            "doc": "",
+                            "doc": "Returns all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -12455,7 +12455,7 @@
                                 "type": "boolean",
                                 "doc": "whether a Signal has been registered for the given name."
                             },
-                            "doc": "",
+                            "doc": "Returns whether a Signal has been registered for the given name.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -12685,7 +12685,7 @@
                                 "type": "boolean",
                                 "doc": "whether a Signal has been registered for the given name."
                             },
-                            "doc": "",
+                            "doc": "Returns whether a Signal has been registered for the given name.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -12924,7 +12924,7 @@
                                     "returns": {
                                         "doc": "either a promise or the resolved value for the promise."
                                     },
-                                    "doc": "",
+                                    "doc": "Returns either a promise or the resolved value for the promise.",
                                     "heritage": [
                                         "packages",
                                         "narwhal",
@@ -13005,7 +13005,7 @@
                                     "returns": {
                                         "doc": "either a promise or the resolved value for the promise."
                                     },
-                                    "doc": "",
+                                    "doc": "Returns either a promise or the resolved value for the promise.",
                                     "heritage": [
                                         "packages",
                                         "narwhal",
@@ -13156,7 +13156,7 @@
                             "returns": {
                                 "doc": "the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress."
                             },
-                            "doc": "",
+                            "doc": "Returns the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress.",
                             "heritage": [
                                 "packages",
                                 "narwhal",
@@ -13430,7 +13430,7 @@
                                     "returns": {
                                         "doc": "either a promise or the resolved value for the promise."
                                     },
-                                    "doc": "",
+                                    "doc": "Returns either a promise or the resolved value for the promise.",
                                     "heritage": [
                                         "packages",
                                         "narwhal",
@@ -13511,7 +13511,7 @@
                                     "returns": {
                                         "doc": "either a promise or the resolved value for the promise."
                                     },
-                                    "doc": "",
+                                    "doc": "Returns either a promise or the resolved value for the promise.",
                                     "heritage": [
                                         "packages",
                                         "narwhal",
@@ -13662,7 +13662,7 @@
                             "returns": {
                                 "doc": "the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress."
                             },
-                            "doc": "",
+                            "doc": "Returns the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress.",
                             "heritage": [
                                 "packages",
                                 "narwhal",

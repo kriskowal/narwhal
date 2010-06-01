@@ -1,0 +1,22 @@
+{
+    "name": "changeGroup",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 1507,
+    "params": [
+        {
+            "name": "group"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Changes the group ownership of the path.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs",
+        "_path"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---_path---change-group"
+}

@@ -15,7 +15,7 @@
         "type": "Boolean",
         "doc": "whether the value is null or undefined"
     },
-    "doc": "",
+    "doc": "Returns whether the value is null or undefined",
     "heritage": [
         "packages",
         "narwhal-lib",

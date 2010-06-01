@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!–[if IE 6]><![endif]–>
+        <title></title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+<div id="container">
+    <div id="header">
+        
+
+    <h1>
+        <tt>Permissions</tt>
+        
+        
+        
+        
+    </h1>
+
+
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            
+
+    
+    <p>Constructs a permissions object.</p>
+    
+
+    <!-- TODO params or throws or returns -->
+    
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>permissions</tt></th>
+            <td class="B"><tt>Permissions</tt></th>
+            
+            <td class="C"><p>override the <code>Permissions.default</code> values.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+    
+
+    
+
+    
+
+    
+    <ul>
+    
+        <li><a href="#update"><tt>update</tt></a></li>
+    
+        <li><a href="#grant"><tt>grant</tt></a></li>
+    
+        <li><a href="#deny"><tt>deny</tt></a></li>
+    
+        <li><a href="#can"><tt>can</tt></a></li>
+    
+        <li><a href="#toUnix"><tt>toUnix</tt></a></li>
+    
+        <li><a href="#default"><tt>default</tt></a></li>
+    
+    </ul>
+    
+
+    
+    <a name="update"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---_permissions---update.html"><tt>update</tt></a>
+        
+        
+    </h2>
+
+    <p>Updates this permissions object with the permissions
+from another permissions object.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>permissions</tt></th>
+            <td class="B"><tt>Number || Permissions</tt></th>
+            
+            <td class="C"><p>bitwise UNIX permissions as a number, or a permissions object.  The permissions will be deeply updated into this permissions object.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="grant"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---_permissions---grant.html"><tt>grant</tt></a>
+        
+        
+    </h2>
+
+    <p>Adds a permission this permissions object.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>who</tt></th>
+            <td class="B"><tt>"owner" | "group" | "other" | "setUid" | "setGid" | "sticky"</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>ability</tt></th>
+            <td class="B"><tt>"read" | "write" | "execute" | undefined</tt></th>
+            
+            <td class="C"><p>or <code>undefined</code> for <code>setUid</code>, <code>setGid</code>, and <code>sticky</code>.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="deny"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---_permissions---deny.html"><tt>deny</tt></a>
+        
+        
+    </h2>
+
+    <p>Removes a permission form this permissions object.</p>
+
+<p>WARNING: beyond specification</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>who</tt></th>
+            <td class="B"><tt>"owner" | "group" | "other" | "setUid" | "setGid" | "sticky"</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>ability</tt></th>
+            <td class="B"><tt>"read" | "write" | "execute" | undefined</tt></th>
+            
+            <td class="C"><p>or <code>undefined</code> for <code>setUid</code>, <code>setGid</code>, and <code>sticky</code>.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="can"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---_permissions---can.html"><tt>can</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns whether this permissions object has the given permission.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>who</tt></th>
+            <td class="B"><tt>"owner" | "group" | "other" | "setUid" | "setGid" | "sticky"</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>ability</tt></th>
+            <td class="B"><tt>"read" | "write" | "execute" | undefined</tt></th>
+            
+            <td class="C"><p>or <code>undefined</code> for <code>setUid</code>, <code>setGid</code>, and <code>sticky</code>.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>whether this permissions object has the given permission.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="toUnix"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---_permissions---to-unix.html"><tt>toUnix</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns a UNIX bit flag representing this set of permissions.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Number</tt></td>
+            <td class="C"><p>a UNIX bit flag representing this set of permissions.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="default"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---_permissions---default.html"><tt>default</tt></a>
+        
+        
+    </h2>
+
+    <p>The default permissions, as constructed on Unix from the
+inverse of <code>umask</code>.  This is a property of the the <code>Permissions</code>
+object proper and can be both gotten as a <code>Permissions</code> object
+or set with either a <code>Number</code> or a <code>Permissions</code> object.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+
+
+        </div>
+    </div>
+    <div id="navigation">
+        
+    <div id="logo-container"><div id="logo"></div></div>
+    <ul>
+        <li><a href="packages.html">packages</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><em>soon:</em> package</li>
+        <li><em>soon:</em> modules</li>
+    </ul>
+
+    </div>
+    <div id="extra">
+        
+
+    <p><a href="packages---narwhal-lib---narwhal-fs---_permissions.txt">JSON Format</a></p>
+
+
+    </div>
+    <div id="footer">
+        
+    </div>
+</div>
+</body>
+</ht

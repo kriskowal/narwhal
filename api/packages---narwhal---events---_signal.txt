@@ -127,7 +127,7 @@
                 "type": "Function",
                 "doc": "a function that emits this signal when it is called."
             },
-            "doc": "",
+            "doc": "Returns a function that emits this signal when it is called.",
             "heritage": [
                 "packages",
                 "narwhal",
@@ -149,7 +149,7 @@
                 "type": "Array",
                 "doc": "all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal."
             },
-            "doc": "",
+            "doc": "Returns all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal.",
             "heritage": [
                 "packages",
                 "narwhal",
@@ -278,7 +278,7 @@
                 "type": "Function",
                 "doc": "a function that emits this signal when it is called."
             },
-            "doc": "",
+            "doc": "Returns a function that emits this signal when it is called.",
             "heritage": [
                 "packages",
                 "narwhal",
@@ -300,7 +300,7 @@
                 "type": "Array",
                 "doc": "all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal."
             },
-            "doc": "",
+            "doc": "Returns all observer functions in order.  Modifications to the returned array will not affect the behavior of the signal.",
             "heritage": [
                 "packages",
                 "narwhal",

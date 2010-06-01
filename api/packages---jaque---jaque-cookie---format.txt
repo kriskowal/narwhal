@@ -25,7 +25,7 @@
         "type": "String",
         "doc": "a cookie string"
     },
-    "doc": "",
+    "doc": "Returns a cookie string",
     "heritage": [
         "packages",
         "jaque",

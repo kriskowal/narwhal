@@ -28,6 +28,13 @@
             
 
     
+    <p>Lists a directory and its recursive contents.  Each returned
+string is a path relative to the given path, suitable as an
+argument to join on the given path and the working directory
+to construct its absolute path.  The first entry returned will
+always be an empty string <code>""</code> representing the given directory.
+Does not follow symbolic links.</p>
+    
 
     <!-- TODO params or throws or returns -->
     
@@ -35,7 +42,7 @@
         
         <tr>
             <th class="A"><tt>path</tt></th>
-            <td class="B"></th>
+            <td class="B"><tt>String</tt></th>
             
         </tr>
         

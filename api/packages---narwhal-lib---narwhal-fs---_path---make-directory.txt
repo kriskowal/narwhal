@@ -1,0 +1,27 @@
+{
+    "name": "makeDirectory",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 1598,
+    "params": [
+        {
+            "name": "permissions",
+            "type": "Permissions | Number"
+        }
+    ],
+    "errors": [],
+    "throws": [
+        {
+            "doc": "if the directory already exists, cannot be created,  or if the parent directory does not exist."
+        }
+    ],
+    "see": [],
+    "doc": "Creates a directory at this path.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs",
+        "_path"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---_path---make-directory"
+}

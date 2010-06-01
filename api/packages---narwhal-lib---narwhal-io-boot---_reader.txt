@@ -58,7 +58,7 @@
                 "type": "Buffer",
                 "doc": "the entirety of the remaining input."
             },
-            "doc": "",
+            "doc": "Returns the entirety of the remaining input.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -100,7 +100,7 @@
                 "type": "Buffer",
                 "doc": "the next chunk of input (from `read(null)`, or @throws `StopIteration` if the next chunk is empty."
             },
-            "doc": "",
+            "doc": "Returns the next chunk of input (from `read(null)`, or @throws `StopIteration` if the next chunk is empty.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -221,7 +221,7 @@
                 "type": "Buffer",
                 "doc": "the entirety of the remaining input."
             },
-            "doc": "",
+            "doc": "Returns the entirety of the remaining input.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -263,7 +263,7 @@
                 "type": "Buffer",
                 "doc": "the next chunk of input (from `read(null)`, or @throws `StopIteration` if the next chunk is empty."
             },
-            "doc": "",
+            "doc": "Returns the next chunk of input (from `read(null)`, or @throws `StopIteration` if the next chunk is empty.",
             "heritage": [
                 "packages",
                 "narwhal-lib",

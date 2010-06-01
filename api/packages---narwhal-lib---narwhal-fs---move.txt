@@ -1,0 +1,28 @@
+{
+    "name": "move",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 275,
+    "params": [
+        {
+            "name": "source",
+            "type": "Source",
+            "doc": "file or directory path"
+        },
+        {
+            "name": "target",
+            "type": "String",
+            "doc": "file or directory path"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Move the file or directory `source` to `target` using the\nunderlying OS semantics including atomicity and moving files into\na target directory if the target is a directory (as opposed to\nreplacing it).",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---move"
+}

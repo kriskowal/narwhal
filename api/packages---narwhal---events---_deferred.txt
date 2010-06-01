@@ -51,7 +51,7 @@
                     "returns": {
                         "doc": "either a promise or the resolved value for the promise."
                     },
-                    "doc": "",
+                    "doc": "Returns either a promise or the resolved value for the promise.",
                     "heritage": [
                         "packages",
                         "narwhal",
@@ -132,7 +132,7 @@
                     "returns": {
                         "doc": "either a promise or the resolved value for the promise."
                     },
-                    "doc": "",
+                    "doc": "Returns either a promise or the resolved value for the promise.",
                     "heritage": [
                         "packages",
                         "narwhal",
@@ -283,7 +283,7 @@
             "returns": {
                 "doc": "the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress."
             },
-            "doc": "",
+            "doc": "Returns the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress.",
             "heritage": [
                 "packages",
                 "narwhal",
@@ -557,7 +557,7 @@
                     "returns": {
                         "doc": "either a promise or the resolved value for the promise."
                     },
-                    "doc": "",
+                    "doc": "Returns either a promise or the resolved value for the promise.",
                     "heritage": [
                         "packages",
                         "narwhal",
@@ -638,7 +638,7 @@
                     "returns": {
                         "doc": "either a promise or the resolved value for the promise."
                     },
-                    "doc": "",
+                    "doc": "Returns either a promise or the resolved value for the promise.",
                     "heritage": [
                         "packages",
                         "narwhal",
@@ -789,7 +789,7 @@
             "returns": {
                 "doc": "the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress."
             },
-            "doc": "",
+            "doc": "Returns the progress of the deferred or undefined if that is unknown. User interface widgets should take \"undefined\" as a queue to display indefinite progress.",
             "heritage": [
                 "packages",
                 "narwhal",

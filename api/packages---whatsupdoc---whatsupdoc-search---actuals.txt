@@ -17,7 +17,7 @@
         "type": "Object * [id, Object]",
         "doc": "a mapping from module identifiers to the find information for the module that would actually be loaded if that identifier were required."
     },
-    "doc": "",
+    "doc": "Returns a mapping from module identifiers to the find information for the module that would actually be loaded if that identifier were required.",
     "heritage": [
         "packages",
         "whatsupdoc",

@@ -1,0 +1,22 @@
+{
+    "name": "isReadable",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 1563,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Boolean",
+        "doc": "whether the given path is readable to this user."
+    },
+    "doc": "Returns whether the given path is readable to this user.\n\n/!\\ WARNING: this method should only be used to provide expedient\ninformation to the user about whether the file is readable; the\nonly reliable way to ascertain whether a file is readable is to \ntry to open it for reading.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs",
+        "_path"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---_path---is-readable"
+}

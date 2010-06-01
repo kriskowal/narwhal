@@ -22,7 +22,7 @@
                 "type": "Array",
                 "doc": "an array of all files that match the given paths in every package.  Each of the variadic path terms may be replaced with their configured equivalents in their respective package, as described by the `directories` property in the given package's `package.json` file."
             },
-            "doc": "",
+            "doc": "Returns an array of all files that match the given paths in every package.  Each of the variadic path terms may be replaced with their configured equivalents in their respective package, as described by the `directories` property in the given package's `package.json` file.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -49,7 +49,7 @@
                 "type": "Path || Undefined",
                 "doc": "a path object from `narwhal/fs` in the `narwhal-lib` package for the file in the first package that contains a corresponding path, or `undefined` if no matching file exists.  If the paths correspond to an absolute path, returns that as a path object.  @throws {Error} an error if no corresponding path exists."
             },
-            "doc": "",
+            "doc": "Returns a path object from `narwhal/fs` in the `narwhal-lib` package for the file in the first package that contains a corresponding path, or `undefined` if no matching file exists.  If the paths correspond to an absolute path, returns that as a path object.  @throws {Error} an error if no corresponding path exists.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -81,7 +81,7 @@
                 "type": "Path",
                 "doc": "a path object from `narwhal/fs` in the `narwhal-lib` package for the file in the first package that contains a corresponding path.  If the paths correspond to an absolute path, returns that as a path object."
             },
-            "doc": "",
+            "doc": "Returns a path object from `narwhal/fs` in the `narwhal-lib` package for the file in the first package that contains a corresponding path.  If the paths correspond to an absolute path, returns that as a path object.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -509,7 +509,7 @@
                         "type": "Path",
                         "doc": "a path in the package, regardless of whether a corresponding file exists."
                     },
-                    "doc": "",
+                    "doc": "Returns a path in the package, regardless of whether a corresponding file exists.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -540,7 +540,7 @@
                         "type": "Path",
                         "doc": "a path in the package, regardless of whether a corresponding file exists."
                     },
-                    "doc": "",
+                    "doc": "Returns a path in the package, regardless of whether a corresponding file exists.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -643,7 +643,7 @@
                         "type": "String",
                         "doc": "a string like `Author Name (http://example.com/) <author@example.com>`, where each component is optional."
                     },
-                    "doc": "",
+                    "doc": "Returns a string like `Author Name (http://example.com/) <author@example.com>`, where each component is optional.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -749,7 +749,7 @@
                         "type": "String",
                         "doc": "a string like `Author Name (http://example.com/) <author@example.com>`, where each component is optional."
                     },
-                    "doc": "",
+                    "doc": "Returns a string like `Author Name (http://example.com/) <author@example.com>`, where each component is optional.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -833,7 +833,7 @@
                 "type": "Array",
                 "doc": "an array of all files that match the given paths in every package.  Each of the variadic path terms may be replaced with their configured equivalents in their respective package, as described by the `directories` property in the given package's `package.json` file."
             },
-            "doc": "",
+            "doc": "Returns an array of all files that match the given paths in every package.  Each of the variadic path terms may be replaced with their configured equivalents in their respective package, as described by the `directories` property in the given package's `package.json` file.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -860,7 +860,7 @@
                 "type": "Path || Undefined",
                 "doc": "a path object from `narwhal/fs` in the `narwhal-lib` package for the file in the first package that contains a corresponding path, or `undefined` if no matching file exists.  If the paths correspond to an absolute path, returns that as a path object.  @throws {Error} an error if no corresponding path exists."
             },
-            "doc": "",
+            "doc": "Returns a path object from `narwhal/fs` in the `narwhal-lib` package for the file in the first package that contains a corresponding path, or `undefined` if no matching file exists.  If the paths correspond to an absolute path, returns that as a path object.  @throws {Error} an error if no corresponding path exists.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -892,7 +892,7 @@
                 "type": "Path",
                 "doc": "a path object from `narwhal/fs` in the `narwhal-lib` package for the file in the first package that contains a corresponding path.  If the paths correspond to an absolute path, returns that as a path object."
             },
-            "doc": "",
+            "doc": "Returns a path object from `narwhal/fs` in the `narwhal-lib` package for the file in the first package that contains a corresponding path.  If the paths correspond to an absolute path, returns that as a path object.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -1320,7 +1320,7 @@
                         "type": "Path",
                         "doc": "a path in the package, regardless of whether a corresponding file exists."
                     },
-                    "doc": "",
+                    "doc": "Returns a path in the package, regardless of whether a corresponding file exists.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -1351,7 +1351,7 @@
                         "type": "Path",
                         "doc": "a path in the package, regardless of whether a corresponding file exists."
                     },
-                    "doc": "",
+                    "doc": "Returns a path in the package, regardless of whether a corresponding file exists.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -1454,7 +1454,7 @@
                         "type": "String",
                         "doc": "a string like `Author Name (http://example.com/) <author@example.com>`, where each component is optional."
                     },
-                    "doc": "",
+                    "doc": "Returns a string like `Author Name (http://example.com/) <author@example.com>`, where each component is optional.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -1560,7 +1560,7 @@
                         "type": "String",
                         "doc": "a string like `Author Name (http://example.com/) <author@example.com>`, where each component is optional."
                     },
-                    "doc": "",
+                    "doc": "Returns a string like `Author Name (http://example.com/) <author@example.com>`, where each component is optional.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",

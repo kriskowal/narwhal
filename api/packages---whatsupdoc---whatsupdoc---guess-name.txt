@@ -17,7 +17,7 @@
         "type": "String | Undefined",
         "doc": "a name or undefined if no name can be found."
     },
-    "doc": "",
+    "doc": "Returns a name or undefined if no name can be found.",
     "heritage": [
         "packages",
         "whatsupdoc",

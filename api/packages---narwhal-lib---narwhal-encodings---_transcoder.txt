@@ -63,7 +63,7 @@
                 "type": "{source, target, error}",
                 "doc": "state"
             },
-            "doc": "",
+            "doc": "Returns state",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -116,7 +116,7 @@
                 "type": "{source, target, error}",
                 "doc": "state"
             },
-            "doc": "",
+            "doc": "Returns state",
             "heritage": [
                 "packages",
                 "narwhal-lib",

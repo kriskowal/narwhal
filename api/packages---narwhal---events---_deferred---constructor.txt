@@ -40,7 +40,7 @@
             "returns": {
                 "doc": "either a promise or the resolved value for the promise."
             },
-            "doc": "",
+            "doc": "Returns either a promise or the resolved value for the promise.",
             "heritage": [
                 "packages",
                 "narwhal",
@@ -121,7 +121,7 @@
             "returns": {
                 "doc": "either a promise or the resolved value for the promise."
             },
-            "doc": "",
+            "doc": "Returns either a promise or the resolved value for the promise.",
             "heritage": [
                 "packages",
                 "narwhal",

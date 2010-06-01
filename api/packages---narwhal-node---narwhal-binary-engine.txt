@@ -154,7 +154,7 @@
                 "type": "Number",
                 "doc": "byte value"
             },
-            "doc": "",
+            "doc": "Returns byte value",
             "heritage": [
                 "packages",
                 "narwhal-node",
@@ -350,7 +350,7 @@
                 "type": "Buffer",
                 "doc": "target"
             },
-            "doc": "",
+            "doc": "Returns target",
             "heritage": [
                 "packages",
                 "narwhal-node",
@@ -502,7 +502,7 @@
                 "type": "Number",
                 "doc": "byte value"
             },
-            "doc": "",
+            "doc": "Returns byte value",
             "heritage": [
                 "packages",
                 "narwhal-node",
@@ -698,7 +698,7 @@
                 "type": "Buffer",
                 "doc": "target"
             },
-            "doc": "",
+            "doc": "Returns target",
             "heritage": [
                 "packages",
                 "narwhal-node",

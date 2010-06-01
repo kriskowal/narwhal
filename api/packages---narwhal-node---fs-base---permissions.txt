@@ -2,12 +2,21 @@
     "name": "permissions",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
-    "lineNo": 701,
-    "params": [],
+    "lineNo": 789,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        }
+    ],
     "errors": [],
     "throws": [],
     "see": [],
-    "doc": "",
+    "returns": {
+        "type": "Permissions",
+        "doc": "a representation of the permissions granted to various users for the given file."
+    },
+    "doc": "Returns a representation of the permissions granted to\nvarious users for the given file.",
     "heritage": [
         "packages",
         "narwhal-node",

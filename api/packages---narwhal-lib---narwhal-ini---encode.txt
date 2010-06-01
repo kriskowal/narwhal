@@ -17,7 +17,7 @@
         "type": "String",
         "doc": "encoded"
     },
-    "doc": "",
+    "doc": "Returns encoded",
     "heritage": [
         "packages",
         "narwhal-lib",

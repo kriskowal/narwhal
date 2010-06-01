@@ -21,7 +21,7 @@
         "type": "String",
         "doc": "the last component of a path, without the given extension if the extension is provided and matches the given file."
     },
-    "doc": "",
+    "doc": "Returns the last component of a path, without the given extension if the extension is provided and matches the given file.",
     "heritage": [
         "packages",
         "narwhal-lib",

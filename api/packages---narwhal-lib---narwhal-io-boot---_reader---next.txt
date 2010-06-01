@@ -11,7 +11,7 @@
         "type": "Buffer",
         "doc": "the next chunk of input (from `read(null)`, or @throws `StopIteration` if the next chunk is empty."
     },
-    "doc": "",
+    "doc": "Returns the next chunk of input (from `read(null)`, or @throws `StopIteration` if the next chunk is empty.",
     "heritage": [
         "packages",
         "narwhal-lib",

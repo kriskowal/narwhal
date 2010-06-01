@@ -28,6 +28,8 @@
             
 
     
+    <p>Provides comprehensive, synchronous file system interaction methods.</p>
+    
 
     <!-- TODO params or throws or returns -->
     
@@ -39,9 +41,9 @@
     
     <ul>
     
-        <li><a href="#symbolicLink"><tt>symbolicLink</tt></a></li>
-    
         <li><a href="#open"><tt>open</tt></a></li>
+    
+        <li><a href="#openRaw"><tt>openRaw</tt></a></li>
     
         <li><a href="#read"><tt>read</tt></a></li>
     
@@ -49,38 +51,155 @@
     
         <li><a href="#append"><tt>append</tt></a></li>
     
+        <li><a href="#move"><tt>move</tt></a></li>
+    
+        <li><a href="#remove"><tt>remove</tt></a></li>
+    
         <li><a href="#copy"><tt>copy</tt></a></li>
+    
+        <li><a href="#copyTree"><tt>copyTree</tt></a></li>
+    
+        <li><a href="#remove"><tt>remove</tt></a></li>
+    
+        <li><a href="#removeTree"><tt>removeTree</tt></a></li>
+    
+        <li><a href="#makeDirectory"><tt>makeDirectory</tt></a></li>
+    
+        <li><a href="#makeTree"><tt>makeTree</tt></a></li>
+    
+        <li><a href="#symbolicLink"><tt>symbolicLink</tt></a></li>
+    
+        <li><a href="#hardLink"><tt>hardLink</tt></a></li>
+    
+        <li><a href="#touch"><tt>touch</tt></a></li>
+    
+        <li><a href="#workingDirectory"><tt>workingDirectory</tt></a></li>
+    
+        <li><a href="#workingDirectoryPath"><tt>workingDirectoryPath</tt></a></li>
+    
+        <li><a href="#changeWorkingDirectory"><tt>changeWorkingDirectory</tt></a></li>
+    
+        <li><a href="#list"><tt>list</tt></a></li>
+    
+        <li><a href="#listPaths"><tt>listPaths</tt></a></li>
     
         <li><a href="#listTree"><tt>listTree</tt></a></li>
     
+        <li><a href="#listTreePaths"><tt>listTreePaths</tt></a></li>
+    
         <li><a href="#listDirectoryTree"><tt>listDirectoryTree</tt></a></li>
+    
+        <li><a href="#glob"><tt>glob</tt></a></li>
+    
+        <li><a href="#globPaths"><tt>globPaths</tt></a></li>
+    
+        <li><a href="#patternToRegExp"><tt>patternToRegExp</tt></a></li>
+    
+        <li><a href="#match"><tt>match</tt></a></li>
+    
+        <li><a href="#MATCH_LEADING_DIR"><tt>MATCH_LEADING_DIR</tt></a></li>
+    
+        <li><a href="#MATCH_PATHNAME"><tt>MATCH_PATHNAME</tt></a></li>
+    
+        <li><a href="#MATCH_PERIOD"><tt>MATCH_PERIOD</tt></a></li>
+    
+        <li><a href="#MATCH_NOESCAPE"><tt>MATCH_NOESCAPE</tt></a></li>
+    
+        <li><a href="#MATCH_CASEFOLD"><tt>MATCH_CASEFOLD</tt></a></li>
+    
+        <li><a href="#MATCH_DOTMATCH"><tt>MATCH_DOTMATCH</tt></a></li>
+    
+        <li><a href="#UNIX_BITS"><tt>UNIX_BITS</tt></a></li>
+    
+        <li><a href="#UNIX_BITS_REVERSED"><tt>UNIX_BITS_REVERSED</tt></a></li>
+    
+        <li><a href="#Permissions"><tt>Permissions</tt></a></li>
+    
+        <li><a href="#owner"><tt>owner</tt></a></li>
+    
+        <li><a href="#group"><tt>group</tt></a></li>
+    
+        <li><a href="#changeOwner"><tt>changeOwner</tt></a></li>
+    
+        <li><a href="#changeGroup"><tt>changeGroup</tt></a></li>
+    
+        <li><a href="#permissions"><tt>permissions</tt></a></li>
+    
+        <li><a href="#changePermissions"><tt>changePermissions</tt></a></li>
+    
+        <li><a href="#readLink"><tt>readLink</tt></a></li>
+    
+        <li><a href="#exists"><tt>exists</tt></a></li>
+    
+        <li><a href="#isFile"><tt>isFile</tt></a></li>
+    
+        <li><a href="#isDirectory"><tt>isDirectory</tt></a></li>
+    
+        <li><a href="#isLink"><tt>isLink</tt></a></li>
+    
+        <li><a href="#isBlockDevice"><tt>isBlockDevice</tt></a></li>
+    
+        <li><a href="#isCharacterDevice"><tt>isCharacterDevice</tt></a></li>
+    
+        <li><a href="#isFifo"><tt>isFifo</tt></a></li>
+    
+        <li><a href="#isSocket"><tt>isSocket</tt></a></li>
+    
+        <li><a href="#isReadable"><tt>isReadable</tt></a></li>
+    
+        <li><a href="#isWritable"><tt>isWritable</tt></a></li>
+    
+        <li><a href="#same"><tt>same</tt></a></li>
+    
+        <li><a href="#sameFilesystem"><tt>sameFilesystem</tt></a></li>
+    
+        <li><a href="#size"><tt>size</tt></a></li>
+    
+        <li><a href="#lastModified"><tt>lastModified</tt></a></li>
+    
+        <li><a href="#iterator"><tt>iterator</tt></a></li>
+    
+        <li><a href="#ROOT"><tt>ROOT</tt></a></li>
+    
+        <li><a href="#SEPARATOR"><tt>SEPARATOR</tt></a></li>
+    
+        <li><a href="#ALT_SEPARATOR"><tt>ALT_SEPARATOR</tt></a></li>
+    
+        <li><a href="#split"><tt>split</tt></a></li>
+    
+        <li><a href="#join"><tt>join</tt></a></li>
+    
+        <li><a href="#resolve"><tt>resolve</tt></a></li>
+    
+        <li><a href="#canonical"><tt>canonical</tt></a></li>
+    
+        <li><a href="#normal"><tt>normal</tt></a></li>
+    
+        <li><a href="#relative"><tt>relative</tt></a></li>
+    
+        <li><a href="#absolute"><tt>absolute</tt></a></li>
+    
+        <li><a href="#isAbsolute"><tt>isAbsolute</tt></a></li>
+    
+        <li><a href="#isRelative"><tt>isRelative</tt></a></li>
+    
+        <li><a href="#isRoot"><tt>isRoot</tt></a></li>
+    
+        <li><a href="#root"><tt>root</tt></a></li>
+    
+        <li><a href="#directory"><tt>directory</tt></a></li>
+    
+        <li><a href="#base"><tt>base</tt></a></li>
+    
+        <li><a href="#extension"><tt>extension</tt></a></li>
+    
+        <li><a href="#path"><tt>path</tt></a></li>
+    
+        <li><a href="#Path"><tt>Path</tt></a></li>
     
     </ul>
     
 
-    
-    <a name="symbolicLink"></a>
-    <h2>
-        <a href="packages---narwhal-lib---narwhal-fs---symbolic-link.html"><tt>symbolicLink</tt></a>
-        
-        
-    </h2>
-
-    
-
-
-    <table class="form whatsupdoc-parameters">
-        
-        
-        
-    </table>
-
-    
-
-    
-
-    
-    </table>
     
     <a name="open"></a>
     <h2>
@@ -89,11 +208,176 @@
         
     </h2>
 
-    
+    <p>Creates an IO stream for a file, in either text in a parcticular
+character set or in bytes.</p>
+
+<p>Mode includes:</p>
+
+<ul>
+<li><code>"r"</code> for reading (<code>read</code> option)</li>
+<li><code>"w"</code> for writing (<code>write</code> option)</li>
+<li><code>"a"</code> for appending (<code>append</code> option)</li>
+<li><code>"+"</code> for updating (<code>update</code> option)</li>
+<li><code>"b"</code> for a byte stream (<code>binary</code> option)</li>
+<li><code>"x"</code> for exclusive creation: open will fail if the file already
+exists. (<code>exclusive</code> option)</li>
+</ul>
+
+<p>Options include:</p>
+
+<ul>
+<li><code>charset</code> an IANA character set, case insensitive.</li>
+<li><code>buffering</code> <code>Number</code> of bytes to buffer, presently only
+used by the charset transcoder for its internal buffer.</li>
+<li><code>lineBuffering</code> <code>Boolean</code> whether to buffer lines, not
+presently supported.</li>
+<li>all options mentioned above, in the mode string as <code>Boolean</code>
+values.</li>
+<li>all options mentioned below, in the <code>openRaw</code> method.</li>
+</ul>
 
 
     <table class="form whatsupdoc-parameters">
         
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>mode</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>(optional, further arguments shift) as specified by <code>openRaw</code></p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>charset</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>(options, further arguments shift) a character set name, as defined by IANA, in all upper-case to distinguish it from a mode string.  The default if none is specified and the stream is not binary, is <code>UTF-8</code>.</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>permissions</tt></th>
+            <td class="B"><tt>Permissions | Number</tt></th>
+            
+            <td class="C"><p>(optional, further arguments shift)</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>options</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>(optional)</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="openRaw"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---open-raw.html"><tt>openRaw</tt></a>
+        
+        
+    </h2>
+
+    <p>Open a file as a raw byte stream.</p>
+
+<p>The following combinations of true <code>read</code>, <code>write</code>, <code>update</code> *
+and <code>append</code> properties are supported:</p>
+
+<ul>
+<li><code>read</code>: read only</li>
+<li><code>write</code>: write only, truncates, creates if necessary</li>
+<li><code>append</code>: write only, append, creates if necessary</li>
+<li><code>read</code> and <code>update</code>: read and write, does not create, does not
+truncate</li>
+<li><code>write</code> and <code>update</code>: read and write, trancates, creates if
+necessary</li>
+<li><code>append</code> and <code>update</code>: read and write, does not truncate,
+creates if necessary</li>
+</ul>
+
+<p>On some varieties of UNIX, "append" causes all writes to be
+appended, regardless of the seek position.</p>
+
+<p>The following additional properties can be set on the
+options and are used when the underlying system supports
+them:</p>
+
+<ul>
+<li><code>exclusive</code>: prevents the file from being opened if it
+a file already exists. Atomicity of the <code>exclusive</code> open
+can be used to coordinate processes like daemons.</li>
+<li><code>truncate</code>: explicitly requests truncation of the file
+upon successful open.</li>
+<li><code>create</code>: explicitly requests creation if the file
+does not exist.</li>
+</ul>
+
+<p>The following properties can also be specified but are
+not mentioned in the CommonJS standard, and may not be
+supported by all Narwhal engines:</p>
+
+<ul>
+<li><code>xSync</code>: requests that data be written to disk immediately.</li>
+<li><code>xNarwhalNoControlTty</code>: requests that, if the opened file is
+a terminal device or pseudo terminal, that the calling
+process does not become the controller for that terminal.</li>
+<li><code>xNarwhalNoFollow</code>: ensures that symbolic links are not followed,
+which prevents certain kinds of attacks that take
+advantage of race conditions in opening files where the
+attacker subverts a write by injecting a symbolic link
+at a path that is known to be opened by a process with
+authority in excess of its own.</li>
+<li><code>xNarwhalDirectory</code></li>
+</ul>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>mode</tt></th>
+            <td class="B"><tt>Object</tt></th>
+            
+            <td class="C"><p>optional</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>permissions</tt></th>
+            <td class="B"><tt>Permissions || Object</tt></th>
+            
+            <td class="C"><p>optional</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>a raw byte stream</p></td>
+        </tr> 
         
         
     </table>
@@ -112,7 +396,7 @@
         
     </h2>
 
-    
+    <p>Reads all of the content of a file.</p>
 
 
     <table class="form whatsupdoc-parameters">
@@ -124,10 +408,10 @@
         </tr>
         
         <tr>
-            <th class="A">&hellip;<tt>mode</tt></th>
+            <th class="A">&hellip;<tt>options</tt></th>
             <td class="B"></th>
             
-            <td class="C"><p>as String, options as Object, permissions as Number</p></td>
+            <td class="C"><p>each as described by <code>open</code></p></td>
             
         </tr>
         
@@ -149,7 +433,7 @@
         
     </h2>
 
-    
+    <p>Wrties the entire content of a file.</p>
 
 
     <table class="form whatsupdoc-parameters">
@@ -167,10 +451,10 @@
         </tr>
         
         <tr>
-            <th class="A">&hellip;<tt>mode</tt></th>
+            <th class="A">&hellip;<tt>options</tt></th>
             <td class="B"></th>
             
-            <td class="C"><p>as String, options as Object, permissions as Number</p></td>
+            <td class="C"><p>each as described by <code>open</code></p></td>
             
         </tr>
         
@@ -192,7 +476,7 @@
         
     </h2>
 
-    
+    <p>Appends content to a file.</p>
 
 
     <table class="form whatsupdoc-parameters">
@@ -228,6 +512,80 @@
     
     </table>
     
+    <a name="move"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---move.html"><tt>move</tt></a>
+        
+        
+    </h2>
+
+    <p>Move the file or directory <code>source</code> to <code>target</code> using the
+underlying OS semantics including atomicity and moving files into
+a target directory if the target is a directory (as opposed to
+replacing it).</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>source</tt></th>
+            <td class="B"><tt>Source</tt></th>
+            
+            <td class="C"><p>file or directory path</p></td>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>target</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>file or directory path</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="remove"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---remove.html"><tt>remove</tt></a>
+        
+        
+    </h2>
+
+    <p>Attempt to remove the <code>file</code> from disk. To remove
+directories use {@link fs-base.removeDirectory}.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>path to a file (not a directory).</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
     <a name="copy"></a>
     <h2>
         <a href="packages---narwhal-lib---narwhal-fs---copy.html"><tt>copy</tt></a>
@@ -235,7 +593,7 @@
         
     </h2>
 
-    
+    <p>Copies a file.</p>
 
 
     <table class="form whatsupdoc-parameters">
@@ -267,14 +625,57 @@
     
     </table>
     
-    <a name="listTree"></a>
+    <a name="copyTree"></a>
     <h2>
-        <a href="packages---narwhal-lib---narwhal-fs---list-tree.html"><tt>listTree</tt></a>
+        <a href="packages---narwhal-lib---narwhal-fs---copy-tree.html"><tt>copyTree</tt></a>
         
         
     </h2>
 
+    <p>Recursively copies a directory tree.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>source</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>target</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
     
+
+    
+
+    
+    </table>
+    
+    <a name="remove"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---remove.html"><tt>remove</tt></a>
+        
+        
+    </h2>
+
+    <p>Removes an empty directory. A symbolic link is itself
+removed, rather than the directory it resolves to being
+removed.</p>
 
 
     <table class="form whatsupdoc-parameters">
@@ -282,6 +683,406 @@
         <tr>
             <th class="A"><tt>path</tt></th>
             <td class="B"></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="removeTree"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---remove-tree.html"><tt>removeTree</tt></a>
+        
+        
+    </h2>
+
+    <p>Removes a directory and all of its recursive contents.
+Removes symbolic links but does not traverse into them.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="makeDirectory"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---make-directory.html"><tt>makeDirectory</tt></a>
+        
+        
+    </h2>
+
+    <p>Creates a (single) directory. If parent directories do
+not exist they will not be created by this method.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="makeTree"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---make-tree.html"><tt>makeTree</tt></a>
+        
+        
+    </h2>
+
+    <p>Creates a directory and any of its parent directories
+as necessary.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="symbolicLink"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---symbolic-link.html"><tt>symbolicLink</tt></a>
+        
+        
+    </h2>
+
+    <p>Creates a symbolic link at the source path that references
+the target path, resolved from the source.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>source</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>target</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="hardLink"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---hard-link.html"><tt>hardLink</tt></a>
+        
+        
+    </h2>
+
+    <p>Creates a hard link at the source location that shares
+the underlying storage at the target location, effectively
+functioning as a copy of the target file, although changes
+to one file are immediately reflected in the other.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>source</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>target</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="touch"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---touch.html"><tt>touch</tt></a>
+        
+        
+    </h2>
+
+    <p>'touch' the path, setting the last modified date to
+<code>mtime</code> or now. If there is no file or directory at
+<code>path</code>, an empty file will be created.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>mtime</tt></th>
+            <td class="B"><tt>Date</tt></th>
+            
+            <td class="C"><p>optional</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="workingDirectory"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---working-directory.html"><tt>workingDirectory</tt></a>
+        
+        
+    </h2>
+
+    <p>Get the process's current working directory.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="workingDirectoryPath"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---working-directory-path.html"><tt>workingDirectoryPath</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns the current working directory as a <code>Path</code></p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Path</tt></td>
+            <td class="C"><p>the current working directory as a <code>Path</code></p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="changeWorkingDirectory"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---change-working-directory.html"><tt>changeWorkingDirectory</tt></a>
+        
+        
+    </h2>
+
+    <p>Change the process's current working directory.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="list"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---list.html"><tt>list</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns a list of the entries in a directory.  These are
+not fully qualified paths, but single directory entry
+names.  The self (<code>'.'</code>) and parent (<code>'..'</code>) directory
+entries will not be returned.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>to a directory</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * String</tt></td>
+            <td class="C"><p>an array of the names of the files in a given directory.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="listPaths"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---list-paths.html"><tt>listPaths</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns a list of absolute Path objects for each entry
+in the directory.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * Path</tt></td>
+            <td class="C"><p>an array of fully qualified path objects for each file in the given directory.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="listTree"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---list-tree.html"><tt>listTree</tt></a>
+        
+        
+    </h2>
+
+    <p>Lists a directory and its recursive contents.  Each returned
+string is a path relative to the given path, suitable as an
+argument to join on the given path and the working directory
+to construct its absolute path.  The first entry returned will
+always be an empty string <code>""</code> representing the given directory.
+Does not follow symbolic links.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
             
         </tr>
         
@@ -302,9 +1103,254 @@
     
     </table>
     
+    <a name="listTreePaths"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---list-tree-paths.html"><tt>listTreePaths</tt></a>
+        
+        
+    </h2>
+
+    <p>Constructs an array of paths including the given directory and
+its recursive contents.  Does not follow symbolic links.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>paths</tt></th>
+            <td class="B"><tt>Array * Path</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
     <a name="listDirectoryTree"></a>
     <h2>
         <a href="packages---narwhal-lib---narwhal-fs---list-directory-tree.html"><tt>listDirectoryTree</tt></a>
+        
+        
+    </h2>
+
+    <p>Constructs an array of paths including the given directory
+and its recursively contained directories.  Does not follow
+symbolic links.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * String</tt></td>
+            <td class="C"><p>paths</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="glob"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---glob.html"><tt>glob</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns a list of paths that match the given shell expansion pattern.
+The following syntax is supported:</p>
+
+<ul>
+<li><code>?</code> to match any single character of a directory entry</li>
+<li><code>*</code> to match zero or more characters of a directory entry</li>
+<li><code>**</code> as a directory entry, to recursively traverse that directory</li>
+<li><code>[]</code> to match any of the given characters, or to escape any of the
+given characters, in a directory entry</li>
+<li><code>{,}</code> to match any of comma delimited options. Nested
+options are not yet supported.</li>
+</ul>
+
+<p>This method is implemented in pure-JavaScript and as such will
+work anywhere <code>fs-base</code> is implemented.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>pattern</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>flags</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+            <td class="C"><p>(optional) of the <code>MATCH_</code> prefix flag variables specified below.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="globPaths"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---glob-paths.html"><tt>globPaths</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns an array of paths for all entries that match
+the given shell expansion pattern, as described in <code>glob</code>.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>pattern</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>flags</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * Path</tt></td>
+            <td class="C"><p>paths</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="patternToRegExp"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---pattern-to-reg-exp.html"><tt>patternToRegExp</tt></a>
+        
+        
+    </h2>
+
+    <p>Converts a glob pattern into a regular expression.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>pattern</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>flags</tt></th>
+            <td class="B"><tt>Number</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="match"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---match.html"><tt>match</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns whether a given file matches a shell expansion
+pattern as described by <code>glob</code>.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>pattern</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>a glob pattern</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="MATCH_LEADING_DIR"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---__match-leading-dir.html"><tt>MATCH_LEADING_DIR</tt></a>
         
         
     </h2>
@@ -322,6 +1368,1919 @@
 
     
 
+    
+    </table>
+    
+    <a name="MATCH_PATHNAME"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---__match-pathname.html"><tt>MATCH_PATHNAME</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="MATCH_PERIOD"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---__match-period.html"><tt>MATCH_PERIOD</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="MATCH_NOESCAPE"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---__match-noescape.html"><tt>MATCH_NOESCAPE</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="MATCH_CASEFOLD"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---__match-casefold.html"><tt>MATCH_CASEFOLD</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="MATCH_DOTMATCH"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---__match-dotmatch.html"><tt>MATCH_DOTMATCH</tt></a>
+        
+        
+    </h2>
+
+    
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="UNIX_BITS"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---__unix-bits.html"><tt>UNIX_BITS</tt></a>
+        
+        
+    </h2>
+
+    <p>Permissions, broken down by who they affect
+where applicable, and what right they grant.</p>
+
+<pre><code> [
+     ['owner', 'read'],
+     ['owner', 'write'],
+     ['owner', 'execute'],
+     ['group', 'read'],
+     ['group', 'write'],
+     ['group', 'execute'],
+     ['other', 'read'],
+     ['other', 'write'],
+     ['other', 'execute'],
+     ['setUid', undefined],
+     ['setGid', undefined],
+     ['sticky', undefined],
+ ]
+</code></pre>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="UNIX_BITS_REVERSED"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---__unix-bits-reversed.html"><tt>UNIX_BITS_REVERSED</tt></a>
+        
+        
+    </h2>
+
+    <p><code>UNIX_BITS</code> in reverse order, from most significant to
+least significant.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Permissions"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---_permissions.html"><tt>Permissions</tt></a>
+        
+        
+    </h2>
+
+    <p>Constructs a permissions object.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>permissions</tt></th>
+            <td class="B"><tt>Permissions</tt></th>
+            
+            <td class="C"><p>override the <code>Permissions.default</code> values.</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_permissions---update.html"><tt>update</tt></a></th> 
+        <td><p>Updates this permissions object with the permissions
+from another permissions object.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_permissions---grant.html"><tt>grant</tt></a></th> 
+        <td><p>Adds a permission this permissions object.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_permissions---deny.html"><tt>deny</tt></a></th> 
+        <td><p>Removes a permission form this permissions object.</p>
+
+<p>WARNING: beyond specification</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_permissions---can.html"><tt>can</tt></a></th> 
+        <td><p>Returns whether this permissions object has the given permission.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_permissions---to-unix.html"><tt>toUnix</tt></a></th> 
+        <td><p>Returns a UNIX bit flag representing this set of permissions.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_permissions---default.html"><tt>default</tt></a></th> 
+        <td><p>The default permissions, as constructed on Unix from the
+inverse of <code>umask</code>.  This is a property of the the <code>Permissions</code>
+object proper and can be both gotten as a <code>Permissions</code> object
+or set with either a <code>Number</code> or a <code>Permissions</code> object.</p></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="owner"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---owner.html"><tt>owner</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns the user identifier of the owner of 
+the referenced file.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>owner the identifier of the owner of a file.</p></td>
+        </tr> 
+        
+        
+        <tr>
+            <th class="A"><em>throws</em></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>if the file does not exist</p></td>
+            
+        </tr>
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="group"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---group.html"><tt>group</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns the group identifier for the group that owns
+the referenced file.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>group the identifier of the group that owns the file.</p></td>
+        </tr> 
+        
+        
+        <tr>
+            <th class="A"><em>throws</em></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>if the file does not exist.</p></td>
+            
+        </tr>
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="changeOwner"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---change-owner.html"><tt>changeOwner</tt></a>
+        
+        
+    </h2>
+
+    <p>Changes the owner for a referenced file.</p>
+
+<p>WARNING: beyond specification</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>owner</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>an identifier for the owner of a file</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="changeGroup"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---change-group.html"><tt>changeGroup</tt></a>
+        
+        
+    </h2>
+
+    <p>Sets the group ownership of the given file or directory.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>group</tt></th>
+            <td class="B"></th>
+            
+            <td class="C"><p>a group identifier</p></td>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="permissions"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---permissions.html"><tt>permissions</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns a representation of the permissions granted to
+various users for the given file.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Permissions</tt></td>
+            <td class="C"><p>a representation of the permissions granted to various users for the given file.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="changePermissions"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---change-permissions.html"><tt>changePermissions</tt></a>
+        
+        
+    </h2>
+
+    <p>Sets the permissions for the given file.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>permissions</tt></th>
+            <td class="B"><tt>Permissions | Number</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="readLink"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---read-link.html"><tt>readLink</tt></a>
+        
+        
+    </h2>
+
+    <p>Reads the content of a symbolic link at the given path.</p>
+
+<p>See: <a href="POSIX readlink function">http://www.opengroup.org/onlinepubs/000095399/functions/readlink.html</a>.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>path</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="exists"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---exists.html"><tt>exists</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns whether a file exists at the given path.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether a file (of any kind, including directories) exists at the given path</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="isFile"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---is-file.html"><tt>isFile</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns whether a regular file exists at the given path.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether a regular file exists at the given path.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="isDirectory"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---is-directory.html"><tt>isDirectory</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns whether a directory exists at the given path.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether a directory exists at the given path.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="isLink"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---is-link.html"><tt>isLink</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns whether a symbolic link exists at the given path.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether a symbolic link exists at the given path.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="isBlockDevice"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---is-block-device.html"><tt>isBlockDevice</tt></a>
+        
+        
+    </h2>
+
+    <p>/!\ Warning: beyond specification. Not necessarily
+interoperable.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether a block device exists at the given path.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="isCharacterDevice"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---is-character-device.html"><tt>isCharacterDevice</tt></a>
+        
+        
+    </h2>
+
+    <p>/!\ Warning: beyond specification. Not necessarily
+interoperable.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether a character streaming device exists at the given path.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="isFifo"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---is-fifo.html"><tt>isFifo</tt></a>
+        
+        
+    </h2>
+
+    <p>/!\ Warning: beyond specification. Not necessarily
+interoperable.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether a named pipe device exists at the given path.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="isSocket"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---is-socket.html"><tt>isSocket</tt></a>
+        
+        
+    </h2>
+
+    <p>/!\ Warning: beyond specification. Not necessarily
+interoperable.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether a UNIX domain socket exists at the given path.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="isReadable"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---is-readable.html"><tt>isReadable</tt></a>
+        
+        
+    </h2>
+
+    <p>/!\ Warning: this function provides information about the
+process owner's rights for information and display
+purposes only. The only reliable way to detect whether a
+file is writable or readable, without race coditions, is
+to attempt to open the file.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether <code>path</code> is readable.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="isWritable"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---is-writable.html"><tt>isWritable</tt></a>
+        
+        
+    </h2>
+
+    <p>/!\ Warning: this function provides information about the
+process owner's rights for information and display
+purposes only. The only reliable way to detect whether a
+file is writable or readable, without race coditions, is
+to attempt to open the file.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether <code>path</code> is writable.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="same"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---same.html"><tt>same</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns whether the paths refer to the same physical storage.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>pathA</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>pathB</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>undefined</tt></td>
+            <td class="C"><p>whether the paths refer to the same physical storage.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="sameFilesystem"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---same-filesystem.html"><tt>sameFilesystem</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns whether the paths are on the same file system.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>pathA</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>pathB</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether the paths are on the same file system.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="size"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---size.html"><tt>size</tt></a>
+        
+        
+    </h2>
+
+    <p>Return the size of the file in bytes. Due to the way that
+ECMAScript behaves, if the file is larger than 65,536
+terabytes accuracy will be lost.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="lastModified"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---last-modified.html"><tt>lastModified</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns the last modification time of the <code>path</code></p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Date</tt></td>
+            <td class="C"><p>the last modification time of the <code>path</code></p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="iterator"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---iterator.html"><tt>iterator</tt></a>
+        
+        
+    </h2>
+
+    <p>Creates a directory iterator.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Iterator</tt></td>
+            <td class="C"><p>a directory entry name iterator.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---iterator---next.html"><tt>next</tt></a></th> 
+        <td><p>Returns the next entry name in the directory</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---iterator---iterate.html"><tt>iterate</tt></a></th> 
+        <td><p>Returns an iterator, itself, so caling iterate
+is idempotent.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---iterator---close.html"><tt>close</tt></a></th> 
+        <td><p>Closes the iteration.</p></td>
+    </tr>
+    
+    
+    </table>
+    
+    <a name="ROOT"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---__root.html"><tt>ROOT</tt></a>
+        
+        
+    </h2>
+
+    <ul>
+<li><code>/</code> on Unix</li>
+<li><code>\</code> on Windows</li>
+</ul>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="SEPARATOR"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---__separator.html"><tt>SEPARATOR</tt></a>
+        
+        
+    </h2>
+
+    <ul>
+<li><code>/</code> on Unix</li>
+<li><code>\</code> on Windows</li>
+</ul>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="ALT_SEPARATOR"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---__alt-separator.html"><tt>ALT_SEPARATOR</tt></a>
+        
+        
+    </h2>
+
+    <ul>
+<li>undefined on Unix</li>
+<li><code>/</code> on Windows</li>
+</ul>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="split"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---split.html"><tt>split</tt></a>
+        
+        
+    </h2>
+
+    <p>separates a path into components.  If the path is
+absolute, the first path component is the root of the
+file system, indicated by an empty string on Unix, and a
+drive letter followed by a colon on Windows.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Array * String</tt></td>
+            <td class="C"></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="join"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---join.html"><tt>join</tt></a>
+        
+        
+    </h2>
+
+    <p>Takes file system paths as variadic arguments and treats
+each as a file or directory path and returns the path
+arrived by traversing into the those paths.  All
+arguments except for the last must be paths to
+directories for the result to be meaningful.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>path</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="resolve"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---resolve.html"><tt>resolve</tt></a>
+        
+        
+    </h2>
+
+    <p>Takes file system paths as variadic arguments and treats
+each path as a location, in the URL sense, resolving each
+new location based on the previous.  For example, if the
+first argument is the absolute path of a JSON file, and
+the second argument is a path mentioned in that JSON
+file, <code>resolve</code> returns the absolute path of the
+mentioned file.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>path</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="canonical"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---canonical.html"><tt>canonical</tt></a>
+        
+        
+    </h2>
+
+    <p>Resolve symlinks and canonicalize <code>path</code>. If it is a
+directory, the returned string will be guarenteed to have
+a trailing '/'</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="normal"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---normal.html"><tt>normal</tt></a>
+        
+        
+    </h2>
+
+    <p>Takes paths as any number of arguments and reduces them
+into a single path in normal form, removing all "." path
+components, and reducing ".." path components by removing
+the previous path component if possible.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>path</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="relative"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---relative.html"><tt>relative</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns the relative path from the source directory to the target file.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>source</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>target</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>the relative path from the source directory to the target file.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="absolute"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---absolute.html"><tt>absolute</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns a fully-qualified path from the root of a file system to the given path, by normalizing the path as joined on the current working directory. Absolute paths are not necessarily canonical.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>a fully-qualified path from the root of a file system to the given path, by normalizing the path as joined on the current working directory. Absolute paths are not necessarily canonical.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="isAbsolute"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---is-absolute.html"><tt>isAbsolute</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns whether the given path begins at the root of the file system or a drive letter.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether the given path begins at the root of the file system or a drive letter.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="isRelative"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---is-relative.html"><tt>isRelative</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns whether the given path does not begin at the root of the file system or a drive letter.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether the given path does not begin at the root of the file system or a drive letter.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="isRoot"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---is-root.html"><tt>isRoot</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns whether the given path component corresponds to the root of the file system or a drive letter, as applicable.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>Boolean</tt></td>
+            <td class="C"><p>whether the given path component corresponds to the root of the file system or a drive letter, as applicable.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="root"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---root.html"><tt>root</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns the Unix root path or corresponding Windows drive for a given path.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>the Unix root path or corresponding Windows drive for a given path.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="directory"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---directory.html"><tt>directory</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns the parent directory of the given path.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>the parent directory of the given path.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="base"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---base.html"><tt>base</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns the last component of a path, without the given extension if the extension is provided and matches the given file.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A"><tt>path</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+        </tr>
+        
+        <tr>
+            <th class="A"><tt>extention</tt></th>
+            <td class="B"><tt>String</tt></th>
+            
+            <td class="C"><p>an optional extention to detect and remove if it exists.</p></td>
+            
+        </tr>
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>the last component of a path, without the given extension if the extension is provided and matches the given file.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="extension"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---extension.html"><tt>extension</tt></a>
+        
+        
+    </h2>
+
+    <p>Returns the extension (e.g., <code>txt</code>) of the file at the given path.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        <tr>
+            <th class="A"><em>returns</em></th>
+            <td class="B"><tt>String</tt></td>
+            <td class="C"><p>the extension (e.g., <code>txt</code>) of the file at the given path.</p></td>
+        </tr> 
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="path"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---path.html"><tt>path</tt></a>
+        
+        
+    </h2>
+
+    <p>Joins the variadic paths provided as arguments and
+returns a <code>Path</code> object representing that path.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        <tr>
+            <th class="A">&hellip;<tt>path</tt></th>
+            <td class="B"></th>
+            
+        </tr>
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    </table>
+    
+    <a name="Path"></a>
+    <h2>
+        <a href="packages---narwhal-lib---narwhal-fs---_path.html"><tt>Path</tt></a>
+        
+        
+    </h2>
+
+    <p>Constructs an object that, for convenience, represents
+a given path and provides a set of chainable methods
+on that path.</p>
+
+
+    <table class="form whatsupdoc-parameters">
+        
+        
+        
+    </table>
+
+    
+
+    
+
+    
+    <p>Properties:</p>
+    <table class="form">
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---value-of.html"><tt>valueOf</tt></a></th> 
+        <td><p>Permits a Path to be implicitly coerced into a String.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---join.html"><tt>join</tt></a></th> 
+        <td><p>Joins paths onto this one.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---resolve.html"><tt>resolve</tt></a></th> 
+        <td><p>Resolves locations based on this path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---to.html"><tt>to</tt></a></th> 
+        <td><p>Returns the relative path from here to the given path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---from.html"><tt>from</tt></a></th> 
+        <td><p>Returns the relative path from the given path to here.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---glob.html"><tt>glob</tt></a></th> 
+        <td><p>Returns an array of paths for a shell expansion in the context of this path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---glob-paths.html"><tt>globPaths</tt></a></th> 
+        <td><p>Returns an array of paths for a shell expansion in the context of this path, as Path objects.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---absolute.html"><tt>absolute</tt></a></th> 
+        <td><p>Returns the fully qualified path, as joined from the current working directory and normalized, but not canonicalized.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---canonical.html"><tt>canonical</tt></a></th> 
+        <td><p>Returns the canonical path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---directory.html"><tt>directory</tt></a></th> 
+        <td><p>Returns the directory containing this path, the parent directory.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---normal.html"><tt>normal</tt></a></th> 
+        <td><p>Returns this path in normal form, having removed every self <code>"."</code> entry and resolving all possible * parent <code>".."</code> entries.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---list-paths.html"><tt>listPaths</tt></a></th> 
+        <td><p>Returns an array of path obejcts for each entry in the directory at this path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---list-tree-paths.html"><tt>listTreePaths</tt></a></th> 
+        <td><p>Returns an array of path objects for each entry in this directory, recursively traversing contained directories but not symbolic links, relative to this path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---base.html"><tt>base</tt></a></th> 
+        <td><p>Returns the name of the directory entry for this path, without the extension if one is given and matches the entry.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---change-group.html"><tt>changeGroup</tt></a></th> 
+        <td><p>Changes the group ownership of the path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---change-owner.html"><tt>changeOwner</tt></a></th> 
+        <td><p>Changes the owner of the path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---copy.html"><tt>copy</tt></a></th> 
+        <td><p>Copies this path to the given target path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---copy-tree.html"><tt>copyTree</tt></a></th> 
+        <td><p>Recursively copies this path to the given taget path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---exists.html"><tt>exists</tt></a></th> 
+        <td><p>Returns whether a file exists at this path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---extension.html"><tt>extension</tt></a></th> 
+        <td><p>Returns the extension of this path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---hard-link.html"><tt>hardLink</tt></a></th> 
+        <td><p>Creates another hard link to the file at this path
+at the given path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---is-directory.html"><tt>isDirectory</tt></a></th> 
+        <td><p>Returns whether a directory exists at this path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---is-file.html"><tt>isFile</tt></a></th> 
+        <td><p>Returns whether a regular file exists at this path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---is-link.html"><tt>isLink</tt></a></th> 
+        <td><p>Returns whether a symbolic link exists at this path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---is-readable.html"><tt>isReadable</tt></a></th> 
+        <td><p>Returns whether the given path is readable to this user.</p>
+
+<p>/!\ WARNING: this method should only be used to provide expedient
+information to the user about whether the file is readable; the
+only reliable way to ascertain whether a file is readable is to 
+try to open it for reading.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---is-writable.html"><tt>isWritable</tt></a></th> 
+        <td><p>Returns whether the given path is writable to this user.</p>
+
+<p>/!\ WARNING: this method should only be used to provide expedient
+information to the user about whether the file is writable; the
+only reliable way to ascertain whether a file is writable is to 
+try to open it for writable.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---list.html"><tt>list</tt></a></th> 
+        <td><p>Returns a list of the directory entry names in this directory.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---list-tree.html"><tt>listTree</tt></a></th> 
+        <td><p>Returns a list of all paths under this directory, relative to this directory, including this directory as an empty string, <code>""</code>.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---make-directory.html"><tt>makeDirectory</tt></a></th> 
+        <td><p>Creates a directory at this path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---make-tree.html"><tt>makeTree</tt></a></th> 
+        <td><p>Creates this directory and any parent directories as needed.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---move.html"><tt>move</tt></a></th> 
+        <td><p>Moves the file at this path to the target path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---last-modified.html"><tt>lastModified</tt></a></th> 
+        <td><p>Returns the date of the last modification of this file.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---open.html"><tt>open</tt></a></th> 
+        <td><p>Returns an open stream for a file at this path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---read.html"><tt>read</tt></a></th> 
+        <td><p>Returns the content of the file at this path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---remove.html"><tt>remove</tt></a></th> 
+        <td><p>Removes the file at this path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---remove-directory.html"><tt>removeDirectory</tt></a></th> 
+        <td><p>Removes the directory at this path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---remove-tree.html"><tt>removeTree</tt></a></th> 
+        <td><p>Removes this file or directory, and the content of this directory
+recursively, not following symbolic links.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---rename.html"><tt>rename</tt></a></th> 
+        <td><p>Renames the file at this path, relative to its parent directory.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---size.html"><tt>size</tt></a></th> 
+        <td><p>Returns the size of the file at this path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---split.html"><tt>split</tt></a></th> 
+        <td><p>Returns an array of the the path components of this path, starting with the root of the file system if absolute.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---stat.html"><tt>stat</tt></a></th> 
+        <td><p>Returns the file system metadata for the file at this path.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---symbolic-link.html"><tt>symbolicLink</tt></a></th> 
+        <td><p>Creates a symbolic link to this path at the given target location.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---touch.html"><tt>touch</tt></a></th> 
+        <td><p>Sets the date of last modification for this path, creating
+an empty file if necessary.</p></td>
+    </tr>
+    
+    <tr>
+        <th><a href="packages---narwhal-lib---narwhal-fs---_path---write.html"><tt>write</tt></a></th> 
+        <td><p>Writes the given content to a file at this path.</p></td>
+    </tr>
+    
     
     </table>
     

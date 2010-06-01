@@ -21,7 +21,7 @@
         "type": "String",
         "doc": "the text of the corresponding module file in the topmost module path with the first applicable extension."
     },
-    "doc": "",
+    "doc": "Returns the text of the corresponding module file in the topmost module path with the first applicable extension.",
     "heritage": [
         "packages",
         "narwhal-lib",

@@ -1,0 +1,26 @@
+{
+    "name": "changeOwner",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+    "lineNo": 728,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        },
+        {
+            "name": "owner",
+            "doc": "an identifier for the owner of a file"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Changes the owner for a referenced file.\n\nWARNING: beyond specification",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "fs-base"
+    ],
+    "href": "packages---narwhal-node---fs-base---change-owner"
+}

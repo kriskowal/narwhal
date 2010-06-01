@@ -13,7 +13,7 @@
         "type": "Boolean",
         "doc": "whether a module factory function has already been loaded for the given identifier."
     },
-    "doc": "",
+    "doc": "Returns whether a module factory function has already been loaded for the given identifier.",
     "heritage": [
         "packages",
         "narwhal-lib",

@@ -111,7 +111,7 @@
                 "type": "Function(lexicalScope Object)",
                 "doc": "factory a module factory (\"maker\") function."
             },
-            "doc": "",
+            "doc": "Returns factory a module factory (\"maker\") function.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -143,7 +143,7 @@
                 "type": "String",
                 "doc": "the text of the corresponding module file in the topmost module path with the first applicable extension."
             },
-            "doc": "",
+            "doc": "Returns the text of the corresponding module file in the topmost module path with the first applicable extension.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -181,7 +181,7 @@
                 "type": "Function(scope: Object)",
                 "doc": "a module factory function or maker that executes the given text with the owned properties of the given `scope` record as free variables.  The returned function may have a `path` property to provide hints to the recipient for debugging."
             },
-            "doc": "",
+            "doc": "Returns a module factory function or maker that executes the given text with the owned properties of the given `scope` record as free variables.  The returned function may have a `path` property to provide hints to the recipient for debugging.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -213,7 +213,7 @@
                 "type": "Function(scope: Object)",
                 "doc": "the memoized module factory function corresponding to the given top-level identifier."
             },
-            "doc": "",
+            "doc": "Returns the memoized module factory function corresponding to the given top-level identifier.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -261,7 +261,7 @@
                 "type": "Boolean",
                 "doc": "whether a module factory function has already been loaded for the given identifier."
             },
-            "doc": "",
+            "doc": "Returns whether a module factory function has already been loaded for the given identifier.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -466,7 +466,7 @@
                 "type": "Function(lexicalScope Object)",
                 "doc": "factory a module factory (\"maker\") function."
             },
-            "doc": "",
+            "doc": "Returns factory a module factory (\"maker\") function.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -498,7 +498,7 @@
                 "type": "String",
                 "doc": "the text of the corresponding module file in the topmost module path with the first applicable extension."
             },
-            "doc": "",
+            "doc": "Returns the text of the corresponding module file in the topmost module path with the first applicable extension.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -536,7 +536,7 @@
                 "type": "Function(scope: Object)",
                 "doc": "a module factory function or maker that executes the given text with the owned properties of the given `scope` record as free variables.  The returned function may have a `path` property to provide hints to the recipient for debugging."
             },
-            "doc": "",
+            "doc": "Returns a module factory function or maker that executes the given text with the owned properties of the given `scope` record as free variables.  The returned function may have a `path` property to provide hints to the recipient for debugging.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -568,7 +568,7 @@
                 "type": "Function(scope: Object)",
                 "doc": "the memoized module factory function corresponding to the given top-level identifier."
             },
-            "doc": "",
+            "doc": "Returns the memoized module factory function corresponding to the given top-level identifier.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -616,7 +616,7 @@
                 "type": "Boolean",
                 "doc": "whether a module factory function has already been loaded for the given identifier."
             },
-            "doc": "",
+            "doc": "Returns whether a module factory function has already been loaded for the given identifier.",
             "heritage": [
                 "packages",
                 "narwhal-lib",

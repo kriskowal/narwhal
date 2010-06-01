@@ -1,0 +1,57 @@
+{
+    "name": "whatsupdoc/args",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc/args.js",
+    "lineNo": 2,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "module": true,
+    "doc": "provides command line argument parsing for the\n`whatsupdoc` command.",
+    "type": "module",
+    "id": "whatsupdoc/args",
+    "children": [
+        {
+            "name": "parser",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc/args.js",
+            "lineNo": 12,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "an arguments parser from the `narwhal-lib` `args` module\nfor the `whatsupdoc` command line utility.",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc-args"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc-args---parser"
+        }
+    ],
+    "index": {
+        "parser": {
+            "name": "parser",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc/args.js",
+            "lineNo": 12,
+            "params": [],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "an arguments parser from the `narwhal-lib` `args` module\nfor the `whatsupdoc` command line utility.",
+            "heritage": [
+                "packages",
+                "whatsupdoc",
+                "whatsupdoc-args"
+            ],
+            "href": "packages---whatsupdoc---whatsupdoc-args---parser"
+        }
+    },
+    "heritage": [
+        "packages",
+        "whatsupdoc"
+    ],
+    "href": "packages---whatsupdoc---whatsupdoc-args"
+}

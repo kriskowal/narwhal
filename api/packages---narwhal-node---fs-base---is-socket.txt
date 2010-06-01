@@ -2,11 +2,20 @@
     "name": "isSocket",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
-    "lineNo": 901,
-    "params": [],
+    "lineNo": 1019,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        }
+    ],
     "errors": [],
     "throws": [],
     "see": [],
+    "returns": {
+        "type": "Boolean",
+        "doc": "whether a UNIX domain socket exists at the given path."
+    },
     "doc": "/!\\ Warning: beyond specification. Not necessarily\ninteroperable.",
     "heritage": [
         "packages",

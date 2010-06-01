@@ -84,7 +84,7 @@
                 "type": "String",
                 "doc": "a string like `Author Name (http://example.com/) <author@example.com>`, where each component is optional."
             },
-            "doc": "",
+            "doc": "Returns a string like `Author Name (http://example.com/) <author@example.com>`, where each component is optional.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -190,7 +190,7 @@
                 "type": "String",
                 "doc": "a string like `Author Name (http://example.com/) <author@example.com>`, where each component is optional."
             },
-            "doc": "",
+            "doc": "Returns a string like `Author Name (http://example.com/) <author@example.com>`, where each component is optional.",
             "heritage": [
                 "packages",
                 "narwhal-lib",

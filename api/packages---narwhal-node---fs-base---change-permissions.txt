@@ -2,12 +2,21 @@
     "name": "changePermissions",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
-    "lineNo": 720,
-    "params": [],
+    "lineNo": 814,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        },
+        {
+            "name": "permissions",
+            "type": "Permissions | Number"
+        }
+    ],
     "errors": [],
     "throws": [],
     "see": [],
-    "doc": "",
+    "doc": "Sets the permissions for the given file.",
     "heritage": [
         "packages",
         "narwhal-node",

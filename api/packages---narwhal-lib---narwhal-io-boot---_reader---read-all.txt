@@ -11,7 +11,7 @@
         "type": "Buffer",
         "doc": "the entirety of the remaining input."
     },
-    "doc": "",
+    "doc": "Returns the entirety of the remaining input.",
     "heritage": [
         "packages",
         "narwhal-lib",

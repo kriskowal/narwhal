@@ -22,7 +22,7 @@
         "type": "Path",
         "doc": "a path object from `narwhal/fs` in the `narwhal-lib` package for the file in the first package that contains a corresponding path.  If the paths correspond to an absolute path, returns that as a path object."
     },
-    "doc": "",
+    "doc": "Returns a path object from `narwhal/fs` in the `narwhal-lib` package for the file in the first package that contains a corresponding path.  If the paths correspond to an absolute path, returns that as a path object.",
     "heritage": [
         "packages",
         "narwhal-lib",

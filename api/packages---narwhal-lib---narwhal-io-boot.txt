@@ -72,7 +72,7 @@
                         "type": "Buffer",
                         "doc": "the entirety of the remaining input."
                     },
-                    "doc": "",
+                    "doc": "Returns the entirety of the remaining input.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -114,7 +114,7 @@
                         "type": "Buffer",
                         "doc": "the next chunk of input (from `read(null)`, or @throws `StopIteration` if the next chunk is empty."
                     },
-                    "doc": "",
+                    "doc": "Returns the next chunk of input (from `read(null)`, or @throws `StopIteration` if the next chunk is empty.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -235,7 +235,7 @@
                         "type": "Buffer",
                         "doc": "the entirety of the remaining input."
                     },
-                    "doc": "",
+                    "doc": "Returns the entirety of the remaining input.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -277,7 +277,7 @@
                         "type": "Buffer",
                         "doc": "the next chunk of input (from `read(null)`, or @throws `StopIteration` if the next chunk is empty."
                     },
-                    "doc": "",
+                    "doc": "Returns the next chunk of input (from `read(null)`, or @throws `StopIteration` if the next chunk is empty.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -1841,7 +1841,7 @@
             "href": "packages---narwhal-lib---narwhal-io-boot---text-io"
         },
         {
-            "name": "TextIOForMode",
+            "name": "open",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
             "lineNo": 385,
@@ -1868,7 +1868,7 @@
                 "narwhal-lib",
                 "narwhal-io-boot"
             ],
-            "href": "packages---narwhal-lib---narwhal-io-boot---text-io-for-mode"
+            "href": "packages---narwhal-lib---narwhal-io-boot---open"
         },
         {
             "name": "BufferIO",
@@ -2537,7 +2537,7 @@
                         "type": "Buffer",
                         "doc": "the entirety of the remaining input."
                     },
-                    "doc": "",
+                    "doc": "Returns the entirety of the remaining input.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -2579,7 +2579,7 @@
                         "type": "Buffer",
                         "doc": "the next chunk of input (from `read(null)`, or @throws `StopIteration` if the next chunk is empty."
                     },
-                    "doc": "",
+                    "doc": "Returns the next chunk of input (from `read(null)`, or @throws `StopIteration` if the next chunk is empty.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -2700,7 +2700,7 @@
                         "type": "Buffer",
                         "doc": "the entirety of the remaining input."
                     },
-                    "doc": "",
+                    "doc": "Returns the entirety of the remaining input.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -2742,7 +2742,7 @@
                         "type": "Buffer",
                         "doc": "the next chunk of input (from `read(null)`, or @throws `StopIteration` if the next chunk is empty."
                     },
-                    "doc": "",
+                    "doc": "Returns the next chunk of input (from `read(null)`, or @throws `StopIteration` if the next chunk is empty.",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -4305,8 +4305,8 @@
             ],
             "href": "packages---narwhal-lib---narwhal-io-boot---text-io"
         },
-        "TextIOForMode": {
-            "name": "TextIOForMode",
+        "open": {
+            "name": "open",
             "markup": "markdown",
             "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/io-boot.js",
             "lineNo": 385,
@@ -4333,7 +4333,7 @@
                 "narwhal-lib",
                 "narwhal-io-boot"
             ],
-            "href": "packages---narwhal-lib---narwhal-io-boot---text-io-for-mode"
+            "href": "packages---narwhal-lib---narwhal-io-boot---open"
         },
         "BufferIO": {
             "name": "BufferIO",

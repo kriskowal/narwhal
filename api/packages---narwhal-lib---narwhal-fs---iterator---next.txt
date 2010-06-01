@@ -1,0 +1,27 @@
+{
+    "name": "next",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 1122,
+    "params": [],
+    "errors": [],
+    "throws": [
+        {
+            "type": "StopIteration",
+            "doc": "if there are no further entries."
+        }
+    ],
+    "see": [],
+    "returns": {
+        "type": "String",
+        "doc": "the next entry name in the directory"
+    },
+    "doc": "Returns the next entry name in the directory",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs",
+        "iterator"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---iterator---next"
+}

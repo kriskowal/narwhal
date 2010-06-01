@@ -32,7 +32,7 @@
         "type": "Buffer",
         "doc": "target"
     },
-    "doc": "",
+    "doc": "Returns target",
     "heritage": [
         "packages",
         "narwhal-node",

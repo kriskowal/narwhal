@@ -16,7 +16,7 @@
     "returns": {
         "doc": "a Node Server object."
     },
-    "doc": "",
+    "doc": "Returns a Node Server object.",
     "children": [
         {
             "name": "stop",

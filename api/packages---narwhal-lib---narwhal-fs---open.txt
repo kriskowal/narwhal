@@ -2,12 +2,36 @@
     "name": "open",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
-    "lineNo": 32,
-    "params": [],
+    "lineNo": 27,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        },
+        {
+            "name": "mode",
+            "type": "String",
+            "doc": "(optional, further arguments shift) as specified by `openRaw`"
+        },
+        {
+            "name": "charset",
+            "type": "String",
+            "doc": "(options, further arguments shift) a character set name, as defined by IANA, in all upper-case to distinguish it from a mode string.  The default if none is specified and the stream is not binary, is `UTF-8`."
+        },
+        {
+            "name": "permissions",
+            "type": "Permissions | Number",
+            "doc": "(optional, further arguments shift)"
+        },
+        {
+            "name": "options",
+            "doc": "(optional)"
+        }
+    ],
     "errors": [],
     "throws": [],
     "see": [],
-    "doc": "",
+    "doc": "Creates an IO stream for a file, in either text in a parcticular\ncharacter set or in bytes.\n\nMode includes:\n\n* `\"r\"` for reading (`read` option)\n* `\"w\"` for writing (`write` option)\n* `\"a\"` for appending (`append` option)\n* `\"+\"` for updating (`update` option)\n* `\"b\"` for a byte stream (`binary` option)\n* `\"x\"` for exclusive creation: open will fail if the file already\n   exists. (`exclusive` option)\n\nOptions include:\n\n* `charset` an IANA character set, case insensitive.\n* `buffering` `Number` of bytes to buffer, presently only\n  used by the charset transcoder for its internal buffer.\n* `lineBuffering` `Boolean` whether to buffer lines, not\n  presently supported.\n* all options mentioned above, in the mode string as `Boolean`\n  values.\n* all options mentioned below, in the `openRaw` method.",
     "heritage": [
         "packages",
         "narwhal-lib",

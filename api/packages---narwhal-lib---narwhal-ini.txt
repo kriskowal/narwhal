@@ -31,7 +31,7 @@
                 "type": "Array * Object",
                 "doc": "decoded where the section key, `\"-\"` signifies the default sections."
             },
-            "doc": "",
+            "doc": "Returns decoded where the section key, `\"-\"` signifies the default sections.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -58,7 +58,7 @@
                 "type": "String",
                 "doc": "encoded"
             },
-            "doc": "",
+            "doc": "Returns encoded",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -87,7 +87,7 @@
                 "type": "Array * Object",
                 "doc": "decoded where the section key, `\"-\"` signifies the default sections."
             },
-            "doc": "",
+            "doc": "Returns decoded where the section key, `\"-\"` signifies the default sections.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -114,7 +114,7 @@
                 "type": "String",
                 "doc": "encoded"
             },
-            "doc": "",
+            "doc": "Returns encoded",
             "heritage": [
                 "packages",
                 "narwhal-lib",

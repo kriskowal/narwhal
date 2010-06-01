@@ -2,7 +2,7 @@
     "name": "write",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
-    "lineNo": 158,
+    "lineNo": 239,
     "params": [
         {
             "name": "path"
@@ -11,15 +11,15 @@
             "name": "content"
         },
         {
-            "name": "mode",
+            "name": "options",
             "variadic": true,
-            "doc": "as String, options as Object, permissions as Number"
+            "doc": "each as described by `open`"
         }
     ],
     "errors": [],
     "throws": [],
     "see": [],
-    "doc": "",
+    "doc": "Wrties the entire content of a file.",
     "heritage": [
         "packages",
         "narwhal-lib",

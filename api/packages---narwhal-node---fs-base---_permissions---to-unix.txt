@@ -1,0 +1,24 @@
+{
+    "name": "toUnix",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+    "lineNo": 229,
+    "params": [],
+    "errors": [
+        "Did not recognize \"this\" tag."
+    ],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Number",
+        "doc": "a UNIX bit flag representing this set of permissions."
+    },
+    "doc": "WARNING: beyond specification",
+    "heritage": [
+        "packages",
+        "narwhal-node",
+        "fs-base",
+        "_permissions"
+    ],
+    "href": "packages---narwhal-node---fs-base---_permissions---to-unix"
+}

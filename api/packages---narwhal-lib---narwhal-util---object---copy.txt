@@ -14,7 +14,7 @@
     "returns": {
         "doc": "a shallow copy on all owned properties"
     },
-    "doc": "",
+    "doc": "Returns a shallow copy on all owned properties",
     "heritage": [
         "packages",
         "narwhal-lib",

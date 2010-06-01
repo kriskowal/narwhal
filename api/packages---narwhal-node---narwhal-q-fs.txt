@@ -30,7 +30,7 @@
                 "type": "Promise * Stream",
                 "doc": "a stream from the `narwhal/q-io` module."
             },
-            "doc": "",
+            "doc": "Returns a stream from the `narwhal/q-io` module.",
             "heritage": [
                 "packages",
                 "narwhal-node",
@@ -94,7 +94,7 @@
                 "type": "Promise * Undefined",
                 "doc": "a promise that resolves when the writing is complete."
             },
-            "doc": "",
+            "doc": "Returns a promise that resolves when the writing is complete.",
             "heritage": [
                 "packages",
                 "narwhal-node",
@@ -148,7 +148,7 @@
                 "type": "Promise * Stream",
                 "doc": "a stream from the `narwhal/q-io` module."
             },
-            "doc": "",
+            "doc": "Returns a stream from the `narwhal/q-io` module.",
             "heritage": [
                 "packages",
                 "narwhal-node",
@@ -212,7 +212,7 @@
                 "type": "Promise * Undefined",
                 "doc": "a promise that resolves when the writing is complete."
             },
-            "doc": "",
+            "doc": "Returns a promise that resolves when the writing is complete.",
             "heritage": [
                 "packages",
                 "narwhal-node",

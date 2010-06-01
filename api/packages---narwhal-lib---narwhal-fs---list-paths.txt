@@ -1,0 +1,26 @@
+{
+    "name": "listPaths",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 459,
+    "params": [
+        {
+            "name": "path",
+            "type": "String"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Array * Path",
+        "doc": "an array of fully qualified path objects for each file in the given directory."
+    },
+    "doc": "Returns a list of absolute Path objects for each entry\nin the directory.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---list-paths"
+}

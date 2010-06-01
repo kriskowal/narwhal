@@ -17,7 +17,7 @@
         "type": "Array",
         "doc": "an array of all files that match the given paths in every package.  Each of the variadic path terms may be replaced with their configured equivalents in their respective package, as described by the `directories` property in the given package's `package.json` file."
     },
-    "doc": "",
+    "doc": "Returns an array of all files that match the given paths in every package.  Each of the variadic path terms may be replaced with their configured equivalents in their respective package, as described by the `directories` property in the given package's `package.json` file.",
     "heritage": [
         "packages",
         "narwhal-lib",

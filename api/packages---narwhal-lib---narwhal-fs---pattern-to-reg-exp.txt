@@ -1,0 +1,26 @@
+{
+    "name": "patternToRegExp",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 672,
+    "params": [
+        {
+            "name": "pattern",
+            "type": "String"
+        },
+        {
+            "name": "flags",
+            "type": "Number"
+        }
+    ],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "Converts a glob pattern into a regular expression.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---pattern-to-reg-exp"
+}

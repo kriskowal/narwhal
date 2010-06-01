@@ -10,7 +10,7 @@
     "returns": {
         "doc": "whether the given object is a promise. Otherwise it is a resolved value."
     },
-    "doc": "",
+    "doc": "Returns whether the given object is a promise. Otherwise it is a resolved value.",
     "heritage": [
         "packages",
         "narwhal-lib",

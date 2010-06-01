@@ -11,7 +11,7 @@
         "type": "Boolean",
         "doc": "false because the underlying embedding does not yet support this feature."
     },
-    "doc": "",
+    "doc": "Returns false because the underlying embedding does not yet support this feature.",
     "heritage": [
         "packages",
         "narwhal-node",

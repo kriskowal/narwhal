@@ -30,7 +30,7 @@
                 "type": "String",
                 "doc": "a hexadecimal string of the MD4 hash for a given string, as interpreted in bytes."
             },
-            "doc": "",
+            "doc": "Returns a hexadecimal string of the MD4 hash for a given string, as interpreted in bytes.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -58,7 +58,7 @@
                 "type": "String",
                 "doc": "a hexadecimal string of the MD4 hash for a given string, as interpreted in bytes."
             },
-            "doc": "",
+            "doc": "Returns a hexadecimal string of the MD4 hash for a given string, as interpreted in bytes.",
             "heritage": [
                 "packages",
                 "narwhal-lib",

@@ -16,7 +16,7 @@
         "type": "Promise * undefined",
         "doc": "a promise for `undefined` that will resolve after `timeout` miliseconds."
     },
-    "doc": "",
+    "doc": "Returns a promise for `undefined` that will resolve after `timeout` miliseconds.",
     "heritage": [
         "packages",
         "narwhal-lib",

@@ -11,7 +11,7 @@
         "type": "Boolean",
         "doc": "whether this event instructs the emitting signal to apply its default action."
     },
-    "doc": "",
+    "doc": "Returns whether this event instructs the emitting signal to apply its default action.",
     "heritage": [
         "packages",
         "narwhal",

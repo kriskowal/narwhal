@@ -1,0 +1,17 @@
+{
+    "name": "makeJsonTxt",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/whatsupdoc/lib/whatsupdoc/main.js",
+    "lineNo": 167,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "",
+    "heritage": [
+        "packages",
+        "whatsupdoc",
+        "whatsupdoc-main"
+    ],
+    "href": "packages---whatsupdoc---whatsupdoc-main---make-json-txt"
+}

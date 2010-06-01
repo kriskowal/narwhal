@@ -32,7 +32,7 @@
                 "type": "Promise * undefined",
                 "doc": "a promise for `undefined` that will resolve after `timeout` miliseconds."
             },
-            "doc": "",
+            "doc": "Returns a promise for `undefined` that will resolve after `timeout` miliseconds.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -76,7 +76,7 @@
                 "type": "Promise * Array",
                 "doc": "a promise for an array of each resolved value respectively."
             },
-            "doc": "",
+            "doc": "Returns a promise for an array of each resolved value respectively.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -120,7 +120,7 @@
                 "type": "Promise * Array",
                 "doc": "a promise for the sum of the resolved."
             },
-            "doc": "",
+            "doc": "Returns a promise for the sum of the resolved.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -184,7 +184,7 @@
                 "type": "Array * Promise",
                 "doc": "an array of promises for the returned results of the callback on each respective resolved value."
             },
-            "doc": "",
+            "doc": "Returns an array of promises for the returned results of the callback on each respective resolved value.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -219,7 +219,7 @@
                 "type": "Promise * Array",
                 "doc": "a promise for an array of the returned results of the callback on each respective resolved value."
             },
-            "doc": "",
+            "doc": "Returns a promise for an array of the returned results of the callback on each respective resolved value.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -250,7 +250,7 @@
                     "returns": {
                         "doc": "a promise"
                     },
-                    "doc": "",
+                    "doc": "Returns a promise",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -296,7 +296,7 @@
                     "returns": {
                         "doc": "a promise"
                     },
-                    "doc": "",
+                    "doc": "Returns a promise",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -356,7 +356,7 @@
                 "type": "Promise * undefined",
                 "doc": "a promise for `undefined` that will resolve after `timeout` miliseconds."
             },
-            "doc": "",
+            "doc": "Returns a promise for `undefined` that will resolve after `timeout` miliseconds.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -400,7 +400,7 @@
                 "type": "Promise * Array",
                 "doc": "a promise for an array of each resolved value respectively."
             },
-            "doc": "",
+            "doc": "Returns a promise for an array of each resolved value respectively.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -444,7 +444,7 @@
                 "type": "Promise * Array",
                 "doc": "a promise for the sum of the resolved."
             },
-            "doc": "",
+            "doc": "Returns a promise for the sum of the resolved.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -508,7 +508,7 @@
                 "type": "Array * Promise",
                 "doc": "an array of promises for the returned results of the callback on each respective resolved value."
             },
-            "doc": "",
+            "doc": "Returns an array of promises for the returned results of the callback on each respective resolved value.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -543,7 +543,7 @@
                 "type": "Promise * Array",
                 "doc": "a promise for an array of the returned results of the callback on each respective resolved value."
             },
-            "doc": "",
+            "doc": "Returns a promise for an array of the returned results of the callback on each respective resolved value.",
             "heritage": [
                 "packages",
                 "narwhal-lib",
@@ -574,7 +574,7 @@
                     "returns": {
                         "doc": "a promise"
                     },
-                    "doc": "",
+                    "doc": "Returns a promise",
                     "heritage": [
                         "packages",
                         "narwhal-lib",
@@ -620,7 +620,7 @@
                     "returns": {
                         "doc": "a promise"
                     },
-                    "doc": "",
+                    "doc": "Returns a promise",
                     "heritage": [
                         "packages",
                         "narwhal-lib",

@@ -1,0 +1,17 @@
+{
+    "name": "SEPARATOR",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 1151,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "doc": "* `/` on Unix\n* `\\` on Windows",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---__separator"
+}

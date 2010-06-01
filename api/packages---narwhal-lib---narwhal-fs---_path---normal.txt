@@ -1,0 +1,22 @@
+{
+    "name": "normal",
+    "markup": "markdown",
+    "fileName": "/Users/kris/narwhal+node/packages/narwhal-lib/lib/narwhal/fs.js",
+    "lineNo": 1437,
+    "params": [],
+    "errors": [],
+    "throws": [],
+    "see": [],
+    "returns": {
+        "type": "Path",
+        "doc": "this path in normal form, having removed every self `\".\"` entry and resolving all possible * parent `\"..\"` entries."
+    },
+    "doc": "Returns this path in normal form, having removed every self `\".\"` entry and resolving all possible * parent `\"..\"` entries.",
+    "heritage": [
+        "packages",
+        "narwhal-lib",
+        "narwhal-fs",
+        "_path"
+    ],
+    "href": "packages---narwhal-lib---narwhal-fs---_path---normal"
+}

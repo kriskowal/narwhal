@@ -2,12 +2,344 @@
     "name": "Permissions",
     "markup": "markdown",
     "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
-    "lineNo": 88,
-    "params": [],
+    "lineNo": 123,
+    "params": [
+        {
+            "name": "permissions",
+            "type": "Permissions",
+            "doc": "override the `Permissions.default` values."
+        }
+    ],
     "errors": [],
     "throws": [],
     "see": [],
-    "doc": "",
+    "doc": "Constructs a permissions object.",
+    "children": [
+        {
+            "name": "update",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 133,
+            "params": [
+                {
+                    "name": "permissions",
+                    "type": "Number || Permissions",
+                    "doc": "bitwise UNIX permissions as a number, or a permissions object.  The permissions will be deeply updated into this permissions object."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Updates this permissions object with the permissions\nfrom another permissions object.\n\nWARNING: beyond specification",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base",
+                "_permissions"
+            ],
+            "href": "packages---narwhal-node---fs-base---_permissions---update"
+        },
+        {
+            "name": "grant",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 166,
+            "params": [
+                {
+                    "name": "who",
+                    "type": "\"owner\" | \"group\" | \"other\" | \"setUid\" | \"setGid\" | \"sticky\""
+                },
+                {
+                    "name": "ability",
+                    "type": "\"read\" | \"write\" | \"execute\" | undefined",
+                    "doc": "or `undefined` for `setUid`, `setGid`, and `sticky`."
+                }
+            ],
+            "errors": [
+                "Did not recognize \"this\" tag."
+            ],
+            "throws": [],
+            "see": [],
+            "doc": "Adds a permission this permissions object.\n\nWARNING: beyond specification",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base",
+                "_permissions"
+            ],
+            "href": "packages---narwhal-node---fs-base---_permissions---grant"
+        },
+        {
+            "name": "deny",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 188,
+            "params": [
+                {
+                    "name": "who",
+                    "type": "\"owner\" | \"group\" | \"other\" | \"setUid\" | \"setGid\" | \"sticky\""
+                },
+                {
+                    "name": "ability",
+                    "type": "\"read\" | \"write\" | \"execute\" | undefined",
+                    "doc": "or `undefined` for `setUid`, `setGid`, and `sticky`."
+                }
+            ],
+            "errors": [
+                "Did not recognize \"this\" tag."
+            ],
+            "throws": [],
+            "see": [],
+            "doc": "Removes a permission form this permissions object.\n\nWARNING: beyond specification",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base",
+                "_permissions"
+            ],
+            "href": "packages---narwhal-node---fs-base---_permissions---deny"
+        },
+        {
+            "name": "can",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 210,
+            "params": [
+                {
+                    "name": "who",
+                    "type": "\"owner\" | \"group\" | \"other\" | \"setUid\" | \"setGid\" | \"sticky\""
+                },
+                {
+                    "name": "ability",
+                    "type": "\"read\" | \"write\" | \"execute\" | undefined",
+                    "doc": "or `undefined` for `setUid`, `setGid`, and `sticky`."
+                }
+            ],
+            "errors": [
+                "Did not recognize \"this\" tag."
+            ],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "whether this permissions object has the given permission."
+            },
+            "doc": "WARNING: beyond specification",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base",
+                "_permissions"
+            ],
+            "href": "packages---narwhal-node---fs-base---_permissions---can"
+        },
+        {
+            "name": "toUnix",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 229,
+            "params": [],
+            "errors": [
+                "Did not recognize \"this\" tag."
+            ],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Number",
+                "doc": "a UNIX bit flag representing this set of permissions."
+            },
+            "doc": "WARNING: beyond specification",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base",
+                "_permissions"
+            ],
+            "href": "packages---narwhal-node---fs-base---_permissions---to-unix"
+        },
+        {
+            "name": "default",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 246,
+            "params": [],
+            "errors": [
+                "Did not recognize \"classproperty\" tag."
+            ],
+            "throws": [],
+            "see": [],
+            "doc": "The default permissions, as constructed on Unix from the\ninverse of `umask`.  This is a property of the the `Permissions`\nobject proper and can be both gotten as a `Permissions` object\nor set with either a `Number` or a `Permissions` object.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base",
+                "_permissions"
+            ],
+            "href": "packages---narwhal-node---fs-base---_permissions---default"
+        }
+    ],
+    "index": {
+        "update": {
+            "name": "update",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 133,
+            "params": [
+                {
+                    "name": "permissions",
+                    "type": "Number || Permissions",
+                    "doc": "bitwise UNIX permissions as a number, or a permissions object.  The permissions will be deeply updated into this permissions object."
+                }
+            ],
+            "errors": [],
+            "throws": [],
+            "see": [],
+            "doc": "Updates this permissions object with the permissions\nfrom another permissions object.\n\nWARNING: beyond specification",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base",
+                "_permissions"
+            ],
+            "href": "packages---narwhal-node---fs-base---_permissions---update"
+        },
+        "grant": {
+            "name": "grant",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 166,
+            "params": [
+                {
+                    "name": "who",
+                    "type": "\"owner\" | \"group\" | \"other\" | \"setUid\" | \"setGid\" | \"sticky\""
+                },
+                {
+                    "name": "ability",
+                    "type": "\"read\" | \"write\" | \"execute\" | undefined",
+                    "doc": "or `undefined` for `setUid`, `setGid`, and `sticky`."
+                }
+            ],
+            "errors": [
+                "Did not recognize \"this\" tag."
+            ],
+            "throws": [],
+            "see": [],
+            "doc": "Adds a permission this permissions object.\n\nWARNING: beyond specification",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base",
+                "_permissions"
+            ],
+            "href": "packages---narwhal-node---fs-base---_permissions---grant"
+        },
+        "deny": {
+            "name": "deny",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 188,
+            "params": [
+                {
+                    "name": "who",
+                    "type": "\"owner\" | \"group\" | \"other\" | \"setUid\" | \"setGid\" | \"sticky\""
+                },
+                {
+                    "name": "ability",
+                    "type": "\"read\" | \"write\" | \"execute\" | undefined",
+                    "doc": "or `undefined` for `setUid`, `setGid`, and `sticky`."
+                }
+            ],
+            "errors": [
+                "Did not recognize \"this\" tag."
+            ],
+            "throws": [],
+            "see": [],
+            "doc": "Removes a permission form this permissions object.\n\nWARNING: beyond specification",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base",
+                "_permissions"
+            ],
+            "href": "packages---narwhal-node---fs-base---_permissions---deny"
+        },
+        "can": {
+            "name": "can",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 210,
+            "params": [
+                {
+                    "name": "who",
+                    "type": "\"owner\" | \"group\" | \"other\" | \"setUid\" | \"setGid\" | \"sticky\""
+                },
+                {
+                    "name": "ability",
+                    "type": "\"read\" | \"write\" | \"execute\" | undefined",
+                    "doc": "or `undefined` for `setUid`, `setGid`, and `sticky`."
+                }
+            ],
+            "errors": [
+                "Did not recognize \"this\" tag."
+            ],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "doc": "whether this permissions object has the given permission."
+            },
+            "doc": "WARNING: beyond specification",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base",
+                "_permissions"
+            ],
+            "href": "packages---narwhal-node---fs-base---_permissions---can"
+        },
+        "toUnix": {
+            "name": "toUnix",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 229,
+            "params": [],
+            "errors": [
+                "Did not recognize \"this\" tag."
+            ],
+            "throws": [],
+            "see": [],
+            "returns": {
+                "type": "Number",
+                "doc": "a UNIX bit flag representing this set of permissions."
+            },
+            "doc": "WARNING: beyond specification",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base",
+                "_permissions"
+            ],
+            "href": "packages---narwhal-node---fs-base---_permissions---to-unix"
+        },
+        "default": {
+            "name": "default",
+            "markup": "markdown",
+            "fileName": "/Users/kris/narwhal+node/packages/narwhal-node/lib/fs-base.js",
+            "lineNo": 246,
+            "params": [],
+            "errors": [
+                "Did not recognize \"classproperty\" tag."
+            ],
+            "throws": [],
+            "see": [],
+            "doc": "The default permissions, as constructed on Unix from the\ninverse of `umask`.  This is a property of the the `Permissions`\nobject proper and can be both gotten as a `Permissions` object\nor set with either a `Number` or a `Permissions` object.",
+            "heritage": [
+                "packages",
+                "narwhal-node",
+                "fs-base",
+                "_permissions"
+            ],
+            "href": "packages---narwhal-node---fs-base---_permissions---default"
+        }
+    },
     "heritage": [
         "packages",
         "narwhal-node",
