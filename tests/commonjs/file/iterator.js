@@ -17,7 +17,7 @@ var Test = function (block) {
                     );
                     block(path);
                 } finally {
-                    if (path.exists())
+                    if (fs.exists())
                         path.rmtree();
                 }
             }
