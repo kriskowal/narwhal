@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/kriskowal/narwhal.png)](http://travis-ci.org/kriskowal/narwhal)
 
 <script>
 function addEvent(obj, evType, fn) { 
